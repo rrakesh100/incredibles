@@ -1,7 +1,8 @@
 import React from 'react';
-import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
-import { SceneMap, TabView } from 'react-native-tab-view';
-import Competitive from './screens/Compititive';
+import { StyleSheet, YellowBox } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+import ExamScreen from './screens/Exam';
+import HomeScreen from './screens/Home';
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -11,44 +12,30 @@ YellowBox.ignoreWarnings([
   ]);
   console.disableYellowBox = true;
 
+// Navigator
+const StackNavigtor = StackNavigator(
+	{
+	  Home: {
+	    screen: HomeScreen,
+	  },
+		Exam: {
+			screen: ExamScreen,
+		}
+	},
+	{
+		initialRouteName: 'Home'
+	}
+);
+
+
 export default class App extends React.Component {
-  
-  state = {
-    index: 0,
-    routes: [
-      { key: 'home', title: 'Home' },
-      { key: 'academicStudies', title: 'Academic Studies' },
-      { key: 'competitiveExams', title: 'Competitive Exams' }
-    ],
-  };
-  
-  
   render() {
     return (
-      <TabView
-         navigationState={this.state}
-         renderScene={SceneMap({
-           home: FirstRoute,
-           academicStudies: SecondRoute,
-           competitiveExams : ThirdRoute
-         })}
-         onIndexChange={index => this.setState({ index })}
-         initialLayout={{ width: Dimensions.get('window').width }}
-       />
+			<StackNavigtor />
     );
   }
 }
 
-const FirstRoute = () => (
-  <View style={[styles.container, { backgroundColor: '#ff4081' }]} />
-);
-const SecondRoute = () => (
-  <View style={[styles.container, { backgroundColor: '#673ab7' }]} />
-);
-
-const ThirdRoute = () => (
-  <Competitive  />
-);
 
 const styles = StyleSheet.create({
   container: {
