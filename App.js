@@ -1,6 +1,8 @@
 import React from 'react';
 import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView } from 'react-native-tab-view';
+import Competitive from './screens/Compititive';
+
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
   'Deprecation warning: moment construction falls back to js Date. This is discouraged and will be removed in upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.',
@@ -45,7 +47,7 @@ const SecondRoute = () => (
 );
 
 const ThirdRoute = () => (
-  <View style={[styles.container, { backgroundColor: '#303ab7' }]} />
+  <Competitive  />
 );
 
 const styles = StyleSheet.create({
