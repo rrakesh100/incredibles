@@ -1,11 +1,11 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { compititiveData } from '../api/competitive';
 
 
 
-export default class App extends React.Component {
+export default class Compititive extends React.Component {
 
     render() {
         return (
@@ -26,17 +26,22 @@ export default class App extends React.Component {
     }
 
     renderItem({item}) {
+        console.log('NAV in ITEM=', this.props);
         return (
-            <View style={s.card}>
-                <View style={s.cardContent}>
-                    <Text style={s.title}>{item.title}</Text>
-                    <Text style={s.catagories}>{item.catagories ? item.catagories.join(' | ') : ''}</Text>
-                    <Text style={s.desc}>{item.desc.substr(0, 200) + '...'}</Text>                
+            <TouchableHighlight
+                onPress={() => this.props.onNavigate('Exam', {data: item})}
+                underlayColor='#ffffff'>
+                <View style={s.card}>
+                    <View style={s.cardContent}>
+                        <Text style={s.title}>{item.title}</Text>
+                        <Text style={s.catagories}>{item.catagories ? item.catagories.join(' | ') : ''}</Text>
+                        <Text style={s.desc}>{item.desc.substr(0, 200) + '...'}</Text>                
+                    </View>
+                    <View style={s.arrow}>
+                        <Icon name="ios-arrow-forward" color="#4F8EF7"   size={32} />
+                    </View>
                 </View>
-                <View style={s.arrow}>
-                    <Icon name="ios-arrow-forward" color="#4F8EF7"   size={32} />
-                </View>
-            </View>
+            </TouchableHighlight>
         )
     }
 

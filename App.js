@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, YellowBox } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import Compititive from './screens/Compititive';
 import ExamScreen from './screens/Exam';
 import HomeScreen from './screens/Home';
 
@@ -20,10 +21,13 @@ const StackNavigtor = StackNavigator(
 	  },
 		Exam: {
 			screen: ExamScreen,
-		}
+    },
+    Compititive: {
+      screen: Compititive,
+    }
 	},
 	{
-		initialRouteName: 'Home'
+		initialRouteName: 'Exam'
 	}
 );
 

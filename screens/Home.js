@@ -39,13 +39,14 @@ export default class Home extends React.Component {
   
   
   render() {
+      console.log('NAV=', JSON.stringify(this.props.navigation, null, 2))
     return (
       <TabView
          navigationState={this.state}
          renderScene={SceneMap({
            home: FirstRoute,
            academicStudies: SecondRoute,
-           competitiveExams : ThirdRoute
+           competitiveExams : ThirdRoute.bind(this, this.props.navigation)
          })}
          onIndexChange={index => this.setState({ index })}
          initialLayout={{ width: Dimensions.get('window').width }}
@@ -62,9 +63,16 @@ const SecondRoute = () => (
   <View style={[styles.container, { backgroundColor: '#673ab7' }]} />
 );
 
-const ThirdRoute = () => (
-  <Competitive  />
+const ThirdRoute = (nav) => (
+  <Competitive onNavigate={redirect.bind(this, nav)} />
 );
+
+const redirect = (nav, route, data) => {
+    console.log('NAVE=', JSON.stringify(nav, null,2 ) + 
+    '\n ROUTE=', JSON.stringify(route, null,2 ) +
+    '\n DATA=', JSON.stringify(data, null,2 ));
+    nav.navigate(route, data);
+}
 
 const styles = StyleSheet.create({
   container: {
