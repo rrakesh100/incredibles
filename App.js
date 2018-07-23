@@ -27,7 +27,7 @@ const StackNavigtor = StackNavigator(
     }
 	},
 	{
-		initialRouteName: 'Exam'
+		initialRouteName: 'Home'
 	}
 );
 

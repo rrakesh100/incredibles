@@ -35,7 +35,7 @@ export default class Compititive extends React.Component {
                     <View style={s.cardContent}>
                         <Text style={s.title}>{item.title}</Text>
                         <Text style={s.catagories}>{item.catagories ? item.catagories.join(' | ') : ''}</Text>
-                        <Text style={s.desc}>{item.desc.substr(0, 200) + '...'}</Text>                
+                        <Text style={s.desc}>{item.desc.substr(0, 200) + '...'}</Text>
                     </View>
                     <View style={s.arrow}>
                         <Icon name="ios-arrow-forward" color="#4F8EF7"   size={32} />

@@ -2,6 +2,8 @@ import React from 'react';
 import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import Competitive from './Compititive';
+import HomePage from './HomePage';
+
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -27,7 +29,7 @@ export default class Home extends React.Component {
 		}
 	);
 
-  
+
   state = {
     index: 0,
     routes: [
@@ -36,8 +38,8 @@ export default class Home extends React.Component {
       { key: 'competitiveExams', title: 'Competitive Exams' }
     ],
   };
-  
-  
+
+
   render() {
       console.log('NAV=', JSON.stringify(this.props.navigation, null, 2))
     return (
@@ -55,8 +57,8 @@ export default class Home extends React.Component {
   }
 }
 
-const FirstRoute = () => (
-    <View style={[styles.container, { backgroundColor: '#ff4081' }]} />
+const FirstRoute = (nav) => (
+  <HomePage />
 );
 
 const SecondRoute = () => (
@@ -68,7 +70,7 @@ const ThirdRoute = (nav) => (
 );
 
 const redirect = (nav, route, data) => {
-    console.log('NAVE=', JSON.stringify(nav, null,2 ) + 
+    console.log('NAVE=', JSON.stringify(nav, null,2 ) +
     '\n ROUTE=', JSON.stringify(route, null,2 ) +
     '\n DATA=', JSON.stringify(data, null,2 ));
     nav.navigate(route, data);
