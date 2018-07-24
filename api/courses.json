@@ -1,0 +1,1664 @@
+{
+   "MULTIPLE": [
+      [
+         {
+            "name": "id",
+            "VALUE": "1"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "Sakshi"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "0"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "1"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Sakshi - Online Test"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Sakshi - Online Test"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": []
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "site"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "3"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "0"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "0"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "1"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": null
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519125944"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519126859"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "0"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": []
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": {
+               "SINGLE": [
+                  {
+                     "name": "name",
+                     "VALUE": "numsections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "1"
+                  }
+               ]
+            }
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "6"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "Bank"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10008"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Bank"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Bank"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "123"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1519151400"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1550687400"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519130054"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519130054"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "7"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "General Knowledge"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10003"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "General Knowledge"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "General Knowledge"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "1234"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1519151400"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1550687400"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "2"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519130606"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519130606"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "8"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "EAMCET"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10007"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "EAMCET"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "EAMCET"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "123456"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1519151400"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1550687400"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519130749"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519130749"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "9"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "APPSC"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10006"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "APPSC"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "APPSC"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "12356"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1519151400"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1550687400"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519130843"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519130843"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "10"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "Civil Services"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10005"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Civil Services"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Civil Services"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "456"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1519151400"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1550687400"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "1"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519133748"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519136835"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "11"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "SSC"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10004"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "SSC"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "SSC"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "56"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1519151400"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1550687400"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1519133838"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1519133838"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "12"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "physics"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10002"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Physics"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Physics"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": "123456789"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1522348200"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1553884200"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1522321041"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1522321041"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "13"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "puc"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "4"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "20001"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "puc"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "puc"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": []
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1525717800"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1557253800"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1525683441"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1525683441"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "14"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "ARTM"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "6"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "40001"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Arithmetic"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Arithmetic"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": []
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1525717800"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1557253800"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "9"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1525683921"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1525683921"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "15"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "CA"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "5"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "30001"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Current Affairs"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Current Affairs"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": []
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1526322600"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1557858600"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "4"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1526295293"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1526299653"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "16"
+         },
+         {
+            "name": "shortname",
+            "VALUE": "LC"
+         },
+         {
+            "name": "categoryid",
+            "VALUE": "3"
+         },
+         {
+            "name": "categorysortorder",
+            "VALUE": "10001"
+         },
+         {
+            "name": "fullname",
+            "VALUE": "Law Course"
+         },
+         {
+            "name": "displayname",
+            "VALUE": "Law Course"
+         },
+         {
+            "name": "idnumber",
+            "VALUE": []
+         },
+         {
+            "name": "summary",
+            "VALUE": {
+               "p": "Test Description of Law course. 1st year concepts."
+            }
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "format",
+            "VALUE": "topics"
+         },
+         {
+            "name": "showgrades",
+            "VALUE": "1"
+         },
+         {
+            "name": "newsitems",
+            "VALUE": "5"
+         },
+         {
+            "name": "startdate",
+            "VALUE": "1529001000"
+         },
+         {
+            "name": "enddate",
+            "VALUE": "1536949800"
+         },
+         {
+            "name": "numsections",
+            "VALUE": "5"
+         },
+         {
+            "name": "maxbytes",
+            "VALUE": "0"
+         },
+         {
+            "name": "showreports",
+            "VALUE": "0"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddensections",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmode",
+            "VALUE": "0"
+         },
+         {
+            "name": "groupmodeforce",
+            "VALUE": "0"
+         },
+         {
+            "name": "defaultgroupingid",
+            "VALUE": "0"
+         },
+         {
+            "name": "timecreated",
+            "VALUE": "1528982930"
+         },
+         {
+            "name": "timemodified",
+            "VALUE": "1528985572"
+         },
+         {
+            "name": "enablecompletion",
+            "VALUE": "1"
+         },
+         {
+            "name": "completionnotify",
+            "VALUE": "0"
+         },
+         {
+            "name": "lang",
+            "VALUE": "en"
+         },
+         {
+            "name": "forcetheme",
+            "VALUE": []
+         },
+         {
+            "name": "courseformatoptions",
+            "MULTIPLE": [
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "hiddensections"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ],
+               [
+                  {
+                     "name": "name",
+                     "VALUE": "coursedisplay"
+                  },
+                  {
+                     "name": "value",
+                     "VALUE": "0"
+                  }
+               ]
+            ]
+         }
+      ]
+   ]
+}

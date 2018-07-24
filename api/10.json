@@ -1,0 +1,277 @@
+{
+   "MULTIPLE": [
+      [
+         {
+            "name": "id",
+            "VALUE": "41"
+         },
+         {
+            "name": "name",
+            "VALUE": "General"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "section",
+            "VALUE": "0"
+         },
+         {
+            "name": "hiddenbynumsections",
+            "VALUE": "0"
+         },
+         {
+            "name": "uservisible",
+            "VALUE": "1"
+         },
+         {
+            "name": "availabilityinfo",
+            "VALUE": null
+         },
+         {
+            "name": "modules",
+            "MULTIPLE": {
+               "SINGLE": [
+                  {
+                     "name": "id",
+                     "VALUE": "11"
+                  },
+                  {
+                     "name": "url",
+                     "VALUE": "http://test.sakshi.myofficestation.com/mod/forum/view.php?id=11"
+                  },
+                  {
+                     "name": "name",
+                     "VALUE": "Announcements"
+                  },
+                  {
+                     "name": "instance",
+                     "VALUE": "9"
+                  },
+                  {
+                     "name": "description",
+                     "VALUE": null
+                  },
+                  {
+                     "name": "visible",
+                     "VALUE": "1"
+                  },
+                  {
+                     "name": "uservisible",
+                     "VALUE": "1"
+                  },
+                  {
+                     "name": "availabilityinfo",
+                     "VALUE": null
+                  },
+                  {
+                     "name": "visibleoncoursepage",
+                     "VALUE": "1"
+                  },
+                  {
+                     "name": "modicon",
+                     "VALUE": "http://test.sakshi.myofficestation.com/theme/image.php/boost/forum/1525668650/icon"
+                  },
+                  {
+                     "name": "modname",
+                     "VALUE": "forum"
+                  },
+                  {
+                     "name": "modplural",
+                     "VALUE": "Forums"
+                  },
+                  {
+                     "name": "availability",
+                     "VALUE": null
+                  },
+                  {
+                     "name": "indent",
+                     "VALUE": "0"
+                  },
+                  {
+                     "name": "contents",
+                     "MULTIPLE": []
+                  }
+               ]
+            }
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "42"
+         },
+         {
+            "name": "name",
+            "VALUE": "Topic 1"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "section",
+            "VALUE": "1"
+         },
+         {
+            "name": "hiddenbynumsections",
+            "VALUE": "0"
+         },
+         {
+            "name": "uservisible",
+            "VALUE": "1"
+         },
+         {
+            "name": "availabilityinfo",
+            "VALUE": null
+         },
+         {
+            "name": "modules",
+            "MULTIPLE": []
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "43"
+         },
+         {
+            "name": "name",
+            "VALUE": "Topic 2"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "section",
+            "VALUE": "2"
+         },
+         {
+            "name": "hiddenbynumsections",
+            "VALUE": "0"
+         },
+         {
+            "name": "uservisible",
+            "VALUE": "1"
+         },
+         {
+            "name": "availabilityinfo",
+            "VALUE": null
+         },
+         {
+            "name": "modules",
+            "MULTIPLE": []
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "44"
+         },
+         {
+            "name": "name",
+            "VALUE": "Topic 3"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "section",
+            "VALUE": "3"
+         },
+         {
+            "name": "hiddenbynumsections",
+            "VALUE": "0"
+         },
+         {
+            "name": "uservisible",
+            "VALUE": "1"
+         },
+         {
+            "name": "availabilityinfo",
+            "VALUE": null
+         },
+         {
+            "name": "modules",
+            "MULTIPLE": []
+         }
+      ],
+      [
+         {
+            "name": "id",
+            "VALUE": "45"
+         },
+         {
+            "name": "name",
+            "VALUE": "Topic 4"
+         },
+         {
+            "name": "visible",
+            "VALUE": "1"
+         },
+         {
+            "name": "summary",
+            "VALUE": []
+         },
+         {
+            "name": "summaryformat",
+            "VALUE": "1"
+         },
+         {
+            "name": "section",
+            "VALUE": "4"
+         },
+         {
+            "name": "hiddenbynumsections",
+            "VALUE": "0"
+         },
+         {
+            "name": "uservisible",
+            "VALUE": "1"
+         },
+         {
+            "name": "availabilityinfo",
+            "VALUE": null
+         },
+         {
+            "name": "modules",
+            "MULTIPLE": []
+         }
+      ]
+   ]
+}
