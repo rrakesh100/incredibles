@@ -22,7 +22,7 @@ export default class AcademicStudies extends React.Component {
     render() {
         return (
             <View style={{
-                backgroundColor : '#E4FAFB'
+                backgroundColor : '#eeeeee'
             }}>
                 {
                     /*examInfo.map((item, index) =>*/
