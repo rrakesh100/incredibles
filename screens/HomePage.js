@@ -120,7 +120,7 @@ export default class HomePage extends Component {
             loop={true}
             onSnapToItem={(index) => this.setState({ activeSlide: index }) }
           />
-          <View style={{height : 60}}>
+          <View style={{height : 80}}>
           { this.pagination() }
           </View>
         </View>

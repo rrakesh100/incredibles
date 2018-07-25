@@ -22,7 +22,7 @@ export default class AcademicStudies extends React.Component {
     render() {
         return (
             <View style={{
-                backgroundColor : "white"
+                backgroundColor : '#E4FAFB'
             }}>
                 {
                     /*examInfo.map((item, index) =>*/
@@ -36,21 +36,21 @@ export default class AcademicStudies extends React.Component {
                         >
                             <Card style={{
                                 backgroundColor : "#f1f2f2",
-                                margin : 5,
+                                margin : 0,
                                 position : "relative"
                             }}>
                             <Text style={{
-                            fontSize : 24,
-                            fontWeight : "bold",
-                            color : '#2980b9'
-                        }}>Name</Text>
+                                    fontSize : 24,
+                                    fontWeight : "bold",
+                                    color : '#2980b9'
+                                }}>Name</Text>
                             <View style={{
                                 display : "flex",
                                 flexDirection : "row"
                             }}>
                             {
                                 // item.topic.map((item1, index1) =>
-                                [...Array(5)].map((item1, index1) =>
+                                [...Array(4)].map((item1, index1) =>
                                     <Text style={{
                                         marginRight : 5,
                                         fontSize : 14,
@@ -67,9 +67,9 @@ export default class AcademicStudies extends React.Component {
                                   style={{
                                       position : "absolute",
                                       right : 0,
-                                      top : "40%"
+                                      top : 0
                                   }}
-                                  size={25} color="#900" />
+                                  size={25} color="#E4FAFB" />
                             </Card>
                         </TouchableOpacity>
                     )

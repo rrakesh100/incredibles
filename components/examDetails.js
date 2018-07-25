@@ -42,7 +42,7 @@ export default class ExamDetails extends React.Component {
                         flexDirection : "column",
                         height : "50%",
                         position: "relative",
-                        backgroundColor : "blue"
+                        backgroundColor: '#00539d'
                     }}>
                         <Icon name="arrow-left"
                               style={{
@@ -56,27 +56,19 @@ export default class ExamDetails extends React.Component {
                                   this.props.setView("examList");
                               }}
                               size={25} color="white" />
-                        <Icon name="shopping-cart"
-                              style={{
-                                  position : "absolute",
-                                  top : 0,
-                                  right : 0,
-                                  margin : 10
-                              }}
-                              size={25} color="white" />
                     </View>
                     <View style={{
                         display : "flex",
                         flexDirection : "row",
                         height : "50%",
-                        backgroundColor : "blue"
+                        backgroundColor: '#00539d'
                     }}>
                         <Text style={{
                             fontSize : 24,
-                            color : "white",
+                            color: '#fff',
                             marginLeft : 20,
                             marginTop: 10
-                        }}>JEE MAIN | Advance</Text>
+                        }}>JEE MAIN | Advanced </Text>
                     </View>
                 </View>
                 <Card style={{
