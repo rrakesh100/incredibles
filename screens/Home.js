@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
-import { SceneMap, TabView } from 'react-native-tab-view';
+import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import Competitive from './Compititive';
 import HomePage from './HomePage';
 import Second from "./../components/second";
@@ -18,11 +18,11 @@ export default class Home extends React.Component {
 
     static navigationOptions = ({navigation}) => (
 		{
-			title: `Sakshi Eduction`,
+			title: `Sakshi Education`,
 			headerTintColor: '#ffffff',
 			headerStyle: {
 				backgroundColor: '#00539d',
-				borderBottomColor: '#ffffff',
+				borderBottomColor: '#ffffff'
 			},
 			headerTitleStyle: {
 				fontSize: 18,
@@ -46,6 +46,7 @@ export default class Home extends React.Component {
     return (
       <TabView
          navigationState={this.state}
+         tabStyle={{backgroundColor:'#000'}}
          renderScene={SceneMap({
            home: FirstRoute,
            academicStudies: Second,
@@ -53,6 +54,12 @@ export default class Home extends React.Component {
          })}
          onIndexChange={index => this.setState({ index })}
          initialLayout={{ width: Dimensions.get('window').width }}
+         renderTabBar={props =>
+          <TabBar
+            {...props}
+            style={{ backgroundColor: '#00539d' }}
+          />
+}
        />
     );
   }

@@ -26,7 +26,6 @@ export default class Compititive extends React.Component {
     }
 
     renderItem({item}) {
-        console.log('NAV in ITEM=', this.props);
         return (
             <TouchableHighlight
                 onPress={() => this.props.onNavigate('Exam', {data: item})}
