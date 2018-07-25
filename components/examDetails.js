@@ -6,6 +6,7 @@ import { images } from '../api/images';
 import { SearchBar } from 'react-native-elements';
 import ImageCarousel from "./ImageCarousel";
 import { Button } from 'react-native-elements';
+import InfoTab from "./InfoTab";
 
 const examInfo = [
     {
@@ -71,101 +72,93 @@ export default class ExamDetails extends React.Component {
                         }}>JEE MAIN | Advanced </Text>
                     </View>
                 </View>
-                <Card style={{
-                    display : "flex",
-                    flexDirection : "column",
-                    height : "8%",
-                    backgroundColor : "white"
-                }}>
                     <SearchBar
                         onChangeText={() => {}}
                         onClearText={() => {}}
                         lightTheme={true}
                         inputStyle={{backgroundColor: 'white'}}
                         placeholder='What are you looking for...' />
-                </Card>
                 <View style={{
                     display : "flex",
                     flexDirection : "column",
                     height : "30%"
                 }}>
-                    <Card>
                     <ImageCarousel images={images}/>
-                    </Card>
                 </View>
                 <View style={{
                     display : "flex",
                     flexDirection : "row",
-                    height : "8%",
                     alignItems: "center",
-                    paddingTop : 15
+                    paddingTop : 15,
+                    height : "40%"
                 }}>
-                    <Button
-                        onPress={() => {
-                            this.setState({
-                                tabType : "recentUpdates"
-                            })
-                        }}
-                        title='RECENT UPDATES'
-                    />
+                    {/*<Button*/}
+                        {/*onPress={() => {*/}
+                            {/*this.setState({*/}
+                                {/*tabType : "recentUpdates"*/}
+                            {/*})*/}
+                        {/*}}*/}
+                        {/*title='RECENT UPDATES'*/}
+                    {/*/>*/}
 
-                    <Button
-                        onPress={() => {
-                            this.setState({
-                                tabType : "examOverview"
-                            })
-                        }}
-                        title='EXAM OVERVIEW'
-                    />
+                    {/*<Button*/}
+                        {/*onPress={() => {*/}
+                            {/*this.setState({*/}
+                                {/*tabType : "examOverview"*/}
+                            {/*})*/}
+                        {/*}}*/}
+                        {/*title='EXAM OVERVIEW'*/}
+                    {/*/>*/}
+                    <InfoTab/>
                 </View>
-                <View>
-                    {
-                        this.state.tabType == "recentUpdates" ?
-                            <View style={{
-                                height : "30%"
-                            }}>
-                                <View style={{
-                                    height : "90%"
-                                }}>
-                                    {
-                                        [...Array(5)].map((item, index) =>
-                                            <Card style={{
-                                                backgroundColor : "lightgray",
-                                                display : "flex",
-                                                flexDirection : "column"
-                                            }}>
-                                                <View style={{
-                                                    display : "flex",
-                                                    flexDirection : "row"
-                                                }}>
-                                                    <Text style={{
-                                                        color : "red",
-                                                        fontSize : 16
-                                                    }}> 20 March 2017</Text>
-                                                    <Badge containerStyle={{ backgroundColor: 'green'}}>
-                                                        <Text>Exam Alert</Text>
-                                                    </Badge>
-                                                </View>
-                                                <View style={{
-                                                    display : "flex",
-                                                    flexDirection : "row"
-                                                }}>
-                                                    <Text>This is text</Text>
-                                                </View>
-                                            </Card>
-                                        )
-                                    }
-                                </View>
-                                <View style={{
-                                    height : "10%"
-                                }}>
-                                    {/*<Badge containerStyle={{ backgroundColor: 'green'}}>*/}
-                                        {/*<Text>Show More</Text>*/}
-                                    {/*</Badge>*/}
-                                </View>
-                            </View> : null
-                    }
-            </View>
+                {/*<View>*/}
+                    {/*{*/}
+                        {/*this.state.tabType == "recentUpdates" ?*/}
+                            {/*<View style={{*/}
+                                {/*height : "30%"*/}
+                            {/*}}>*/}
+                                {/*<View style={{*/}
+                                    {/*height : "90%"*/}
+                                {/*}}>*/}
+                                    {/*{*/}
+                                        {/*[...Array(5)].map((item, index) =>*/}
+                                            {/*<Card style={{*/}
+                                                {/*backgroundColor : "lightgray",*/}
+                                                {/*display : "flex",*/}
+                                                {/*flexDirection : "column"*/}
+                                            {/*}}>*/}
+                                                {/*<View style={{*/}
+                                                    {/*display : "flex",*/}
+                                                    {/*flexDirection : "row"*/}
+                                                {/*}}>*/}
+                                                    {/*<Text style={{*/}
+                                                        {/*color : "red",*/}
+                                                        {/*fontSize : 16*/}
+                                                    {/*}}> 20 March 2017</Text>*/}
+                                                    {/*<Badge containerStyle={{ backgroundColor: 'green'}}>*/}
+                                                        {/*<Text>Exam Alert</Text>*/}
+                                                    {/*</Badge>*/}
+                                                {/*</View>*/}
+                                                {/*<View style={{*/}
+                                                    {/*display : "flex",*/}
+                                                    {/*flexDirection : "row"*/}
+                                                {/*}}>*/}
+                                                    {/*<Text>This is text</Text>*/}
+                                                {/*</View>*/}
+                                            {/*</Card>*/}
+                                        {/*)*/}
+                                    {/*}*/}
+                                {/*</View>*/}
+                                {/*<View style={{*/}
+                                    {/*height : "10%"*/}
+                                {/*}}>*/}
+                                    {/*/!*<Badge containerStyle={{ backgroundColor: 'green'}}>*!/*/}
+                                        {/*/!*<Text>Show More</Text>*!/*/}
+                                    {/*/!*</Badge>*!/*/}
+                                {/*</View>*/}
+                            {/*</View> : null*/}
+                    {/*}*/}
+            {/*</View>*/}
             </View>
         );
     }

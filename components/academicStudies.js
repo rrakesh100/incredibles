@@ -34,9 +34,11 @@ export default class AcademicStudies extends React.Component {
                             }}
 
                         >
-                            <Card style={{
-                                backgroundColor : "#f1f2f2",
-                                margin : 0,
+                            <View style={{
+                                backgroundColor : "white",
+                                marginTop : 10,
+                                marginBottom : 10,
+                                padding : 10,
                                 position : "relative"
                             }}>
                             <Text style={{
@@ -67,10 +69,10 @@ export default class AcademicStudies extends React.Component {
                                   style={{
                                       position : "absolute",
                                       right : 0,
-                                      top : 10
+                                      top : "40%"
                                   }}
-                                  size={25} color="#9CC4C6" />
-                            </Card>
+                                  size={25} color="#4F8EF7" />
+                            </View>
                         </TouchableOpacity>
                     )
                 }
