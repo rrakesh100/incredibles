@@ -67,9 +67,9 @@ export default class AcademicStudies extends React.Component {
                                   style={{
                                       position : "absolute",
                                       right : 0,
-                                      top : 0
+                                      top : 10
                                   }}
-                                  size={25} color="#E4FAFB" />
+                                  size={25} color="#9CC4C6" />
                             </Card>
                         </TouchableOpacity>
                     )
