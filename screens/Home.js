@@ -4,6 +4,9 @@ import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import Competitive from './Compititive';
 import HomePage from './HomePage';
 import Second from "./../components/second";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Ionicon from 'react-native-vector-icons/Ionicons';
+
 
 
 YellowBox.ignoreWarnings([
@@ -27,6 +30,14 @@ export default class Home extends React.Component {
 			headerTitleStyle: {
 				fontSize: 18,
 			},
+      headerRight : <View style={{display:'flex', flexDirection:'row'}}>
+      <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
+      <Icon style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
+      <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
+      </View> ,
+      headerLeft : <View>
+      <Ionicon style={{marginLeft : 12, marginRight : 8}} name="md-menu" size={36} color="#fff"/>
+      </View>
 		}
 	);
 
