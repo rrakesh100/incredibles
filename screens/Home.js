@@ -3,6 +3,7 @@ import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import Competitive from './Compititive';
 import HomePage from './HomePage';
+import Second from "./../components/second";
 
 
 YellowBox.ignoreWarnings([
@@ -47,7 +48,7 @@ export default class Home extends React.Component {
          navigationState={this.state}
          renderScene={SceneMap({
            home: FirstRoute,
-           academicStudies: SecondRoute,
+           academicStudies: Second,
            competitiveExams : ThirdRoute.bind(this, this.props.navigation)
          })}
          onIndexChange={index => this.setState({ index })}
