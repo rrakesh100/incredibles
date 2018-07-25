@@ -6,10 +6,9 @@ import { homeData, trendingData } from '../api/homepage';
 import { Button } from 'native-base';
 import { Badge } from 'react-native-elements';
 import { Container, Header, Content, Card, CardItem, Body } from 'native-base';
-
-
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 export default class HomePage extends Component {
 
@@ -127,11 +126,13 @@ export default class HomePage extends Component {
           <Text style={styles.txtS}>Recent Updates</Text>
           <View style={styles.container}>
           <ButtonGroup
-          selectedBackgroundColor="black"
+          selectedButtonStyle={styles.selectedButtonStyle}
           onPress={this.updateIndex}
           selectedIndex={this.state.index}
-          buttons={['ACADEMICS', 'COMPETITIVE EXAMS', 'RESULTS', 'JOBS']}
-          containerStyle={{height: 50}} />
+          buttonStyle={styles.buttonStyle}
+          selectedTextStyle={styles.selectedTextStyle}
+          buttons={['Academics', 'Exams', 'Results', 'Jobs']}
+          containerStyle={{height: 60}} />
           </View>
         </View>
         <View>
@@ -143,11 +144,22 @@ export default class HomePage extends Component {
         </View>
         <View style={styles.adStyle}>
         <Text style={styles.trend}>Trending Exams</Text>
-        <Card style={{width:200, height: 150, marginLeft: 6}}>
-            <Text style={{marginTop: 10, marginLeft: 10, fontSize: 20}}>India Post Payment Bank Officer Post</Text>
-            <Text style={{marginTop: 10, marginLeft: 10, fontSize: 15, color: '#47C8DB'}}>Mar 2018</Text>
-            <Text style={{marginTop: 10, marginLeft: 10, fontSize: 13}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..</Text>
-        </Card>
+        <Grid>
+          <Col>
+            <Card style={{width:200, height: 150, marginLeft: 6}}>
+              <Text style={{marginTop: 10, marginLeft: 10, fontSize: 20}}>India Post Payment Bank Officer Post</Text>
+              <Text style={{marginTop: 10, marginLeft: 10, fontSize: 15, color: '#47C8DB'}}>Mar 2018</Text>
+              <Text style={{marginTop: 10, marginLeft: 10, fontSize: 13}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..</Text>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{width:200, height: 150, marginLeft: 6}}>
+                <Text style={{marginTop: 10, marginLeft: 10, fontSize: 20}}>SSC CHSL 2017</Text>
+                <Text style={{marginTop: 10, marginLeft: 10, fontSize: 15, color: '#47C8DB'}}>Feb 2017</Text>
+                <Text style={{marginTop: 10, marginLeft: 10, fontSize: 13}}>sed do eiusmod tempor incididunt..Lorem ipsum dolor sit amet, consectetur adipiscing elit,</Text>
+            </Card>
+          </Col>
+          </Grid>
         </View>
         </ScrollView>
       )
@@ -158,7 +170,8 @@ export default class HomePage extends Component {
     title : {
       color: '#47C8DB',
       fontSize: 20,
-      margin: 7,
+      margin: 8,
+      marginTop : 16,
       fontWeight: 'bold'
     },
     imgS : {
@@ -169,7 +182,8 @@ export default class HomePage extends Component {
     txtS : {
       color: '#47C8DB',
       fontSize: 20,
-      marginLeft: 7,
+      marginLeft: 8,
+      marginTop : 12,
       fontWeight: 'bold'
     },
     imgText: {
@@ -186,6 +200,10 @@ export default class HomePage extends Component {
     container : {
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop : 12,
+    marginLeft : -8,
+    marginRight : -8
+
     },
     separator : {
       backgroundColor: '#ecf0f1',
@@ -242,13 +260,32 @@ export default class HomePage extends Component {
     shrink : {
       flex:1,
       height: undefined,
-      width: undefined
+      width: undefined,
+      marginVertical: 5
     },
     trend : {
       color: '#47C8DB',
-      fontw
       fontSize: 20,
       marginVertical: 20,
       marginHorizontal: 10
-    }
+    },
+    selectedTextStyle: {
+       color: '#fff',
+       fontSize : 12,
+       fontWeight : 'bold'
+   },
+   buttonStyle: {
+        color: '#000',
+        backgroundColor: '#fff',
+        marginRight : 2,
+        marginLeft : 2
+
+   },
+   selectedButtonStyle: {
+        backgroundColor: '#FFD133'
+   },
+   smallTab: {
+        color: '#555', fontSize: 12
+   },
+
   })
