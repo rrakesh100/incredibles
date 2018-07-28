@@ -5,7 +5,7 @@ import { ButtonGroup } from 'react-native-elements';
 import { homeData, trendingData } from '../api/homepage';
 import { Button } from 'native-base';
 import { Badge } from 'react-native-elements';
-import { Container, Header, Content, Card, CardItem, Body } from 'native-base';
+import { Card } from 'react-native-elements';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 import { Col, Row, Grid } from "react-native-easy-grid";
@@ -62,6 +62,8 @@ export default class HomePage extends Component {
                   borderRadius: 10,
                   marginHorizontal: 1,
               }}
+              inactiveDotOpacity={0.4}
+              inactiveDotScale={0.6}
             />
         );
     }
@@ -125,7 +127,7 @@ export default class HomePage extends Component {
           </View>
         </View>
         <View style={styles.imgText}>
-          <Text style={styles.txtS}>Recent Updates</Text>
+          <Text style={styles.txtS}>Recent <Text style={{fontWeight: 'bold'}}>Updates</Text></Text>
           <View style={styles.container}>
           <ButtonGroup
           selectedButtonStyle={styles.selectedButtonStyle}
@@ -145,23 +147,55 @@ export default class HomePage extends Component {
         <Image resizeMode="contain" style={styles.shrink} source={require('../Adimg.jpg')} />
         </View>
         <View style={styles.adStyle}>
-        <Text style={styles.trend}>Trending Exams</Text>
+        <Text style={styles.trend}>Trending <Text style={{fontWeight: 'bold'}}>Exams</Text></Text>
         <Grid>
           <Col>
-            <Card style={{width:200, height: 150, marginLeft: 6}}>
-              <Text style={{marginTop: 10, marginLeft: 10, fontSize: 20}}>India Post Payment Bank Officer Post</Text>
-              <Text style={{marginTop: 10, marginLeft: 10, fontSize: 15, color: '#47C8DB'}}>Mar 2018</Text>
-              <Text style={{marginTop: 10, marginLeft: 10, fontSize: 13}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..</Text>
-            </Card>
+          <Card containerStyle={{width:180, height: 140}}>
+            <Text style={{fontSize: 20}}>India Post Payment Bank Officer Post</Text>
+            <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>Mar 2018</Text>
+            <Text style={{marginTop: 6, fontSize: 13}}>sed do eiusmod tempor incididunt..</Text>
+          </Card>
           </Col>
           <Col>
-            <Card style={{width:200, height: 150, marginLeft: 6}}>
-                <Text style={{marginTop: 10, marginLeft: 10, fontSize: 20}}>SSC CHSL 2017</Text>
-                <Text style={{marginTop: 10, marginLeft: 10, fontSize: 15, color: '#47C8DB'}}>Feb 2017</Text>
-                <Text style={{marginTop: 10, marginLeft: 10, fontSize: 13}}>sed do eiusmod tempor incididunt..Lorem ipsum dolor sit amet, consectetur adipiscing elit,</Text>
-            </Card>
+          <Card containerStyle={{width:180, height: 140}}>
+              <Text style={{fontSize: 20}}>SSC CHSL 2017</Text>
+              <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>Feb 2017</Text>
+              <Text style={{marginTop: 6, fontSize: 13}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..</Text>
+          </Card>
           </Col>
           </Grid>
+        </View>
+
+        <View style={styles.adStyle}>
+        <Text style={styles.trend}>Online Test and <Text style={{fontWeight: 'bold'}}>Test Series</Text></Text>
+        <Grid>
+          <Col>
+            <Card containerStyle={{width:180, height: 180}}
+              title='IBPS PO'
+              image={require('../onlinetest.jpg')}
+              imageStyle={{width:180, height: 60}}>
+              <View>
+              <Text style={{marginBottom: 10}}>
+              PRELIMS 2018
+              25 FULL TEST
+              </Text>
+              </View>
+            </Card>
+            </Col>
+            <Col>
+              <Card containerStyle={{width:180, height: 180}}
+              title='SSC CGL'
+              image={require('../online.jpg')}
+              imageStyle={{width:180, height: 60}}>
+                <View>
+                <Text style={{marginBottom: 10}}>
+                TIER 1 2018
+                30 FULL TEST
+                </Text>
+                </View>
+              </Card>
+            </Col>
+            </Grid>
         </View>
         </ScrollView>
       )
@@ -252,6 +286,11 @@ export default class HomePage extends Component {
       marginTop: 10,
       backgroundColor: '#ecf0f1',
       height: 250
+    },
+    trendStyle : {
+      marginTop: 10,
+      backgroundColor: '#ecf0f1',
+      height: 300
     },
     adText : {
       color: '#16A085',
