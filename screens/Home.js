@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import Second from "./../components/second";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
-
+import Estore from './Estore';
 
 
 YellowBox.ignoreWarnings([
@@ -47,7 +47,8 @@ export default class Home extends React.Component {
     routes: [
       { key: 'home', title: 'Home' },
       { key: 'academicStudies', title: 'Academic Studies' },
-      { key: 'competitiveExams', title: 'Competitive Exams' }
+      { key: 'competitiveExams', title: 'Competitive Exams' },
+      { key: 'eStore', title: 'eStore' }
     ],
   };
 
@@ -59,9 +60,10 @@ export default class Home extends React.Component {
          navigationState={this.state}
          tabStyle={{backgroundColor:'#000'}}
          renderScene={SceneMap({
-           home: FirstRoute,
+           home: FirstRoute.bind(this, this.props.navigation),
            academicStudies: Second,
-           competitiveExams : ThirdRoute.bind(this, this.props.navigation)
+           competitiveExams : ThirdRoute.bind(this, this.props.navigation),
+           eStore: FourthRoute,
          })}
          onIndexChange={index => this.setState({ index })}
          initialLayout={{ width: Dimensions.get('window').width }}
@@ -77,7 +79,7 @@ export default class Home extends React.Component {
 }
 
 const FirstRoute = (nav) => (
-  <HomePage />
+  <HomePage onNavigate={redirect.bind(this, nav)}/>
 );
 
 const SecondRoute = () => (
@@ -86,6 +88,10 @@ const SecondRoute = () => (
 
 const ThirdRoute = (nav) => (
   <Competitive onNavigate={redirect.bind(this, nav)} />
+);
+
+const FourthRoute = (nav) => (
+  <Estore />
 );
 
 const redirect = (nav, route, data) => {

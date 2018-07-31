@@ -1,14 +1,13 @@
 import React, { Component} from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableHighlight } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { ButtonGroup } from 'react-native-elements';
-import { homeData, trendingData } from '../api/homepage';
+import { ButtonGroup, Badge, Card } from 'react-native-elements';
+import { homeData, trendingData, onlineTestData, currentAffairsData, curAffData } from '../api/homepage';
 import { Button } from 'native-base';
-import { Badge } from 'react-native-elements';
-import { Card } from 'react-native-elements';
+import { Col, Row, Grid } from "react-native-easy-grid";
+
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
-import { Col, Row, Grid } from "react-native-easy-grid";
 
 export default class HomePage extends Component {
 
@@ -72,6 +71,38 @@ export default class HomePage extends Component {
     this.setState({index})
     }
 
+    renderCurrentAffairsList() {
+      const updatesArr = []
+
+      for( let i=0; i<3; i++) {
+        updatesArr.push(
+          <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: i})}
+            underlayColor='#ffffff'>
+          <View>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Image source={curAffData[i].image} style={{width:100, height: 100, verticalAlign: 'middle', margin: 2}}/>
+            <View>
+              <Text style={{fontSize: 18, fontWeight: 'bold', margin: 4, textAlign: 'justify'}}>{curAffData[i].heading}</Text>
+              <Text style={{margin: 4}}>{curAffData[i].date}</Text>
+              <Text numberOfLines={2} style={{margin: 4}}>{curAffData[i].description}</Text>
+            </View>
+            </View>
+          </View>
+          </TouchableHighlight>
+        )
+      }
+      updatesArr.push(
+        <View>
+        <Badge
+            containerStyle={styles.badge}
+            value='View All'
+            textStyle={{ color: 'orange' }}
+            />
+        </View>
+      )
+      return updatesArr
+    }
+
     renderRecentHomeUpdates() {
       const updatesArr = []
 
@@ -104,6 +135,82 @@ export default class HomePage extends Component {
         return updatesArr;
       }
 
+      renderTrendingCards({item, index}) {
+        return (
+          <View>
+            <Card containerStyle={{width:180, height: 140}}>
+              <Text style={{fontSize: 20}}>{item.title}</Text>
+              <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>{item.date}</Text>
+              <Text style={{marginTop: 6, fontSize: 13}}>{item.desc}</Text>
+            </Card>
+
+            <Badge containerStyle={styles.badge}
+            onPress={() => this.props.onNavigate('CurrentAffair', {data: item})}
+            value='View All'
+            textStyle={{ color: 'orange' }}
+            />
+          </View>
+        )
+      }
+
+      renderOnlineTestCards({item, index}) {
+        return (
+          <View>
+              <Card containerStyle={{width:180, height: 160}}
+                title={item.title}
+                image={item.image}
+                imageStyle={{width:180, height: 60}}>
+                  <View>
+                    <Text>
+                    {item.type}
+                    </Text>
+                  </View>
+                  <View>
+                    <Text>
+                    {item.noOfTests}
+                    </Text>
+                  </View>
+              </Card>
+              <Badge containerStyle={styles.badge}
+              value='View All'
+              textStyle={{ color: 'orange' }}
+              />
+           </View>
+        )
+      }
+
+      renderCurrentAffairsCards({item, index}) {
+        return (
+          <View>
+          <Card containerStyle={{width:180, height: 160, backgroundColor: '#DCF0F7'}}
+           image={item.image}
+           imageStyle={{width:160, height: 80, marginTop: 8, marginLeft: 8}}>
+             <View>
+               <Text style={{fontSize: 20,color: '#47C8DB', fontWeight: 'bold'}}>
+               {item.title}
+               </Text>
+             </View>
+              <View>
+                <Text>
+                {item.month}
+                </Text>
+              </View>
+              <View>
+                <Text style={{color: 'red'}}>
+                {item.others}
+                </Text>
+              </View>
+          </Card>
+          <Badge containerStyle={styles.badge}
+          value='View All'
+          textStyle={{ color: 'orange' }}
+          />
+          </View>
+        )
+      }
+
+
+
 
 
   render() {
@@ -128,16 +235,16 @@ export default class HomePage extends Component {
         </View>
         <View style={styles.imgText}>
           <Text style={styles.txtS}>Recent <Text style={{fontWeight: 'bold'}}>Updates</Text></Text>
-          <View style={styles.container}>
-          <ButtonGroup
-          selectedButtonStyle={styles.selectedButtonStyle}
-          onPress={this.updateIndex}
-          selectedIndex={this.state.index}
-          buttonStyle={styles.buttonStyle}
-          selectedTextStyle={styles.selectedTextStyle}
-          buttons={['Academics', 'Exams', 'Results', 'Jobs']}
-          containerStyle={{height: 60}} />
-          </View>
+            <View style={styles.container}>
+              <ButtonGroup
+                selectedButtonStyle={styles.selectedButtonStyle}
+                onPress={this.updateIndex}
+                selectedIndex={this.state.index}
+                buttonStyle={styles.buttonStyle}
+                selectedTextStyle={styles.selectedTextStyle}
+                buttons={['Academics', 'Exams', 'Results', 'Jobs']}
+                containerStyle={{height: 60}} />
+            </View>
         </View>
         <View>
             {this.renderRecentHomeUpdates()}
@@ -148,54 +255,57 @@ export default class HomePage extends Component {
         </View>
         <View style={styles.adStyle}>
         <Text style={styles.trend}>Trending <Text style={{fontWeight: 'bold'}}>Exams</Text></Text>
-        <Grid>
-          <Col>
-          <Card containerStyle={{width:180, height: 140}}>
-            <Text style={{fontSize: 20}}>India Post Payment Bank Officer Post</Text>
-            <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>Mar 2018</Text>
-            <Text style={{marginTop: 6, fontSize: 13}}>sed do eiusmod tempor incididunt..</Text>
-          </Card>
-          </Col>
-          <Col>
-          <Card containerStyle={{width:180, height: 140}}>
-              <Text style={{fontSize: 20}}>SSC CHSL 2017</Text>
-              <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>Feb 2017</Text>
-              <Text style={{marginTop: 6, fontSize: 13}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..</Text>
-          </Card>
-          </Col>
-          </Grid>
+
+          <Carousel
+            ref={(c) => { this._carousel = c; }}
+            data={trendingData}
+            renderItem={this.renderTrendingCards}
+            sliderWidth={sliderWidth}
+            sliderHeight={sliderHeight}
+            itemWidth={sliderWidth}
+            autoplay={true}
+            loop={true}
+          />
+
         </View>
 
-        <View style={styles.adStyle}>
+        <View style={styles.trendStyle}>
         <Text style={styles.trend}>Online Test and <Text style={{fontWeight: 'bold'}}>Test Series</Text></Text>
-        <Grid>
-          <Col>
-            <Card containerStyle={{width:180, height: 180}}
-              title='IBPS PO'
-              image={require('../onlinetest.jpg')}
-              imageStyle={{width:180, height: 60}}>
-              <View>
-              <Text style={{marginBottom: 10}}>
-              PRELIMS 2018
-              25 FULL TEST
-              </Text>
-              </View>
-            </Card>
-            </Col>
-            <Col>
-              <Card containerStyle={{width:180, height: 180}}
-              title='SSC CGL'
-              image={require('../online.jpg')}
-              imageStyle={{width:180, height: 60}}>
-                <View>
-                <Text style={{marginBottom: 10}}>
-                TIER 1 2018
-                30 FULL TEST
-                </Text>
-                </View>
-              </Card>
-            </Col>
-            </Grid>
+
+            <Carousel
+              ref={(c) => { this._carousel = c; }}
+              data={onlineTestData}
+              renderItem={this.renderOnlineTestCards}
+              sliderWidth={sliderWidth}
+              sliderHeight={sliderHeight}
+              itemWidth={sliderWidth}
+              autoplay={true}
+              loop={true}
+            />
+        </View>
+
+        <View style={styles.trendStyle}>
+        <Text style={styles.trend}>Current Affairs and <Text style={{fontWeight: 'bold'}}>Other Exams</Text></Text>
+
+            <Carousel
+              ref={(c) => { this._carousel = c; }}
+              data={currentAffairsData}
+              renderItem={this.renderCurrentAffairsCards}
+              sliderWidth={sliderWidth}
+              sliderHeight={sliderHeight}
+              itemWidth={sliderWidth}
+              autoplay={true}
+              loop={true}
+            />
+        </View>
+        <View style={styles.ad}>
+        <Image resizeMode="contain" style={styles.shrink} source={require('../ad.jpg')} />
+        </View>
+        <View style={styles.cStyle}>
+        <Text style={styles.trend}>Current <Text style={{fontWeight: 'bold'}}>Affairs</Text></Text>
+        </View>
+        <View style={styles.caStyle}>
+        { this.renderCurrentAffairsList() }
         </View>
         </ScrollView>
       )
@@ -282,6 +392,10 @@ export default class HomePage extends Component {
     contentDesc : {
       fontSize : 8
     },
+    ad: {
+      backgroundColor: '#ecf0f1',
+      height: 200
+    },
     adStyle : {
       marginTop: 10,
       backgroundColor: '#ecf0f1',
@@ -290,7 +404,7 @@ export default class HomePage extends Component {
     trendStyle : {
       marginTop: 10,
       backgroundColor: '#ecf0f1',
-      height: 300
+      height: 270
     },
     adText : {
       color: '#16A085',
@@ -307,7 +421,7 @@ export default class HomePage extends Component {
     trend : {
       color: '#47C8DB',
       fontSize: 20,
-      marginVertical: 20,
+      marginVertical: 10,
       marginHorizontal: 10
     },
     selectedTextStyle: {
@@ -327,6 +441,14 @@ export default class HomePage extends Component {
    },
    smallTab: {
         color: '#555', fontSize: 12
+   },
+   cStyle: {
+     height: 40,
+     backgroundColor: 'white'
+   },
+   caStyle : {
+     backgroundColor: '#ecf0f1',
+     height: 400
    },
 
   })
