@@ -72,14 +72,16 @@ export default class Home extends React.Component {
             {...props}
             style={{ backgroundColor: '#00539d' }}
           />
-}
+          }
        />
+
     );
   }
 }
 
 const FirstRoute = (nav) => (
-  <HomePage onNavigate={redirect.bind(this, nav)}/>
+  <Estore onNavigate={redirect.bind(this, nav)} />
+
 );
 
 const SecondRoute = () => (
