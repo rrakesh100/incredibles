@@ -5,6 +5,10 @@ import Compititive from './screens/Compititive';
 import ExamScreen from './screens/Exam';
 import HomeScreen from './screens/Home';
 import Second from "./components/second";
+import { DrawerNavigator } from 'react-navigation';
+import EstoreScreen from './screens/Estore';
+import OnlineSubscribeScreen from './components/OnlineSubscribe';
+
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -25,7 +29,13 @@ const StackNavigtor = StackNavigator(
     },
     Compititive: {
       screen: Compititive,
-    }
+    },
+    Estore : {
+      screen : EstoreScreen
+    },
+    OnlineSubscribe : {
+      screen : OnlineSubscribeScreen
+    },
 	},
 	{
 		initialRouteName: 'Home'

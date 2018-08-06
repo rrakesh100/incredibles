@@ -6,7 +6,7 @@ export default class OnlineSubscribe extends Component {
 
   static navigationOptions = ({navigation}) => (
   {
-    title: `${navigation.state.params ? navigation.state.params.data.name : 'kumar'}`,
+    title: `${navigation.state.params ? navigation.state.params.data.name : 'online subscribe'}`,
     headerTintColor: '#ffffff',
     headerStyle: {
       backgroundColor: '#00539d',
@@ -21,7 +21,7 @@ export default class OnlineSubscribe extends Component {
   render() {
     return (
       <View>
-      <Text>Nithya</Text>
+      <Text>online subscribe</Text>
       </View>
     )
   }

@@ -7,6 +7,8 @@ import Second from "./../components/second";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Estore from './Estore';
+import { DrawerNavigator } from 'react-navigation';
+
 
 
 YellowBox.ignoreWarnings([
@@ -48,7 +50,7 @@ export default class Home extends React.Component {
       { key: 'home', title: 'Home' },
       { key: 'academicStudies', title: 'Academic Studies' },
       { key: 'competitiveExams', title: 'Competitive Exams' },
-      { key: 'eStore', title: 'eStore' }
+      { key: 'eStore', title: 'Estore' }
     ],
   };
 
@@ -63,7 +65,7 @@ export default class Home extends React.Component {
            home: FirstRoute.bind(this, this.props.navigation),
            academicStudies: Second,
            competitiveExams : ThirdRoute.bind(this, this.props.navigation),
-           eStore: FourthRoute,
+           eStore: FourthRoute.bind(this, this.props.navigation)
          })}
          onIndexChange={index => this.setState({ index })}
          initialLayout={{ width: Dimensions.get('window').width }}
@@ -80,8 +82,7 @@ export default class Home extends React.Component {
 }
 
 const FirstRoute = (nav) => (
-  <Estore onNavigate={redirect.bind(this, nav)} />
-
+  <HomePage />
 );
 
 const SecondRoute = () => (
@@ -93,8 +94,9 @@ const ThirdRoute = (nav) => (
 );
 
 const FourthRoute = (nav) => (
-  <Estore />
+  <Estore onNavigate={redirect.bind(this, nav)}/>
 );
+
 
 const redirect = (nav, route, data) => {
     console.log('NAVE=', JSON.stringify(nav, null,2 ) +
@@ -102,6 +104,7 @@ const redirect = (nav, route, data) => {
     '\n DATA=', JSON.stringify(data, null,2 ));
     nav.navigate(route, data);
 }
+
 
 const styles = StyleSheet.create({
   container: {

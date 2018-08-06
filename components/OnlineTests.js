@@ -45,8 +45,10 @@ export default class OnlineTests extends  Component {
            <View style={{margin: 8}}>
            </View>
              <Button title='SUBSCRIBE' buttonStyle={styles.bStyle}
+
               textStyle={{color: '#F8C548'}}
-              onPress={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}/>
+              onPress={() => this.props.navigate('OnlineSubscribe', {data: {name: 'Girish'}})} />
+
            </View>
         </View>
         </Card>

@@ -7,7 +7,6 @@ import { estoreData } from '../api/estore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import OnlineTests from '../components/OnlineTests';
 
-
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 
@@ -57,7 +56,10 @@ export default class Estore extends Component {
               </View>
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>PM Narendra Modi</Text>
-                <Button title='Buy' buttonStyle={styles.bStyle}
+                <Button title='Buy' buttonStyle={styles.bStyle} onPress ={() => {
+                    this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})
+                }
+                }
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -366,7 +368,7 @@ export default class Estore extends Component {
   }
 
   render() {
-
+    console.log(estoreData)
     return (
       <ScrollView>
         <SearchBar

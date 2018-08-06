@@ -1,11 +1,20 @@
 export const estoreData = [
   {
-    img: require('../es1.jpg')
+    title: 'May 2018',
+    info: '+ Weekly Practice Tests',
+    img: require('../esca1.jpg'),
+    description: 'PM Narendra Modi'
   },
   {
-    img: require('../es2.jpg')
+    title: 'June 2018',
+    info: '+ Weekly Practice Tests',
+    img: require('../esca2.jpg'),
+    description: 'Indian Army'
   },
   {
-    img: require('../es3.jpg')
-  },
+    title: 'July 2018',
+    info: '+ Weekly Practice Tests',
+    img: require('../esca3.jpg'),
+    description: 'Indian Economy'
+  }
 ]
