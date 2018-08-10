@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import { Button, Card } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Feather';
+import CartIcon from 'react-native-vector-icons/EvilIcons';
+
 
 const sliderWidth = Dimensions.get('window').width;
 
@@ -19,6 +21,9 @@ export default class OnlineSubscribe extends Component {
     headerTitleStyle: {
       fontSize: 18,
     },
+    headerRight: <View>
+        <CartIcon name="cart" style={{}} size={24} color="white" />
+        </View>
   }
   );
 
