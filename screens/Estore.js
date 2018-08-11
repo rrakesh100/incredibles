@@ -56,10 +56,8 @@ export default class Estore extends Component {
               </View>
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>PM Narendra Modi</Text>
-                <Button title='Buy' buttonStyle={styles.bStyle} onPress ={() => {
-                    this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})
-                }
-                }
+                <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -84,6 +82,7 @@ export default class Estore extends Component {
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>Indian Army</Text>
                 <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -108,6 +107,92 @@ export default class Estore extends Component {
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>Indian Economy</Text>
                 <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
+                 textStyle={{color: '#F8C548'}}/>
+              </View>
+            </View>
+         </View>
+         </Card>
+         <View style={{height: 45, marginLeft: 200}}>
+           <Button title='View All' buttonStyle={styles.btnS}
+            textStyle={{color: '#F8C548'}}/>
+         </View>
+         { this.renderEStoreCurAff() }
+        </View>
+        <View style={styles.gap}>
+        <Text style={styles.cTxt}>Intelligence bureau</Text>
+        </View>
+        <View>
+         <Card>
+         <View style={styles.gap}>
+          <Image style={{width: 100, height: 100, margin: 10}} source={require('../esca1.jpg')} />
+            <View>
+              <View style={styles.gap}>
+                <Text style={styles.txtStyle}>May 2018</Text>
+                <Button title='50% OFF'  buttonStyle={styles.btnStyle}
+                 textStyle={{color: '#7FD672', fontSize: 12}} />
+               </View>
+               <View style={styles.seperator}>
+               </View>
+               <View>
+                <Text style={{color: '#F8C548'}}>+ Weekly Practice Tests</Text>
+               </View>
+              <View style={styles.seperator}>
+              </View>
+              <View style={styles.gap}>
+                <Text style={{fontSize: 16}} numberOfLines={2}>PM Narendra Modi</Text>
+                <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
+                 textStyle={{color: '#F8C548'}}/>
+              </View>
+            </View>
+         </View>
+         </Card>
+         <Card>
+         <View style={styles.gap}>
+          <Image style={{width: 100, height: 100, margin: 10}} source={require('../esca2.jpg')} />
+            <View>
+              <View style={styles.gap}>
+                <Text style={styles.txtStyle}>June 2018</Text>
+                <Button title='50% OFF'  buttonStyle={styles.btnStyle}
+                 textStyle={{color: '#7FD672', fontSize: 12}} />
+               </View>
+               <View style={styles.seperator}>
+               </View>
+               <View>
+                <Text style={{color: '#F8C548'}}>+ Weekly Practice Tests</Text>
+               </View>
+              <View style={styles.seperator}>
+              </View>
+              <View style={styles.gap}>
+                <Text style={{fontSize: 16}} numberOfLines={2}>Indian Army</Text>
+                <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
+                 textStyle={{color: '#F8C548'}}/>
+              </View>
+            </View>
+         </View>
+         </Card>
+         <Card>
+         <View style={styles.gap}>
+          <Image style={{width: 100, height: 100, margin: 10}} source={require('../esca3.jpg')} />
+            <View>
+              <View style={styles.gap}>
+                <Text style={styles.txtStyle}>July 2018</Text>
+                <Button title='50% OFF'  buttonStyle={styles.btnStyle}
+                 textStyle={{color: '#7FD672', fontSize: 12}} />
+               </View>
+               <View style={styles.seperator}>
+               </View>
+               <View>
+                <Text style={{color: '#F8C548'}}>+ Weekly Practice Tests</Text>
+               </View>
+              <View style={styles.seperator}>
+              </View>
+              <View style={styles.gap}>
+                <Text style={{fontSize: 16}} numberOfLines={2}>Indian Economy</Text>
+                <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -142,6 +227,7 @@ export default class Estore extends Component {
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>PM Narendra Modi</Text>
                 <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -166,6 +252,7 @@ export default class Estore extends Component {
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>Indian Army</Text>
                 <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -190,88 +277,7 @@ export default class Estore extends Component {
               <View style={styles.gap}>
                 <Text style={{fontSize: 16}} numberOfLines={2}>Indian Economy</Text>
                 <Button title='Buy' buttonStyle={styles.bStyle}
-                 textStyle={{color: '#F8C548'}}/>
-              </View>
-            </View>
-         </View>
-         </Card>
-         <View style={{height: 45, marginLeft: 200}}>
-           <Button title='View All' buttonStyle={styles.btnS}
-            textStyle={{color: '#F8C548'}}/>
-         </View>
-         { this.renderEStoreCurAff() }
-        </View>
-        <View style={styles.gap}>
-        <Text style={styles.cTxt}>Intelligence Bereau</Text>
-        </View>
-        <View>
-         <Card>
-         <View style={styles.gap}>
-          <Image style={{width: 100, height: 100, margin: 10}} source={require('../esca1.jpg')} />
-            <View>
-              <View style={styles.gap}>
-                <Text style={styles.txtStyle}>May 2018</Text>
-                <Button title='50% OFF'  buttonStyle={styles.btnStyle}
-                 textStyle={{color: '#7FD672', fontSize: 12}} />
-               </View>
-               <View style={styles.seperator}>
-               </View>
-               <View>
-                <Text style={{color: '#F8C548'}}>+ Weekly Practice Tests</Text>
-               </View>
-              <View style={styles.seperator}>
-              </View>
-              <View style={styles.gap}>
-                <Text style={{fontSize: 16}} numberOfLines={2}>PM Narendra Modi</Text>
-                <Button title='Buy' buttonStyle={styles.bStyle}
-                 textStyle={{color: '#F8C548'}}/>
-              </View>
-            </View>
-         </View>
-         </Card>
-         <Card>
-         <View style={styles.gap}>
-          <Image style={{width: 100, height: 100, margin: 10}} source={require('../esca2.jpg')} />
-            <View>
-              <View style={styles.gap}>
-                <Text style={styles.txtStyle}>June 2018</Text>
-                <Button title='50% OFF'  buttonStyle={styles.btnStyle}
-                 textStyle={{color: '#7FD672', fontSize: 12}} />
-               </View>
-               <View style={styles.seperator}>
-               </View>
-               <View>
-                <Text style={{color: '#F8C548'}}>+ Weekly Practice Tests</Text>
-               </View>
-              <View style={styles.seperator}>
-              </View>
-              <View style={styles.gap}>
-                <Text style={{fontSize: 16}} numberOfLines={2}>Indian Army</Text>
-                <Button title='Buy' buttonStyle={styles.bStyle}
-                 textStyle={{color: '#F8C548'}}/>
-              </View>
-            </View>
-         </View>
-         </Card>
-         <Card>
-         <View style={styles.gap}>
-          <Image style={{width: 100, height: 100, margin: 10}} source={require('../esca3.jpg')} />
-            <View>
-              <View style={styles.gap}>
-                <Text style={styles.txtStyle}>July 2018</Text>
-                <Button title='50% OFF'  buttonStyle={styles.btnStyle}
-                 textStyle={{color: '#7FD672', fontSize: 12}} />
-               </View>
-               <View style={styles.seperator}>
-               </View>
-               <View>
-                <Text style={{color: '#F8C548'}}>+ Weekly Practice Tests</Text>
-               </View>
-              <View style={styles.seperator}>
-              </View>
-              <View style={styles.gap}>
-                <Text style={{fontSize: 16}} numberOfLines={2}>Indian Economy</Text>
-                <Button title='Buy' buttonStyle={styles.bStyle}
+                onPress ={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
                  textStyle={{color: '#F8C548'}}/>
               </View>
             </View>
@@ -358,7 +364,133 @@ export default class Estore extends Component {
     else if(this.state.index==2) {
 
       return (
-            <OnlineTests />
+        <View>
+          <Card>
+          <View>
+            <View style={styles.flex}>
+              <Text style={styles.txtStyle}>EAMCET - 2018 Grand Tests</Text>
+              <Button title='60% OFF'  buttonStyle={styles.buttonS}
+               textStyle={{color: '#7FD672', fontSize: 12}} />
+             </View>
+
+             <View style={styles.flex}>
+             <View>
+             <Text style={{color: '#F8C548', fontSize: 18}}>Engineering</Text>
+             <View style={styles.seperatr}>
+             </View>
+              <Text style={{fontSize: 14}}>8 Mock Tests</Text>
+              <View style={styles.seperatr}>
+              </View>
+              <View>
+              <Text>Rs.<Text style={{textDecorationLine: 'line-through'}}>500</Text> Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
+              </View>
+             </View>
+             <View style = {styles.lineStyle} />
+             <View>
+             <Text style={{color: '#F8C548', fontSize: 18}}>Medical</Text>
+             <View style={styles.seperatr}>
+             </View>
+              <Text style={{fontSize: 14}}>8 Mock Tests</Text>
+              <View style={styles.seperatr}>
+              </View>
+              <View>
+              <Text>Rs.<Text style={{textDecorationLine: 'line-through'}}>500</Text> Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
+              </View>
+             </View>
+             <View style={{margin: 8}}>
+             </View>
+               <Button title='SUBSCRIBE' buttonStyle={styles.button}
+               onPress={() => this.props.onNavigate('Subscription', {data: {name: 'Girish'}})}
+                textStyle={{color: '#F8C548'}} />
+
+             </View>
+          </View>
+          </Card>
+          <Card>
+          <View>
+            <View style={{flexDirection: 'row', margin: 8}}>
+              <View>
+              <Text style={styles.txtStyle}>SSC CGL 2018 Tier</Text>
+              <Text style={styles.txtStyle}>Grand Tests (New Pattern)</Text>
+              </View>
+              <Text style={{color: '#C3CFCF',position:'absolute',right: 5}}>valid for only 1 year</Text>
+             </View>
+             <View style={styles.flex}>
+             <View>
+              <Text style={{fontSize: 14}}>10 Tests with Solutions and explanation</Text>
+              <View style={styles.seperatr}>
+              </View>
+              <View>
+              <Text>Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
+              </View>
+             </View>
+             <View>
+             </View>
+             <View>
+               <Button title='SUBSCRIBE' buttonStyle={styles.button}
+               onPress={() => this.props.onNavigate('Subscription', {data: {name: 'Girish'}})}
+                textStyle={{color: '#F8C548'}}/>
+             </View>
+             </View>
+          </View>
+          </Card>
+          <Card>
+          <View>
+            <View style={{flexDirection: 'row', margin: 8}}>
+              <View>
+              <Text style={styles.txtStyle}>SSC CGL 2018 Tier</Text>
+              <Text style={styles.txtStyle}>Grand Tests (Set-I)</Text>
+              </View>
+              <Text style={{color: '#C3CFCF',position:'absolute',right: 5}}>valid for only 1 year</Text>
+             </View>
+             <View style={styles.flex}>
+             <View>
+              <Text style={{fontSize: 14}}>4 Tests with Solutions and explanation</Text>
+              <View style={styles.seperatr}>
+              </View>
+              <View>
+              <Text>Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
+              </View>
+             </View>
+             <View>
+             </View>
+             <View>
+               <Button title='SUBSCRIBE' buttonStyle={styles.button}
+               onPress={() => this.props.onNavigate('Subscription', {data: {name: 'Girish'}})}
+                textStyle={{color: '#F8C548'}}/>
+             </View>
+             </View>
+          </View>
+          </Card>
+          <Card>
+          <View>
+            <View style={{flexDirection: 'row', margin: 8}}>
+              <View>
+              <Text style={styles.txtStyle}>SSC CGL 2018 Tier</Text>
+              <Text style={styles.txtStyle}>Grand Tests (Set-II)</Text>
+              </View>
+              <Text style={{color: '#C3CFCF',position:'absolute',right: 5}}>valid for only 1 year</Text>
+             </View>
+             <View style={styles.flex}>
+             <View>
+              <Text style={{fontSize: 14}}>6 Tests with Solutions and explanation</Text>
+              <View style={styles.seperatr}>
+              </View>
+              <View>
+              <Text>Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
+              </View>
+             </View>
+             <View>
+             </View>
+             <View>
+               <Button title='SUBSCRIBE' buttonStyle={styles.button}
+               onPress={() => this.props.onNavigate('Subscription', {data: {name: 'Girish'}})}
+                textStyle={{color: '#F8C548'}}/>
+             </View>
+             </View>
+          </View>
+          </Card>
+        </View>
       )
     }
   }
@@ -368,7 +500,7 @@ export default class Estore extends Component {
   }
 
   render() {
-    console.log(estoreData)
+
     return (
       <ScrollView>
         <SearchBar
@@ -486,5 +618,32 @@ export default class Estore extends Component {
      borderColor: '#F8C548',
      borderWidth:1,
      backgroundColor: 'white'
+   },
+   flex: {
+     flexDirection: 'row',
+     alignItems: 'center',
+     margin: 8
+   },
+   seperatr: {
+     height: 4
+   },
+   buttonS: {
+     width: 68,
+     height: 25,
+     borderRadius: 6,
+     borderColor: '#7FD672',
+     backgroundColor: '#DCFFE7',
+     borderWidth: 1
+   },
+   button: {
+     width: 100,
+     height: 30,
+     borderRadius: 16,
+     borderColor: '#F8C548',
+     borderWidth:1,
+     backgroundColor: 'white'
+   },
+   lineStyle: {
+     margin: 20
    }
   })

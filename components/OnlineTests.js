@@ -14,17 +14,17 @@ export default class OnlineTests extends  Component {
         <View>
           <View style={styles.flex}>
             <Text style={styles.txtStyle}>EAMCET - 2018 Grand Tests</Text>
-            <Button title='60% OFF'  buttonStyle={styles.btnStyle}
+            <Button title='60% OFF'  buttonStyle={styles.buttonS}
              textStyle={{color: '#7FD672', fontSize: 12}} />
            </View>
 
            <View style={styles.flex}>
            <View>
            <Text style={{color: '#F8C548', fontSize: 18}}>Engineering</Text>
-           <View style={styles.seperator}>
+           <View style={styles.seperatr}>
            </View>
             <Text style={{fontSize: 14}}>8 Mock Tests</Text>
-            <View style={styles.seperator}>
+            <View style={styles.seperatr}>
             </View>
             <View>
             <Text>Rs.<Text style={{textDecorationLine: 'line-through'}}>500</Text> Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
@@ -33,10 +33,10 @@ export default class OnlineTests extends  Component {
            <View style = {styles.lineStyle} />
            <View>
            <Text style={{color: '#F8C548', fontSize: 18}}>Medical</Text>
-           <View style={styles.seperator}>
+           <View style={styles.seperatr}>
            </View>
             <Text style={{fontSize: 14}}>8 Mock Tests</Text>
-            <View style={styles.seperator}>
+            <View style={styles.seperatr}>
             </View>
             <View>
             <Text>Rs.<Text style={{textDecorationLine: 'line-through'}}>500</Text> Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
@@ -44,10 +44,8 @@ export default class OnlineTests extends  Component {
            </View>
            <View style={{margin: 8}}>
            </View>
-             <Button title='SUBSCRIBE' buttonStyle={styles.bStyle}
-
-              textStyle={{color: '#F8C548'}}
-              onPress={() => this.props.navigate('OnlineSubscribe', {data: {name: 'Girish'}})} />
+             <Button title='SUBSCRIBE' buttonStyle={styles.button}
+              textStyle={{color: '#F8C548'}} />
 
            </View>
         </View>
@@ -64,7 +62,7 @@ export default class OnlineTests extends  Component {
            <View style={styles.flex}>
            <View>
             <Text style={{fontSize: 14}}>10 Tests with Solutions and explanation</Text>
-            <View style={styles.seperator}>
+            <View style={styles.seperatr}>
             </View>
             <View>
             <Text>Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
@@ -73,7 +71,8 @@ export default class OnlineTests extends  Component {
            <View>
            </View>
            <View>
-             <Button title='SUBSCRIBE' buttonStyle={styles.bStyle}
+             <Button title='SUBSCRIBE' buttonStyle={styles.button}
+             onPress={() => this.props.onNavigate('OnlineSubscribe', {data: {name: 'Girish'}})}
               textStyle={{color: '#F8C548'}}/>
            </View>
            </View>
@@ -91,7 +90,7 @@ export default class OnlineTests extends  Component {
            <View style={styles.flex}>
            <View>
             <Text style={{fontSize: 14}}>4 Tests with Solutions and explanation</Text>
-            <View style={styles.seperator}>
+            <View style={styles.seperatr}>
             </View>
             <View>
             <Text>Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
@@ -100,7 +99,7 @@ export default class OnlineTests extends  Component {
            <View>
            </View>
            <View>
-             <Button title='SUBSCRIBE' buttonStyle={styles.bStyle}
+             <Button title='SUBSCRIBE' buttonStyle={styles.button}
               textStyle={{color: '#F8C548'}}/>
            </View>
            </View>
@@ -118,7 +117,7 @@ export default class OnlineTests extends  Component {
            <View style={styles.flex}>
            <View>
             <Text style={{fontSize: 14}}>6 Tests with Solutions and explanation</Text>
-            <View style={styles.seperator}>
+            <View style={styles.seperatr}>
             </View>
             <View>
             <Text>Rs.<Text style={{color: '#17A194'}}>150</Text></Text>
@@ -127,7 +126,7 @@ export default class OnlineTests extends  Component {
            <View>
            </View>
            <View>
-             <Button title='SUBSCRIBE' buttonStyle={styles.bStyle}
+             <Button title='SUBSCRIBE' buttonStyle={styles.button}
               textStyle={{color: '#F8C548'}}/>
            </View>
            </View>
