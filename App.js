@@ -5,7 +5,7 @@ import Compititive from './screens/Compititive';
 import ExamScreen from './screens/Exam';
 import HomeScreen from './screens/Home';
 import Second from "./components/second";
-import { DrawerNavigator } from 'react-navigation';
+import { DrawerNavigator, createStackNavigator } from 'react-navigation';
 import EstoreScreen from './screens/Estore';
 import OnlineSubscribeScreen from './components/OnlineSubscribe';
 import OnlineTestsScreen from './components/OnlineTests';
@@ -20,7 +20,7 @@ YellowBox.ignoreWarnings([
   console.disableYellowBox = true;
 
 // Navigator
-const StackNavigtor = StackNavigator(
+const StackNavigtor = createStackNavigator(
 	{
 	  Home: {
 	    screen: HomeScreen,

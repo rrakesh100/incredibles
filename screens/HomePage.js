@@ -29,7 +29,8 @@ export default class HomePage extends Component {
           image: require('../sak3.jpg'),
           text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
         }
-      ]
+      ],
+      activeSlide : 0
     }
 
 
@@ -430,7 +431,6 @@ export default class HomePage extends Component {
        fontWeight : 'bold'
    },
    buttonStyle: {
-        color: '#000',
         backgroundColor: '#fff',
         marginRight : 2,
         marginLeft : 2

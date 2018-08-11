@@ -68,7 +68,7 @@ export default class Home extends React.Component {
            eStore: FourthRoute.bind(this, this.props.navigation)
          })}
          onIndexChange={index => this.setState({ index })}
-         initialLayout={{ width: Dimensions.get('window').width }}
+         initialLayout={{ width: Dimensions.get('window').width , height : Dimensions.get('window').height}}
          renderTabBar={props =>
           <TabBar
             {...props}
