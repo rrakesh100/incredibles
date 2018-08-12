@@ -60,8 +60,10 @@ export default class Estore extends Component {
                                 <View>
                                   <View style={styles.gap}>
                                     <Text style={styles.txtStyle}>{item.title}</Text>
+                                    { item.discountPercentage  ?
                                     <Button title={item.discountPercentage + '% OFF'}  buttonStyle={styles.btnStyle}
-                                     textStyle={{color: '#7FD672', fontSize: 8}} />
+                                     textStyle={{color: '#7FD672', fontSize: 8}} /> : null
+                                    }
                                    </View>
                                    <View style={styles.seperator}/>
                                     <Text style={{color: '#FEC336'}}>+{item.shortDesc}</Text>
@@ -163,10 +165,6 @@ export default class Estore extends Component {
     else if(this.state.index==2) {
         return (this.renderOnlineTests());
     }
-  }
-
-  renderEStoreCurAff() {
-
   }
 
   render() {
@@ -299,7 +297,7 @@ export default class Estore extends Component {
      borderWidth:2,
      backgroundColor: 'white',
      position : 'absolute',
-     marginTop : 8, 
+     marginTop : 8,
      right : 0
    },
    flex: {
