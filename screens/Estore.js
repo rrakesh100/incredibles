@@ -16,10 +16,13 @@ export default class Estore extends Component {
     super();
     this.renderStudyMaterialAndTestPackets=this.renderStudyMaterialAndTestPackets.bind(this);
     this.renderOnlineTests=this.renderOnlineTests.bind(this);
+    this.state = {
+      index: 0,
+      viewAllClicked: {},
+      viewAllCategoryName: null
+    }
   }
-  state = {
-    index: 0
-  }
+
 
   _renderItem ({item, index}) {
     return (
@@ -29,17 +32,27 @@ export default class Estore extends Component {
     )
   }
 
+  onViewAllButton(categoryName) {
+    const  {viewAllClicked } = this.state;
+    viewAllClicked[categoryName] = true;
+    this.setState({
+      viewAllClicked,
+    })
+  }
+
   updateIndex = (index) => {
   this.setState({index})
   }
 
 
   renderStudyMaterialAndTestPackets() {
+    const { viewAllClicked } = this.state;
     return (
       <View>
         {
         studyMaterial.map(entry => {
           let items = entry['items'];
+          let slicedItems = viewAllClicked[entry.categoryName] ? items : items.slice(0,3);
         return (
               <View>
                  <View style={styles.gap}>
@@ -47,7 +60,7 @@ export default class Estore extends Component {
                  </View>
                  <View>
                     {
-                      items.map(item => {
+                      slicedItems.map(item => {
                         return (
                           <Card>
                            <Grid>
@@ -87,7 +100,9 @@ export default class Estore extends Component {
                      </View>
                      <View style={{height: 45, marginLeft: 200}}>
                         <Button title='View All' buttonStyle={styles.viewAll}
-                        textStyle={{color: '#F8C548'}}/>
+                        textStyle={{color: '#F8C548'}}
+                        onPress={this.onViewAllButton.bind(this, entry.categoryName)}
+                        />
                      </View>
               </View>
             )

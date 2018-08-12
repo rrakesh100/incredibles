@@ -98,13 +98,68 @@ export const studyMaterial = [
         description : 'Indian Economy',
         discountApplicable : false,
         price : '150'
+      },
+      {
+        image : require('../esca1.jpg'),
+        title : 'May 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'PM Narendra Modi',
+        discountApplicable : 'yes',
+        discountPercentage : 30,
+        originalPrice : '500',
+        price : '350'
+      },
+      {
+        image : require('../esca2.jpg'),
+        title : 'June 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Army',
+        discountApplicable : 'yes',
+        discountPercentage : 20,
+        originalPrice : '250',
+        price : '200'
+      },
+      {
+        image : require('../esca3.jpg'),
+        title : 'July 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Economy',
+        discountApplicable : false,
+        price : '150'
       }
-
     ]
   },
   {
     categoryName : 'Intelligence Bureau',
     items : [
+      {
+        image : require('../esca1.jpg'),
+        title : 'May 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'PM Narendra Modi',
+        discountApplicable : 'yes',
+        discountPercentage : 30,
+        originalPrice : '500',
+        price : '350'
+      },
+      {
+        image : require('../esca2.jpg'),
+        title : 'June 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Army',
+        discountApplicable : 'yes',
+        discountPercentage : 20,
+        originalPrice : '250',
+        price : '200'
+      },
+      {
+        image : require('../esca3.jpg'),
+        title : 'July 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Economy',
+        discountApplicable : false,
+        price : '150'
+      },
       {
         image : require('../esca1.jpg'),
         title : 'May 2018',
@@ -166,6 +221,34 @@ export const studyMaterial = [
         description : 'Indian Economy',
         discountApplicable : false,
         price : '150'
+      },
+      {
+        image : require('../esca1.jpg'),
+        title : 'May 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'PM Narendra Modi',
+        discountApplicable : 'yes',
+        discountPercentage : 30,
+        originalPrice : '500',
+        price : '350'
+      },
+      {
+        image : require('../esca2.jpg'),
+        title : 'June 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Army',
+        discountApplicable : 'yes',
+        discountPercentage : 20,
+        originalPrice : '250',
+        price : '200'
+      },
+      {
+        image : require('../esca3.jpg'),
+        title : 'July 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Economy',
+        discountApplicable : false,
+        price : '150'
       }
 
     ]
@@ -173,6 +256,34 @@ export const studyMaterial = [
   {
     categoryName : 'EAMCET',
     items : [
+      {
+        image : require('../esca1.jpg'),
+        title : 'May 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'PM Narendra Modi',
+        discountApplicable : 'yes',
+        discountPercentage : 30,
+        originalPrice : '500',
+        price : '350'
+      },
+      {
+        image : require('../esca2.jpg'),
+        title : 'June 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Army',
+        discountApplicable : 'yes',
+        discountPercentage : 20,
+        originalPrice : '250',
+        price : '200'
+      },
+      {
+        image : require('../esca3.jpg'),
+        title : 'July 2018',
+        shortDesc : 'Weekly Practice Tests',
+        description : 'Indian Economy',
+        discountApplicable : false,
+        price : '150'
+      },
       {
         image : require('../esca1.jpg'),
         title : 'May 2018',
