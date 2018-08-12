@@ -1,10 +1,8 @@
-import React, { Component} from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableHighlight } from 'react-native';
+import React, { Component } from 'react';
+import { Dimensions, Image, ScrollView, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { Badge, ButtonGroup, Card } from 'react-native-elements';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { ButtonGroup, Badge, Card } from 'react-native-elements';
-import { homeData, trendingData, onlineTestData, currentAffairsData, curAffData } from '../api/homepage';
-import { Button } from 'native-base';
-import { Col, Row, Grid } from "react-native-easy-grid";
+import { curAffData, currentAffairsData, homeData, onlineTestData, trendingData } from '../api/homepage';
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
@@ -16,17 +14,17 @@ export default class HomePage extends Component {
         entries: [
         {
           title: 'Latest Stories',
-          image: require('../sak1.jpg'),
+          image: require('../assets/imgs/sak1.jpg'),
           text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
         },
         {
           title: 'Latest Stories',
-          image: require('../sak2.jpg'),
+          image: require('../assets/imgs/sak2.jpg'),
           text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
         },
         {
           title: 'Latest Stories',
-          image: require('../sak3.jpg'),
+          image: require('../assets/imgs/sak3.jpg'),
           text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
         }
       ],
@@ -252,7 +250,7 @@ export default class HomePage extends Component {
         </View>
         <View style={styles.adStyle}>
         <Text style={styles.adText}>Advertisement/Announcements</Text>
-        <Image resizeMode="contain" style={styles.shrink} source={require('../Adimg.jpg')} />
+        <Image resizeMode="contain" style={styles.shrink} source={require('../assets/imgs/Adimg.jpg')} />
         </View>
         <View style={styles.adStyle}>
         <Text style={styles.trend}>Trending <Text style={{fontWeight: 'bold'}}>Exams</Text></Text>
@@ -300,7 +298,7 @@ export default class HomePage extends Component {
             />
         </View>
         <View style={styles.ad}>
-        <Image resizeMode="contain" style={styles.shrink} source={require('../ad.jpg')} />
+        <Image resizeMode="contain" style={styles.shrink} source={require('../assets/imgs/ad.jpg')} />
         </View>
         <View style={styles.cStyle}>
         <Text style={styles.trend}>Current <Text style={{fontWeight: 'bold'}}>Affairs</Text></Text>

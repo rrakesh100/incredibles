@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button, Card } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/Feather';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
 
 
@@ -30,7 +29,7 @@ export default class OnlineSubscribe extends Component {
   render() {
     return (
       <ScrollView>
-        <Image style={styles.resize} source={require('../ib.jpg')} />
+        <Image style={styles.resize} source={require('../assets/imgs/ib.jpg')} />
             <View style={styles.header}>
               <View style={styles.flex}>
                 <Text style={styles.txtStyle}>

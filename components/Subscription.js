@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
-import CartIcon from 'react-native-vector-icons/EvilIcons';
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button, Card } from 'react-native-elements';
+import CartIcon from 'react-native-vector-icons/EvilIcons';
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -32,7 +32,7 @@ export default class  Subscription extends Component {
   render() {
     return (
       <ScrollView>
-        <Image style={styles.resize} source={require('../subscribe.jpg')} />
+        <Image style={styles.resize} source={require('../assets/imgs/subscribe.jpg')} />
         <View style={styles.header}>
             <Text style={styles.txtStyle}>
             SSC CGL 2016 Tier Grand Tests (New Pattern)
