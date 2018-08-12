@@ -8,6 +8,7 @@ import Compititive from './screens/Compititive';
 import DrawerScreen from './screens/Drawer';
 import EstoreScreen from './screens/Estore';
 import ExamScreen from './screens/Exam';
+import FeedbackScreen from './screens/Feedback';
 import HomeScreen from './screens/Home';
 
 YellowBox.ignoreWarnings([
@@ -42,6 +43,9 @@ const StackNavigtor = createDrawerNavigator(
     OnlineSubscribe : {
       screen : OnlineSubscribeScreen
     },
+    Feedback: {
+      screen: FeedbackScreen
+    }
 	},
 	{
     initialRouteName: 'Home',
