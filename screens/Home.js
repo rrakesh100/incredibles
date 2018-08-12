@@ -2,17 +2,14 @@ import React from 'react';
 import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import Competitive from './Compititive';
-import HomePage from './HomePage';
 import AcademicStudies from './AcademicStudies';
-import Second from "./../components/second";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
+import Second from "./../components/second";
 import Estore from './Estore';
 import { DrawerNavigator } from 'react-navigation';
-import {
-  Text,
-  ScrollView,
-} from 'react-native';
+import { Text, ScrollView } from 'react-native';
+import HomePage from './HomePage';
 
 import FacebookTabBar from './FacebookTabBar';
 import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
