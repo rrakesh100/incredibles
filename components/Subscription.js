@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
-import { Button, Card } from 'react-native-elements';
-
+import { Button, Card, Icon } from 'react-native-elements';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
 
 
 export default class  Subscription extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      subscribed : false,
+      quantity : 1
+    }
+  }
+
+  componentDidMount(){
+    console.log(this.props);
   }
 
   static navigationOptions = ({navigation}) => (
@@ -29,7 +37,24 @@ export default class  Subscription extends Component {
   }
   );
 
+  onQuantityChanged(action) {
+    if(this.state.quantity === 1 && action === 'remove'){
+      this.setState({subscribed : false});
+      return;
+    }
+    if(action === 'add') {
+      this.setState({
+        quantity: this.state.quantity + 1
+      })
+    }else {
+      this.setState({
+        quantity : this.state.quantity - 1
+      })
+    }
+  }
+
   render() {
+    const { subscribed } = this.state;
     return (
       <ScrollView>
         <Image style={styles.resize} source={require('../subscribe.jpg')} />
@@ -53,18 +78,48 @@ export default class  Subscription extends Component {
            Online Mock tests
            </Text>
 
+
         </View>
         <View style={styles.seperator}>
-        <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 12}}>
-        <View style={{marginLeft: 20}}>
-        <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>150</Text></Text>
+        <View style={{marginLeft: 20}} >
+        <Grid style={{marginTop: 10}}>
+           <Col size={3}>
+           <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>150</Text></Text>
+           </Col>
+           <Col size={3}>
+           <Text style={{color: '#C3CFCF'}}>valid for 2 year</Text>
+           </Col>
+           <Col size={4}>
+           {
+             subscribed ? (
+               <Row>
+                <Col>
+                <Icon raised name='md-remove-circle' type='ionicon' color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'remove')} />
+                </Col>
+                <Col>
+                  <Text style={{marginTop : 10, marginLeft : 10}}>{this.state.quantity}</Text>
+                </Col>
+                <Col >
+                <Icon raised name='md-add-circle' type='ionicon' color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'add')} />
+                </Col>
+
+               </Row>
+              ) :
+             ( <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
+                 onPress={() => {
+                   this.setState({subscribed : true});
+                 }}
+               textStyle={{color: '#F8C548', fontSize : 8}}  />)
+           }
+
+           </Col>
+         </Grid>
         </View>
-        <Text style={{color: '#C3CFCF', marginLeft: 30}}>valid for 1 year</Text>
-        <View style={{position: 'absolute', right: 4}}>
-        <Button title='SUBSCRIBE' buttonStyle={styles.bStyle}
-         textStyle={{color: '#F8C548'}}/>
-         </View>
         </View>
+        <View>
+            <Button title='PROCEED' buttonStyle={styles.proceedButton}
+               onPress={() => this.props.onNavigate('Checkout', {data: {name: 'Girish'}})}
+             textStyle={{color: '#F8C548', fontSize : 12}}  />
         </View>
         <View style={styles.flex}>
         <View>
@@ -111,7 +166,7 @@ const styles = StyleSheet.create({
     height: 250
   },
   seperator: {
-    height:55,
+    height:80,
     backgroundColor: 'white'
   },
   txtStyle: {
@@ -131,6 +186,24 @@ const styles = StyleSheet.create({
     borderColor: '#7FD672',
     backgroundColor: '#DCFFE7',
     borderWidth: 1
+  },
+  subscribeButton: {
+    width: 80,
+    height: 30,
+    borderRadius: 16,
+    borderColor: '#FFBC00',
+    borderWidth:2,
+    backgroundColor: 'white'
+  },
+  proceedButton: {
+    width: 120,
+    height: 30,
+    borderRadius: 16,
+    borderColor: '#FFBC00',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth:3,
+    backgroundColor: 'white'
   },
   bStyle: {
     width: 100,

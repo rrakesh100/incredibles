@@ -34,7 +34,7 @@ export default class OnlineSubscribe extends Component {
             <View style={styles.header}>
               <View style={styles.flex}>
                 <Text style={styles.txtStyle}>
-                Intelligence Bureau Exam 2018
+                  Intelligence Bureau Exam 2018
                 </Text>
                 <Button title='50% OFF'  buttonStyle={styles.btnStyle}
                  textStyle={{color: '#7FD672', fontSize: 12}} />
@@ -129,7 +129,6 @@ const styles = StyleSheet.create({
     borderColor: '#F8C548',
     borderWidth:1,
     backgroundColor: 'white',
-
   },
   space: {
     height: 60,
