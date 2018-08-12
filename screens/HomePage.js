@@ -1,9 +1,8 @@
 import React, { Component} from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableHighlight } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { ButtonGroup, Badge, Card } from 'react-native-elements';
+import { Button, ButtonGroup, Badge, Card } from 'react-native-elements';
 import { homeData, trendingData, onlineTestData, currentAffairsData, curAffData } from '../api/homepage';
-import { Button } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
@@ -94,11 +93,8 @@ export default class HomePage extends Component {
       }
       updatesArr.push(
         <View>
-        <Badge
-            containerStyle={styles.badge}
-            value='View All'
-            textStyle={{ color: 'orange' }}
-            />
+        <Button title='View All' buttonStyle={styles.viewAll}
+        textStyle={{color: '#F8C548'}} />
         </View>
       )
       return updatesArr
@@ -112,12 +108,10 @@ export default class HomePage extends Component {
             <View>
                   <View style={styles.card} key={i}>
                       <View style={styles.listStyle}>
-                          <Text style={{color: 'orange', marginHorizontal: 8}}>{homeData[i].title}</Text>
-                          <Badge
-                              containerStyle={{ backgroundColor: '#2ecc71'}}
-                              value={homeData[i].type}
-                              textStyle={{ color: 'green' }}
-                          />
+                          <Text style={{color: '#FEC336', marginHorizontal: 8}}>{homeData[i].title}</Text>
+
+                          <Button title={homeData[i].type} buttonStyle={styles.btnStyle}
+                          textStyle={{color: '#7FD672'}} />
                       </View>
                       <Text style={{marginTop: 5}}>{homeData[i].desc}</Text>
                   </View>
@@ -126,11 +120,8 @@ export default class HomePage extends Component {
         }
         updatesArr.push(
           <View>
-          <Badge
-              containerStyle={styles.badge}
-              value='View All'
-              textStyle={{ color: 'orange' }}
-              />
+          <Button title='View All' buttonStyle={styles.viewAll}
+          textStyle={{color: '#F8C548'}} />
           </View>
         )
         return updatesArr;
@@ -145,11 +136,8 @@ export default class HomePage extends Component {
               <Text style={{marginTop: 6, fontSize: 13}}>{item.desc}</Text>
             </Card>
 
-            <Badge containerStyle={styles.badge}
-            onPress={() => this.props.onNavigate('CurrentAffair', {data: item})}
-            value='View All'
-            textStyle={{ color: 'orange' }}
-            />
+            <Button title='View All' buttonStyle={styles.viewAll}
+            textStyle={{color: '#F8C548'}} />
           </View>
         )
       }
@@ -172,10 +160,8 @@ export default class HomePage extends Component {
                     </Text>
                   </View>
               </Card>
-              <Badge containerStyle={styles.badge}
-              value='View All'
-              textStyle={{ color: 'orange' }}
-              />
+              <Button title='View All' buttonStyle={styles.viewAll}
+              textStyle={{color: '#F8C548'}} />
            </View>
         )
       }
@@ -202,10 +188,8 @@ export default class HomePage extends Component {
                 </Text>
               </View>
           </Card>
-          <Badge containerStyle={styles.badge}
-          value='View All'
-          textStyle={{ color: 'orange' }}
-          />
+          <Button title='View All' buttonStyle={styles.viewAll}
+          textStyle={{color: '#F8C548'}} />
           </View>
         )
       }
@@ -217,7 +201,7 @@ export default class HomePage extends Component {
   render() {
 
       return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor : '#E8F3F7'}}>
         <View>
           <Carousel
             ref={(c) => { this._carousel = c; }}
@@ -241,13 +225,14 @@ export default class HomePage extends Component {
                 selectedButtonStyle={styles.selectedButtonStyle}
                 onPress={this.updateIndex}
                 selectedIndex={this.state.index}
+                textStyle={styles.textStyle}
                 buttonStyle={styles.buttonStyle}
                 selectedTextStyle={styles.selectedTextStyle}
                 buttons={['Academics', 'Exams', 'Results', 'Jobs']}
-                containerStyle={{height: 60}} />
+                containerStyle={{height: 54}} />
             </View>
         </View>
-        <View>
+        <View style={{height: 300}}>
             {this.renderRecentHomeUpdates()}
         </View>
         <View style={styles.adStyle}>
@@ -376,6 +361,14 @@ export default class HomePage extends Component {
         color: 'orange',
         marginHorizontal: 8
     },
+    btnStyle: {
+      width: 140,
+      height: 25,
+      borderRadius: 16,
+      borderColor: '#50E347',
+      backgroundColor: '#DDFEE7',
+      borderWidth: 1
+    },
     badge: {
       backgroundColor: 'white',
       width: 120,
@@ -383,12 +376,14 @@ export default class HomePage extends Component {
       height: 40,
       marginTop: 5
     },
+    textStyle : {
+      color: '#fff',
+      fontSize : 15,
+      fontWeight : 'bold',
+      marginLeft : 10
+    },
     cardContent: {
         flex: 1
-    },
-    contentStyle : {
-      fontSize: 12,
-      color: 'orange'
     },
     contentDesc : {
       fontSize : 8
@@ -431,13 +426,21 @@ export default class HomePage extends Component {
        fontWeight : 'bold'
    },
    buttonStyle: {
-        backgroundColor: '#fff',
-        marginRight : 2,
-        marginLeft : 2
-
+     backgroundColor: '#89AFCC'
+   },
+   viewAll: {
+     width: 100,
+     height: 40,
+     borderRadius: 20,
+     borderColor: '#F8C548',
+     borderWidth:1,
+     backgroundColor: 'white',
+     position : 'absolute',
+     marginTop : 8,
+     right : 0
    },
    selectedButtonStyle: {
-        backgroundColor: '#FFD133'
+        backgroundColor: '#FFBC00'
    },
    smallTab: {
         color: '#555', fontSize: 12
