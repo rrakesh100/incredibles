@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, YellowBox } from 'react-native';
-<<<<<<< HEAD
 import Compititive from './screens/Compititive';
 import ExamScreen from './screens/Exam';
 import HomeScreen from './screens/Home';
@@ -29,6 +28,7 @@ import Compititive from './screens/Compititive';
 import DrawerScreen from './screens/Drawer';
 import EstoreScreen from './screens/Estore';
 import ExamScreen from './screens/Exam';
+import FeedbackScreen from './screens/Feedback';
 import HomeScreen from './screens/Home';
 
 YellowBox.ignoreWarnings([
@@ -96,6 +96,9 @@ const StackNavigtor = createDrawerNavigator(
     Test: {
       screen : TestScreen
     },
+    Feedback: {
+      screen: FeedbackScreen
+    }
 	},
 	{
     initialRouteName: 'Home',

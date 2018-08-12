@@ -107,7 +107,7 @@ class Drawer extends Component {
                     type='ionicon'
                     color='orange'
                     />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('Feedback')}>
               Feedback
               </Text>
             </View>
@@ -120,7 +120,7 @@ class Drawer extends Component {
               <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
               About Sakshi
               </Text>
-            </View>
+            </View>4
             <View style={s.item}>
                 <Icon
                     name='ios-cog'
