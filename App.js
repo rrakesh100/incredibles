@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, YellowBox } from 'react-native';
+<<<<<<< HEAD
 import Compititive from './screens/Compititive';
 import ExamScreen from './screens/Exam';
 import HomeScreen from './screens/Home';
@@ -20,7 +21,15 @@ import TakeTestScreen from './components/TakeTest';
 import TestScreen from './components/Test';
 import CurrentAffairScreen from './screens/CurrentAffair';
 import LoginScreen from './screens/Login';
-
+import { createDrawerNavigator } from 'react-navigation';
+import OnlineSubscribeScreen from './components/OnlineSubscribe';
+import OnlineTestsScreen from './components/OnlineTests';
+import SubscriptionScreen from './components/Subscription';
+import Compititive from './screens/Compititive';
+import DrawerScreen from './screens/Drawer';
+import EstoreScreen from './screens/Estore';
+import ExamScreen from './screens/Exam';
+import HomeScreen from './screens/Home';
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -31,7 +40,7 @@ YellowBox.ignoreWarnings([
   console.disableYellowBox = true;
 
 // Navigator
-const StackNavigtor = createStackNavigator(
+const StackNavigtor = createDrawerNavigator(
 	{
 	  Home: {
 	    screen: HomeScreen,
@@ -89,7 +98,9 @@ const StackNavigtor = createStackNavigator(
     },
 	},
 	{
-		initialRouteName: 'Home'
+    initialRouteName: 'Home',
+    contentComponent: DrawerScreen,
+    drawerWidth: 300
 	}
 );
 
