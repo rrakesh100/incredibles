@@ -55,6 +55,7 @@ export default class  Subscription extends Component {
 
   render() {
     const { subscribed } = this.state;
+    console.log('@@@@', this.props);
     return (
       <ScrollView>
         <Image style={styles.resize} source={require('../subscribe.jpg')} />
@@ -118,7 +119,7 @@ export default class  Subscription extends Component {
         </View>
         <View>
             <Button title='PROCEED' buttonStyle={styles.proceedButton}
-               onPress={() => this.props.onNavigate('Checkout', {data: {name: 'Girish'}})}
+               onPress={() => this.props.state.params.onNavigate('Checkout', {data: {name: 'Girish'}})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
         </View>
         <View style={styles.flex}>

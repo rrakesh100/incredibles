@@ -7,8 +7,11 @@ import { estoreData , onlineTests, studyMaterial } from '../api/estore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import OnlineTests from '../components/OnlineTests';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import PayuMoney from 'react-native-payumoney';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
+import uuidv4 from 'uuid/v4';
+
 
 export default class Estore extends Component {
 
@@ -112,6 +115,54 @@ export default class Estore extends Component {
     )
     }
 
+    _makePay = () =>  {
+      //merchantId = 6371743
+      //merchantkey = ikWUZXlM
+      //merchantSalt = emwQSa7mLh
+      console.log('ha ha ha');
+      let options = {
+         amount: 10.32,
+         txid: new Date().getTime()+"",
+         productId: "test",
+         name: "coders",
+         phone: "9901250919",
+         id: "6371743",
+         productId: "testing product",
+         key: "ikWUZXlM",
+         email : 'codersmagic@gmail.com',
+         surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
+         furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
+         sandbox: true, //false in production
+         hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
+     };
+
+     fetch('https://allocable-worlds.000webhostapp.com/hash.php', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                key: "ikWUZXlM",
+                txid: new Date().getTime()+"",
+                amount: 10.32,
+                productInfo: "testing product",
+                firstname: "coders",
+                email: "codersmagic@gmail.com"
+            }),
+    })
+    .then((response) => {console.log('ddddddd',response); return response.text(); } )
+    .catch((e) => console.log('ccccccccccc ',e))
+    .then((hash) => {
+      // options.hash = hash;
+        console.log(options);
+        PayuMoney.pay(options).then((d) => {
+            console.log(d); // WIll get a Success response with verification hash
+        }).catch(e => {
+            console.log(e); //In case of failture
+        });
+    }) ;
+  }
 
   renderOnlineTests(){
     return (
@@ -149,6 +200,7 @@ export default class Estore extends Component {
               </Col>
             </Row>
             <Row size={1}>
+          
               <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
               onPress={() => this.props.onNavigate('Subscription', {onNavigate : this.props.onNavigate, data : {abc : 'rakesh'}})}
                textStyle={{color: '#F8C548', fontSize : 8}} />
