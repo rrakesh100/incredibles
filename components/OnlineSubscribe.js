@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
-import { Button, Card } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/Feather';
+import { Button, Card, Icon } from 'react-native-elements';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 
 const sliderWidth = Dimensions.get('window').width;
 
 
 export default class OnlineSubscribe extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      subscribed : false,
+      quantity : 1
+    }
+  }
 
   static navigationOptions = ({navigation}) => (
   {
@@ -27,7 +34,24 @@ export default class OnlineSubscribe extends Component {
   }
   );
 
+  onQuantityChanged(action) {
+    if(this.state.quantity === 1 && action === 'remove'){
+      this.setState({subscribed : false});
+      return;
+    }
+    if(action === 'add') {
+      this.setState({
+        quantity: this.state.quantity + 1
+      })
+    }else {
+      this.setState({
+        quantity : this.state.quantity - 1
+      })
+    }
+  }
+
   render() {
+    const { subscribed } = this.state;
     return (
       <ScrollView>
         <Image style={styles.resize} source={require('../ib.jpg')} />
@@ -50,8 +74,24 @@ export default class OnlineSubscribe extends Component {
           <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 12}}>
               <Text style={{fontSize: 22}}>Rs.<Text style={{textDecorationLine: 'line-through', fontSize:22}}>40</Text> <Text style={{fontSize: 22, marginLeft: 4}}>Rs.</Text><Text style={{color: '#17A194', fontSize: 22}}>20</Text></Text>
               <View style={{position: 'absolute', right: 4}}>
-              <Button title='BUY NOW' buttonStyle={styles.bStyle}
-               textStyle={{color: '#F8C548'}} />
+              {
+                subscribed ? (
+                  <View style={styles.flex}>
+                  <Icon raised name='md-remove-circle'
+                  type='ionicon' color='#FFBC00'  size={18}
+                  onPress={this.onQuantityChanged.bind(this, 'remove')} />
+                  <Text>{this.state.quantity}</Text>
+                  <Icon raised name='md-add-circle'
+                  type='ionicon' color='#FFBC00'  size={18}
+                  onPress={this.onQuantityChanged.bind(this, 'add')} />
+                  </View>
+                 ) :
+              ( <Button title='BUY NOW' buttonStyle={styles.bStyle}
+              onPress={() => {
+                this.setState({subscribed : true});
+              }}
+               textStyle={{color: '#F8C548'}} /> )
+             }
               </View>
           </View>
           </View>
@@ -59,6 +99,12 @@ export default class OnlineSubscribe extends Component {
             <Text style={{color: '#F8C548', margin: 8}}>
             *PDFs will be emailed only to the subscribed
             </Text>
+            { subscribed ?
+              <View style={{marginLeft: 120}}>
+            <Button title='PROCEED' buttonStyle={styles.bStyle}
+               onPress={() => this.props.onNavigate('Checkout', {data: {name: 'Girish'}})}
+             textStyle={{color: '#F8C548', fontSize : 12}}  />
+             </View> : null }
             <View style={styles.flex}>
             <View>
             <Card containerStyle={{width:150, height: 160}}>

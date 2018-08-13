@@ -9,28 +9,32 @@ const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 
 export default class HomePage extends Component {
-
-    state = {
-        index: 0,
-        entries: [
-        {
-          title: 'Latest Stories',
-          image: require('../sak1.jpg'),
-          text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
-        },
-        {
-          title: 'Latest Stories',
-          image: require('../sak2.jpg'),
-          text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
-        },
-        {
-          title: 'Latest Stories',
-          image: require('../sak3.jpg'),
-          text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
-        }
-      ],
-      activeSlide : 0
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 0,
+      entries: [
+      {
+        title: 'Latest Stories',
+        image: require('../sak1.jpg'),
+        text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
+      },
+      {
+        title: 'Latest Stories',
+        image: require('../sak2.jpg'),
+        text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
+      },
+      {
+        title: 'Latest Stories',
+        image: require('../sak3.jpg'),
+        text: 'Online AP CETs dates 2018 - APSCHE Entrance Tests Dates 2018'
+      }
+    ],
+    activeSlide : 0,
+    viewAllClicked: false,
+    currentAffairsViewAllClicked: false
     }
+  }
 
 
   _renderItem ({item, index}) {
@@ -71,10 +75,25 @@ export default class HomePage extends Component {
     this.setState({index})
     }
 
+    onViewingAll() {
+      this.setState({
+        currentAffairsViewAllClicked: true
+      })
+    }
+
+    onHidingBtn() {
+      this.setState({
+        currentAffairsViewAllClicked: false
+      })
+    }
+
     renderCurrentAffairsList() {
+      const { currentAffairsViewAllClicked } = this.state;
+
+      let maxNum = currentAffairsViewAllClicked ? curAffData.length : 3;
       const updatesArr = []
 
-      for( let i=0; i<3; i++) {
+      for( let i=0; i<maxNum; i++) {
         updatesArr.push(
           <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: i})}
             underlayColor='#ffffff'>
@@ -92,18 +111,41 @@ export default class HomePage extends Component {
         )
       }
       updatesArr.push(
-        <View>
-        <Button title='View All' buttonStyle={styles.viewAll}
-        textStyle={{color: '#F8C548'}} />
+        !currentAffairsViewAllClicked ?
+        <View style={{height: 50}}>
+          <Button title='View All' buttonStyle={styles.viewAll}
+          onPress={this.onViewingAll.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+        </View> :
+        <View style={{height: 50}}>
+          <Button title='Hide' buttonStyle={styles.viewAll}
+          onPress={this.onHidingBtn.bind(this)}
+          textStyle={{color: '#F8C548'}} />
         </View>
       )
       return updatesArr
     }
 
-    renderRecentHomeUpdates() {
-      const updatesArr = []
+    onViewAllButton() {
+      this.setState({
+        viewAllClicked: true
+      })
+    }
 
-      for( let i = 0; i < 3; i++) {
+    onHideButton() {
+      this.setState({
+        viewAllClicked: false
+      })
+    }
+
+
+    renderRecentHomeUpdates() {
+      const { viewAllClicked } = this.state;
+      const updatesArr = [];
+
+      let maxNum = viewAllClicked ? homeData.length : 3;
+
+      for( let i = 0; i < maxNum; i++) {
           updatesArr.push(
             <View>
                   <View style={styles.card} key={i}>
@@ -118,12 +160,21 @@ export default class HomePage extends Component {
               </View>
             );
         }
+
         updatesArr.push(
-          <View>
+            !viewAllClicked ?
+            <View style={{height: 50}}>
           <Button title='View All' buttonStyle={styles.viewAll}
+          onPress={this.onViewAllButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View> :
+          <View style={{height: 50}}>
+          <Button title='Hide' buttonStyle={styles.viewAll}
+          onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View>
         )
+
         return updatesArr;
       }
 
@@ -232,9 +283,7 @@ export default class HomePage extends Component {
                 containerStyle={{height: 54}} />
             </View>
         </View>
-        <View style={{height: 300}}>
             {this.renderRecentHomeUpdates()}
-        </View>
         <View style={styles.adStyle}>
         <Text style={styles.adText}>Advertisement/Announcements</Text>
         <Image resizeMode="contain" style={styles.shrink} source={require('../Adimg.jpg')} />
@@ -290,9 +339,7 @@ export default class HomePage extends Component {
         <View style={styles.cStyle}>
         <Text style={styles.trend}>Current <Text style={{fontWeight: 'bold'}}>Affairs</Text></Text>
         </View>
-        <View style={styles.caStyle}>
         { this.renderCurrentAffairsList() }
-        </View>
         </ScrollView>
       )
     }

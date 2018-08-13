@@ -11,6 +11,7 @@ import OnlineSubscribeScreen from './components/OnlineSubscribe';
 import OnlineTestsScreen from './components/OnlineTests';
 import SubscriptionScreen from './components/Subscription';
 import CheckoutScreen from './components/Checkout';
+import BillingScreen from './components/Billing';
 
 
 YellowBox.ignoreWarnings([
@@ -48,6 +49,9 @@ const StackNavigtor = createStackNavigator(
     Checkout : {
       screen : CheckoutScreen
     },
+    Billing : {
+      screen : BillingScreen
+    }
 	},
 	{
 		initialRouteName: 'Home'
