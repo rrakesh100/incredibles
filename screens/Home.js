@@ -8,7 +8,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Estore from './Estore';
 import { DrawerNavigator } from 'react-navigation';
+import {
+  Text,
+  ScrollView,
+} from 'react-native';
 
+import FacebookTabBar from './FacebookTabBar';
+import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
 
 
 YellowBox.ignoreWarnings([
@@ -26,7 +32,7 @@ export default class Home extends React.Component {
 			title: `Sakshi Education`,
 			headerTintColor: '#ffffff',
 			headerStyle: {
-				backgroundColor: '#00539d',
+				backgroundColor: '#364C8B',
 				borderBottomColor: '#ffffff'
 			},
 			headerTitleStyle: {
@@ -56,27 +62,46 @@ export default class Home extends React.Component {
 
 
   render() {
-      console.log('NAV=', JSON.stringify(this.props.navigation, null, 2))
+      console.log('NAV=', JSON.stringify(this.props.navigation, null, 2));
+      let nav = this.props.navigation;
     return (
-      <TabView
-         navigationState={this.state}
-         tabStyle={{backgroundColor:'#000'}}
-         renderScene={SceneMap({
-           home: FirstRoute.bind(this, this.props.navigation),
-           academicStudies: Second,
-           competitiveExams : ThirdRoute.bind(this, this.props.navigation),
-           eStore: FourthRoute.bind(this, this.props.navigation)
-         })}
-         onIndexChange={index => this.setState({ index })}
-         initialLayout={{ width: Dimensions.get('window').width , height : Dimensions.get('window').height}}
-         renderTabBar={props =>
-          <TabBar
-            {...props}
-            style={{ backgroundColor: '#00539d' }}
-          />
-          }
-       />
-
+      <ScrollableTabView
+        style={{marginTop: 0}}
+          initialPage={0}
+          renderTabBar={() => <ScrollableTabBar underlineStyle={{backgroundColor:'#FFBC00'}}
+             activeTextColor='#FFFFFF' inactiveTextColor = '#98B9D6'
+             style ={{backgroundColor : '#364C8B',height:60}}/>}  >
+    <ScrollView tabLabel="Home" tabIcon="" style={styles.tabView}>
+      <View style={styles.card}>
+       <HomePage onNavigate={redirect.bind(this, nav)} />
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="Academic Studies" style={styles.tabView}>
+      <View style={styles.card}>
+        <Text>Friends</Text>
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="Competitive Exams" style={styles.tabView}>
+      <View style={styles.card}>
+      <Competitive onNavigate={redirect.bind(this, nav)} />
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="eStore" style={styles.tabView}>
+      <View style={styles.card}>
+        <Estore onNavigate={redirect.bind(this, nav)}/>
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="Online Tests" style={styles.tabView}>
+      <View style={styles.card}>
+        <Text>Online Tests</Text>
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="Messages" style={styles.tabView}>
+      <View style={styles.card}>
+        <Text>Messages</Text>
+      </View>
+    </ScrollView>
+  </ScrollableTabView>
     );
   }
 }
@@ -113,4 +138,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  tabView : {
+     backgroundColor: '#E8F3F7'
+  }
 });
