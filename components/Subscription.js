@@ -17,7 +17,7 @@ export default class  Subscription extends Component {
   }
 
   componentDidMount(){
-    console.log(this.props);
+    console.log('[][][][][][][][][][]]][]',this.props);
   }
 
   static navigationOptions = ({navigation}) => (
@@ -119,7 +119,7 @@ export default class  Subscription extends Component {
         </View>
         <View>
             <Button title='PROCEED' buttonStyle={styles.proceedButton}
-               onPress={() => this.props.state.params.onNavigate('Checkout', {data: {name: 'Girish'}})}
+               onPress={() => this.props.navigation.navigate('Checkout', {data: {name: 'Girish'}})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
         </View>
         <View style={styles.flex}>

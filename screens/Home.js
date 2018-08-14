@@ -118,9 +118,7 @@ const ThirdRoute = (nav) => (
   <Competitive onNavigate={redirect.bind(this, nav)} />
 );
 
-const FourthRoute = (nav) => (
-  <Estore onNavigate={redirect.bind(this, nav)}/>
-);
+
 
 
 const redirect = (nav, route, data) => {

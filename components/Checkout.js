@@ -143,6 +143,7 @@ export default class  Checkout extends Component {
         </View>
         <View style={{marginTop: 80, marginLeft: 120}}>
         <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
+        onPress={() => this.props.navigation.navigate('Billing', {data: {name: 'Girish'}})} 
          textStyle={{color: '#F8C548', fontSize : 14}} />
          </View>
         </ScrollView>

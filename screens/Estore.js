@@ -7,7 +7,7 @@ import { estoreData , onlineTests, studyMaterial } from '../api/estore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import OnlineTests from '../components/OnlineTests';
 import { Col, Row, Grid } from "react-native-easy-grid";
-import { PayuMoney }from 'react-native-payumoney';
+import  PayuMoney from 'react-native-payumoney';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 import uuidv4 from 'uuid/v4';
@@ -25,6 +25,12 @@ export default class Estore extends Component {
       viewAllCategoryName: null
     }
   }
+
+  componentDidMount(){
+    console.log('$$$$$$$', this.props);
+  }
+
+
 
 
   _renderItem ({item, index}) {
@@ -147,6 +153,7 @@ export default class Estore extends Component {
   }
 
   renderOnlineTests(){
+    console.log('###########',this.props);
     return (
       <View>
       {
@@ -184,7 +191,7 @@ export default class Estore extends Component {
             <Row size={1}>
 
               <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
-              onPress={() => this.props.onNavigate('Subscription', {onNavigate : this.props.onNavigate, data : {abc : 'rakesh'}})}
+              onPress={() => this.props.onNavigate('Subscription', {data : {abc : 'rakesh'}})}
                textStyle={{color: '#F8C548', fontSize : 8}} />
             </Row>
             </Col>
@@ -214,7 +221,7 @@ export default class Estore extends Component {
     else if(this.state.index==2) {
         return (this.renderOnlineTests());
     }
-  }
+
 
   render() {
 
