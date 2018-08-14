@@ -41,6 +41,120 @@ export const homeData = [
   }
 ]
 
+export const homepageExamData = [
+  {
+    title: 'IBPS PO',
+    date: 'Last date to apply 31/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'SSC CGL 2018',
+    date: 'Last date to apply 15/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'SSC CHSL 2018',
+    date: 'Last date to apply 01/09/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Railway Exam',
+    date: 'Last date to apply 27/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Group-2',
+    date: 'Last date to apply 31/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Group-1',
+    date: 'Last date to apply 31/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'EAMCET 2018',
+    date: 'Last date to apply 31/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'CIVILS 2018',
+    date: 'Last date to apply 31/08/2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  }
+];
+
+export const homepageResultsData = [
+  {
+    title: 'CBSE Results 2018',
+    date: 'May 2018',
+    desc: 'The Central Board of Secondary Education (CBSE) has allowed all the concerned students to apply for verification, obtaining photocopy of evaluated answer copies and re-evaluation.'
+  },
+  {
+    title: 'EAMCET 2018',
+    date: 'Mar 2018',
+    desc: 'AP EAMCET Result 2018 – Jawaharlal Nehru Technical University (JNTU), Kakinada has released the rank card of AP EAMCET 2018'
+  },
+  {
+    title: 'UPSC Results',
+    date: 'Jan 2018',
+    desc: 'UPSC declared the results of Civil Services (Preliminary) Examination, 2018 held on 03.06.2018. '
+  },
+  {
+    title: 'IBPS PO',
+    date: 'Sep 2018',
+    desc: 'IBPS has allowed all the concerned students to apply for verification, obtaining photocopy of evaluated answer copies and re-evaluation.'
+  },
+  {
+    title: 'SSC CGL 2018',
+    date: 'Oct 2018',
+    desc: 'SSC has allowed all the concerned students to apply for verification, obtaining photocopy of evaluated answer copies and re-evaluation.'
+  },
+  {
+    title: 'SSC CHSL 2018',
+    date: 'Mar 2018',
+    desc: 'SSC has allowed all the concerned students to apply for verification, obtaining photocopy of evaluated answer copies and re-evaluation.'
+  },
+  {
+    title: 'Railway Exam',
+    date: 'Dec 2018',
+    desc: 'RRB declared the results of Civil Services (Preliminary) Examination, 2018 held on 03.06.2018.'
+  }
+]
+
+export const homepageJobsData = [
+  {
+    title: 'Scientific & Tech Asst.',
+    date: 'May 2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Jr Engineer, Surveyor',
+    date: 'Mar 2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Aircraft Technician',
+    date: 'Jan 2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Scientific & Tech Asst.',
+    date: 'May 2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Jr Engineer, Surveyor',
+    date: 'Mar 2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  },
+  {
+    title: 'Aircraft Technician',
+    date: 'Jan 2018',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+  }
+]
+
 export const trendingData = [
   {
     title: 'India Post Payment Bank Officer Post',

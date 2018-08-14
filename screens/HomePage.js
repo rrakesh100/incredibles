@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, FlatList, ScrollView, TouchableHighlight } from 'react-native';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { Button, ButtonGroup, Badge, Card } from 'react-native-elements';
-import { homeData, trendingData, onlineTestData, currentAffairsData, curAffData } from '../api/homepage';
+import { homeData, trendingData, onlineTestData, currentAffairsData, curAffData, homepageExamData, homepageResultsData, homepageJobsData } from '../api/homepage';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
@@ -72,7 +72,10 @@ export default class HomePage extends Component {
     }
 
     updateIndex = (index) => {
-    this.setState({index})
+    this.setState({
+      index,
+      viewAllClicked: false
+    })
     }
 
     onViewingAll() {
@@ -138,9 +141,9 @@ export default class HomePage extends Component {
       })
     }
 
-
-    renderRecentHomeUpdates() {
+    renderAcademicUpdates() {
       const { viewAllClicked } = this.state;
+
       const updatesArr = [];
 
       let maxNum = viewAllClicked ? homeData.length : 3;
@@ -153,7 +156,7 @@ export default class HomePage extends Component {
                           <Text style={{color: '#FEC336', marginHorizontal: 8}}>{homeData[i].title}</Text>
 
                           <Button title={homeData[i].type} buttonStyle={styles.btnStyle}
-                          textStyle={{color: '#7FD672'}} />
+                          textStyle={{color: '#7FD672', fontSize: 12}} />
                       </View>
                       <Text style={{marginTop: 5}}>{homeData[i].desc}</Text>
                   </View>
@@ -176,6 +179,157 @@ export default class HomePage extends Component {
         )
 
         return updatesArr;
+    }
+
+    renderExamUpdates() {
+      const { viewAllClicked } = this.state;
+
+      const updatesArr = [];
+
+      let maxNum = viewAllClicked ? homepageExamData.length : 3;
+
+      for( let i = 0; i < maxNum; i++) {
+          updatesArr.push(
+            <View>
+                  <View style={styles.card} key={i}>
+                      <View style={styles.listStyle}>
+                          <Text style={{color: '#FEC336', marginHorizontal: 8}}>{homepageExamData[i].date}</Text>
+
+                          <Button title={homepageExamData[i].title} buttonStyle={styles.btnStyle}
+                          textStyle={{color: '#7FD672', fontSize: 12}} />
+                      </View>
+                      <Text style={{marginTop: 5}}>{homepageExamData[i].desc}</Text>
+                  </View>
+              </View>
+            );
+        }
+
+        updatesArr.push(
+            !viewAllClicked ?
+            <View style={{height: 50}}>
+          <Button title='View All' buttonStyle={styles.viewAll}
+          onPress={this.onViewAllButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View> :
+          <View style={{height: 50}}>
+          <Button title='Hide' buttonStyle={styles.viewAll}
+          onPress={this.onHideButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View>
+        )
+
+        return updatesArr;
+    }
+
+    renderResultUpdates() {
+      const { viewAllClicked } = this.state;
+
+      const updatesArr = [];
+
+      let maxNum = viewAllClicked ? homepageResultsData.length : 3;
+
+      for( let i = 0; i < maxNum; i++) {
+          updatesArr.push(
+            <View>
+                  <View style={styles.card} key={i}>
+                      <View style={styles.listStyle}>
+                          <Text style={{color: '#FEC336', marginHorizontal: 8}}>{homepageResultsData[i].date}</Text>
+
+                          <Button title={homepageResultsData[i].title} buttonStyle={styles.btnStyle}
+                          textStyle={{color: '#7FD672', fontSize: 12}} />
+                      </View>
+                      <Text style={{marginTop: 5}}>{homepageResultsData[i].desc}</Text>
+                  </View>
+              </View>
+            );
+        }
+
+        updatesArr.push(
+            !viewAllClicked ?
+            <View style={{height: 50}}>
+          <Button title='View All' buttonStyle={styles.viewAll}
+          onPress={this.onViewAllButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View> :
+          <View style={{height: 50}}>
+          <Button title='Hide' buttonStyle={styles.viewAll}
+          onPress={this.onHideButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View>
+        )
+
+        return updatesArr;
+    }
+
+    renderJobUpdates() {
+      const { viewAllClicked } = this.state;
+
+      const updatesArr = [];
+
+      let maxNum = viewAllClicked ? homepageJobsData.length : 3;
+
+      for( let i = 0; i < maxNum; i++) {
+          updatesArr.push(
+            <View>
+                  <View style={styles.card} key={i}>
+                      <View style={styles.listStyle}>
+                          <Text style={{color: '#FEC336', marginHorizontal: 8}}>{homepageJobsData[i].date}</Text>
+
+                          <Button title={homepageJobsData[i].title} buttonStyle={styles.btnStyle}
+                          textStyle={{color: '#7FD672', fontSize: 12}} />
+                      </View>
+                      <Text style={{marginTop: 5}}>{homepageJobsData[i].desc}</Text>
+                  </View>
+              </View>
+            );
+        }
+
+        updatesArr.push(
+            !viewAllClicked ?
+            <View style={{height: 50}}>
+          <Button title='View All' buttonStyle={styles.viewAll}
+          onPress={this.onViewAllButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View> :
+          <View style={{height: 50}}>
+          <Button title='Hide' buttonStyle={styles.viewAll}
+          onPress={this.onHideButton.bind(this)}
+          textStyle={{color: '#F8C548'}} />
+          </View>
+        )
+
+        return updatesArr;
+    }
+
+
+
+    renderRecentHomeUpdates() {
+      const { index } = this.state;
+
+      if(index == 0) {
+        return (
+          this.renderAcademicUpdates()
+        )
+      }
+
+      else if(index == 1) {
+        return (
+          this.renderExamUpdates()
+        )
+      }
+
+      else if(index == 2) {
+        return (
+          this.renderResultUpdates()
+        )
+      }
+
+      else if(index == 3) {
+        return (
+          this.renderJobUpdates()
+        )
+      }
+
       }
 
       renderTrendingCards({item, index}) {
