@@ -26,11 +26,6 @@ export default class Estore extends Component {
     }
   }
 
-  componentDidMount(){
-    console.log('$$$$$$$', this.props);
-  }
-
-
 
 
   _renderItem ({item, index}) {
@@ -153,7 +148,6 @@ export default class Estore extends Component {
   }
 
   renderOnlineTests(){
-    console.log('###########',this.props);
     return (
       <View>
       {
@@ -221,6 +215,7 @@ export default class Estore extends Component {
     else if(this.state.index==2) {
         return (this.renderOnlineTests());
     }
+  }
 
 
   render() {

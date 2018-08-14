@@ -16,9 +16,6 @@ export default class  Subscription extends Component {
     }
   }
 
-  componentDidMount(){
-    console.log('[][][][][][][][][][]]][]',this.props);
-  }
 
   static navigationOptions = ({navigation}) => (
   {
