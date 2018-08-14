@@ -7,7 +7,7 @@ import { estoreData , onlineTests, studyMaterial } from '../api/estore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import OnlineTests from '../components/OnlineTests';
 import { Col, Row, Grid } from "react-native-easy-grid";
-import PayuMoney from 'react-native-payumoney';
+import { PayuMoney }from 'react-native-payumoney';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 import uuidv4 from 'uuid/v4';
@@ -136,32 +136,14 @@ export default class Estore extends Component {
          hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
      };
 
-     fetch('https://allocable-worlds.000webhostapp.com/hash.php', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                key: "ikWUZXlM",
-                txid: new Date().getTime()+"",
-                amount: 10.32,
-                productInfo: "testing product",
-                firstname: "coders",
-                email: "codersmagic@gmail.com"
-            }),
-    })
-    .then((response) => {console.log('ddddddd',response); return response.text(); } )
-    .catch((e) => console.log('ccccccccccc ',e))
-    .then((hash) => {
       // options.hash = hash;
         console.log(options);
         PayuMoney.pay(options).then((d) => {
-            console.log(d); // WIll get a Success response with verification hash
+            alert(d); // WIll get a Success response with verification hash
         }).catch(e => {
-            console.log(e); //In case of failture
+            alert(e); //In case of failture
         });
-    }) ;
+
   }
 
   renderOnlineTests(){
@@ -200,7 +182,9 @@ export default class Estore extends Component {
               </Col>
             </Row>
             <Row size={1}>
-          
+
+            <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
+            onPress={() => this._makePay() }   textStyle={{color: '#F8C548', fontSize : 8}} />
               <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
               onPress={() => this.props.onNavigate('Subscription', {onNavigate : this.props.onNavigate, data : {abc : 'rakesh'}})}
                textStyle={{color: '#F8C548', fontSize : 8}} />
