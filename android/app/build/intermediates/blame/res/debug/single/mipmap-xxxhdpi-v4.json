@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.core/payumoney-sdk/7.0.1/res/mipmap-xxxhdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher_round.png",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.core/payumoney-sdk/7.0.1/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    }
+]

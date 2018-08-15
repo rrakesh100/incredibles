@@ -1,0 +1,466 @@
+[
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_dual_button_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_dual_button_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/register.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/register.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/loader_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/incredibles/react-native-payumoney/unspecified/res/layout/loader_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_bank_list.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_bank_list.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_saved_card_delete.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_saved_card_delete.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_amount.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_amount.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_list.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_list.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_get_cvv_fragment_new.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_get_cvv_fragment_new.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/sdk_activity_web_view_dummy.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.core/payumoney-sdk/7.0.1/res/layout/sdk_activity_web_view_dummy.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/loading.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/loading.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/nb_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/nb_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_withdraw_confirm_details.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_withdraw_confirm_details.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/layout_bank_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/layout_bank_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/choose_action.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/choose_action.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/app_progressbar.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/app_progressbar.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/bank.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/bank.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/add_new_card_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/add_new_card_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/wallet_view_net_banking_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/wallet_view_net_banking_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cb_payments.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/cb_payments.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_autoload_cardlist.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_autoload_cardlist.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cb_layout_snooze.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/cb_layout_snooze.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_enter_otp.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_enter_otp.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/user_account_saved_withdraw_bank_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/user_account_saved_withdraw_bank_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_quick_pay.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_quick_pay.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cb_prog_dialog.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/cb_prog_dialog.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/user_account_saved_card_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/user_account_saved_card_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cvv_boxes_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/cvv_boxes_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/activity_citrus_ui.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/activity_citrus_ui.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/retry_otp.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/retry_otp.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dev_loading_view.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/layout/dev_loading_view.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/bank_row_details.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/bank_row_details.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/redbox_item_frame.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/layout/redbox_item_frame.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fps_view.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/layout/fps_view.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/magicretry_main.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.magicretry/magicretry/1.0.5/res/layout/magicretry_main.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.magicretry/magicretry/1.0.5/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_signle_button_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_signle_button_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_result_new.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_result_new.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_add_money_new.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_add_money_new.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_wallet.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_wallet.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_withdraw_money.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_withdraw_money.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/sticky_row_details.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/sticky_row_details.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cvv_dialog_content.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/cvv_dialog_content.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/static_bank_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/static_bank_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_alert_autoload_eligible_cards.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_alert_autoload_eligible_cards.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_pay_umoney.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_pay_umoney.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_ui_header.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/dialog_ui_header.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/layout_terms_condition.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/layout_terms_condition.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_auto_load_update.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_auto_load_update.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cb_layout_snooze_slow_user.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/cb_layout_snooze_slow_user.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/saved_card_item_manage_cards.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/saved_card_item_manage_cards.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_add_money_options.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_add_money_options.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/user_balance_add_money_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/user_balance_add_money_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/sdk_progressdialog_sendingotp.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.core/payumoney-sdk/7.0.1/res/layout/sdk_progressdialog_sendingotp.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/register_pin.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/register_pin.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/wallet_view_saved_card_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/wallet_view_saved_card_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/redbox_view.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/layout/redbox_view.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/amount_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/amount_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/redbox_item_title.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/res/layout/redbox_item_title.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/fragment_add_card_fragment_new.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/fragment_add_card_fragment_new.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/wallet_view_user_wallet_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/wallet_view_user_wallet_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/wait_for_otp.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/wait_for_otp.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/cb_progressdialog.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/cb_progressdialog.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/bankold.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/res/layout/bankold.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/dialog_withdraw_success.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/dialog_withdraw_success.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/user_auto_load_layout.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/user_auto_load_layout.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/sdk_activity_login.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.core/payumoney-sdk/7.0.1/res/layout/sdk_activity_login.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout/sticky_index.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout/sticky_index.xml"
+    }
+]

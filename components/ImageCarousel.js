@@ -1,4 +1,3 @@
-import { Constants } from 'expo';
 import React, { Component } from 'react';
 import { Dimensions, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
+    paddingTop: 5,
   },
   scrollContainer: {
   },

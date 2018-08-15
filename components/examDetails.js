@@ -23,6 +23,19 @@ const examInfo = [
 
 export default class ExamDetails extends React.Component {
 
+  static navigationOptions = ({navigation}) => (
+  {
+    title: 'Exam Detail',
+    headerTintColor: '#ffffff',
+    headerStyle: {
+      backgroundColor: '#00539d',
+      borderBottomColor: '#ffffff',
+    },
+    headerTitleStyle: {
+      fontSize: 18,
+    }
+  }
+  );
     state = {
         searchText : "",
         tabType : "recentUpdates"
@@ -38,26 +51,7 @@ export default class ExamDetails extends React.Component {
                     flexDirection : "column",
                     height : "15%"
                 }}>
-                    <View style={{
-                        display : "flex",
-                        flexDirection : "column",
-                        height : "50%",
-                        position: "relative",
-                        backgroundColor: '#00539d'
-                    }}>
-                        <Icon name="arrow-left"
-                              style={{
-                                    position : "absolute",
-                                    top : 0,
-                                    left : 0,
-                                    margin : 10
-                              }}
-                              onPress={() => {
-                                  //Alert.alert("Hello");
-                                  this.props.setView("examList");
-                              }}
-                              size={25} color="white" />
-                    </View>
+                  
                     <View style={{
                         display : "flex",
                         flexDirection : "row",
@@ -92,73 +86,9 @@ export default class ExamDetails extends React.Component {
                     paddingTop : 15,
                     height : "40%"
                 }}>
-                    {/*<Button*/}
-                        {/*onPress={() => {*/}
-                            {/*this.setState({*/}
-                                {/*tabType : "recentUpdates"*/}
-                            {/*})*/}
-                        {/*}}*/}
-                        {/*title='RECENT UPDATES'*/}
-                    {/*/>*/}
-
-                    {/*<Button*/}
-                        {/*onPress={() => {*/}
-                            {/*this.setState({*/}
-                                {/*tabType : "examOverview"*/}
-                            {/*})*/}
-                        {/*}}*/}
-                        {/*title='EXAM OVERVIEW'*/}
-                    {/*/>*/}
                     <InfoTab/>
                 </View>
-                {/*<View>*/}
-                    {/*{*/}
-                        {/*this.state.tabType == "recentUpdates" ?*/}
-                            {/*<View style={{*/}
-                                {/*height : "30%"*/}
-                            {/*}}>*/}
-                                {/*<View style={{*/}
-                                    {/*height : "90%"*/}
-                                {/*}}>*/}
-                                    {/*{*/}
-                                        {/*[...Array(5)].map((item, index) =>*/}
-                                            {/*<Card style={{*/}
-                                                {/*backgroundColor : "lightgray",*/}
-                                                {/*display : "flex",*/}
-                                                {/*flexDirection : "column"*/}
-                                            {/*}}>*/}
-                                                {/*<View style={{*/}
-                                                    {/*display : "flex",*/}
-                                                    {/*flexDirection : "row"*/}
-                                                {/*}}>*/}
-                                                    {/*<Text style={{*/}
-                                                        {/*color : "red",*/}
-                                                        {/*fontSize : 16*/}
-                                                    {/*}}> 20 March 2017</Text>*/}
-                                                    {/*<Badge containerStyle={{ backgroundColor: 'green'}}>*/}
-                                                        {/*<Text>Exam Alert</Text>*/}
-                                                    {/*</Badge>*/}
-                                                {/*</View>*/}
-                                                {/*<View style={{*/}
-                                                    {/*display : "flex",*/}
-                                                    {/*flexDirection : "row"*/}
-                                                {/*}}>*/}
-                                                    {/*<Text>This is text</Text>*/}
-                                                {/*</View>*/}
-                                            {/*</Card>*/}
-                                        {/*)*/}
-                                    {/*}*/}
-                                {/*</View>*/}
-                                {/*<View style={{*/}
-                                    {/*height : "10%"*/}
-                                {/*}}>*/}
-                                    {/*/!*<Badge containerStyle={{ backgroundColor: 'green'}}>*!/*/}
-                                        {/*/!*<Text>Show More</Text>*!/*/}
-                                    {/*/!*</Badge>*!/*/}
-                                {/*</View>*/}
-                            {/*</View> : null*/}
-                    {/*}*/}
-            {/*</View>*/}
+              
             </View>
         );
     }

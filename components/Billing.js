@@ -84,7 +84,8 @@ export default class  Billing extends Component {
             </View>
           </View>
           <View style={{marginTop: 80, marginLeft: 120}}>
-          <Button title='BUY NOW' buttonStyle={styles.buyButton}
+          <Button title='BUY NOW' buttonStyle={styles.buyButton} 
+          onPress={() => this.props.navigation.navigate('Payment', {data: {name: 'LOL'}})}
            textStyle={{color: '#F8C548', fontSize : 14}} />
            </View>
       </ScrollView>

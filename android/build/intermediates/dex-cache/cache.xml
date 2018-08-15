@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.volley-volley-1.0.0_2f1ea37bbd3432a7d361e8d33f171b86acf1a279.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.graphics/asset-download-sdk/0.1.9/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="97e8b48d7874dad1ded66324f8a879c1c3b17172">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.payumoney.graphics-asset-download-sdk-0.1.9_18b40b0878cf71c04d954a76a90b8070389eeaa0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_cab2789ba4e624cd80cc139e341f0dde4c136ea7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/incredibles/react-native-payumoney/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f6fc168a319b8cd14a2c240a530df9718556208e">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/incredibles-react-native-payumoney-unspecified_b34e71578b4bc61c767f0cf922c6863df3ef913a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cb86970df0f0f25f766d320b279c7858c1ca0003">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.1_dffd2a1d3310b8b9798ec448b1b2f0f2b0c2e8c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_ef5c65b2f6e84dd269e72c9a67f5a27682bb2800.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_ae08a74f7d2b52f8c54a9640033def3134b30d2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.jakewharton/disklrucache/2.0.2/93b399470e72c0bc8cb52379943b63c9aa586cd8/disklrucache-2.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="93b399470e72c0bc8cb52379943b63c9aa586cd8">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/disklrucache-2.0.2_8d0e74642a91dc10860e1ed6c5540f8749cd727e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="feb035e98d4fef27ff2a6f45bbaac40c07a6596a">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.payu.custombrowser-payu-custom-browser-6.1.3_9f17b1936f26f12e2441888ab5390b5bd9ed3b3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_627ccf5acb81cb5527520d7eb61b12ebfdf9c179.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/gson-2.6.2_1001a7318d6387dc72557395da6be73c93f60cb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.magicretry/magicretry/1.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="591e7c1eb05bda2bcee22d151402fd8d61ffeca9">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.payu.magicretry-magicretry-1.0.5_90928a639c47275fe80cf376f4fa9116641ae26a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.1_b8aac0bb15640cadf1050001b3879d4285409659.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_5ee989941cd69e9871634abb7ace85c842a885fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_06f63a65d71d48e1526640cbeb52cae627897b8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_0ad62db857b770d5a4e266555c41adf3fc0ffc98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.core/payumoney-sdk/7.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c93ec2c2bacd3fc6a24530d6c0be4afdbde0ba3d">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.payumoney.core-payumoney-sdk-7.0.1_04259b3719993596a41ad87e3c03881decc25316.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_e26856fe15588dcddc26eda9362c58d9709c12ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="179b5ab02f5f249358175c7c62a1a3e4a4dff591">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.payumoney.sdkui-plug-n-play-1.0.0_17824fcd51464c85451acf821a38d346adf72923.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_2b2d71ecb275cb75d5ac504b2dd1931057b0408d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_65324109318e14828e4b479f933a837d422e0865.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.55.4_127dc673842e385793d722af4193529c50a7ea6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.1_8952249347c5fd562d3034704f327c3bf8bc1d6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_1ab27a3b12bbfb312c6c85914e23bc614c560700.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_b83f87d93d380ad1b1dfbf7671dfc6d59c3fdf89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_3e6ea1625ca274d0b37c80aafc695cb06b801acd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.1_29c4b0ca11dbfc8d098506e280279b46c47cdee4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_73f3d95b17d143a06ee68d5b32bb16b298bd8801.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_685ab8646ade944c7aa465905c61f203263222ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.1_8122e3ae8d38c89309a2091d8c75e9127ede2f8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.github.aakira/expandable-layout/1.6.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3cef25b344d6893e5e2d9b1ae38d180955e9d3ef">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.github.aakira-expandable-layout-1.6.0_fd2291eb1e868fb1ee386d3c62fdf692e6a9bb85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_eef206c4a12330bda47aaa892599df5731e1c766.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_84ac3b29e22240c7b55397b030ff608186304acd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.1_d5a755d0ea59e24989133ac6ee4eea4553f1516c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_080b0dac07587be3192572b3b425c2a8699b2f50.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/rrampall/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_441f5755f3ac79fda04a966494cc073e575dfe9a.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout-v11/saved_card_item.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/res/layout-v11/saved_card_item.xml"
+    },
+    {
+        "merged": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/res/merged/debug/layout-v11/magicretry_fragment.xml",
+        "source": "/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payu.magicretry/magicretry/1.0.5/res/layout-v11/magicretry_fragment.xml"
+    }
+]
