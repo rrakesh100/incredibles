@@ -133,30 +133,30 @@ export const studyMaterial = [
     categoryName : 'Intelligence Bureau',
     items : [
       {
-        image : require('../esca1.jpg'),
+        image : require('../ja.jpg'),
         title : 'May 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'PM Narendra Modi',
+        description : 'Ys Jagan',
         discountApplicable : 'yes',
         discountPercentage : 30,
         originalPrice : '500',
         price : '350'
       },
       {
-        image : require('../esca2.jpg'),
+        image : require('../rocket.jpg'),
         title : 'June 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'Indian Army',
+        description : 'ISRO',
         discountApplicable : 'yes',
         discountPercentage : 20,
         originalPrice : '250',
         price : '200'
       },
       {
-        image : require('../esca3.jpg'),
+        image : require('../sa.jpg'),
         title : 'July 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'Indian Economy',
+        description : 'Sachin Tendulkar',
         discountApplicable : false,
         price : '150'
       },
@@ -195,30 +195,30 @@ export const studyMaterial = [
     categoryName : 'RBI Assistants',
     items : [
       {
-        image : require('../esca1.jpg'),
+        image : require('../ar.jpg'),
         title : 'May 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'PM Narendra Modi',
+        description : 'Ar Rahman',
         discountApplicable : 'yes',
         discountPercentage : 30,
         originalPrice : '500',
         price : '350'
       },
       {
-        image : require('../esca2.jpg'),
+        image : require('../stock.jpg'),
         title : 'June 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'Indian Army',
+        description : 'Stock Exchange',
         discountApplicable : 'yes',
         discountPercentage : 20,
         originalPrice : '250',
         price : '200'
       },
       {
-        image : require('../esca3.jpg'),
+        image : require('../pv.jpg'),
         title : 'July 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'Indian Economy',
+        description : 'PV Sindhu',
         discountApplicable : false,
         price : '150'
       },
@@ -257,10 +257,10 @@ export const studyMaterial = [
     categoryName : 'EAMCET',
     items : [
       {
-        image : require('../esca1.jpg'),
+        image : require('../zuckr.jpg'),
         title : 'May 2018',
         shortDesc : 'Weekly Practice Tests',
-        description : 'PM Narendra Modi',
+        description : 'Mark Zuckerberg',
         discountApplicable : 'yes',
         discountPercentage : 30,
         originalPrice : '500',
