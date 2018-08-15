@@ -12,9 +12,15 @@ import SubscriptionScreen from './components/Subscription';
 import CheckoutScreen from './components/Checkout';
 import BillingScreen from './components/Billing';
 import TrendingExamScreen from './components/ViewAllTrendingExams';
+<<<<<<< HEAD
 import PaymentScreen from './screens/Payment';
 import AcademicStudiesScreen from './screens/AcademicStudies';
 import ExamDetailsScreen from './components/examDetails';
+=======
+import CurrentAffairScreen from './screens/CurrentAffair';
+
+
+>>>>>>> 5215846... navigation for trending exams and current affairs
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
   'Deprecation warning: moment construction falls back to js Date. This is discouraged and will be removed in upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.',
@@ -64,6 +70,9 @@ const StackNavigtor = createStackNavigator(
     },
     ExamDetails : {
       screen : ExamDetailsScreen
+    },
+    CurrentAffair : {
+      screen : CurrentAffairScreen
     }
 	},
 	{

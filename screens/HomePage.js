@@ -36,6 +36,10 @@ export default class HomePage extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
 
   _renderItem ({item, index}) {
         return (
@@ -98,7 +102,7 @@ export default class HomePage extends Component {
 
       for( let i=0; i<maxNum; i++) {
         updatesArr.push(
-          <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: i})}
+          <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: curAffData[i]})}
             underlayColor='#ffffff'>
           <View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -115,12 +119,12 @@ export default class HomePage extends Component {
       }
       updatesArr.push(
         !currentAffairsViewAllClicked ?
-        <View style={{height: 50}}>
+        <View style={{alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewingAll.bind(this)}
           textStyle={{color: '#F8C548'}} />
         </View> :
-        <View style={{height: 50}}>
+        <View style={{alignItems: 'flex-end'}}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHidingBtn.bind(this)}
           textStyle={{color: '#F8C548'}} />
@@ -166,12 +170,12 @@ export default class HomePage extends Component {
 
         updatesArr.push(
             !viewAllClicked ?
-            <View style={{height: 50}}>
+            <View style={{height: 50, alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewAllButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View> :
-          <View style={{height: 50}}>
+          <View style={{height: 50, alignItems: 'flex-end'}}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
@@ -340,10 +344,6 @@ export default class HomePage extends Component {
               <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>{item.date}</Text>
               <Text style={{marginTop: 6, fontSize: 13}} numberOfLines={3}>{item.desc}</Text>
             </Card>
-
-            <Button title='View All' buttonStyle={styles.viewAll}
-            onPress={() =>  this.props.onNavigate('Checkout', {data: 'Girish'})}
-            textStyle={{color: '#F8C548'}} />
           </View>
         )
       }
@@ -366,8 +366,7 @@ export default class HomePage extends Component {
                     </Text>
                   </View>
               </Card>
-              <Button title='View All' buttonStyle={styles.viewAll}
-              textStyle={{color: '#F8C548'}} />
+
            </View>
         )
       }
@@ -394,8 +393,7 @@ export default class HomePage extends Component {
                 </Text>
               </View>
           </Card>
-          <Button title='View All' buttonStyle={styles.viewAll}
-          textStyle={{color: '#F8C548'}} />
+
           </View>
         )
       }
@@ -405,7 +403,6 @@ export default class HomePage extends Component {
 
 
   render() {
-
       return (
         <ScrollView style={{backgroundColor : '#E8F3F7'}}>
         <View>
@@ -456,8 +453,13 @@ export default class HomePage extends Component {
             autoplay={true}
             loop={true}
           />
-
+          <View style={{alignItems: 'flex-end'}}>
+          <Button title='View All' buttonStyle={styles.viewAll}
+          onPress={() =>  this.props.onNavigate('ViewAllTrendingExams', {data: 'Girish'})}
+          textStyle={{color: '#F8C548'}} />
+          </View>
         </View>
+
 
         <View style={styles.trendStyle}>
         <Text style={styles.trend}>Online Test and <Text style={{fontWeight: 'bold'}}>Test Series</Text></Text>
@@ -472,6 +474,10 @@ export default class HomePage extends Component {
               autoplay={true}
               loop={true}
             />
+            <View style={{alignItems: 'flex-end'}}>
+            <Button title='View All' buttonStyle={styles.viewAll}
+            textStyle={{color: '#F8C548'}} />
+            </View>
         </View>
 
         <View style={styles.trendStyle}>
@@ -487,6 +493,10 @@ export default class HomePage extends Component {
               autoplay={true}
               loop={true}
             />
+            <View style={{alignItems: 'flex-end'}}>
+            <Button title='View All' buttonStyle={styles.viewAll}
+            textStyle={{color: '#F8C548'}} />
+            </View>
         </View>
         <View style={styles.ad}>
         <Image resizeMode="contain" style={styles.shrink} source={require('../ad.jpg')} />
@@ -597,7 +607,7 @@ export default class HomePage extends Component {
     adStyle : {
       marginTop: 10,
       backgroundColor: '#ecf0f1',
-      height: 250
+      height: 260
     },
     trendStyle : {
       marginTop: 10,
@@ -632,14 +642,11 @@ export default class HomePage extends Component {
    },
    viewAll: {
      width: 100,
-     height: 40,
+     height: 34,
      borderRadius: 20,
      borderColor: '#F8C548',
      borderWidth:1,
      backgroundColor: 'white',
-     position : 'absolute',
-     marginTop : 8,
-     right : 0
    },
    selectedButtonStyle: {
         backgroundColor: '#FFBC00'
