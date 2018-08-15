@@ -170,12 +170,12 @@ export default class HomePage extends Component {
 
         updatesArr.push(
             !viewAllClicked ?
-            <View style={{height: 50, alignItems: 'flex-end'}}>
+            <View style={{alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewAllButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View> :
-          <View style={{height: 50, alignItems: 'flex-end'}}>
+          <View style={{alignItems: 'flex-end'}}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
@@ -210,12 +210,12 @@ export default class HomePage extends Component {
 
         updatesArr.push(
             !viewAllClicked ?
-            <View style={{height: 50}}>
+            <View style={{alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewAllButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View> :
-          <View style={{height: 50}}>
+          <View style={{alignItems: 'flex-end'}}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
@@ -250,12 +250,12 @@ export default class HomePage extends Component {
 
         updatesArr.push(
             !viewAllClicked ?
-            <View style={{height: 50}}>
+            <View style={{alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewAllButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View> :
-          <View style={{height: 50}}>
+          <View style={{alignItems: 'flex-end'}}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
@@ -290,12 +290,12 @@ export default class HomePage extends Component {
 
         updatesArr.push(
             !viewAllClicked ?
-            <View style={{height: 50}}>
+            <View style={{alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewAllButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View> :
-          <View style={{height: 50}}>
+          <View style={{alignItems: 'flex-end'}}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />

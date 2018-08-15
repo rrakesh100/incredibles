@@ -28,9 +28,14 @@ export default class ViewAllTrendingExams extends Component {
   }
   );
 
-  timeout() {
-    console.log('nithya')
+  componentDidMount() {
+    setInterval(() => {
+        this.setState({
+          showText: !this.state.showText
+        })
+      },100);
   }
+
 
   onTextPress(url) {
     Linking.openURL(url)
@@ -49,7 +54,9 @@ export default class ViewAllTrendingExams extends Component {
                   onPress={this.onTextPress.bind(this, exam.URL)}>
                   {exam.desc}
                   </Text>
-                  <View style={{position: 'absolute', right: 0}}>
+                  <View style={styles.new}>
+                  { showText ?
+                    <Text style={{color: 'red'}}>new</Text> : <Text></Text> }
                   </View>
                 </View>
               <Text style={styles.description}>{exam.shortdesc}</Text>
@@ -76,7 +83,6 @@ export default class ViewAllTrendingExams extends Component {
   const styles = StyleSheet.create({
     flex: {
       flexDirection: 'row',
-      alignItems: 'center',
       margin: 6
     },
     description: {
@@ -86,6 +92,9 @@ export default class ViewAllTrendingExams extends Component {
     },
     postedDate: {
       color: '#F8C548'
+    },
+    new : {
+      alignItems: 'flex-end'
     },
     lastDate: {
       color: '#F8C548',

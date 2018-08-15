@@ -44,6 +44,14 @@ export default class Estore extends Component {
     })
   }
 
+  onHideButton(categoryName) {
+    const  {viewAllClicked } = this.state;
+    viewAllClicked[categoryName] = false;
+    this.setState({
+      viewAllClicked,
+    })
+  }
+
   updateIndex = (index) => {
   this.setState({index})
   }
@@ -102,12 +110,22 @@ export default class Estore extends Component {
                            </Card> )})
                          }
                      </View>
-                     <View style={{height: 45, marginLeft: 200}}>
-                        <Button title='View All' buttonStyle={styles.viewAll}
-                        textStyle={{color: '#F8C548'}}
-                        onPress={this.onViewAllButton.bind(this, entry.categoryName)}
-                        />
-                     </View>
+                     {
+                       !viewAllClicked[entry.categoryName] ?
+                       <View style={{height: 45, alignItems: 'flex-end'}}>
+                          <Button title='View All' buttonStyle={styles.viewAll}
+                          textStyle={{color: '#F8C548'}}
+                          onPress={this.onViewAllButton.bind(this, entry.categoryName)}
+                          />
+                       </View> :
+                       <View style={{height: 45, alignItems: 'flex-end'}}>
+                          <Button title='Hide' buttonStyle={styles.viewAll}
+                          textStyle={{color: '#F8C548'}}
+                          onPress={this.onHideButton.bind(this, entry.categoryName)}
+                          />
+                       </View>
+                     }
+
               </View>
             )
           })
