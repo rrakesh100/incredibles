@@ -2,6 +2,7 @@ import React from "react";
 import {Dimensions, Image, View, Alert, TouchableHighlight, TouchableOpacity, ScrollView} from "react-native";
 import { Card, ListItem, Button, Text } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {academicStudies} from '../api/academicStudies';
 
 export default class AcademicStudies extends React.Component {
 
@@ -37,7 +38,7 @@ export default class AcademicStudies extends React.Component {
         return (
           <ScrollView style={{backgroundColor : '#E8F3F7'}}>
             {
-              [...Array(5)].map((item, index) => {
+              academicStudies.map((item, index) => {
                 return (  <TouchableOpacity key={index}
                   onPress={() => this.props.onNavigate('ExamDetails', {data: {name: 'Girish'}})}
                       >
@@ -52,25 +53,26 @@ export default class AcademicStudies extends React.Component {
                               fontSize : 24,
                               fontWeight : "bold",
                               color : '#2980b9'
-                          }}>Name</Text>
+                          }}>{item.examName}</Text>
                       <View style={{
                           display : "flex",
                           flexDirection : "row"
                       }}>
                       {
-                          [...Array(4)].map((item1, index1) =>
-                              <Text style={{
+                          item.subjects.map((item1, index1) =>
+                               <Text style={{
                                   marginRight : 5,
                                   fontSize : 14,
                                   color : "orange"
-                              }}>SubTopics |</Text>
+                              }}>{item1} |</Text>
                           )
                       }
                       </View>
                       <Text style={{
                           fontSize : 12
-                      }}>This is description
+                      }}>{item.description}
                       </Text>
+
                       <Icon name="chevron-right"
                             style={{
                                 position : "absolute",

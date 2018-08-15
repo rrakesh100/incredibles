@@ -87,6 +87,7 @@ ADDED from /Users/rrampall/work/lab/sakshi/incredibles/android/app/src/main/Andr
 		ADDED from /Users/rrampall/work/lab/sakshi/incredibles/android/app/src/main/AndroidManifest.xml:23:17-81
 uses-sdk
 INJECTED from /Users/rrampall/work/lab/sakshi/incredibles/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [incredibles:react-native-vector-icons:unspecified] /Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/incredibles/react-native-vector-icons/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [incredibles:react-native-payumoney:unspecified] /Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/incredibles/react-native-payumoney/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [com.payumoney.sdkui:plug-n-play:1.0.0] /Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.payumoney.sdkui/plug-n-play/1.0.0/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.aakira:expandable-layout:1.6.0] /Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/exploded-aar/com.github.aakira/expandable-layout/1.6.0/AndroidManifest.xml:8:5-10:41

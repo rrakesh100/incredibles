@@ -91,11 +91,6 @@ export default class Home extends React.Component {
         <Text>Online Tests</Text>
       </View>
     </ScrollView>
-    <ScrollView tabLabel="Messages" style={styles.tabView}>
-      <View style={styles.card}>
-        <Text>Messages</Text>
-      </View>
-    </ScrollView>
   </ScrollableTabView>
     );
   }
