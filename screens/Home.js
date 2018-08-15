@@ -107,7 +107,7 @@ export default class Home extends React.Component {
 }
 
 const FirstRoute = (nav) => (
-  <HomePage />
+  <HomePage onNavigate={redirect.bind(this, nav)}/>
 );
 
 const SecondRoute = () => (

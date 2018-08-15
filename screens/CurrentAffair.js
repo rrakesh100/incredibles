@@ -7,7 +7,7 @@ export default class CurrentAffair extends React.Component {
 
     static navigationOptions = ({navigation}) => (
 		{
-      title: `${navigation.state.params ? navigation.state.params.data.title : 'Exam'}`,
+      title: 'Current Affairs',
 			headerTintColor: '#ffffff',
 			headerStyle: {
 				backgroundColor: '#00539d',
@@ -20,10 +20,10 @@ export default class CurrentAffair extends React.Component {
     );
 
     render() {
-      console.log(this.props)
       return (
         <View>
          <Text>Girish</Text>
         </View>
       )
     }
+  }
