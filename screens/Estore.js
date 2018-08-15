@@ -81,7 +81,7 @@ export default class Estore extends Component {
                                  <Image style={{width: 100, height: 100, margin: 10}} source={item.image} />
                                  </View>
                               </Col>
-                              <Col size={3.8} style={{marginTop : 10,marginLeft:4}}>
+                              <Col size={3.8} style={{marginTop : 10,marginLeft:20}}>
                                 <View>
                                   <View style={styles.gap}>
                                     <Text style={styles.txtStyle}>{item.title}</Text>
@@ -96,10 +96,10 @@ export default class Estore extends Component {
                                  </View>
                               </Col>
                               <Col size={2}  style={{marginTop : 10}}>
-                                <Row>
-                                   <Text><Text style={{textDecorationLine: 'line-through'}}>Rs.{item.originalPrice}</Text>
-                                   <Text style={{color: '#17A194'}}>Rs.{item.price}</Text></Text>
-                                </Row>
+                              <Row style={{marginTop : 20}}>
+                                 <Text><Text style={{textDecorationLine: 'line-through'}}>Rs.{item.originalPrice}</Text>
+                                 <Text style={{color: '#17A194'}}>Rs.{item.price}</Text></Text>
+                              </Row>
                                 <Row>
                                   <Button title='Buy' buttonStyle={styles.bStyle}
                                   onPress ={() => this.props.onNavigate('Checkout', {'data' : item})}
@@ -225,7 +225,7 @@ export default class Estore extends Component {
 
       return (
         <View>
-        <Text>sa</Text>
+        <Text style={{fontSize : 14, marginLeft : 10}}>No books available for download !!</Text>
         </View>
       )
     }

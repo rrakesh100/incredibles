@@ -52,7 +52,7 @@ export default class Payment extends Component<Props> {
             key: "LLKwG0",
             surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
             furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
-            sandbox: false, //false in production
+            sandbox: false  , //false in production
             hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
         };
         PayuMoney.pay(options).then((d) => {
