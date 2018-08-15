@@ -11,6 +11,7 @@ import OnlineTestsScreen from './components/OnlineTests';
 import SubscriptionScreen from './components/Subscription';
 import CheckoutScreen from './components/Checkout';
 import BillingScreen from './components/Billing';
+import TrendingExamScreen from './components/ViewAllTrendingExams';
 
 
 YellowBox.ignoreWarnings([
@@ -50,6 +51,9 @@ const StackNavigtor = createStackNavigator(
     },
     Billing : {
       screen : BillingScreen
+    },
+    ViewAllTrendingExams : {
+      screen : TrendingExamScreen
     }
 	},
 	{

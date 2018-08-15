@@ -2188,7 +2188,7 @@ create-react-class@15.5.3:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-create-react-class@^15.6.3:
+create-react-class@^15.6.2, create-react-class@^15.6.3:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   dependencies:
@@ -5739,9 +5739,9 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-"react-native-payumoney@git+https://github.com/Suraj-Tiwari/react-native-payumoney.git":
+react-native-payumoney@^0.0.3:
   version "0.0.3"
-  resolved "git+https://github.com/Suraj-Tiwari/react-native-payumoney.git#d905ca5695321140470e015df7e802efc9b49319"
+  resolved "https://registry.yarnpkg.com/react-native-payumoney/-/react-native-payumoney-0.0.3.tgz#570e0dfb8384e55ca80027e6c424b0ba2d88e801"
 
 react-native-safe-area-view@^0.7.0:
   version "0.7.0"
@@ -5780,6 +5780,14 @@ react-native-scripts@1.14.0:
     qrcode-terminal "^0.11.0"
     rimraf "^2.6.1"
     xdl "48.1.4"
+
+react-native-scrollable-tab-view@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.8.0.tgz#5cb1fcfce07bf530a3c81ab51fc5071144edac5c"
+  dependencies:
+    create-react-class "^15.6.2"
+    prop-types "^15.6.0"
+    react-timer-mixin "^0.13.3"
 
 react-native-snap-carousel@^3.7.2:
   version "3.7.2"
@@ -5977,7 +5985,7 @@ react-test-renderer@^16.3.1:
     prop-types "^15.6.0"
     react-is "^16.4.1"
 
-react-timer-mixin@^0.13.2:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.4"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
 

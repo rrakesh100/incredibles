@@ -157,20 +157,69 @@ export const homepageJobsData = [
 
 export const trendingData = [
   {
-    title: 'India Post Payment Bank Officer Post',
-    date: 'Mar 2018',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+    title: 'INDIAN AIRFORCE 2018',
+    postedDate: 'Oct 08, 2018',
+    lastDate: 'Oct 30, 2018',
+    URL: 'http://indianairforce.nic.in/',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    desc: 'Indian AIRFORCE 2018 Recruitment'
   },
   {
     title: 'SSC CGL 2018',
-    date: 'May 2018',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
+    postedDate: 'Mar 02, 2018',
+    lastDate: 'Mar 30, 2018',
+    URL: 'https://ssc.nic.in',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    desc: 'Staff selection commission(SSC) combined graduate level(CGL)-2018'
   },
   {
-    title: 'SSC CHSL 2018',
-    date: 'Aug 2018',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..'
-  }
+    title: 'IBPS PO 2018',
+    postedDate: 'May 09, 2018',
+    lastDate: 'Jun 02, 2018',
+    URL: 'http://www.ibps.in',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    desc: 'Institute of Banking Personnel Selection (IBPS) probationary officer '
+  },
+  {
+    title: 'INDIAN ARMY 2018',
+    postedDate: 'Jan 15, 2018',
+    lastDate: 'Feb 12, 2018',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    URL: 'https://indianarmy.nic.in/index.aspx',
+    desc: 'Indian ARMY 2018 Recruitment'
+  },
+  {
+    title: 'UPSC 2018',
+    postedDate: 'May 05, 2018',
+    lastDate: 'May 31, 2018',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    URL: 'http://www.upsc.gov.in',
+    desc: 'Institute of Banking Personnel Selection (IBPS) probationary officer '
+  },
+  {
+    title: 'Junior Engineer',
+    postedDate: 'Mar 17, 2018',
+    lastDate: 'Apr 08, 2018',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    URL: 'https://ssc.nic.in',
+    desc: ' Uploading of marks of Paper-II of Junior Engineers (Civil, Mechanical, Electrical and Quantity Surveying & Contract) Examination 2017'
+  },
+  {
+    title: 'Constable 2018',
+    postedDate: 'Sep 05, 2018',
+    lastDate: 'Sep 29, 2018',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    URL: 'https://tspsc.gov.in/TSPSCWEB0508/indexnew.jsp',
+    desc: '2018 Important Notice for Candidates of Constable (GD) Examination, 2018'
+  },
+  {
+    title: 'INDIAN NAVY 2018',
+    postedDate: 'Dec 04,2018',
+    lastDate: 'Dec 31,2018',
+    shortdesc: 'Applications are invited for filling up the following vacancies:...',
+    URL: 'https://www.joinindiannavy.gov.in/en',
+    desc: 'Indian Navy 2018 Recruitment'
+  },
 
 ]
 

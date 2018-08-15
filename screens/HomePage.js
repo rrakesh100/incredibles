@@ -150,8 +150,8 @@ export default class HomePage extends Component {
 
       for( let i = 0; i < maxNum; i++) {
           updatesArr.push(
-            <View>
-                  <View style={styles.card} key={i}>
+            <View key={i}>
+                  <View style={styles.card}>
                       <View style={styles.listStyle}>
                           <Text style={{color: '#FEC336', marginHorizontal: 8}}>{homeData[i].title}</Text>
 
@@ -338,10 +338,11 @@ export default class HomePage extends Component {
             <Card containerStyle={{width:180, height: 140}}>
               <Text style={{fontSize: 20}}>{item.title}</Text>
               <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>{item.date}</Text>
-              <Text style={{marginTop: 6, fontSize: 13}}>{item.desc}</Text>
+              <Text style={{marginTop: 6, fontSize: 13}} numberOfLines={3}>{item.desc}</Text>
             </Card>
 
             <Button title='View All' buttonStyle={styles.viewAll}
+            onPress={() =>  this.props.onNavigate('Checkout', {data: 'Girish'})}
             textStyle={{color: '#F8C548'}} />
           </View>
         )

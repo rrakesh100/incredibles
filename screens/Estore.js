@@ -147,7 +147,7 @@ export default class Estore extends Component {
 
   }
 
-  renderOnlineTests(){
+  renderOnlineTests() {
     return (
       <View>
       {
