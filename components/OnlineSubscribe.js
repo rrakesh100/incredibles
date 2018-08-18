@@ -4,8 +4,8 @@ import { Button, Card, Icon } from 'react-native-elements';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
-
 const sliderWidth = Dimensions.get('window').width;
+const sliderHeight = Dimensions.get('window').height;
 
 
 export default class OnlineSubscribe extends Component {
@@ -34,6 +34,10 @@ export default class OnlineSubscribe extends Component {
   }
   );
 
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   onQuantityChanged(action) {
     if(this.state.quantity === 1 && action === 'remove'){
       this.setState({subscribed : false});
@@ -52,27 +56,36 @@ export default class OnlineSubscribe extends Component {
 
   render() {
     const { subscribed } = this.state;
+    const { navigation } = this.props;
+    const data = navigation.state.params.data;
+    console.log(data)
     return (
       <ScrollView>
-        <Image style={styles.resize} source={require('../ib.jpg')} />
+        <Image style={styles.resize} source={data.image} />
             <View style={styles.header}>
               <View style={styles.flex}>
                 <Text style={styles.txtStyle}>
-                  Intelligence Bureau Exam 2018
+                  {data.categoryName}
                 </Text>
                 <Button title='50% OFF'  buttonStyle={styles.btnStyle}
                  textStyle={{color: '#7FD672', fontSize: 12}} />
                </View>
                <Text style={{color: '#F8C548', marginLeft: 8}}>
-               Previous Solved Papers With Solutions
+               {data.insideShortDesc}
                </Text>
                <Text style={{color: '#b2bec3', fontSize: 16, margin: 8}}>
-               It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.
+               {data.insideDesc}
                </Text>
             </View>
-          <View style={styles.space}>
-          <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 12}}>
-              <Text style={{fontSize: 22}}>Rs.<Text style={{textDecorationLine: 'line-through', fontSize:22}}>40</Text> <Text style={{fontSize: 22, marginLeft: 4}}>Rs.</Text><Text style={{color: '#17A194', fontSize: 22}}>20</Text></Text>
+          <View style={[styles.space, {flex:1}]}>
+          <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: 12}}>
+              <Text style={{fontSize: 22}}>
+                  {
+                    data.originalPrice ?
+                    <Text style={{textDecorationLine: 'line-through', fontSize:22}}>Rs.{data.originalPrice}</Text> : null }
+                  <Text style={{fontSize: 22, marginLeft: 4}}>Rs.</Text>
+                  <Text style={{color: '#17A194', fontSize: 22}}>{data.price}</Text>
+              </Text>
               <View style={{position: 'absolute', right: 4}}>
               {
                 subscribed ? (
@@ -102,7 +115,7 @@ export default class OnlineSubscribe extends Component {
             { subscribed ?
               <View style={{marginLeft: 120}}>
             <Button title='PROCEED' buttonStyle={styles.bStyle}
-               onPress={() => this.props.onNavigate('Checkout', {data: {name: 'Girish'}})}
+               onPress={() => this.props.navigation.navigate('Checkout', {data: data})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
              </View> : null }
             <View style={styles.flex}>
@@ -143,8 +156,8 @@ export default class OnlineSubscribe extends Component {
 
 const styles = StyleSheet.create({
   resize : {
-    width: 0.99*sliderWidth,
-    height: 150
+    width: sliderWidth,
+    height: sliderHeight*0.30
   },
   header: {
     backgroundColor: '#E8F3F7',

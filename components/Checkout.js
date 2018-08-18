@@ -15,28 +15,7 @@ export default class  Checkout extends Component {
     this.state = {
       subscribed : false,
       quantity : 1,
-      items : [
-        {
-          image : require('../cart1.jpg'),
-          title : 'Intelligence Bureau',
-          shortDesc : 'ACIO Exam 2018s',
-          description : 'Previous Solved Papers',
-          discountApplicable : 'yes',
-          discountPercentage : 50,
-          originalPrice : '500',
-          price : '250'
-        },
-        {
-          image : require('../cart2.jpg'),
-          title : 'SSC CGL',
-          shortDesc : 'Tier-1 2018',
-          description : 'Previous Solved Papers',
-          discountApplicable : 'yes',
-          discountPercentage : 40,
-          originalPrice : '250',
-          price : '150'
-        }
-      ]
+      items : []
     }
   }
 
@@ -55,7 +34,8 @@ export default class  Checkout extends Component {
   );
 
   componentDidMount(){
-    console.log(this.props);
+    const { items } = this.state;
+
   }
 
   onQuantityChanged(action) {
@@ -76,6 +56,9 @@ export default class  Checkout extends Component {
 
   renderCartItems() {
     const { items } = this.state;
+    const { navigation } = this.props;
+    const data = navigation.state.params.data;
+    items.push(data)
 
     return (
       items.map((item) => {
@@ -124,26 +107,28 @@ export default class  Checkout extends Component {
   }
 
   render(){
-
+    const { items } = this.state;
+    const { navigation } = this.props;
+    const data = navigation.state.params.data;
     return (
         <ScrollView>
 
         { this.renderCartItems() }
         <View style={styles.seperator}>
         <View>
-        <Text style={styles.textStyle}>Total 2 Items</Text>
-        <Text style={styles.textStyle}>Discount on MRP Rs.40</Text>
+        <Text style={styles.textStyle}>Total 1 Item</Text>
+        <Text style={styles.textStyle}>Discount on MRP Rs.{data.price}</Text>
         </View>
         <View>
         <Text style={{color: 'white',fontSize: 18, marginLeft: 50}}>Sub Total</Text>
         </View>
         <View>
-        <Text style={styles.textStyle}>Rs 40</Text>
+        <Text style={styles.textStyle}>Rs {data.price}</Text>
         </View>
         </View>
         <View style={{marginTop: 80, marginLeft: 120}}>
         <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
-        onPress={() => this.props.navigation.navigate('Billing', {data: {name: 'Girish'}})} 
+        onPress={() => this.props.navigation.navigate('Billing', {data: {name: 'Girish'}})}
          textStyle={{color: '#F8C548', fontSize : 14}} />
          </View>
         </ScrollView>
