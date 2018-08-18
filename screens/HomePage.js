@@ -106,7 +106,7 @@ export default class HomePage extends Component {
             underlayColor='#ffffff'>
           <View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Image source={curAffData[i].image} style={{width:100, height: 100, verticalAlign: 'middle', margin: 2}}/>
+              <Image source={curAffData[i].image} style={{width:100, height: 100, margin: 2}}/>
             <View>
               <Text style={{fontSize: 18, fontWeight: 'bold', margin: 4, textAlign: 'justify'}}>{curAffData[i].heading}</Text>
               <Text style={{margin: 4}}>{curAffData[i].date}</Text>

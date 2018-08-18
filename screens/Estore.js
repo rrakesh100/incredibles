@@ -102,7 +102,7 @@ export default class Estore extends Component {
                                 </Row>
                                 <Row>
                                   <Button title='Buy' buttonStyle={styles.bStyle}
-                                  onPress ={() => this.props.onNavigate('Checkout', {'data' : item})}
+                                  onPress ={() => this.props.onNavigate('OnlineSubscribe', {data : item})}
                                    textStyle={{color: '#F8C548'}}/>
                                 </Row>
                               </Col>
@@ -196,14 +196,14 @@ export default class Estore extends Component {
                      textStyle={{color: '#7FD672', fontSize: 8}} /></View> : null }
                   </Row>
                   <Row>
-                    <Text style={{fontSize : 12}}>Valid for {test.validity}</Text>
+                    <Text style={{fontSize : 12}}>{test.validity}</Text>
                   </Row>
               </Col>
             </Row>
             <Row size={1}>
 
               <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
-              onPress={() => this.props.onNavigate('Subscription', {data : {abc : 'rakesh'}})}
+              onPress={() => this.props.onNavigate('Subscription', {data : test})}
                textStyle={{color: '#F8C548', fontSize : 8}} />
             </Row>
             </Col>

@@ -5,6 +5,7 @@ import { Button, Card, Icon } from 'react-native-elements';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
+const sliderHeight = Dimensions.get('window').height;
 
 
 export default class  Subscription extends Component {
@@ -34,6 +35,10 @@ export default class  Subscription extends Component {
   }
   );
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   onQuantityChanged(action) {
     if(this.state.quantity === 1 && action === 'remove'){
       this.setState({subscribed : false});
@@ -52,40 +57,41 @@ export default class  Subscription extends Component {
 
   render() {
     const { subscribed } = this.state;
+    const { navigation } = this.props;
     console.log('@@@@', this.props);
+    const data = navigation.state.params.data;
     return (
       <ScrollView>
-        <Image style={styles.resize} source={require('../subscribe.jpg')} />
+        <Image style={styles.resize} source={data.image} />
         <View style={styles.header}>
             <Text style={styles.txtStyle}>
-            SSC CGL 2016 Tier Grand Tests (New Pattern)
+            {data.title}
             </Text>
            <Text style={{color: '#F8C548', marginLeft: 8}}>
-           10 Tests with solutions and explanations
+           {data.description}
            </Text>
            <Text style={{color: '#b2bec3', fontSize: 16, margin: 8}}>
-           Facility to take tests at your convenient time.
+           {data.insideDescription.first}
            </Text>
            <Text style={{color: '#b2bec3', fontSize: 16, margin: 8}}>
-           Also find detailed solutions and explanations to each and every question.
+           {data.insideDescription.second}
            </Text>
            <Text style={{color: '#b2bec3', fontSize: 16, margin: 8}}>
-           Feel the real-time experience with sakshieducation.com
+           {data.insideDescription.third}
            </Text>
            <Text style={{color: '#b2bec3', fontSize: 16, margin: 8}}>
-           Online Mock tests
+           {data.insideDescription.fourth}
            </Text>
-
 
         </View>
         <View style={styles.seperator}>
         <View style={{marginLeft: 20}} >
         <Grid style={{marginTop: 10}}>
            <Col size={3}>
-           <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>150</Text></Text>
+           <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>{data.price}</Text></Text>
            </Col>
            <Col size={3}>
-           <Text style={{color: '#C3CFCF'}}>valid for 2 year</Text>
+           <Text style={{color: '#C3CFCF'}}>{data.validity}</Text>
            </Col>
            <Col size={4}>
            {
@@ -116,7 +122,7 @@ export default class  Subscription extends Component {
         </View>
         <View>
             <Button title='PROCEED' buttonStyle={styles.proceedButton}
-               onPress={() => this.props.navigation.navigate('Checkout', {data: {name: 'Girish'}})}
+               onPress={() => this.props.navigation.navigate('Checkout', {data: data})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
         </View>
         <View style={styles.flex}>
@@ -157,7 +163,7 @@ export default class  Subscription extends Component {
 const styles = StyleSheet.create({
   resize : {
     width: sliderWidth,
-    height: 150
+    height: sliderHeight*0.30
   },
   header: {
     backgroundColor: '#E8F3F7',
