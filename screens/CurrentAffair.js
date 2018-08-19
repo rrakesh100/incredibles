@@ -20,9 +20,13 @@ export default class CurrentAffair extends React.Component {
     );
 
     render() {
+      const data = this.props.navigation.state.params.data;
       return (
         <View>
-         <Text>Girish</Text>
+         <Text>WORK IN PROGRESS</Text>
+         <Text style={{marginTop : 10, fontWeight : 'bold'}}>{data.heading}</Text>
+         <Text style={{marginTop : 10}}>{data.date}</Text>
+         <Text style={{marginTop : 10}}>{data.description}</Text>
         </View>
       )
     }

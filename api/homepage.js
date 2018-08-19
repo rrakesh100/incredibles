@@ -202,7 +202,7 @@ export const trendingData = [
     lastDate: 'Apr 08, 2018',
     shortdesc: 'Applications are invited for filling up the following vacancies:...',
     URL: 'https://ssc.nic.in',
-    desc: ' Uploading of marks of Paper-II of Junior Engineers (Civil, Mechanical, Electrical and Quantity Surveying & Contract) Examination 2017'
+    desc: ' Uploading of marks of Paper-II of Junior Engineers  Examination 2017'
   },
   {
     title: 'Constable 2018',
