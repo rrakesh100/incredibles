@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions, StyleSheet, ScrollView, TextInput } from 'react-native';
+import { View, Text, Image, Dimensions, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
 import { Button, Icon, SearchBar, Input } from 'react-native-elements';
 import { Card } from 'native-base';
@@ -12,6 +12,7 @@ export default class  Billing extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedPaymentOption : 'None'
     }
   }
 
@@ -28,10 +29,17 @@ export default class  Billing extends Component {
     }
   }
   );
+  
+  onPaymentButtonClick = (selectedPaymentOption) => {
+    this.setState({
+      selectedPaymentOption
+    })
+  }
 
 
 
   render() {
+    const {selectedPaymentOption} = this.state;
     return (
       <ScrollView style={{backgroundColor : '#E8F3F7'}}>
       <Text style={{color: '#95A5A6', fontSize: 18, marginLeft: 15}}>
@@ -74,14 +82,23 @@ export default class  Billing extends Component {
           </View>
           <View style={styles.flex}>
             <View style={{marginLeft: 15}}>
+            <TouchableOpacity onPress={()=>this.onPaymentButtonClick('PayU Money')}>
             <Image source={require('../payu.png')} style={{width: 80, height: 50}}/>
+            </TouchableOpacity>
             </View>
             <View style={{marginLeft: 15}}>
+            <TouchableOpacity onPress={()=>this.onPaymentButtonClick('PayTM')}>
             <Image source={require('../paytm.jpg')} style={{width: 80, height: 50}}/>
+            </TouchableOpacity>
             </View>
             <View style={{marginLeft: 15}}>
+            <TouchableOpacity onPress={()=>this.onPaymentButtonClick('Ru Pay')}>
             <Image source={require('../rupay1.png')} style={{width: 80, height: 50}}/>
+            </TouchableOpacity>
             </View>
+          </View>
+          <View>
+            <Text style={{fontWeight : 'bold', fontSize : 18, marginTop: 20 }}>Selected Payment Mode : {selectedPaymentOption}</Text>
           </View>
           <View style={{marginTop: 80, marginLeft: 120}}>
           <Button title='BUY NOW' buttonStyle={styles.buyButton} 
