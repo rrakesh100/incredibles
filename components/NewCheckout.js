@@ -4,6 +4,7 @@ import CartIcon from 'react-native-vector-icons/EvilIcons';
 import { Button, Icon } from 'react-native-elements';
 import { Card } from 'native-base';
 import CloseIcon from 'react-native-vector-icons/EvilIcons';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -61,19 +62,45 @@ export default class  Checkout extends Component {
     items.push(data)
 
     return (
-      items.map((item) => {
+      items.map((item, index) => {
         return (
 
-          <View>
-            <Card>
-              <View style={{flexDirection: 'row'}}>
-               <Image style={{width: 100, height: 100, margin: 6}} source={item.image} />
-                 <View style={{flexDirection: 'column', justifyContent: 'space-around'}}>
-                     <Text style={styles.txtStyle}>{item.title}</Text>
-                     <Text style={styles.textS}>{item.shortDesc}</Text>
-                     <Text style={styles.textS}>{item.description}</Text>
-                   </View>
-               </View>
+          <View key={index}>
+            <Card style={{height: 120}}>
+            <Grid>
+              <Row>
+                  <Col>
+                     <Text>Title</Text>
+                  </Col>
+                  <Col>
+                     <Text>{item.title}</Text>
+                  </Col>
+              </Row>
+              <Row>
+                  <Col>
+                     <Text>Description</Text>
+                  </Col>
+                  <Col>
+                     <Text>{item.shortDesc}</Text>
+                  </Col>
+              </Row>
+              <Row>
+                  <Col>
+                     <Text>Price</Text>
+                  </Col>
+                  <Col>
+                     <Text>{item.originalPrice}</Text>
+                  </Col>
+              </Row>
+              <Row>
+                  <Col>
+                     <Text>Discounted Price</Text>
+                  </Col>
+                  <Col>
+                     <Text>{item.price}</Text>
+                  </Col>
+              </Row>
+            </Grid>
             </Card>
           </View>
         )

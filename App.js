@@ -10,6 +10,7 @@ import OnlineSubscribeScreen from './components/OnlineSubscribe';
 import OnlineTestsScreen from './components/OnlineTests';
 import SubscriptionScreen from './components/Subscription';
 import CheckoutScreen from './components/Checkout';
+import NewCheckoutScreen from './components/NewCheckout';
 import BillingScreen from './components/Billing';
 import TrendingExamScreen from './components/ViewAllTrendingExams';
 import PaymentScreen from './screens/Payment';
@@ -52,6 +53,9 @@ const StackNavigtor = createStackNavigator(
     },
     Checkout : {
       screen : CheckoutScreen
+    },
+    NewCheckout : {
+      screen : NewCheckoutScreen
     },
     Billing : {
       screen : BillingScreen
