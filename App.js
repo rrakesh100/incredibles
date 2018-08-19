@@ -77,7 +77,7 @@ const StackNavigtor = createStackNavigator(
     }
 	},
 	{
-		initialRouteName: 'Home'
+		initialRouteName: 'Billing'
 	}
 );
 

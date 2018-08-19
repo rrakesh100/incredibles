@@ -68,7 +68,7 @@ export default class  Checkout extends Component {
           <View key={index}>
             <Card style={{height: 120}}>
             <Grid>
-              <Row>
+              <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
                      <Text>Title</Text>
                   </Col>
@@ -76,7 +76,7 @@ export default class  Checkout extends Component {
                      <Text>{item.title}</Text>
                   </Col>
               </Row>
-              <Row>
+              <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
                      <Text>Description</Text>
                   </Col>
@@ -84,7 +84,7 @@ export default class  Checkout extends Component {
                      <Text>{item.shortDesc}</Text>
                   </Col>
               </Row>
-              <Row>
+              <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
                      <Text>Price</Text>
                   </Col>
@@ -92,7 +92,7 @@ export default class  Checkout extends Component {
                      <Text>{item.originalPrice}</Text>
                   </Col>
               </Row>
-              <Row>
+              <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
                      <Text>Discounted Price</Text>
                   </Col>
@@ -122,13 +122,13 @@ export default class  Checkout extends Component {
         <View style={styles.seperator}>
         <View>
         <Text style={styles.textStyle}>Total 1 Item</Text>
-        <Text style={styles.textStyle}>Discount on MRP Rs.{data.originalPrice}</Text>
+        <Text style={styles.textStyle}>Discount on MRP Rs.{data.discountedPrice}</Text>
         </View>
         <View>
         <Text style={{color: 'white',fontSize: 18, marginLeft: 50}}>Sub Total</Text>
         </View>
         <View>
-        <Text style={styles.textStyle}>Rs {data.originalPrice}</Text>
+        <Text style={styles.textStyle}>Rs {data.price}</Text>
         </View>
         </View>
         <View style={{marginTop: 80, marginLeft: 120}}>
