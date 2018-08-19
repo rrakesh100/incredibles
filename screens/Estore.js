@@ -96,7 +96,7 @@ export default class Estore extends Component {
                                  </View>
                               </Col>
                               <Col size={2}  style={{marginTop : 10}}>
-                              <Row style={{marginTop : 20}}>
+                              <Row style={{marginTop : 30}}>
                                  <Text><Text style={{textDecorationLine: 'line-through'}}>Rs.{item.originalPrice}</Text>
                                  <Text style={{color: '#17A194'}}>Rs.{item.price}</Text></Text>
                               </Row>
@@ -151,7 +151,7 @@ export default class Estore extends Component {
          email : 'codersmagic@gmail.com',
          surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
          furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
-         sandbox: false, //false in production
+         sandbox: true, //false in production
          hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
      };
 
