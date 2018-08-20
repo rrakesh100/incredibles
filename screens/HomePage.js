@@ -342,11 +342,13 @@ export default class HomePage extends Component {
       renderTrendingCards({item, index}) {
         return (
           <View>
-            <Card containerStyle={{width:0.9*sliderWidth, height: 180}} title={item.title}>
-              <View style={{marginBottom:50}}>
+            <Card containerStyle={{width:0.9*sliderWidth, height: 200}} title={item.title}>
+              <View style={{marginBottom:100}}>
               <Text style={{marginTop: 6, fontSize: 16}} >{item.desc}</Text>
-              <Text style={{marginTop: 6, fontSize: 14, color: 'green'}}>Posted Date :  {item.postedDate}</Text>
-              <Text style={{marginTop: 6, fontSize: 14, color: 'red'}}>Last Date :  {item.lastDate}</Text>
+              <Text style={{marginTop: 6}}>
+              <Text style={{fontSize: 14, color: 'green', marginRight:10}}>Posted Dt :  {item.postedDate}</Text>
+              <Text style={{marginLeft : 10, fontSize: 14, color: 'red'}}>Last Date :  {item.lastDate}</Text>
+              </Text>
               </View>
             </Card>
           </View>

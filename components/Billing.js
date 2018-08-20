@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image, Dimensions, StyleSheet, ScrollView, TextInput, TouchableOpacity,Picker } from 'react-native';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
 import { Button, Icon, SearchBar, Input } from 'react-native-elements';
 import { Card } from 'native-base';
@@ -12,7 +12,7 @@ export default class  Billing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedPaymentOption : 'None'
+      selectedPaymentOption : 'None',
       city: '',
       pin: ''
     }
@@ -156,7 +156,7 @@ export default class  Billing extends Component {
           </View>
           <View style={{marginTop: 80, marginLeft: 120}}>
           <Button title='BUY NOW' buttonStyle={styles.buyButton} 
-          onPress={() => this.props.navigation.navigate('Payment', {data: {name: 'LOL'}})}
+          onPress={() => this.props.navigation.navigate('Payment', {data: {amountPayable: this.props.navigation.state.params.data.amountPayable}})}
            textStyle={{color: '#F8C548', fontSize : 14}} />
            </View>
       </ScrollView>
