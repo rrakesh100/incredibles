@@ -3,6 +3,7 @@ import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import Competitive from './Compititive';
 import HomePage from './HomePage';
+import OnlineTests from './../components/OnlineTests';
 import Second from "./../components/second";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
@@ -93,7 +94,7 @@ export default class Home extends React.Component {
     </ScrollView>
     <ScrollView tabLabel="Online Tests" style={styles.tabView}>
       <View style={styles.card}>
-        <Text>Online Tests</Text>
+        <OnlineTests />
       </View>
     </ScrollView>
     <ScrollView tabLabel="Messages" style={styles.tabView}>
