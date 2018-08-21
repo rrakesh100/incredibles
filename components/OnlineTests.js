@@ -84,7 +84,7 @@ export default class OnlineTests extends  Component {
   renderMyTests() {
     return(
       <View>
-      <Text>Nithya Menon3</Text>
+      <Text>My Tests</Text>
       </View>
     )
   }
