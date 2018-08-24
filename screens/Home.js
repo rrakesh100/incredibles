@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import Competitive from './Compititive';
 import HomePage from './HomePage';
-import OnlineTests from './../components/OnlineTests';
+import AcademicStudies from './AcademicStudies';
 import Second from "./../components/second";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
@@ -52,13 +52,7 @@ export default class Home extends React.Component {
 
 
   state = {
-    index: 0,
-    routes: [
-      { key: 'home', title: 'Home' },
-      { key: 'academicStudies', title: 'Academic Studies' },
-      { key: 'competitiveExams', title: 'Competitive Exams' },
-      { key: 'eStore', title: 'Estore' }
-    ],
+    index: 0
   };
 
 
@@ -79,7 +73,7 @@ export default class Home extends React.Component {
     </ScrollView>
     <ScrollView tabLabel="Academic Studies" style={styles.tabView}>
       <View style={styles.card}>
-        <Text>Friends</Text>
+        <AcademicStudies onNavigate={redirect.bind(this, nav)} />
       </View>
     </ScrollView>
     <ScrollView tabLabel="Competitive Exams" style={styles.tabView}>
@@ -94,12 +88,7 @@ export default class Home extends React.Component {
     </ScrollView>
     <ScrollView tabLabel="Online Tests" style={styles.tabView}>
       <View style={styles.card}>
-        <OnlineTests onNavigate={redirect.bind(this, nav)}/>
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="Messages" style={styles.tabView}>
-      <View style={styles.card}>
-        <Text>Messages</Text>
+        <Text>Online Tests</Text>
       </View>
     </ScrollView>
   </ScrollableTabView>

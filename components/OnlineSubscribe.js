@@ -55,9 +55,10 @@ export default class OnlineSubscribe extends Component {
   }
 
   render() {
-    const { subscribed, quantity } = this.state;
+    const { subscribed } = this.state;
     const { navigation } = this.props;
     const data = navigation.state.params.data;
+    console.log(data)
     return (
       <ScrollView>
         <Image style={styles.resize} source={data.image} />
@@ -114,7 +115,7 @@ export default class OnlineSubscribe extends Component {
             { subscribed ?
               <View style={{marginLeft: 120}}>
             <Button title='PROCEED' buttonStyle={styles.bStyle}
-               onPress={() => this.props.navigation.navigate('NewCheckout', {data: data, Qty: quantity})}
+               onPress={() => this.props.navigation.navigate('Checkout', {data: data})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
              </View> : null }
             <View style={styles.flex}>

@@ -10,13 +10,12 @@ import OnlineSubscribeScreen from './components/OnlineSubscribe';
 import OnlineTestsScreen from './components/OnlineTests';
 import SubscriptionScreen from './components/Subscription';
 import CheckoutScreen from './components/Checkout';
-import NewCheckoutScreen from './components/NewCheckout';
 import BillingScreen from './components/Billing';
 import TrendingExamScreen from './components/ViewAllTrendingExams';
-import TakeTestScreen from './components/TakeTest';
-import TestScreen from './components/Test';
+import PaymentScreen from './screens/Payment';
+import AcademicStudiesScreen from './screens/AcademicStudies';
+import ExamDetailsScreen from './components/examDetails';
 import CurrentAffairScreen from './screens/CurrentAffair';
-import LoginScreen from './screens/Login';
 
 
 YellowBox.ignoreWarnings([
@@ -33,9 +32,6 @@ const StackNavigtor = createStackNavigator(
 	  Home: {
 	    screen: HomeScreen,
 	  },
-    Login: {
-      screen: LoginScreen,
-    },
 		Exam: {
 			screen: ExamScreen,
     },
@@ -57,24 +53,24 @@ const StackNavigtor = createStackNavigator(
     Checkout : {
       screen : CheckoutScreen
     },
-    NewCheckout : {
-      screen : NewCheckoutScreen
-    },
     Billing : {
       screen : BillingScreen
     },
     ViewAllTrendingExams : {
       screen : TrendingExamScreen
     },
+    Payment : {
+      screen : PaymentScreen
+    },
+    AcademicStudies : {
+      screen : AcademicStudiesScreen
+    },
+    ExamDetails : {
+      screen : ExamDetailsScreen
+    },
     CurrentAffair : {
       screen : CurrentAffairScreen
-    },
-    TakeTest: {
-      screen : TakeTestScreen
-    },
-    Test: {
-      screen : TestScreen
-    },
+    }
 	},
 	{
 		initialRouteName: 'Home'

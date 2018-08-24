@@ -17,7 +17,7 @@ const examInfo = [
     }
 ];
 
-export default class AcademicStudies extends React.Component {
+export default class AcaSdemicStudies extends React.Component {
 
     render() {
         return (
@@ -25,56 +25,7 @@ export default class AcademicStudies extends React.Component {
                 backgroundColor : '#eeeeee'
             }}>
                 {
-                    /*examInfo.map((item, index) =>*/
-                    [...Array(5)].map((item, index) =>
-                        <TouchableOpacity
-                            onPress={() => {
-                                //Alert.alert("Hello");
-                                this.props.setView("examDetails");
-                            }}
-
-                        >
-                            <View style={{
-                                backgroundColor : "white",
-                                marginTop : 10,
-                                marginBottom : 10,
-                                padding : 10,
-                                position : "relative"
-                            }}>
-                            <Text style={{
-                                    fontSize : 24,
-                                    fontWeight : "bold",
-                                    color : '#2980b9'
-                                }}>Name</Text>
-                            <View style={{
-                                display : "flex",
-                                flexDirection : "row"
-                            }}>
-                            {
-                                // item.topic.map((item1, index1) =>
-                                [...Array(4)].map((item1, index1) =>
-                                    <Text style={{
-                                        marginRight : 5,
-                                        fontSize : 14,
-                                        color : "orange"
-                                    }}>SubTopics |</Text>
-                                )
-                            }
-                            </View>
-                            <Text style={{
-                                fontSize : 12
-                            }}>This is description
-                            </Text>
-                            <Icon name="chevron-right"
-                                  style={{
-                                      position : "absolute",
-                                      right : 0,
-                                      top : "40%"
-                                  }}
-                                  size={25} color="#4F8EF7" />
-                            </View>
-                        </TouchableOpacity>
-                    )
+                  
                 }
             </View>
         );

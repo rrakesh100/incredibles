@@ -123,7 +123,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -137,7 +136,6 @@ export const studyMaterial = [
         description : 'Indian Army',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -162,7 +160,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -176,7 +173,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -206,7 +202,6 @@ export const studyMaterial = [
         description : 'Ys Jagan',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -220,7 +215,6 @@ export const studyMaterial = [
         description : 'ISRO',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -245,7 +239,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -259,7 +252,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -290,7 +282,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -304,7 +295,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -329,7 +319,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -343,7 +332,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -374,7 +362,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -388,7 +375,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 50,
         originalPrice : '250',
         price : '200'
       },
@@ -413,7 +399,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 30,
-        discountedPrice : 150,
         originalPrice : '500',
         price : '350'
       },
@@ -427,7 +412,6 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         discountApplicable : 'yes',
         discountPercentage : 20,
-        discountedPrice : 150,
         originalPrice : '250',
         price : '200'
       },
