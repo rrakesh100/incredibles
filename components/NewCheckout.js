@@ -59,8 +59,9 @@ export default class  Checkout extends Component {
     const { items } = this.state;
     const { navigation } = this.props;
     const data = navigation.state.params.data;
-    items.push(data)
-
+    items.push(data);
+    items.push(data);
+    
     return (
       items.map((item, index) => {
         return (
@@ -70,34 +71,34 @@ export default class  Checkout extends Component {
             <Grid>
               <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
-                     <Text>Title</Text>
+                     <Text style={styles.textCardStyle}>Title</Text>
                   </Col>
                   <Col>
-                     <Text>{item.title}</Text>
-                  </Col>
-              </Row>
-              <Row style={{marginTop: 10, marginLeft: 10}}>
-                  <Col>
-                     <Text>Description</Text>
-                  </Col>
-                  <Col>
-                     <Text>{item.shortDesc}</Text>
+                     <Text style={styles.textCardValueStyle}>{item.title}</Text>
                   </Col>
               </Row>
               <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
-                     <Text>Price</Text>
+                     <Text style={styles.textCardStyle}>Description</Text>
                   </Col>
                   <Col>
-                     <Text>{item.originalPrice}</Text>
+                     <Text style={styles.textCardValueStyle}>{item.shortDesc}</Text>
                   </Col>
               </Row>
               <Row style={{marginTop: 10, marginLeft: 10}}>
                   <Col>
-                     <Text>Discounted Price</Text>
+                     <Text style={styles.textCardStyle}>Price</Text>
                   </Col>
                   <Col>
-                     <Text>{item.price}</Text>
+                     <Text style={styles.textCardValueStyle}>{item.originalPrice}</Text>
+                  </Col>
+              </Row>
+              <Row style={{marginTop: 10, marginLeft: 10}}>
+                  <Col>
+                     <Text style={styles.textCardStyle}>Discounted Price</Text>
+                  </Col>
+                  <Col>
+                     <Text style={styles.textCardValueStyle}>{item.price}</Text>
                   </Col>
               </Row>
             </Grid>
@@ -115,26 +116,36 @@ export default class  Checkout extends Component {
     const { items } = this.state;
     const { navigation } = this.props;
     const data = navigation.state.params.data;
+    let amountPayable =  data.price;
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor : '#E8F3F7', marginLeft : 10, marginRight:10}}>
+          <Text style={{marginTop : 20, fontSize : 20}}>Order Summary</Text>
+          { this.renderCartItems() }
+        <View style={{marginTop : 20}}>
+            <Grid>
+            <Row style={{marginTop : 20}}>
+              <Col><Text style={styles.textStyle}>Total # of items</Text></Col>
+              <Col><Text style={styles.textValueStyle}>2</Text></Col>
+            </Row>
+            <Row style={{marginTop : 20}}>
+              <Col><Text style={styles.textStyle}>Total Price</Text></Col>
+              <Col><Text style={styles.textValueStyle}>Rs.{parseInt(data.price)*2}</Text></Col>
+            </Row>
+            <Row style={{marginTop : 20}}>
+              <Col><Text style={styles.textStyle}>Discount on MRP</Text></Col>
+              <Col><Text style={styles.textValueStyle}>Rs.{parseInt(data.discountedPrice)*2}</Text></Col>
+            </Row>
+            <Row style={{marginTop : 20}}>
+              <Col><Text style={styles.textStyle}>Amount Payable</Text></Col>
+              <Col><Text style={styles.textValueStyle}>Rs.{parseInt(data.price)*2}</Text></Col>
+            </Row>
+            </Grid>
+        </View>
 
-        { this.renderCartItems() }
-        <View style={styles.seperator}>
-        <View>
-        <Text style={styles.textStyle}>Total 1 Item</Text>
-        <Text style={styles.textStyle}>Discount on MRP Rs.{data.discountedPrice}</Text>
-        </View>
-        <View>
-        <Text style={{color: 'white',fontSize: 18, marginLeft: 50}}>Sub Total</Text>
-        </View>
-        <View>
-        <Text style={styles.textStyle}>Rs {data.price}</Text>
-        </View>
-        </View>
-        <View style={{marginTop: 80, marginLeft: 120}}>
-        <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
-        onPress={() => this.props.navigation.navigate('Billing', {data: {name: 'Girish'}})}
-         textStyle={{color: '#F8C548', fontSize : 14}} />
+        <View style={{marginTop: 120, marginLeft: 120}}>
+          <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
+          onPress={() => this.props.navigation.navigate('Billing', {data: {amountPayable: amountPayable}})}
+           textStyle={{color: '#F8C548', fontSize : 14}} />
          </View>
         </ScrollView>
       )
@@ -175,13 +186,26 @@ export default class  Checkout extends Component {
       bottom:20,
       position : 'absolute'
     },
-    textS: {
-      color: '#F8C548',
-      fontSize: 14
-    },
     textStyle: {
-      color: 'white',
-      fontSize: 18,
+      color: 'green',
+      fontSize: 14,
+      textAlign : 'left',
       marginLeft: 10
+    },
+    textValueStyle: {
+      color: 'green',
+      fontSize: 14,
+      textAlign : 'right',
+      marginRight: 10
+    },
+    textCardStyle: {
+      fontSize: 14,
+      textAlign : 'left',
+      marginLeft: 10
+    },
+    textCardValueStyle: {
+      fontSize: 14,
+      textAlign : 'right',
+      marginRight: 10
     }
   })

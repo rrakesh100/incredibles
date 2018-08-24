@@ -5,6 +5,8 @@ import Competitive from './Compititive';
 import HomePage from './HomePage';
 import AcademicStudies from './AcademicStudies';
 import Second from "./../components/second";
+import OnlineTests from "./../components/OnlineTests";
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Estore from './Estore';
@@ -88,7 +90,7 @@ export default class Home extends React.Component {
     </ScrollView>
     <ScrollView tabLabel="Online Tests" style={styles.tabView}>
       <View style={styles.card}>
-        <Text>Online Tests</Text>
+        <OnlineTests onNavigate={redirect.bind(this, nav)}/>
       </View>
     </ScrollView>
   </ScrollableTabView>

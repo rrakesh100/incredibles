@@ -102,8 +102,9 @@ export default class HomePage extends Component {
 
       for( let i=0; i<maxNum; i++) {
         updatesArr.push(
+          <View>
           <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: curAffData[i]})}
-            underlayColor='#ffffff'>
+            underlayColor='#ffffff' style={{marginTop : 10, marginBottom : 10}}>
           <View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image source={curAffData[i].image} style={{width:100, height: 100, margin: 2}}/>
@@ -115,6 +116,8 @@ export default class HomePage extends Component {
             </View>
           </View>
           </TouchableHighlight>
+          <View style={{ borderBottomColor: 'black',borderBottomWidth: 1,}}/>
+          </View>
         )
       }
       updatesArr.push(
@@ -339,10 +342,14 @@ export default class HomePage extends Component {
       renderTrendingCards({item, index}) {
         return (
           <View>
-            <Card containerStyle={{width:180, height: 140}}>
-              <Text style={{fontSize: 20}}>{item.title}</Text>
-              <Text style={{marginTop: 6, fontSize: 15, color: '#47C8DB'}}>{item.date}</Text>
-              <Text style={{marginTop: 6, fontSize: 13}} numberOfLines={3}>{item.desc}</Text>
+            <Card containerStyle={{width:0.9*sliderWidth, height: 200}} title={item.title}>
+              <View style={{marginBottom:100}}>
+              <Text style={{marginTop: 6, fontSize: 16}} >{item.desc}</Text>
+              <Text style={{marginTop: 6}}>
+              <Text style={{fontSize: 14, color: 'green', marginRight:10}}>Posted Dt :  {item.postedDate}</Text>
+              <Text style={{marginLeft : 10, fontSize: 14, color: 'red'}}>Last Date :  {item.lastDate}</Text>
+              </Text>
+              </View>
             </Card>
           </View>
         )
@@ -351,22 +358,17 @@ export default class HomePage extends Component {
       renderOnlineTestCards({item, index}) {
         return (
           <View>
-              <Card containerStyle={{width:180, height: 160}}
-                title={item.title}
-                image={item.image}
-                imageStyle={{width:180, height: 60}}>
-                  <View>
-                    <Text>
-                    {item.type}
-                    </Text>
+              <Card containerStyle={{width:0.9*sliderWidth, height: 300, backgroundColor: '#DCF0F7'}}
+               image={item.image}
+               imageStyle={{width:0.8*sliderWidth, height: 100, marginTop: 8, marginLeft : 20}}>
+                 <View style={{marginBottom:50}}>
+                  <Grid>
+                    <Col size={1.25}><Text style={{fontWeight: 'bold'}}>{item.title}</Text></Col>
+                    <Col size={0.75}><Text>{item.type}</Text></Col>
+                    <Col size={1}><Text>{item.noOfTests}</Text></Col>
+                  </Grid>
                   </View>
-                  <View>
-                    <Text>
-                    {item.noOfTests}
-                    </Text>
-                  </View>
-              </Card>
-
+              </Card>                
            </View>
         )
       }
@@ -374,26 +376,17 @@ export default class HomePage extends Component {
       renderCurrentAffairsCards({item, index}) {
         return (
           <View>
-          <Card containerStyle={{width:180, height: 160, backgroundColor: '#DCF0F7'}}
+          <Card containerStyle={{width:0.9*sliderWidth, height: 300, backgroundColor: '#DCF0F7'}}
            image={item.image}
-           imageStyle={{width:160, height: 80, marginTop: 8, marginLeft: 8}}>
-             <View>
-               <Text style={{fontSize: 20,color: '#47C8DB', fontWeight: 'bold'}}>
-               {item.title}
-               </Text>
-             </View>
-              <View>
-                <Text>
-                {item.month}
-                </Text>
-              </View>
-              <View>
-                <Text style={{color: 'red'}}>
-                {item.others}
-                </Text>
+           imageStyle={{width:0.8*sliderWidth, height: 100, marginTop: 8, marginLeft : 20}}>
+             <View style={{marginBottom:50}}>
+              <Grid>
+                <Col size={1}><Text style={{fontWeight: 'bold'}}>{item.title}</Text></Col>
+                <Col size={1}><Text>{item.month}</Text></Col>
+                <Col size={2}><Text>{item.others}</Text></Col>
+              </Grid>
               </View>
           </Card>
-
           </View>
         )
       }
@@ -448,16 +441,14 @@ export default class HomePage extends Component {
             data={trendingData}
             renderItem={this.renderTrendingCards}
             sliderWidth={sliderWidth}
-            sliderHeight={sliderHeight}
             itemWidth={sliderWidth}
             autoplay={true}
-            loop={true}
-          />
-          <View style={{alignItems: 'flex-end'}}>
-          <Button title='View All' buttonStyle={styles.viewAll}
-          onPress={() =>  this.props.onNavigate('ViewAllTrendingExams', {data: 'Girish'})}
-          textStyle={{color: '#F8C548'}} />
-          </View>
+            loop={true} />
+            <View style={{alignItems: 'flex-end'}}>
+            <Button title='View All' buttonStyle={styles.viewAll}
+            onPress={() =>  this.props.onNavigate('ViewAllTrendingExams', {data: 'Girish'})}
+            textStyle={{color: '#F8C548'}} />
+            </View>
         </View>
 
 
@@ -469,7 +460,6 @@ export default class HomePage extends Component {
               data={onlineTestData}
               renderItem={this.renderOnlineTestCards}
               sliderWidth={sliderWidth}
-              sliderHeight={sliderHeight}
               itemWidth={sliderWidth}
               autoplay={true}
               loop={true}
@@ -488,7 +478,6 @@ export default class HomePage extends Component {
               data={currentAffairsData}
               renderItem={this.renderCurrentAffairsCards}
               sliderWidth={sliderWidth}
-              sliderHeight={sliderHeight}
               itemWidth={sliderWidth}
               autoplay={true}
               loop={true}
@@ -647,6 +636,7 @@ export default class HomePage extends Component {
      borderColor: '#F8C548',
      borderWidth:1,
      backgroundColor: 'white',
+     marginTop : 10
    },
    selectedButtonStyle: {
         backgroundColor: '#FFBC00'

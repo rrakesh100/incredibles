@@ -58,7 +58,6 @@ export default class  Subscription extends Component {
   render() {
     const { subscribed } = this.state;
     const { navigation } = this.props;
-    console.log('@@@@', this.props);
     const data = navigation.state.params.data;
     return (
       <ScrollView>
