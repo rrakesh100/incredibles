@@ -88,7 +88,7 @@ export default class Home extends React.Component {
     </ScrollView>
     <ScrollView tabLabel="Online Tests" style={styles.tabView}>
       <View style={styles.card}>
-        <OnlineTests />
+        <OnlineTests onNavigate={redirect.bind(this, nav)}/>
       </View>
     </ScrollView>
   </ScrollableTabView>
