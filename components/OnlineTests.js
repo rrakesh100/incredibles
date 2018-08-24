@@ -33,6 +33,8 @@ export default class OnlineTests extends  Component {
 
   renderTrendingTestItem({item}) {
     return (
+      <TouchableHighlight underlayColor='#E8F3F7'
+      onPress={() => this.props.onNavigate('TakeTest', {data: item})} >
       <Card>
         <View style={{flexDirection: 'column'}}>
           <View style={[styles.flex]}>
@@ -54,6 +56,7 @@ export default class OnlineTests extends  Component {
         </View>
 
       </Card>
+      </TouchableHighlight>
     )
   }
 

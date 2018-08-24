@@ -13,7 +13,10 @@ import CheckoutScreen from './components/Checkout';
 import NewCheckoutScreen from './components/NewCheckout';
 import BillingScreen from './components/Billing';
 import TrendingExamScreen from './components/ViewAllTrendingExams';
+import TakeTestScreen from './components/TakeTest';
+import TestScreen from './components/Test';
 import CurrentAffairScreen from './screens/CurrentAffair';
+import LoginScreen from './screens/Login';
 
 
 YellowBox.ignoreWarnings([
@@ -30,6 +33,9 @@ const StackNavigtor = createStackNavigator(
 	  Home: {
 	    screen: HomeScreen,
 	  },
+    Login: {
+      screen: LoginScreen,
+    },
 		Exam: {
 			screen: ExamScreen,
     },
@@ -62,7 +68,13 @@ const StackNavigtor = createStackNavigator(
     },
     CurrentAffair : {
       screen : CurrentAffairScreen
-    }
+    },
+    TakeTest: {
+      screen : TakeTestScreen
+    },
+    Test: {
+      screen : TestScreen
+    },
 	},
 	{
 		initialRouteName: 'Home'
