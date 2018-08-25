@@ -130,7 +130,6 @@ class Drawer extends Component {
               <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
               Settings
               </Text>
-            </View>
             <View style={s.bottomInfo}>
                 { this.renderNeedHelp() }
                 { this.renderBanner() }
@@ -195,7 +194,7 @@ class Drawer extends Component {
             />
             <View style={s.info}>
                 <Text style={s.name}>Swapan Kumar GV</Text>
-                <Button
+                <Button 
                     clear
                     raised
                     title="Logout"
@@ -242,8 +241,7 @@ const s = StyleSheet.create({
         height: 20
     },
     bottomInfo: {
-        backgroundColor: '#00539d',
-        color: 'white',
+        backgroundColor: '#00539d'
     },
     whiteText: {color: 'white'},
     centeredWhiteText: {

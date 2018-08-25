@@ -7,7 +7,6 @@ import Second from "./components/second";
 import { DrawerNavigator, createStackNavigator } from 'react-navigation';
 import EstoreScreen from './screens/Estore';
 import OnlineSubscribeScreen from './components/OnlineSubscribe';
-import OnlineTestsScreen from './components/OnlineTests';
 import SubscriptionScreen from './components/Subscription';
 import CheckoutScreen from './components/Checkout';
 import NewCheckoutScreen from './components/NewCheckout';
@@ -21,15 +20,9 @@ import TestScreen from './components/Test';
 import CurrentAffairScreen from './screens/CurrentAffair';
 import LoginScreen from './screens/Login';
 import { createDrawerNavigator } from 'react-navigation';
-import OnlineSubscribeScreen from './components/OnlineSubscribe';
 import OnlineTestsScreen from './components/OnlineTests';
-import SubscriptionScreen from './components/Subscription';
-import Compititive from './screens/Compititive';
 import DrawerScreen from './screens/Drawer';
-import EstoreScreen from './screens/Estore';
-import ExamScreen from './screens/Exam';
 import FeedbackScreen from './screens/Feedback';
-import HomeScreen from './screens/Home';
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
