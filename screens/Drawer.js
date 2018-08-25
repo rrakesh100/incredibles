@@ -15,10 +15,9 @@ class Drawer extends Component {
 
   render () {
     return (
-      <View>
         <ScrollView>
-          <View>
             { this.renderTitle() }
+      
             <View style={s.item}>
             <Icon
                 name='ios-compass'
@@ -61,6 +60,8 @@ class Drawer extends Component {
               My Transactions
               </Text>
             </View>
+          
+          
             <View style={s.item}>
                 <Icon
                     name='ios-star'
@@ -81,6 +82,8 @@ class Drawer extends Component {
               Favourites
               </Text>
             </View>
+        
+        
             <View style={s.item}>
                 <Icon
                     name='ios-notifications'
@@ -120,7 +123,7 @@ class Drawer extends Component {
               <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
               About Sakshi
               </Text>
-            </View>4
+            </View>
             <View style={s.item}>
                 <Icon
                     name='ios-cog'
@@ -130,13 +133,12 @@ class Drawer extends Component {
               <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
               Settings
               </Text>
+            </View>
             <View style={s.bottomInfo}>
                 { this.renderNeedHelp() }
                 { this.renderBanner() }
             </View>
-          </View>
         </ScrollView>
-      </View>
     );
   }
 
