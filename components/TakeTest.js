@@ -74,7 +74,7 @@ export default class TakeTest extends Component {
         <Text style={styles.tS}>Good Luck</Text>
         </View>
         <View style={styles.takeTest}>
-        <Button title='TAKE TEST' onPress={() => this.props.navigation.navigate('Test', {data: {name: 'Girish'}})}
+        <Button title='TAKE TEST' onPress={() => this.props.navigation.navigate('PauseTest', {data: {time: navigation.state.params.data.time, props: this.props}})}
           buttonStyle={styles.btnS}
          textStyle={{color: '#F8C548', fontSize : 14}} />
         </View>
