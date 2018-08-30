@@ -7,16 +7,9 @@ import NewIcon from 'react-native-vector-icons/Feather';
 import { Card } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import TimerCountdown from 'react-native-timer-countdown';
+import SadIcon from 'react-native-vector-icons/Entypo';
 
-const showAlert = () => {
-  Alert.alert(
-    'submit',
-    [
-      {text: 'Submit', onPress: () => console.log('submitted')},
-    ],
-    { cancelable: false }
-  )
-}
+
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
@@ -27,7 +20,8 @@ export default class Test extends Component {
     this.state = {
       index: 0,
       btnIndex: 0,
-      optionClicked: {}
+      answers: {},
+      revisitTest: false
     };
   }
 
@@ -42,13 +36,24 @@ export default class Test extends Component {
     headerTitleStyle: {
       fontSize: 18,
     },
-    headerRight: <View style={{marginRight: sliderWidth*0.05}}>
+    headerRight: <View style={styles.headerView}>
+          <View style={styles.timerCirlcle}></View>
           <TimerCountdown
-            initialSecondsRemaining={1000*60*30}
-            onTick={secondsRemaining => console.log('tick', secondsRemaining)}
-            onTimeElapsed={showAlert}
+            initialSecondsRemaining={1000*60*navigation.state.params.data.time}
+            onTimeElapsed={() => {
+              return (
+                Alert.alert(
+                  'Time over!',
+                  '',
+                  [
+                    {text: 'submit', onPress: () => console.log('submitted') },
+                  ],
+                  { cancelable: false }
+                )
+              )
+            }}
             allowFontScaling={true}
-            style={{fontSize: 16, fontWeight: 'bold', color: '#47C8DB'}} />
+            style={styles.timerStyle} />
             </View>,
     headerLeft: <View style={{width: 50, height: 60, backgroundColor: '#364E87'}}>
                   <Text style={{color: 'white'}}>1</Text>
@@ -56,7 +61,9 @@ export default class Test extends Component {
   }
   );
 
-
+  componentDidMount() {
+    console.log(this.props);
+  }
 
   updateIndex = (index) => {
 
@@ -66,15 +73,24 @@ export default class Test extends Component {
     }
 
     else if(index == 1) {
-      console.log('stop the clock')
+      return (
+        Alert.alert(
+          'Are you sure you want to pause the test?',
+          '',
+          [
+            {text: 'No', onPress: () => console.log('resumed') },
+            {text: 'Yes', onPress: () => console.log('navigate to pause test page') },
+          ],
+          { cancelable: true }
+        )
+      )
     }
 
     else if(index == 2) {
       let maxVal = testQuestions.length;
       this.state.btnIndex !== maxVal-1 &&
       this.setState({
-        btnIndex: this.state.btnIndex+1,
-        optionClicked: false
+        btnIndex: this.state.btnIndex+1
       });
     }
 
@@ -86,31 +102,39 @@ export default class Test extends Component {
       )
   }
 
-  onPressClick(option) {
-    const { optionClicked } = this.state;
-    optionClicked[option] = true;
-    this.setState({ optionClicked })
+  onPressClick(option, optName, qstnNum) {
+    const { answers } = this.state;
+    answers[qstnNum] = optName;
+    this.setState({ answers })
   }
 
   renderOptionsList({item,index}) {
-    const { optionClicked } = this.state;
-    console.log(optionClicked)
+    const { answers } = this.state;
     return (
       <TouchableHighlight underlayColor='white'
-      onPress={this.onPressClick.bind(this, item.opt)}  >
-          <View style={[styles.optionView, {borderColor: '#D2D7D3', borderWidth: 0.5}]}>
-            <View style={[styles.optContainer]}>
-                <Text style={styles.opt}>{item.opt}</Text>
-            </View>
-          </View>
+      onPress={this.onPressClick.bind(this, item.opt, item.optName, item.num)}>
+            <Grid style={answers[item.num] == item.optName ? styles.selectedOpt : styles.optionView}>
+                  <Row>
+                    <Col size={90}>
+                      <View>
+                        <Text style={styles.opt}>{item.opt}</Text>
+                      </View>
+                    </Col>
+                    <Col size={10}>
+                      <View style={{backgroundColor: '#9FB8CC', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                        <Text style={{fontSize: 24, fontWeight: 'bold', color: 'white'}}>{item.optName}</Text>
+                      </View>
+                    </Col>
+                  </Row>
+            </Grid>
           </TouchableHighlight>
     )
   }
 
   render() {
-    const { index, btnIndex } = this.state;
+    const { index, btnIndex, answers } = this.state;
     return (
-      <View style={{flex: 1, backgroundColor: 'white'}}>
+      <View style={styles.flexView}>
           <View style={[styles.flex, {flex:5}]}>
             <View style={[styles.txtView1, styles.flex]}>
               <Text style={styles.mark}>Mark 1</Text>
@@ -130,11 +154,11 @@ export default class Test extends Component {
             </View>
           </View>
 
-        <View style={[styles.qstn, {flex:30}]}>
+        <View style={styles.qstn}>
           <Text style={{fontSize: 22}}>{testQuestions[btnIndex].question}</Text>
         </View>
 
-        <View style={{flex: 45}}>
+        <View style={styles.list}>
           <FlatList
               data={testQuestions[btnIndex].options}
               renderItem={this.renderOptionsList.bind(this)}
@@ -159,6 +183,25 @@ export default class Test extends Component {
   }
 
   const styles = StyleSheet.create({
+    headerView: {
+      marginRight: sliderWidth*0.05
+    },
+    timerStyle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#47C8DB'
+    },
+    timerCirlcle: {
+      width:26,
+      height: 26,
+      borderRadius: 20,
+      borderWidth: 4,
+      borderColor: '#9FB8CC'
+    },
+    flexView: {
+      flex: 1,
+      backgroundColor: 'white'
+    },
     flex: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -192,18 +235,41 @@ export default class Test extends Component {
       backgroundColor: '#A5A8AC'
     },
     qstn: {
-      margin: sliderWidth*0.04
+      margin: sliderWidth*0.04,
+      flex:20
     },
     optionView:  {
       paddingVertical: 18,
       paddingHorizontal: 6,
-      flexDirection: 'row'
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderColor: '#D2D7D3',
+      borderWidth: 0.5,
     },
-    optContainer: {
-      marginLeft: sliderWidth*0.04,
+    correctOpt: {
+      paddingVertical: 18,
+      paddingHorizontal: 6,
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderColor: '#50E347',
+      backgroundColor: '#DDFEE7',
+      borderWidth: 0.5,
+    },
+    selectedOpt: {
+      paddingVertical: 18,
+      paddingHorizontal: 6,
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderColor: '#94C8D3',
+      backgroundColor: '#DDEAF0',
+      borderWidth: 0.5,
     },
     opt: {
-      fontSize: 16
+      fontSize: 16,
+      marginLeft: sliderWidth*0.04,
+    },
+    list: {
+      flex: 55
     },
     footer: {
       flex: 20,

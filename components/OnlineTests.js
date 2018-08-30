@@ -7,6 +7,7 @@ import { Card } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
+
 const sliderWidth = Dimensions.get('window').width;
 
 
@@ -156,7 +157,7 @@ export default class OnlineTests extends  Component {
           </View>
           </View>
 
-          <View style={{marginTop: 40, marginLeft: 120}}>
+          <View style={{marginTop: 40, marginLeft: sliderWidth*0.35}}>
           <Button title='FIND' buttonStyle={styles.btnS}
            textStyle={{color: '#F8C548', fontSize : 14}} />
           </View>
@@ -174,7 +175,7 @@ export default class OnlineTests extends  Component {
             inputStyle={{backgroundColor: 'white'}}
             placeholder='Which test are you looking for ?' />
 
-          <View style={{marginTop: 30, marginLeft: 120}}>
+          <View style={{marginTop: 30, marginLeft: sliderWidth*0.35}}>
           <Button title='SEARCH' buttonStyle={styles.btnS}
            textStyle={{color: '#F8C548', fontSize : 14}} />
           </View>

@@ -19,10 +19,15 @@ import TakeTestScreen from './components/TakeTest';
 import TestScreen from './components/Test';
 import CurrentAffairScreen from './screens/CurrentAffair';
 import LoginScreen from './screens/Login';
+<<<<<<< HEAD
 import { createDrawerNavigator } from 'react-navigation';
 import OnlineTestsScreen from './components/OnlineTests';
 import DrawerScreen from './screens/Drawer';
 import FeedbackScreen from './screens/Feedback';
+=======
+import TestReportScreen from './components/TestReport';
+import PauseTestScreen from './components/PauseTest';
+>>>>>>> 4d28791... Test Report and Pause Test pages and some changes in Test.js
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -89,8 +94,16 @@ const StackNavigtor = createDrawerNavigator(
     Test: {
       screen : TestScreen
     },
+<<<<<<< HEAD
     Feedback: {
       screen: FeedbackScreen
+=======
+    PauseTest: {
+      screen : PauseTestScreen
+    },
+    TestReport: {
+      screen : TestReportScreen
+>>>>>>> 4d28791... Test Report and Pause Test pages and some changes in Test.js
     }
 	},
 	{
