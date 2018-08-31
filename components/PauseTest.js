@@ -67,7 +67,7 @@ export default class PauseTest extends Component {
         </View>
 
         <View style={{marginTop: 30}}>
-          <Text style={{fontSize: 18, color: '#6C7A89'}}>
+          <Text style={{fontSize: 18, color: '#6C7A89', textAlign: 'center'}}>
           Do you think you are good enough on this test to submit the test now? If yes please submit the test to see the report.
           </Text>
         </View>

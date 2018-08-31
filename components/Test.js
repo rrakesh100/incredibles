@@ -39,7 +39,7 @@ export default class Test extends Component {
     headerRight: <View style={styles.headerView}>
           <View style={styles.timerCirlcle}></View>
           <TimerCountdown
-            initialSecondsRemaining={1000*60*navigation.state.params.data.time}
+            initialSecondsRemaining={1000*60}
             onTimeElapsed={() => {
               return (
                 Alert.alert(

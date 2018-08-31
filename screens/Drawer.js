@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Button, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Avatar, Icon, Text as RNEText } from 'react-native-elements';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, Avatar, Icon, Text as RNEText } from 'react-native-elements';
 import { DrawerActions, NavigationActions } from 'react-navigation';
+
 
 class Drawer extends Component {
   navigateToScreen = (route) => () => {
@@ -17,7 +18,7 @@ class Drawer extends Component {
     return (
         <ScrollView>
             { this.renderTitle() }
-      
+
             <View style={s.item}>
             <Icon
                 name='ios-compass'
@@ -60,8 +61,8 @@ class Drawer extends Component {
               My Transactions
               </Text>
             </View>
-          
-          
+
+
             <View style={s.item}>
                 <Icon
                     name='ios-star'
@@ -69,7 +70,7 @@ class Drawer extends Component {
                     color='orange'
                     />
               <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
-              Bookmarsk
+              Bookmarks
               </Text>
             </View>
             <View style={s.item}>
@@ -82,8 +83,8 @@ class Drawer extends Component {
               Favourites
               </Text>
             </View>
-        
-        
+
+
             <View style={s.item}>
                 <Icon
                     name='ios-notifications'
@@ -144,7 +145,7 @@ class Drawer extends Component {
 
   renderNeedHelp() {
       return (
-          <View style={{backgroundColor: 'darkblue', paddingVertical: 20}}>
+          <View style={{backgroundColor: '#4061AE', paddingVertical: 20}}>
               <RNEText h4 style={[s.whiteText, {marginLeft: 8}]}>Need help?</RNEText>
               <RNEText h4 style={[s.whiteText,{textAlign: 'center'}]}>+91 40 4321 4321</RNEText>
           </View>
@@ -160,8 +161,8 @@ class Drawer extends Component {
                     borderBottomColor: 'white',
                     borderBottomWidth: 1,
                 }}
-            />            
-            
+            />
+
             <RNEText h5 style={s.centeredWhiteText}>Educating, Enlightening and Ennobling</RNEText>
             <Button
                 title="Share App"
@@ -196,12 +197,10 @@ class Drawer extends Component {
             />
             <View style={s.info}>
                 <Text style={s.name}>Swapan Kumar GV</Text>
-                <Button 
-                    clear
-                    raised
+                <Button
                     title="Logout"
                     buttonStyle={s.btnStyle}
-                    style={{color: 'white'}}
+                    textStyle={{color: '#FEC336'}}
                 />
             </View>
         </View>
@@ -217,7 +216,7 @@ export default Drawer;
 
 const s = StyleSheet.create({
     title: {
-        backgroundColor: '#00539d',
+        backgroundColor: '#00C0E5',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -237,13 +236,15 @@ const s = StyleSheet.create({
         fontWeight: 'bold'
     },
     btnStyle: {
-        borderRadius: 6,
+        borderRadius: 16,
         borderWidth: 1,
         width: 120,
-        height: 20
+        height: 20,
+        borderColor: '#FEC336',
+        backgroundColor: '#ffffff'
     },
     bottomInfo: {
-        backgroundColor: '#00539d'
+        backgroundColor: '#3D59A2'
     },
     whiteText: {color: 'white'},
     centeredWhiteText: {

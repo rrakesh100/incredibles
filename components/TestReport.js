@@ -134,6 +134,15 @@ export default class TestReport extends Component {
     )
   }
 
+  onExpandClick = () => {
+    const { viewAnswers } = this.state;
+    let reportData = this.state.testReportData;
+    reportData.map((item, index) => {
+      viewAnswers[index] = true;
+    })
+    this.setState({viewAnswers})
+  }
+
   onCloseIconPress = (index) => {
     const { viewAnswers } = this.state;
     viewAnswers[index] = false;
@@ -142,12 +151,11 @@ export default class TestReport extends Component {
 
   onShowingAnswerCard = (item, index) => {
     const { viewAnswers } = this.state;
-    viewAnswers[index] = true;
+    viewAnswers[index] = !viewAnswers[index];
     this.setState({ viewAnswers })
   }
 
   renderAllQuestionsItem({item,index}) {
-
     const { viewAnswers } = this.state;
 
     return (
@@ -177,7 +185,7 @@ export default class TestReport extends Component {
                       item.level == 'Easy' ?
                         <View style={{marginTop: 2}}>
                           <Button title={item.level} buttonStyle={styles.easy}
-                          textStyle={{color: '#86E27E', fontSize: 12}} />
+                          textStyle={{color: '#59B503', fontSize: 12}} />
                         </View> :
                       item.level == 'Medium' ?
                         <View style={{marginTop: 2}}>
@@ -230,7 +238,6 @@ export default class TestReport extends Component {
         { this.onViewingAnswer(index) }
         </View> : null
       }
-
       </View>
     )
   }
@@ -248,15 +255,279 @@ export default class TestReport extends Component {
   }
 
   renderCorrectAnswersTab() {
-    console.log('correct')
+    const { testReportData, viewAnswers } = this.state;
+    return (
+      testReportData.map((item, index) => {
+        if(item.status == 'correct')
+        return (
+          <View key={index} style={{marginTop:4}}>
+          <TouchableHighlight underlayColor='#ffffff'
+            onPress={ this.onShowingAnswerCard.bind(this, item, index) }>
+              <View style={[styles.flex, {backgroundColor: '#ffffff'}]}>
+                {
+                  viewAnswers[index] ?
+                  <View style={{height: 34, width: '10%', backgroundColor: '#FFBC00', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                      <Text style={{color: '#ffffff', fontWeight: 'bold'}}>{item.no}</Text>
+                  </View> :
+                  <View style={{height: 34, width: '10%', backgroundColor: '#9FB8CC', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                      <Text style={{color: '#ffffff', fontWeight: 'bold'}}>{item.no}</Text>
+                  </View>
+                }
+
+                  <View style={{height: 34, width: '90%', backgroundColor: '#ffffff'}}>
+                    <Grid>
+                      <Col size={20}>
+                        <View>
+                          <Text style={{fontSize: 14, color: '#9FB8CC', margin: 6}}>{item.time}</Text>
+                        </View>
+                      </Col>
+                      <Col size={40}>
+                        {
+                          item.level == 'Easy' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.easy}
+                              textStyle={{color: '#59B503', fontSize: 12}} />
+                            </View> :
+                          item.level == 'Medium' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.medium}
+                              textStyle={{color: '#E0CBAE', fontSize: 12}} />
+                            </View> :
+                          item.level == 'Hard' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.hard}
+                              textStyle={{color: '#FF0000', fontSize: 12}} />
+                            </View> : null
+                        }
+                      </Col>
+                        <Col size={35}>
+                            {
+                              item.status == 'correct' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <NewIcon name='check' color='#59B503' />
+                                  <Text style={{marginLeft: 4, color: '#59B503'}}>{item.status}</Text>
+                                </View> :
+                                item.status == 'Incorrect' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <IncorrectIcon name='close' color= '#FF0000' />
+                                  <Text style={{marginLeft: 4, color: '#FF0000'}}>{item.status}</Text>
+                                </View> :
+                                item.status == 'skipped' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <NewIcon name='arrow-right' color='#47C8DB' />
+                                  <Icon name='ios-arrow-forward' color='#47C8DB' />
+                                  <Text style={{marginLeft: 4, color: '#47C8DB'}}>{item.status}</Text>
+                                </View> : null
+                            }
+                        </Col>
+                        <Col size={5}>
+                          {
+                            viewAnswers[index] ?
+                            <View style={{position: 'absolute', right: 14, marginTop: 4}}>
+                                <CloseIcon name='close' color= '#FFBC00' size={20}
+                                 onPress={ this.onCloseIconPress.bind(this, index) }/>
+                            </View> : null
+                          }
+                        </Col>
+                    </Grid>
+                  </View>
+              </View>
+          </TouchableHighlight>
+          {
+            viewAnswers[index] ?
+            <View>
+            { this.onViewingAnswer(index) }
+            </View> : null
+          }
+          </View>
+        )
+      })
+
+    )
   }
 
   renderIncorrectAnswersTab() {
-    console.log('Incorrect')
+    const { testReportData, viewAnswers } = this.state;
+    return (
+      testReportData.map((item, index) => {
+        if(item.status == 'Incorrect') 
+        return (
+          <View key={index} style={{marginTop:4}}>
+          <TouchableHighlight underlayColor='#ffffff'
+            onPress={ this.onShowingAnswerCard.bind(this, item, index) }>
+              <View style={[styles.flex, {backgroundColor: '#ffffff'}]}>
+                {
+                  viewAnswers[index] ?
+                  <View style={{height: 34, width: '10%', backgroundColor: '#FFBC00', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                      <Text style={{color: '#ffffff', fontWeight: 'bold'}}>{item.no}</Text>
+                  </View> :
+                  <View style={{height: 34, width: '10%', backgroundColor: '#9FB8CC', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                      <Text style={{color: '#ffffff', fontWeight: 'bold'}}>{item.no}</Text>
+                  </View>
+                }
+
+                  <View style={{height: 34, width: '90%', backgroundColor: '#ffffff'}}>
+                    <Grid>
+                      <Col size={20}>
+                        <View>
+                          <Text style={{fontSize: 14, color: '#9FB8CC', margin: 6}}>{item.time}</Text>
+                        </View>
+                      </Col>
+                      <Col size={40}>
+                        {
+                          item.level == 'Easy' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.easy}
+                              textStyle={{color: '#59B503', fontSize: 12}} />
+                            </View> :
+                          item.level == 'Medium' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.medium}
+                              textStyle={{color: '#E0CBAE', fontSize: 12}} />
+                            </View> :
+                          item.level == 'Hard' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.hard}
+                              textStyle={{color: '#FF0000', fontSize: 12}} />
+                            </View> : null
+                        }
+                      </Col>
+                        <Col size={35}>
+                            {
+                              item.status == 'correct' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <NewIcon name='check' color='#59B503' />
+                                  <Text style={{marginLeft: 4, color: '#59B503'}}>{item.status}</Text>
+                                </View> :
+                                item.status == 'Incorrect' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <IncorrectIcon name='close' color= '#FF0000' />
+                                  <Text style={{marginLeft: 4, color: '#FF0000'}}>{item.status}</Text>
+                                </View> :
+                                item.status == 'skipped' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <NewIcon name='arrow-right' color='#47C8DB' />
+                                  <Icon name='ios-arrow-forward' color='#47C8DB' />
+                                  <Text style={{marginLeft: 4, color: '#47C8DB'}}>{item.status}</Text>
+                                </View> : null
+                            }
+                        </Col>
+                        <Col size={5}>
+                          {
+                            viewAnswers[index] ?
+                            <View style={{position: 'absolute', right: 14, marginTop: 4}}>
+                                <CloseIcon name='close' color= '#FFBC00' size={20}
+                                 onPress={ this.onCloseIconPress.bind(this, index) }/>
+                            </View> : null
+                          }
+                        </Col>
+                    </Grid>
+                  </View>
+              </View>
+          </TouchableHighlight>
+          {
+            viewAnswers[index] ?
+            <View>
+            { this.onViewingAnswer(index) }
+            </View> : null
+          }
+          </View>
+        )
+      })
+
+    )
   }
 
   renderSkippedAnswersTab() {
-    console.log('Skipped')
+    const { testReportData, viewAnswers } = this.state;
+    return (
+      testReportData.map((item, index) => {
+        if(item.status == 'skipped')
+        return (
+          <View key={index} style={{marginTop:4}}>
+          <TouchableHighlight underlayColor='#ffffff'
+            onPress={ this.onShowingAnswerCard.bind(this, item, index) }>
+              <View style={[styles.flex, {backgroundColor: '#ffffff'}]}>
+                {
+                  viewAnswers[index] ?
+                  <View style={{height: 34, width: '10%', backgroundColor: '#FFBC00', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                      <Text style={{color: '#ffffff', fontWeight: 'bold'}}>{item.no}</Text>
+                  </View> :
+                  <View style={{height: 34, width: '10%', backgroundColor: '#9FB8CC', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                      <Text style={{color: '#ffffff', fontWeight: 'bold'}}>{item.no}</Text>
+                  </View>
+                }
+
+                  <View style={{height: 34, width: '90%', backgroundColor: '#ffffff'}}>
+                    <Grid>
+                      <Col size={20}>
+                        <View>
+                          <Text style={{fontSize: 14, color: '#9FB8CC', margin: 6}}>{item.time}</Text>
+                        </View>
+                      </Col>
+                      <Col size={40}>
+                        {
+                          item.level == 'Easy' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.easy}
+                              textStyle={{color: '#59B503', fontSize: 12}} />
+                            </View> :
+                          item.level == 'Medium' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.medium}
+                              textStyle={{color: '#E0CBAE', fontSize: 12}} />
+                            </View> :
+                          item.level == 'Hard' ?
+                            <View style={{marginTop: 2}}>
+                              <Button title={item.level} buttonStyle={styles.hard}
+                              textStyle={{color: '#FF0000', fontSize: 12}} />
+                            </View> : null
+                        }
+                      </Col>
+                        <Col size={35}>
+                            {
+                              item.status == 'correct' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <NewIcon name='check' color='#59B503' />
+                                  <Text style={{marginLeft: 4, color: '#59B503'}}>{item.status}</Text>
+                                </View> :
+                                item.status == 'Incorrect' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <IncorrectIcon name='close' color= '#FF0000' />
+                                  <Text style={{marginLeft: 4, color: '#FF0000'}}>{item.status}</Text>
+                                </View> :
+                                item.status == 'skipped' ?
+                                <View style={[styles.flex, {marginTop: 6}]}>
+                                  <NewIcon name='arrow-right' color='#47C8DB' />
+                                  <Icon name='ios-arrow-forward' color='#47C8DB' />
+                                  <Text style={{marginLeft: 4, color: '#47C8DB'}}>{item.status}</Text>
+                                </View> : null
+                            }
+                        </Col>
+                        <Col size={5}>
+                          {
+                            viewAnswers[index] ?
+                            <View style={{position: 'absolute', right: 14, marginTop: 4}}>
+                                <CloseIcon name='close' color= '#FFBC00' size={20}
+                                 onPress={ this.onCloseIconPress.bind(this, index) }/>
+                            </View> : null
+                          }
+                        </Col>
+                    </Grid>
+                  </View>
+              </View>
+          </TouchableHighlight>
+          {
+            viewAnswers[index] ?
+            <View>
+            { this.onViewingAnswer(index) }
+            </View> : null
+          }
+          </View>
+        )
+      })
+
+    )
   }
 
   renderSelectedTabContent() {
@@ -349,7 +620,7 @@ export default class TestReport extends Component {
         </View>
 
         <View style={{backgroundColor: '#E8F3F7', height: sliderHeight*0.06}}>
-            <Text style={{position: 'absolute', right: 10, top: 8, color: '#FFBC00', fontWeight: 'bold'}}>EXPAND ALL</Text>
+            <Text style={styles.expand} onPress={this.onExpandClick}>EXPAND ALL</Text>
         </View>
 
         { this.renderSelectedTabContent() }
@@ -381,7 +652,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 20,
     borderRadius: 16,
-    borderColor: '#86E27E',
+    borderColor: '#59B503',
     backgroundColor: '#ffffff',
     borderWidth: 1
   },
@@ -420,6 +691,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  expand: {
+    position: 'absolute',
+    right: 10,
+    top: 8,
+    color: '#FFBC00',
+    fontWeight: 'bold'
   },
   textStyle : {
     color: '#fff',
