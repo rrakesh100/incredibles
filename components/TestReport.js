@@ -350,7 +350,7 @@ export default class TestReport extends Component {
     const { testReportData, viewAnswers } = this.state;
     return (
       testReportData.map((item, index) => {
-        if(item.status == 'Incorrect') 
+        if(item.status == 'Incorrect')
         return (
           <View key={index} style={{marginTop:4}}>
           <TouchableHighlight underlayColor='#ffffff'
