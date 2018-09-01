@@ -19,6 +19,7 @@ import TakeTestScreen from './components/TakeTest';
 import TestScreen from './components/Test';
 import CurrentAffairScreen from './screens/CurrentAffair';
 import LoginScreen from './screens/Login';
+import RegisterScreen from './screens/Register';
 import { createDrawerNavigator } from 'react-navigation';
 import OnlineTestsScreen from './components/OnlineTests';
 import DrawerScreen from './screens/Drawer';
@@ -44,6 +45,9 @@ const StackNavigtor = createDrawerNavigator(
 	  },
     Login: {
       screen: LoginScreen,
+    },
+    Register: {
+      screen: RegisterScreen,
     },
 		Exam: {
 			screen: ExamScreen,
@@ -107,7 +111,7 @@ const StackNavigtor = createDrawerNavigator(
     }
 	},
 	{
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
