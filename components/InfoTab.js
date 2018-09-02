@@ -1,6 +1,6 @@
 import { Container, Tab, Tabs } from 'native-base';
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { recentUpdates } from '../api/recentUpdtes';
 import Updates from './Updates';
 
@@ -21,7 +21,7 @@ export default class InfoTab extends Component {
                                     asdf
                                     asdfdsfasdfasdf
                                     asdfdsfasdfasdfasd
-                                    
+
                                     asdfdsfasdfasdf`}
                                 </Text>
                             </View>
@@ -33,7 +33,7 @@ export default class InfoTab extends Component {
     }
 }
 
-  
+
 const s = StyleSheet.create({
     container: {
     },

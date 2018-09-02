@@ -43,6 +43,7 @@ export default class Login extends Component {
           <View style={[styles.flex, {marginTop: 20}]}>
             <TouchableHighlight underlayColor='#ffffff'
               onPress={ this.onButtonPress.bind(this, 'https://www.facebook.com/') }>
+              <View>
               <View style={styles.flex}>
                 <View style={styles.fbIconView}>
                   <Icon name='facebook' color='#ffffff' size={30} style={styles.fbIcon}/>
@@ -51,10 +52,12 @@ export default class Login extends Component {
                   <Text style={styles.fbTxt}>FACEBOOK</Text>
                 </View>
               </View>
+              </View>
             </TouchableHighlight>
 
             <TouchableHighlight underlayColor='#ffffff'
               onPress={ this.onButtonPress.bind(this, 'https://www.google.co.in/') }>
+              <View>
               <View style={styles.flex}>
                 <View style={styles.gIcon}>
                   <GoogleIcon name='google' color='#ffffff' size={30}/>
@@ -62,6 +65,7 @@ export default class Login extends Component {
                 <View style={styles.googleView}>
                   <Text style={styles.googleTxt}>GOOGLE</Text>
                 </View>
+              </View>
               </View>
             </TouchableHighlight>
           </View>
