@@ -8,10 +8,10 @@ export default class Updates extends Component {
         return (
             <View style={s.container}>
                 {this.renderTopUpdates()}
-                <Badge 
-                    value='Show More' 
+                <Badge
+                    value='Show More'
                     containerStyle={s.badge}
-                    textStyle={{ color: 'orange' }}
+                    textStyle={{ color: '#FFBC01' }}
                     style={s.badge}
                 />
 
@@ -24,14 +24,14 @@ export default class Updates extends Component {
         const { updates } = this.props;
         for( let i = 0; i < 3; i++) {
             updatesArr.push(
-                <View style={s.cardContainer}>
-                    <View style={s.card} key={i}>
+                <View style={s.cardContainer} key={i}>
+                    <View style={s.card}>
                         <View style={s.title}>
                             <Text style={s.date}>{updates[i].date}</Text>
                             <Badge
-                                containerStyle={{ backgroundColor: '#2ecc71'}}
+                                containerStyle={{ backgroundColor: '#D9FEE4', borderWidth:0.5, borderColor: '#59B503'}}
                                 value={updates[i].type}
-                                textStyle={{ color: 'green' }}
+                                textStyle={{ color: '#59B503' }}
                             />
                         </View>
                         <Text>{updates[i].desc}</Text>
@@ -43,7 +43,7 @@ export default class Updates extends Component {
     }
 
 }
-  
+
 const s = StyleSheet.create({
     container: {
       backgroundColor: '#ecf0f1',
@@ -55,14 +55,16 @@ const s = StyleSheet.create({
         alignItems: 'center'
     },
     date: {
-        color: 'orange',
+        color: '#FFBC01',
         marginHorizontal: 8
     },
     badge: {
-        backgroundColor: 'white', 
-        width: 120, 
-        alignSelf: 'flex-end', 
-        height: 40
+        backgroundColor: 'white',
+        width: 120,
+        alignSelf: 'flex-end',
+        height: 40,
+        borderWidth: 0.5,
+        borderColor: '#FFBC01'
     },
     card: {
         paddingVertical: 8,

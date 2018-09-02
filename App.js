@@ -27,6 +27,9 @@ import FeedbackScreen from './screens/Feedback';
 import TestReportScreen from './components/TestReport';
 import PauseTestScreen from './components/PauseTest';
 import MyTestsScreen from './components/MyTests';
+import InfoTabScreen from './components/InfoTab';
+import StudyMaterialContentScreen from './components/StudyMaterialContent';
+
 
 
 YellowBox.ignoreWarnings([
@@ -108,10 +111,16 @@ const StackNavigtor = createDrawerNavigator(
     },
     TestReport: {
       screen : TestReportScreen
+    },
+    InfoTab: {
+      screen : InfoTabScreen
+    },
+    StudyMaterialContent: {
+      screen : StudyMaterialContentScreen
     }
 	},
 	{
-    initialRouteName: 'Login',
+    initialRouteName: 'Home',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}

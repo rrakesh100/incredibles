@@ -17,8 +17,8 @@ export default class ImageCarousel extends Component {
             pagingEnabled
             showsHorizontalScrollIndicator={false}
           >
-            {images.map(image => (
-                <ImageBackground
+            {images.map((image, index) => (
+                <ImageBackground key={index}
                     source={{uri: image.uri}}
                     style={styles.image}>
                     <Text style={styles.textOnImageTitle}>{image.title}</Text>
@@ -31,7 +31,7 @@ export default class ImageCarousel extends Component {
       );
     }
     console.log('Please provide images');
-    return null;    
+    return null;
   }
 }
 

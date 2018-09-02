@@ -42,3 +42,105 @@ export const academicStudies = [
   }
 
 ];
+
+export const studyMaterialData = [
+  {
+    title: 'Algebra',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+  {
+    title: 'Co-Ordinate Geometry',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+  {
+    title: 'Trignometry',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+  {
+    title: 'Calculus',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+  {
+    title: 'Vectors',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+  {
+    title: 'Probability',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+  {
+    title: 'Statistics',
+    subjects: [
+      'Functions',
+      'Mathematical Induction',
+      'Matrix',
+      'Quadratic Equations',
+      'Theory Of Equations',
+      'Binomial Theorem',
+      'Permutations And Combinations',
+      'Partial Fractions',
+      'Complex Numbers',
+    ]
+  },
+
+]

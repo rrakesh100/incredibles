@@ -368,7 +368,7 @@ export default class HomePage extends Component {
                     <Col size={1}><Text>{item.noOfTests}</Text></Col>
                   </Grid>
                   </View>
-              </Card>                
+              </Card>
            </View>
         )
       }

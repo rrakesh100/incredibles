@@ -64,7 +64,7 @@ export default class AcademicStudies extends React.Component {
                                   marginRight : 5,
                                   fontSize : 14,
                                   color : "orange"
-                              }}>{item1} |</Text>
+                              }} key={index1}>{item1} |</Text>
                           )
                       }
                       </View>
