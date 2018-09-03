@@ -40,7 +40,7 @@ export default class AcademicStudies extends React.Component {
             {
               academicStudies.map((item, index) => {
                 return (  <TouchableOpacity key={index}
-                  onPress={() => this.props.onNavigate('ExamDetails', {data: {name: 'Girish'}})}
+                  onPress={() => this.props.onNavigate('ExamDetails', {data: item})}
                       >
                       <View  key= {index} style={{
                           backgroundColor : "white",

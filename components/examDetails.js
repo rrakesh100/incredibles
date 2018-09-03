@@ -31,10 +31,10 @@ export default class ExamDetails extends React.Component {
 
   static navigationOptions = ({navigation}) => (
   {
-    title: 'Exam Detail',
+    title: `${navigation.state.params ? navigation.state.params.data.examName : 'Exam Detail'}`,
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {
@@ -55,27 +55,9 @@ export default class ExamDetails extends React.Component {
     render() {
         return (
             <ScrollView style={{
-                backgroundColor: '#E8F3F7'
+                backgroundColor:'#E8F3F7'
             }}>
-                <View style={{
-                    display : "flex",
-                    flexDirection : "column",
-                }}>
-
-                    <View style={{
-                        display : "flex",
-                        flexDirection : "row",
-                        backgroundColor: '#00539d'
-                    }}>
-                        <Text style={{
-                            fontSize : 24,
-                            color: '#fff',
-                            marginLeft : 20,
-                            marginTop: 10
-                        }}>JEE MAIN | Advanced </Text>
-                    </View>
-                </View>
-                    <SearchBar
+              <SearchBar
                         onChangeText={() => {}}
                         onClearText={() => {}}
                         lightTheme={true}
@@ -83,19 +65,13 @@ export default class ExamDetails extends React.Component {
                         placeholder='What are you looking for...' />
                 <View style={{
                     display : "flex",
-                    flexDirection : "column",
+                    flexDirection : "column" ,
                 }}>
                     <ImageCarousel images={images}/>
                 </View>
-                <View style={{
-                    display : "flex",
-                    flexDirection : "row",
-                    alignItems: "center",
-                    paddingTop : 15,
-                }}>
-                    <InfoTab/>
-                </View>
-
+                  <InfoTab />
+                <View >
+                  </View>
                 <View style={styles.space}>
                     <Text style={{color: '#47C8DB',
                     fontSize: 18,
@@ -103,7 +79,6 @@ export default class ExamDetails extends React.Component {
                     marginTop: 'auto',
                     marginRight: 'auto'}}>ALL SUBJECTS</Text>
                 </View>
-
                 <View style={styles.container}>
                   <ButtonGroup
                     selectedButtonStyle={styles.selectedButtonStyle}
@@ -117,50 +92,47 @@ export default class ExamDetails extends React.Component {
                 </View>
 
                 <View style={styles.hBar}>
-                    <TouchableHighlight onPress={ () => console.log('study material')}>
-                      <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
-                        <Icon name='file-text-o' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto'}} />
-                        <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>STUDY</Text>
-                        <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>MATERIAL</Text>
-                      </View>
-                    </TouchableHighlight>
+                <TouchableHighlight onPress={ () => console.log('study material')}>
+                  <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
+                    <Icon name='file-text-o' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto'}} />
+                    <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>STUDY</Text>
+                    <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>MATERIAL</Text>
+                  </View>
+                </TouchableHighlight>
 
-                    <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}>
-                    </View>
-                    <TouchableHighlight onPress={ () => console.log('online test')}>
-                      <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
-                        <NewIcon name='computer' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto'}}/>
-                        <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>ONLINE</Text>
-                        <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>TEST</Text>
-                      </View>
-                    </TouchableHighlight>
+                <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}/>
+                <TouchableHighlight onPress={ () => console.log('online test')}>
+                  <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
+                    <NewIcon name='computer' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto'}}/>
+                    <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>ONLINE</Text>
+                    <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>TEST</Text>
+                  </View>
+                </TouchableHighlight>
 
-                    <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}>
-                    </View>
+                <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}/>
 
-                    <TouchableHighlight onPress={ () => console.log('career guidance')}>
-                      <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
-                        <GuidanceIcon name='directions' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}/>
-                        <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>CAREER</Text>
-                        <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>GUIDANCE</Text>
-                      </View>
-                    </TouchableHighlight>
+                <TouchableHighlight onPress={ () => console.log('career guidance')}>
+                  <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
+                    <GuidanceIcon name='directions' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}/>
+                    <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>CAREER</Text>
+                    <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>GUIDANCE</Text>
+                  </View>
+                </TouchableHighlight>
 
-                    <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}>
-                    </View>
+                <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}/>
 
-                    <TouchableHighlight onPress={ () => console.log('comments')}>
-                    <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
-                      <CommentIcon name='comment-discussion' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}/>
-                      <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>COMMENTS</Text>
-                    </View>
-                    </TouchableHighlight>
+                <TouchableHighlight onPress={ () => console.log('comments')}>
+                <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
+                  <CommentIcon name='comment-discussion' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}/>
+                  <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>COMMENTS</Text>
                 </View>
+                </TouchableHighlight>
+            </View>
 
-                <View>
-                  <InfoAccordion data={studyMaterialData} />
-                </View>
-            </ScrollView>
+              <View>
+                <InfoAccordion data={studyMaterialData} />
+              </View>
+          </ScrollView>
         );
     }
 }
