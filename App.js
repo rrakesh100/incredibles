@@ -142,14 +142,6 @@ const DrawerNavigator = createDrawerNavigator(
 	}
 );
 
-const MenuImage = ({navigation}) => {
-    if(!navigation.state.isDrawerOpen){
-        return <Image source={require('./assets/menu-button.png')}/>
-    }else{
-        return <Image source={require('./assets/left-arrow.png')}/>
-    }
-}
-
 const Stack = createStackNavigator({
 
     //important: key and screen name (i.e. DrawerNavigator) should be same while using the drawer navigator inside stack navigator.
