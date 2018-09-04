@@ -1,17 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Button, Avatar, Icon, Text as RNEText } from 'react-native-elements';
-import { DrawerActions, NavigationActions } from 'react-navigation';
-
+import { Avatar, Button, Icon, Text as RNEText } from 'react-native-elements';
 
 class Drawer extends Component {
   navigateToScreen = (route) => () => {
-    const navigateAction = NavigationActions.navigate({
-      routeName: route
-    });
-    this.props.navigation.dispatch(navigateAction);
-    this.props.navigation.dispatch(DrawerActions.closeDrawer())
+    this.props.navigation.navigate(route);
+    this.props.navigation.closeDrawer();
   }
 
   render () {
@@ -36,7 +31,7 @@ class Drawer extends Component {
                 type='ionicon'
                 color='orange'
                 />
-              <Text style={s.itemText} onPress={this.navigateToScreen('About')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('Exam')}>
                Study Materials
               </Text>
             </View>
