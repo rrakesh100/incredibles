@@ -1,35 +1,34 @@
 import React from 'react';
-import {View,Text,StyleSheet,YellowBox,Platform,TouchableOpacity,Image,StatusBar} from 'react-native';
-import Compititive from './screens/Compititive';
-import ExamScreen from './screens/Exam';
-import HomeScreen from './screens/Home';
-import Second from "./components/second";
-import { createDrawerNavigator, createStackNavigator,DrawerActions } from 'react-navigation';
-import EstoreScreen from './screens/Estore';
-import OnlineSubscribeScreen from './components/OnlineSubscribe';
-import SubscriptionScreen from './components/Subscription';
-import CheckoutScreen from './components/Checkout';
-import NewCheckoutScreen from './components/NewCheckout';
-import BillingScreen from './components/Billing';
-import TrendingExamScreen from './components/ViewAllTrendingExams';
-import PaymentScreen from './screens/Payment';
-import AcademicStudiesScreen from './screens/AcademicStudies';
-import ExamDetailsScreen from './components/examDetails';
-import TakeTestScreen from './components/TakeTest';
-import TestScreen from './components/Test';
-import CurrentAffairScreen from './screens/CurrentAffair';
-import LoginScreen from './screens/Login';
-import RegisterScreen from './screens/Register';
-import OnlineTestsScreen from './components/OnlineTests';
-import DrawerScreen from './screens/Drawer';
-import FeedbackScreen from './screens/Feedback';
-import TestReportScreen from './components/TestReport';
-import PauseTestScreen from './components/PauseTest';
-import MyTestsScreen from './components/MyTests';
-import InfoTabScreen from './components/InfoTab';
-import StudyMaterialContentScreen from './components/StudyMaterialContent';
+import { StyleSheet, View, YellowBox } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
+import { createDrawerNavigator, createStackNavigator, DrawerActions } from 'react-navigation';
+import BillingScreen from './components/Billing';
+import CheckoutScreen from './components/Checkout';
+import ExamDetailsScreen from './components/examDetails';
+import InfoTabScreen from './components/InfoTab';
+import MyTestsScreen from './components/MyTests';
+import NewCheckoutScreen from './components/NewCheckout';
+import OnlineSubscribeScreen from './components/OnlineSubscribe';
+import OnlineTestsScreen from './components/OnlineTests';
+import PauseTestScreen from './components/PauseTest';
+import StudyMaterialContentScreen from './components/StudyMaterialContent';
+import SubscriptionScreen from './components/Subscription';
+import TakeTestScreen from './components/TakeTest';
+import TestScreen from './components/Test';
+import TestReportScreen from './components/TestReport';
+import TrendingExamScreen from './components/ViewAllTrendingExams';
+import AcademicStudiesScreen from './screens/AcademicStudies';
+import Compititive from './screens/Compititive';
+import CurrentAffairScreen from './screens/CurrentAffair';
+import DrawerScreen from './screens/Drawer';
+import EstoreScreen from './screens/Estore';
+import ExamScreen from './screens/Exam';
+import FeedbackScreen from './screens/Feedback';
+import HomeScreen from './screens/Home';
+import LoginScreen from './screens/Login';
+import PaymentScreen from './screens/Payment';
+import RegisterScreen from './screens/Register';
 
 
 YellowBox.ignoreWarnings([
@@ -133,7 +132,76 @@ const DrawerNavigator = createDrawerNavigator(
 	{
 	  Home: {
 	    screen: InnerStackNavigator
-	  }
+    },
+    Register: {
+      screen: RegisterScreen,
+    },
+		Exam: {
+			screen: ExamScreen,
+    },
+    Compititive: {
+      screen: Compititive,
+    },
+    Estore : {
+      screen : EstoreScreen
+    },
+    OnlineTests : {
+      screen : OnlineTestsScreen
+    },
+    Subscription : {
+      screen : SubscriptionScreen
+    },
+    OnlineSubscribe : {
+      screen : OnlineSubscribeScreen
+    },
+    Checkout : {
+      screen : CheckoutScreen
+    },
+    NewCheckout : {
+      screen : NewCheckoutScreen
+    },
+    Billing : {
+      screen : BillingScreen
+    },
+    ViewAllTrendingExams : {
+      screen : TrendingExamScreen
+    },
+    Payment : {
+      screen : PaymentScreen
+    },
+    AcademicStudies : {
+      screen : AcademicStudiesScreen
+    },
+    ExamDetails : {
+      screen : ExamDetailsScreen
+    },
+    CurrentAffair : {
+      screen : CurrentAffairScreen
+    },
+    TakeTest: {
+      screen : TakeTestScreen
+    },
+    Test: {
+      screen : TestScreen
+    },
+    Feedback: {
+      screen: FeedbackScreen
+    },
+    PauseTest: {
+      screen : PauseTestScreen
+    },
+    MyTests: {
+      screen : MyTestsScreen
+    },
+    TestReport: {
+      screen : TestReportScreen
+    },
+    InfoTab: {
+      screen : InfoTabScreen
+    },
+    StudyMaterialContent: {
+      screen : StudyMaterialContentScreen
+    }
 	},
 	{
     initialRouteName: 'Home',
