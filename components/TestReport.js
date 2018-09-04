@@ -577,9 +577,9 @@ export default class TestReport extends Component {
                 <Text style={styles.desc}>Mock Test Paper I</Text>
             </Row>
             <Row>
-                  <Text style={styles.footer}>40 Questions</Text>
-                  <Text style={[styles.footer, {marginLeft: 20}]}>60 Marks</Text>
-                  <Text style={[styles.footer, {marginLeft: 20}]}>60 Min</Text>
+                  <Text style={styles.footer}>10 Questions</Text>
+                  <Text style={[styles.footer, {marginLeft: 20}]}>10 Marks</Text>
+                  <Text style={[styles.footer, {marginLeft: 20}]}>10 Min</Text>
             </Row>
           </Col>
 
@@ -594,11 +594,11 @@ export default class TestReport extends Component {
         <View style={[styles.flex, {justifyContent: 'space-around'}]}>
           <View style={[styles.flex, {margin: 6}]}>
             <NewIcon name='check' color='#59B503' />
-            <Text style={{marginLeft: 4}}>Correct - <Text style={{color: '#59B503'}}>50</Text></Text>
+            <Text style={{marginLeft: 4}}>Correct - <Text style={{color: '#59B503'}}>5</Text></Text>
           </View>
           <View style={[styles.flex, {margin: 6}]}>
             <IncorrectIcon name='close' color= '#FF0000' />
-            <Text style={{marginLeft: 4}}>Incorrect - <Text style={{color:'#FF0000'}}>8</Text></Text>
+            <Text style={{marginLeft: 4}}>Incorrect - <Text style={{color:'#FF0000'}}>3</Text></Text>
           </View>
           <View style={[styles.flex, {margin: 6}]}>
             <NewIcon name='arrow-right' color='#47C8DB' />

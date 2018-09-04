@@ -39,14 +39,14 @@ export default class Test extends Component {
     headerRight: <View style={styles.headerView}>
           <View style={styles.timerCirlcle}></View>
           <TimerCountdown
-            initialSecondsRemaining={1000*60}
+            initialSecondsRemaining={1000*60*10}
             onTimeElapsed={() => {
               return (
                 Alert.alert(
                   'Time over!',
                   '',
                   [
-                    {text: 'submit', onPress: () => console.log('submitted') },
+                    {text: 'submit', onPress: () => navigation.navigate('MyTests') },
                   ],
                   { cancelable: false }
                 )
@@ -62,7 +62,7 @@ export default class Test extends Component {
   );
 
   componentDidMount() {
-    console.log(this.props);
+    console.log(this.props.navigation.state.params.data.time);
   }
 
   updateIndex = (index) => {
@@ -79,7 +79,7 @@ export default class Test extends Component {
           '',
           [
             {text: 'No', onPress: () => console.log('resumed') },
-            {text: 'Yes', onPress: () => console.log('navigate to pause test page') },
+            {text: 'Yes', onPress: () => this.props.navigation.navigate('PauseTest')},
           ],
           { cancelable: true }
         )

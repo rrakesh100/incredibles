@@ -74,7 +74,7 @@ export default class PauseTest extends Component {
 
         <View style={{marginTop: 40, marginLeft: sliderWidth*0.32}}>
         <Button title='END TEST' buttonStyle={styles.btnS}
-         onPress={() => console.log('navigate to test report page')}
+         onPress={() => this.props.navigation.navigate('TestReport')}
          textStyle={{color: '#F8C548', fontSize : 14}} />
         </View>
 
@@ -85,7 +85,7 @@ export default class PauseTest extends Component {
 
         <View style={{marginTop: 40, marginLeft: sliderWidth*0.32}}>
         <Button title='RESUME TEST' buttonStyle={styles.btnS}
-         onPress={() => console.log('navigate back to test')}
+         onPress={() => this.props.navigation.navigate('Test')}
          textStyle={{color: '#F8C548', fontSize : 14}} />
         </View>
       </ScrollView>
