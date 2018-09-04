@@ -31,6 +31,10 @@ export default class Login extends Component {
   }
   );
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   onButtonPress(url) {
     Linking.openURL(url)
   }
@@ -102,7 +106,7 @@ export default class Login extends Component {
           </View>
 
           <TouchableHighlight underlayColor='#ffffff'
-            onPress={ () => console.log('navigate to register page')} >
+            onPress={ () => this.props.navigation.navigate('Register') } >
             <View style={styles.btnView}>
               <Text style={styles.btnText}>REGISTER HERE</Text>
             </View>

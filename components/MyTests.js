@@ -77,11 +77,11 @@ export default class PauseTest extends Component {
 
       <View style={[styles.flex, {margin: 40}]}>
           <Button title='REVIEW' buttonStyle={styles.btnS}
-           onPress={() => console.log('navigate to TestReport.js')}
+           onPress={() => this.props.navigation.navigate('TestReport')}
            textStyle={{color: '#F8C548', fontSize : 14}} />
 
            <Button title='RETEST' buttonStyle={styles.btnS}
-            onPress={() => console.log('navigate to Test.js')}
+            onPress={() => this.props.navigation.navigate('Test')}
             textStyle={{color: '#F8C548', fontSize : 14}} />
       </View>
       </View>
