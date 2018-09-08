@@ -17,19 +17,7 @@ export default class Login extends Component {
     super(props);
   }
 
-  static navigationOptions = ({navigation}) => (
-  {
-    title: 'SAKSHI EDUCATION',
-    headerTintColor: '#ffffff',
-    headerStyle: {
-      backgroundColor: '#00539d',
-      borderBottomColor: '#ffffff',
-    },
-    headerTitleStyle: {
-      fontSize: 22,
-    }
-  }
-  );
+
 
   componentDidMount() {
     console.log(this.props);
@@ -108,7 +96,7 @@ export default class Login extends Component {
           <TouchableHighlight underlayColor='#ffffff'
             onPress={ () => this.props.navigation.navigate('Register') } >
             <View style={styles.btnView}>
-              <Text style={styles.btnText}>REGISTER HERE</Text>
+              <Text style={styles.btnText}>REGISTER</Text>
             </View>
           </TouchableHighlight>
 

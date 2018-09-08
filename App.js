@@ -43,95 +43,16 @@ YellowBox.ignoreWarnings([
 
 
 
-const InnerStackNavigator =  createStackNavigator(
-	{
-	  Home: {
-	    screen: HomeScreen,
-	  },
-    Login: {
-      screen: LoginScreen,
-    },
-    Register: {
-      screen: RegisterScreen,
-    },
-		Exam: {
-			screen: ExamScreen,
-    },
-    Compititive: {
-      screen: Compititive,
-    },
-    Estore : {
-      screen : EstoreScreen
-    },
-    OnlineTests : {
-      screen : OnlineTestsScreen
-    },
-    Subscription : {
-      screen : SubscriptionScreen
-    },
-    OnlineSubscribe : {
-      screen : OnlineSubscribeScreen
-    },
-    Checkout : {
-      screen : CheckoutScreen
-    },
-    NewCheckout : {
-      screen : NewCheckoutScreen
-    },
-    Billing : {
-      screen : BillingScreen
-    },
-    ViewAllTrendingExams : {
-      screen : TrendingExamScreen
-    },
-    Payment : {
-      screen : PaymentScreen
-    },
-    AcademicStudies : {
-      screen : AcademicStudiesScreen
-    },
-    ExamDetails : {
-      screen : ExamDetailsScreen
-    },
-    CurrentAffair : {
-      screen : CurrentAffairScreen
-    },
-    TakeTest: {
-      screen : TakeTestScreen
-    },
-    Test: {
-      screen : TestScreen
-    },
-    Feedback: {
-      screen: FeedbackScreen
-    },
-    PauseTest: {
-      screen : PauseTestScreen
-    },
-    MyTests: {
-      screen : MyTestsScreen
-    },
-    TestReport: {
-      screen : TestReportScreen
-    },
-    InfoTab: {
-      screen : InfoTabScreen
-    },
-    StudyMaterialContent: {
-      screen : StudyMaterialContentScreen
-    }
-	},
-	{
-    initialRouteName: 'Home'
-	}
-);
 
 
 // Navigator
 const DrawerNavigator = createDrawerNavigator(
 	{
 	  Home: {
-	    screen: InnerStackNavigator
+	    screen: HomeScreen
+    },
+    Login: {
+      screen: LoginScreen,
     },
     Register: {
       screen: RegisterScreen,
