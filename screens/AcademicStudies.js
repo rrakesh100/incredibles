@@ -8,10 +8,10 @@ export default class AcademicStudies extends React.Component {
 
   static navigationOptions = ({navigation}) => (
   {
-    title: 'My Cart',
+    title: 'Academic Studies',
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {

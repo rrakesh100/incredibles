@@ -20,7 +20,7 @@ export default class PauseTest extends Component {
     title: 'My Tests',
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {

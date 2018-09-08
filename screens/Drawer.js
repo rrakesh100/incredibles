@@ -9,9 +9,16 @@ class Drawer extends Component {
     this.props.navigation.closeDrawer();
   }
 
+  constructor() {
+    super();
+    this.state= {
+      email : ''
+    }
+  }
+
   render () {
     return (
-        <ScrollView>
+        <ScrollView style={{ backgroundColor: '#E8F3F7' }}>
             { this.renderTitle() }
 
             <View style={s.item}>
@@ -31,7 +38,7 @@ class Drawer extends Component {
                 type='ionicon'
                 color='orange'
                 />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Exam')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('AcademicStudies')}>
                Study Materials
               </Text>
             </View>
@@ -42,7 +49,7 @@ class Drawer extends Component {
                     color='orange'
                     />
 
-              <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('MyTests')}>
               My Tests
               </Text>
             </View>
@@ -180,11 +187,34 @@ class Drawer extends Component {
   }
 
   renderTitle() {
+
+    const { email } = this.state;
+    if(!email) {
       return (
         <View style={s.title}>
             <Avatar
                 size="xlarge"
-                source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
+                source={{uri: "http://theroyalmorecambe.co.uk/wp-content/uploads/2017/05/anonymous.gif"}}
+                onPress={() => console.log("Works!")}
+                activeOpacity={0.7}
+                rounded
+                style={s.avatar}
+            />
+            <View style={s.info}>
+                <Button
+                    title="Login"
+                    buttonStyle={s.btnStyle}
+                    textStyle={{color: '#FEC336'}}
+                    onPress={this.navigateToScreen('Login')} />
+            </View>
+        </View>
+      );
+    }else {
+      return (
+        <View style={s.title}>
+            <Avatar
+                size="xlarge"
+                source={{uri: "http://theroyalmorecambe.co.uk/wp-content/uploads/2017/05/anonymous.gif"}}
                 onPress={() => console.log("Works!")}
                 activeOpacity={0.7}
                 rounded
@@ -200,6 +230,8 @@ class Drawer extends Component {
             </View>
         </View>
       );
+    }
+
   }
 }
 
@@ -211,7 +243,7 @@ export default Drawer;
 
 const s = StyleSheet.create({
     title: {
-        backgroundColor: '#00C0E5',
+        backgroundColor: '#364C8B',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -236,7 +268,8 @@ const s = StyleSheet.create({
         width: 120,
         height: 20,
         borderColor: '#FEC336',
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        marginTop : 10
     },
     bottomInfo: {
         backgroundColor: '#3D59A2'

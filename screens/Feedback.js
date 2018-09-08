@@ -7,7 +7,7 @@ export default class Feedback extends Component {
         title: 'Feedback',
         headerTintColor: '#ffffff',
         headerStyle: {
-            backgroundColor: '#00539d',
+            backgroundColor: '#364C8B',
             borderBottomColor: '#ffffff',
         },
         headerTitleStyle: {
@@ -18,11 +18,6 @@ export default class Feedback extends Component {
     render() {
         return (
             <View style={s.container}>
-                <Header
-                    placement="left"
-                    leftComponent={{ icon: 'ios-arrow-back', color: '#fff',   type: 'ionicon'}}
-                    centerComponent={{ text: 'Feedback', style: { color: '#fff', fontSize: 22 } }}
-                />
                 <View style={s.binder}>
 
                     <Text style={s.title}>Please fill the details</Text>
@@ -47,15 +42,14 @@ export default class Feedback extends Component {
 
                 </View>
 
-            </View>    
-        );    
+            </View>
+        );
     }
 }
-
 const s = StyleSheet.create({
     container: {
-        flex: 1, 
-        backgroundColor: '#bdc3c7'
+        flex: 1,
+        backgroundColor: '#E8F3F7'
     },
     binder: {
         width: '90%',
