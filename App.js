@@ -30,7 +30,6 @@ import LoginScreen from './screens/Login';
 import PaymentScreen from './screens/Payment';
 import RegisterScreen from './screens/Register';
 
-
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
   'Deprecation warning: moment construction falls back to js Date. This is discouraged and will be removed in upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.',
@@ -40,16 +39,95 @@ YellowBox.ignoreWarnings([
   console.disableYellowBox = true;
 
 
-
-
-
-
+  const InnerStackNavigator =  createStackNavigator(
+    {
+      Home: {
+        screen: HomeScreen,
+      },
+      Login: {
+        screen: LoginScreen,
+      },
+      Register: {
+        screen: RegisterScreen,
+      },
+      Exam: {
+        screen: ExamScreen,
+      },
+      Compititive: {
+        screen: Compititive,
+      },
+      Estore : {
+        screen : EstoreScreen
+      },
+      OnlineTests : {
+        screen : OnlineTestsScreen
+      },
+      Subscription : {
+        screen : SubscriptionScreen
+      },
+      OnlineSubscribe : {
+        screen : OnlineSubscribeScreen
+      },
+      Checkout : {
+        screen : CheckoutScreen
+      },
+      NewCheckout : {
+        screen : NewCheckoutScreen
+      },
+      Billing : {
+        screen : BillingScreen
+      },
+      ViewAllTrendingExams : {
+        screen : TrendingExamScreen
+      },
+      Payment : {
+        screen : PaymentScreen
+      },
+      AcademicStudies : {
+        screen : AcademicStudiesScreen
+      },
+      ExamDetails : {
+        screen : ExamDetailsScreen
+      },
+      CurrentAffair : {
+        screen : CurrentAffairScreen
+      },
+      TakeTest: {
+        screen : TakeTestScreen
+      },
+      Test: {
+        screen : TestScreen
+      },
+      Feedback: {
+        screen: FeedbackScreen
+      },
+      PauseTest: {
+        screen : PauseTestScreen
+      },
+      MyTests: {
+        screen : MyTestsScreen
+      },
+      TestReport: {
+        screen : TestReportScreen
+      },
+      InfoTab: {
+        screen : InfoTabScreen
+      },
+      StudyMaterialContent: {
+        screen : StudyMaterialContentScreen
+      }
+    },
+    {
+      initialRouteName: 'Home',
+      headerMode: 'none',
+    }
+  );
 
 // Navigator
 const DrawerNavigator = createDrawerNavigator(
 	{
 	  Home: {
-	    screen: HomeScreen
+	    screen: InnerStackNavigator,
     },
     Login: {
       screen: LoginScreen,
