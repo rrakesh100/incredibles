@@ -485,7 +485,7 @@ export default class HomePage extends Component {
             />
             <View style={{alignItems: 'flex-end'}}>
             <Button title='View All' buttonStyle={styles.viewAll}
-            textStyle={{color: '#F8C548'}} />
+            textStyle={{color: '#F8C548'}}  onPress={() =>  this.props.onNavigate('OnlineTests', {data: 'Girish'})} />
             </View>
         </View>
 

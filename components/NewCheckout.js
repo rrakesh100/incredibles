@@ -5,12 +5,13 @@ import { Button, Icon } from 'react-native-elements';
 import { Card } from 'native-base';
 import CloseIcon from 'react-native-vector-icons/EvilIcons';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import { AsyncStorage } from "react-native";
 
 
 const sliderWidth = Dimensions.get('window').width;
 
 
-export default class  Checkout extends Component {
+export default class  NewCheckout extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,13 +56,52 @@ export default class  Checkout extends Component {
     }
   }
 
-  renderCartItems() {
-    const { items } = this.state;
+  _storeData = async () => {
     const { navigation } = this.props;
+
     const data = navigation.state.params.data;
-    items.push(data);
-    items.push(data);
-    
+      try {
+        let value =  this._retrieveData().then(value => {
+          console.log('LOLOLO', value);
+          let v = [];
+          v.push(data);
+          console.log('EEEEEEE', JSON.parse(value));
+          if(value) {
+           v = v.concat(JSON.parse(value));
+            console.log('VVVVVVVVVV', v);
+            console.log('WWWWWWWWWW', JSON.stringify(v));
+
+
+          }
+          console.log('HAHAHAHA', v);
+          AsyncStorage.setItem('items', JSON.stringify(v));
+          this.setState({
+            items : v
+          })
+          })
+      } catch (error) {
+        console.log(error) ;
+      }
+  }
+
+  _retrieveData = async () => {
+  try {
+    return AsyncStorage.getItem('items')
+   } catch (error) {
+     // Error retrieving data
+   }
+  }
+
+
+  renderCartItems() {
+    const { navigation } = this.props;
+    const { items } =  this.state ;
+
+    console.log('$$$$$$$$$$$$$', items);
+
+    if(!items)
+      return;
+
     return (
       items.map((item, index) => {
         return (
@@ -146,7 +186,11 @@ export default class  Checkout extends Component {
           <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
           onPress={() => this.props.navigation.navigate('Billing', {data: {amountPayable: amountPayable}})}
            textStyle={{color: '#F8C548', fontSize : 14}} />
-         </View>
+         <Button title='ADD' buttonStyle={styles.checkoutButton}
+         onPress={() => this._storeData()}
+          textStyle={{color: '#F8C548', fontSize : 14}} />
+        </View>
+
         </ScrollView>
       )
     }
