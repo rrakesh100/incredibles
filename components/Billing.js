@@ -31,7 +31,7 @@ export default class  Billing extends Component {
     }
   }
   );
-  
+
   onPaymentButtonClick = (selectedPaymentOption) => {
     this.setState({
       selectedPaymentOption
@@ -154,11 +154,18 @@ export default class  Billing extends Component {
           <View>
             <Text style={{fontWeight : 'bold', fontSize : 18, marginTop: 20 }}>Selected Payment Mode : {selectedPaymentOption}</Text>
           </View>
-          <View style={{marginTop: 80, marginLeft: 120}}>
-          <Button title='BUY NOW' buttonStyle={styles.buyButton} 
+          <View style={{}}>
+          <View style={{marginTop: 80, marginLeft: sliderWidth*0.35}}>
+          <Button title='BUY NOW' buttonStyle={styles.buyButton}
           onPress={() => this.props.navigation.navigate('Payment', {data: {amountPayable: this.props.navigation.state.params.data.amountPayable}})}
            textStyle={{color: '#F8C548', fontSize : 14}} />
            </View>
+           <View style={{marginTop: 40, marginLeft: sliderWidth*0.35}}>
+           <Button title='TRANSACTION' buttonStyle={styles.buyButton}
+           onPress={() => this.props.navigation.navigate('TransactionInvoice')}
+            textStyle={{color: '#F8C548', fontSize : 14}} />
+            </View>
+            </View>
       </ScrollView>
     )
   }
