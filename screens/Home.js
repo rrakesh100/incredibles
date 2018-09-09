@@ -25,7 +25,7 @@ YellowBox.ignoreWarnings([
 
 export default class Home extends React.Component {
 
-    
+
 
   state = {
     index: 0
@@ -65,6 +65,16 @@ export default class Home extends React.Component {
     <ScrollView tabLabel="Online Tests" style={styles.tabView}>
       <View style={styles.card}>
         <OnlineTests onNavigate={redirect.bind(this, nav)}/>
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="Current Affairs" style={styles.tabView}>
+      <View style={styles.card}>
+      <Text>Current Affairs</Text>
+      </View>
+    </ScrollView>
+    <ScrollView tabLabel="Jobs" style={styles.tabView}>
+      <View style={styles.card}>
+      <Text>Jobs</Text>
       </View>
     </ScrollView>
   </ScrollableTabView>

@@ -29,6 +29,8 @@ import HomeScreen from './screens/Home';
 import LoginScreen from './screens/Login';
 import PaymentScreen from './screens/Payment';
 import RegisterScreen from './screens/Register';
+import TransactionInvoiceScreen from './components/TransactionInvoice';
+
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -115,6 +117,9 @@ YellowBox.ignoreWarnings([
       },
       StudyMaterialContent: {
         screen : StudyMaterialContentScreen
+      },
+      TransactionInvoice: {
+        screen : TransactionInvoiceScreen
       }
     },
     {
@@ -200,6 +205,9 @@ const DrawerNavigator = createDrawerNavigator(
     },
     StudyMaterialContent: {
       screen : StudyMaterialContentScreen
+    },
+    TransactionInvoice: {
+      screen : TransactionInvoiceScreen
     }
 	},
 	{

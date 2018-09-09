@@ -451,6 +451,25 @@ export default class HomePage extends Component {
             </View>
         </View>
 
+        <TouchableHighlight underlayColor='#E8F3F7'
+            onPress={ () => console.log('eStore Ad')}>
+        <View style={{marginTop: 20, height: 70, flexDirection: 'row'}}>
+          <View style={{width: '70%', backgroundColor: '#364682'}}>
+              <Text style={{color: '#ffffff', fontSize: 26, marginLeft: 10, marginTop:4}}>At Our <Text style={{color: '#5DE38A', fontSize: 26, marginLeft: 10, marginTop:10}}>eStore</Text></Text>
+              <Text style={{color: '#ffffff', marginLeft: 10, fontSize:12}}>Buy our test module online</Text>
+              <Text style={{color: '#ffffff', marginLeft: 10, fontSize:12}}>We have wide range of collections of test papers</Text>
+          </View>
+          <View style={{width: '30%'}}>
+            <View style={{height: 40, backgroundColor: '#FF8017'}}>
+              <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>REPUBLIC</Text>
+              <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>DAY SALE</Text>
+            </View>
+            <View style={{height: 30, backgroundColor: '#128C00'}}>
+              <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>FREEDOM OFFER</Text>
+            </View>
+          </View>
+        </View>
+        </TouchableHighlight>
 
         <View style={styles.trendStyle}>
         <Text style={styles.trend}>Online Test and <Text style={{fontWeight: 'bold'}}>Test Series</Text></Text>
@@ -483,7 +502,8 @@ export default class HomePage extends Component {
               loop={true}
             />
             <View style={{alignItems: 'flex-end'}}>
-            <Button title='View All' buttonStyle={styles.viewAll}
+            <Button title='View All' onPress={() => this.props.onNavigate('CurrentAffair', {data: 'Girish'})}
+            buttonStyle={styles.viewAll}
             textStyle={{color: '#F8C548'}} />
             </View>
         </View>
