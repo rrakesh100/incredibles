@@ -98,9 +98,9 @@ export default class HomePage extends Component {
       const { currentAffairsViewAllClicked } = this.state;
 
       let maxNum = currentAffairsViewAllClicked ? curAffData.length : 3;
-      const updatesArr = []
+      const updatesArr = [];
 
-      for( let i=0; i<maxNum; i++) {
+      for(let i=0; i<maxNum; i++) {
         updatesArr.push(
           <View>
           <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: curAffData[i]})}
@@ -116,7 +116,7 @@ export default class HomePage extends Component {
             </View>
           </View>
           </TouchableHighlight>
-          <View style={{ borderBottomColor: 'black',borderBottomWidth: 1,}}/>
+          <View style={{ borderBottomColor: '#b2bec3',borderBottomWidth: 0.5}}/>
           </View>
         )
       }
@@ -124,7 +124,7 @@ export default class HomePage extends Component {
         !currentAffairsViewAllClicked ?
         <View style={{alignItems: 'flex-end'}}>
           <Button title='View All' buttonStyle={styles.viewAll}
-          onPress={this.onViewingAll.bind(this)}
+          onPress={() => this.props.onNavigate('CurrentAffairs', {data:{name:'Girish'}})}
           textStyle={{color: '#F8C548'}} />
         </View> :
         <View style={{alignItems: 'flex-end'}}>
@@ -195,7 +195,7 @@ export default class HomePage extends Component {
 
       let maxNum = viewAllClicked ? homepageExamData.length : 3;
 
-      for( let i = 0; i < maxNum; i++) {
+      for(let i = 0; i < maxNum; i++) {
           updatesArr.push(
             <View>
                   <View style={styles.card} key={i}>
@@ -363,9 +363,11 @@ export default class HomePage extends Component {
                imageStyle={{width:0.8*sliderWidth, height: 100, marginTop: 8, marginLeft : 20}}>
                  <View style={{marginBottom:50}}>
                   <Grid>
-                    <Col size={1.25}><Text style={{fontWeight: 'bold'}}>{item.title}</Text></Col>
-                    <Col size={0.75}><Text>{item.type}</Text></Col>
-                    <Col size={1}><Text>{item.noOfTests}</Text></Col>
+                    <Row>
+                      <Col size={1.25}><Text style={{fontWeight: 'bold'}}>{item.title}</Text></Col>
+                      <Col size={0.75}><Text>{item.type}</Text></Col>
+                      <Col size={1}><Text>{item.noOfTests}</Text></Col>
+                    </Row>
                   </Grid>
                   </View>
               </Card>

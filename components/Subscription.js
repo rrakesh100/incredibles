@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
-import { Button, Card, Icon } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Entypo';
+import { Button, Card } from 'react-native-elements';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
@@ -86,6 +87,7 @@ export default class  Subscription extends Component {
         <View style={styles.seperator}>
         <View style={{marginLeft: 20}} >
         <Grid style={{marginTop: 10}}>
+         <Row>
            <Col size={3}>
            <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>{data.price}</Text></Text>
            </Col>
@@ -97,13 +99,13 @@ export default class  Subscription extends Component {
              subscribed ? (
                <Row>
                 <Col>
-                <Icon raised name='md-remove-circle' type='ionicon' color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'remove')} />
+                <Icon name='circle-with-minus' size={26} color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'remove')} />
                 </Col>
                 <Col>
-                  <Text style={{marginTop : 10, marginLeft : 10}}>{this.state.quantity}</Text>
+                  <Text>{this.state.quantity}</Text>
                 </Col>
                 <Col >
-                <Icon raised name='md-add-circle' type='ionicon' color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'add')} />
+                <Icon name='circle-with-plus' size={26} color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'add')} />
                 </Col>
 
                </Row>
@@ -112,14 +114,15 @@ export default class  Subscription extends Component {
                  onPress={() => {
                    this.setState({subscribed : true});
                  }}
-               textStyle={{color: '#F8C548', fontSize : 8}}  />)
+               textStyle={{color: '#F8C548', fontSize : 10}}  />)
            }
 
            </Col>
+           </Row>
          </Grid>
         </View>
         </View>
-        <View>
+        <View style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 20}}>
             <Button title='PROCEED' buttonStyle={styles.proceedButton}
                onPress={() => this.props.navigation.navigate('Checkout', {data: data})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
@@ -169,7 +172,7 @@ const styles = StyleSheet.create({
     height: 250
   },
   seperator: {
-    height:80,
+    height:50,
     backgroundColor: 'white'
   },
   txtStyle: {
@@ -192,10 +195,10 @@ const styles = StyleSheet.create({
   },
   subscribeButton: {
     width: 80,
-    height: 30,
+    height: 20,
     borderRadius: 16,
     borderColor: '#FFBC00',
-    borderWidth:2,
+    borderWidth:1,
     backgroundColor: 'white'
   },
   proceedButton: {
@@ -205,7 +208,7 @@ const styles = StyleSheet.create({
     borderColor: '#FFBC00',
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth:3,
+    borderWidth:1,
     backgroundColor: 'white'
   },
   bStyle: {

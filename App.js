@@ -20,6 +20,7 @@ import TestReportScreen from './components/TestReport';
 import TrendingExamScreen from './components/ViewAllTrendingExams';
 import AcademicStudiesScreen from './screens/AcademicStudies';
 import Compititive from './screens/Compititive';
+import CurrentAffairsScreen from './screens/CurrentAffairs';
 import CurrentAffairScreen from './screens/CurrentAffair';
 import DrawerScreen from './screens/Drawer';
 import EstoreScreen from './screens/Estore';
@@ -90,6 +91,9 @@ YellowBox.ignoreWarnings([
       },
       ExamDetails : {
         screen : ExamDetailsScreen
+      },
+      CurrentAffairs: {
+        screen : CurrentAffairsScreen
       },
       CurrentAffair : {
         screen : CurrentAffairScreen
@@ -178,6 +182,9 @@ const DrawerNavigator = createDrawerNavigator(
     },
     ExamDetails : {
       screen : ExamDetailsScreen
+    },
+    CurrentAffairs: {
+      screen : CurrentAffairsScreen
     },
     CurrentAffair : {
       screen : CurrentAffairScreen
