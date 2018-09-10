@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
-import { Button, Card, Icon } from 'react-native-elements';
+import { Button, Card } from 'react-native-elements';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
+import Icon from 'react-native-vector-icons/Entypo';
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
@@ -77,7 +78,7 @@ export default class OnlineSubscribe extends Component {
                </Text>
             </View>
           <View style={[styles.space, {flex:1}]}>
-          <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: 12}}>
+          <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: 'auto', marginBottom: 'auto'}}>
               <Text style={{fontSize: 22}}>
                   {
                     data.originalPrice ?
@@ -85,24 +86,23 @@ export default class OnlineSubscribe extends Component {
                   <Text style={{fontSize: 22, marginLeft: 4}}>Rs.</Text>
                   <Text style={{color: '#17A194', fontSize: 22}}>{data.price}</Text>
               </Text>
-              <View style={{position: 'absolute', right: 4}}>
+              <View style={{position: 'absolute', right: 30}}>
               {
-                subscribed ? (
-                  <View style={styles.flex}>
-                  <Icon raised name='md-remove-circle'
-                  type='ionicon' color='#FFBC00'  size={18}
-                  onPress={this.onQuantityChanged.bind(this, 'remove')} />
-                  <Text>{this.state.quantity}</Text>
-                  <Icon raised name='md-add-circle'
-                  type='ionicon' color='#FFBC00'  size={18}
-                  onPress={this.onQuantityChanged.bind(this, 'add')} />
-                  </View>
-                 ) :
-              ( <Button title='BUY NOW' buttonStyle={styles.bStyle}
-              onPress={() => {
-                this.setState({subscribed : true});
-              }}
-               textStyle={{color: '#F8C548'}} /> )
+                subscribed ?
+                  <View style={[styles.flex]}>
+                  <Icon name='circle-with-minus'
+                  size={24} style={{marginRight:10}}
+                  color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'remove')} />
+                  <Text style={{fontSize: 20}}>{this.state.quantity}</Text>
+                  <Icon name='circle-with-plus'
+                  size={24} style={{marginLeft:10}}
+                  color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'add')} />
+                  </View> :
+                <Button title='BUY NOW' buttonStyle={styles.bStyle}
+                onPress={() => {
+                  this.setState({subscribed : true});
+                }}
+               textStyle={{color: '#F8C548'}} />
              }
               </View>
           </View>
@@ -112,7 +112,7 @@ export default class OnlineSubscribe extends Component {
             *PDFs will be emailed only to the subscribed
             </Text>
             { subscribed ?
-              <View style={{marginLeft: 120}}>
+              <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
             <Button title='PROCEED' buttonStyle={styles.bStyle}
                onPress={() => this.props.navigation.navigate('NewCheckout', {data: data, Qty: quantity})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
