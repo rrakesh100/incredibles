@@ -1,0 +1,67 @@
+{
+  "self": "http://sakshi.myofficestation.com/English/node?type=competitive_exams_category&title=NABARD",
+  "first": "http://sakshi.myofficestation.com/English/node?type=competitive_exams_category&title=NABARD&page=0",
+  "last": "http://sakshi.myofficestation.com/English/node?type=competitive_exams_category&title=NABARD&page=0",
+  "list": [
+    {
+      "body": [
+
+      ],
+      "field_comp_exam_catg_image": {
+        "file": {
+          "uri": "http://sakshi.myofficestation.com/English/file/628",
+          "id": "628",
+          "resource": "file",
+          "uuid": "3ea9929b-9270-4c7e-8028-2d4e183a6752"
+        }
+      },
+      "field_ref_competitive_exam": {
+        "uri": "http://sakshi.myofficestation.com/English/node/689",
+        "id": "689",
+        "resource": "node",
+        "uuid": "32053c4c-9a93-4cbd-86c2-3f6dc451811a"
+      },
+      "field_comp_catg_carousal_images": [
+
+      ],
+      "nid": "775",
+      "vid": "775",
+      "is_new": false,
+      "type": "competitive_exams_category",
+      "title": "NABARD",
+      "language": "en",
+      "url": "http://sakshi.myofficestation.com/English/content/nabard",
+      "edit_url": "http://sakshi.myofficestation.com/English/node/775/edit",
+      "status": "1",
+      "promote": "0",
+      "sticky": "0",
+      "created": "1493903417",
+      "changed": "1531139182",
+      "author": {
+        "uri": "http://sakshi.myofficestation.com/English/user/1",
+        "id": "1",
+        "resource": "user",
+        "uuid": "f69b9b47-750b-4f1c-be2c-5d385c48eb64"
+      },
+      "source": {
+        "uri": "http://sakshi.myofficestation.com/English/node/775",
+        "id": "775",
+        "resource": "node",
+        "uuid": "fea695f7-57db-4c15-995c-352d20ceb26c"
+      },
+      "log": "",
+      "revision": null,
+      "comment": "1",
+      "comments": [
+
+      ],
+      "comment_count": "0",
+      "comment_count_new": "0",
+      "views": 0,
+      "day_views": 0,
+      "last_view": null,
+      "uuid": "fea695f7-57db-4c15-995c-352d20ceb26c",
+      "vuuid": "96011f62-822a-4559-b1df-54461a533331"
+    }
+  ]
+}
