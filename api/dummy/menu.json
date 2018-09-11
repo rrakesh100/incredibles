@@ -1,0 +1,3356 @@
+{
+  "name": "menu-sakshi",
+  "tree": {
+    "Home | 1960": {
+      "link": {
+        "mlid": "1960",
+        "plid": "0",
+        "title": "Home",
+        "description": "",
+        "path": "node",
+        "path_alias": false,
+        "href": "node",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "0",
+        "weight": "-50",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": [
+
+      ]
+    },
+    "Academics | 308": {
+      "link": {
+        "mlid": "308",
+        "plid": "0",
+        "title": "Academics",
+        "description": "",
+        "path": "node/7",
+        "path_alias": "academics",
+        "href": "node/7",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "1",
+        "weight": "-49",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": {
+        "Entrance Exams | 314": {
+          "link": {
+            "mlid": "314",
+            "plid": "308",
+            "title": "Entrance Exams",
+            "description": "",
+            "path": "node/80",
+            "path_alias": "ENTRANCE-EXAMS",
+            "href": "node/80",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "EAMCET | 315": {
+              "link": {
+                "mlid": "315",
+                "plid": "314",
+                "title": "EAMCET",
+                "description": "",
+                "path": "node/61",
+                "path_alias": "Emcet",
+                "href": "node/61",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "NEET | 316": {
+              "link": {
+                "mlid": "316",
+                "plid": "314",
+                "title": "NEET",
+                "description": "",
+                "path": "node/69",
+                "path_alias": "NEET",
+                "href": "node/69",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "JEE (Main & Adv) | 317": {
+              "link": {
+                "mlid": "317",
+                "plid": "314",
+                "title": "JEE (Main & Adv)",
+                "description": "",
+                "path": "node/67",
+                "path_alias": "JEE",
+                "href": "node/67",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "GATE | 318": {
+              "link": {
+                "mlid": "318",
+                "plid": "314",
+                "title": "GATE",
+                "description": "",
+                "path": "node/65",
+                "path_alias": "GATE",
+                "href": "node/65",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "ICET | 319": {
+              "link": {
+                "mlid": "319",
+                "plid": "314",
+                "title": "ICET",
+                "description": "",
+                "path": "node/66",
+                "path_alias": "ICET",
+                "href": "node/66",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "LAWCET | 320": {
+              "link": {
+                "mlid": "320",
+                "plid": "314",
+                "title": "LAWCET",
+                "description": "",
+                "path": "node/68",
+                "path_alias": "LAWCET",
+                "href": "node/68",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-45",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "UGC NET | 321": {
+              "link": {
+                "mlid": "321",
+                "plid": "314",
+                "title": "UGC NET",
+                "description": "",
+                "path": "node/72",
+                "path_alias": "UGC",
+                "href": "node/72",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-44",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "APRJC/POLYCET | 322": {
+              "link": {
+                "mlid": "322",
+                "plid": "314",
+                "title": "APRJC/POLYCET",
+                "description": "",
+                "path": "node/62",
+                "path_alias": "APRJC",
+                "href": "node/62",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-43",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "TSRJC/POLYCET | 323": {
+              "link": {
+                "mlid": "323",
+                "plid": "314",
+                "title": "TSRJC/POLYCET",
+                "description": "",
+                "path": "node/71",
+                "path_alias": "TSRJC",
+                "href": "node/71",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-42",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "DIETCET | 324": {
+              "link": {
+                "mlid": "324",
+                "plid": "314",
+                "title": "DIETCET",
+                "description": "",
+                "path": "node/64",
+                "path_alias": "DIETCET",
+                "href": "node/64",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-41",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "BITSAT | 325": {
+              "link": {
+                "mlid": "325",
+                "plid": "314",
+                "title": "BITSAT",
+                "description": "",
+                "path": "node/63",
+                "path_alias": "BITSAT",
+                "href": "node/63",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-40",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "SCRA | 326": {
+              "link": {
+                "mlid": "326",
+                "plid": "314",
+                "title": "SCRA",
+                "description": "",
+                "path": "node/70",
+                "path_alias": "SCRA",
+                "href": "node/70",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-39",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "Class | 327": {
+          "link": {
+            "mlid": "327",
+            "plid": "308",
+            "title": "Class",
+            "description": "",
+            "path": "node/81",
+            "path_alias": "CLASS",
+            "href": "node/81",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "10th | 328": {
+              "link": {
+                "mlid": "328",
+                "plid": "327",
+                "title": "10th",
+                "description": "",
+                "path": "node/78",
+                "path_alias": "10TH",
+                "href": "node/78",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "INTER | 329": {
+              "link": {
+                "mlid": "329",
+                "plid": "327",
+                "title": "INTER",
+                "description": "",
+                "path": "node/79",
+                "path_alias": "INTER",
+                "href": "node/79",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Engineering | 330": {
+              "link": {
+                "mlid": "330",
+                "plid": "327",
+                "title": "Engineering",
+                "description": "",
+                "path": "node/73",
+                "path_alias": "ENGINEERING",
+                "href": "node/73",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "Others | 331": {
+          "link": {
+            "mlid": "331",
+            "plid": "308",
+            "title": "Others",
+            "description": "",
+            "path": "node/74",
+            "path_alias": "OTHERS",
+            "href": "node/74",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-48",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "Academic Guidance | 334": {
+              "link": {
+                "mlid": "334",
+                "plid": "331",
+                "title": "Academic Guidance",
+                "description": "",
+                "path": "node/75",
+                "path_alias": "ACADEMIC-GUIDANCE",
+                "href": "node/75",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Careers/Courses | 332": {
+              "link": {
+                "mlid": "332",
+                "plid": "331",
+                "title": "Careers/Courses",
+                "description": "",
+                "path": "node/490",
+                "path_alias": "career",
+                "href": "node/490",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Institutes/Colleges | 333": {
+              "link": {
+                "mlid": "333",
+                "plid": "331",
+                "title": "Institutes/Colleges",
+                "description": "",
+                "path": "node/488",
+                "path_alias": "institutes-colleges",
+                "href": "node/488",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Study Abroad | 543": {
+              "link": {
+                "mlid": "543",
+                "plid": "331",
+                "title": "Study Abroad",
+                "description": "",
+                "path": "node/642",
+                "path_alias": "study-abroad",
+                "href": "node/642",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Scholarships | 555": {
+              "link": {
+                "mlid": "555",
+                "plid": "331",
+                "title": "Scholarships",
+                "description": "",
+                "path": "scholarships",
+                "path_alias": false,
+                "href": "scholarships",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Competitive Exams | 309": {
+      "link": {
+        "mlid": "309",
+        "plid": "0",
+        "title": "Competitive Exams",
+        "description": "",
+        "path": "node/2",
+        "path_alias": "competitive-exam-page",
+        "href": "node/2",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "1",
+        "weight": "-48",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": {
+        "UPSC | 364": {
+          "link": {
+            "mlid": "364",
+            "plid": "309",
+            "title": "UPSC",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "Civils | 365": {
+              "link": {
+                "mlid": "365",
+                "plid": "364",
+                "title": "Civils",
+                "description": "",
+                "path": "node/686",
+                "path_alias": "civil-services",
+                "href": "node/686",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "IAS | 1964": {
+              "link": {
+                "mlid": "1964",
+                "plid": "364",
+                "title": "IAS",
+                "description": "",
+                "path": "node",
+                "path_alias": false,
+                "href": "node",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "0",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "యుపిఎస్సి | 1851": {
+          "link": {
+            "mlid": "1851",
+            "plid": "309",
+            "title": "యుపిఎస్సి",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "CENTRAL EXAMS | 376": {
+          "link": {
+            "mlid": "376",
+            "plid": "309",
+            "title": "CENTRAL EXAMS",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "RRB Exams | 397": {
+              "link": {
+                "mlid": "397",
+                "plid": "376",
+                "title": "RRB Exams",
+                "description": "",
+                "path": "node/687",
+                "path_alias": "rrb",
+                "href": "node/687",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "SSC Exams | 398": {
+              "link": {
+                "mlid": "398",
+                "plid": "376",
+                "title": "SSC Exams",
+                "description": "",
+                "path": "node/688",
+                "path_alias": "SSC-exams",
+                "href": "node/688",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "BANK Exams | 399": {
+              "link": {
+                "mlid": "399",
+                "plid": "376",
+                "title": "BANK Exams",
+                "description": "",
+                "path": "node/689",
+                "path_alias": "bank-exams",
+                "href": "node/689",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Insurance Exams | 400": {
+              "link": {
+                "mlid": "400",
+                "plid": "376",
+                "title": "Insurance Exams",
+                "description": "",
+                "path": "node/690",
+                "path_alias": "insurance-exams",
+                "href": "node/690",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "BSNL | 378": {
+              "link": {
+                "mlid": "378",
+                "plid": "376",
+                "title": "BSNL",
+                "description": "",
+                "path": "node/691",
+                "path_alias": "BSNL-Exams",
+                "href": "node/691",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-45",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Intelligence Bureau | 379": {
+              "link": {
+                "mlid": "379",
+                "plid": "376",
+                "title": "Intelligence Bureau",
+                "description": "",
+                "path": "node/692",
+                "path_alias": "Intelligence-bureau-exams",
+                "href": "node/692",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-44",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Postal Exams | 377": {
+              "link": {
+                "mlid": "377",
+                "plid": "376",
+                "title": "Postal Exams",
+                "description": "",
+                "path": "node/693",
+                "path_alias": "postal-exams",
+                "href": "node/693",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-43",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "STATE EXAMS | 368": {
+          "link": {
+            "mlid": "368",
+            "plid": "309",
+            "title": "STATE EXAMS",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-48",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "APPSC | 369": {
+              "link": {
+                "mlid": "369",
+                "plid": "368",
+                "title": "APPSC",
+                "description": "",
+                "path": "node/694",
+                "path_alias": "APPSC-Exam",
+                "href": "node/694",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "TSPSC | 370": {
+              "link": {
+                "mlid": "370",
+                "plid": "368",
+                "title": "TSPSC",
+                "description": "",
+                "path": "node/695",
+                "path_alias": "TSPSC-Exam",
+                "href": "node/695",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Police | 371": {
+              "link": {
+                "mlid": "371",
+                "plid": "368",
+                "title": "Police",
+                "description": "",
+                "path": "node/696",
+                "path_alias": "POLICE",
+                "href": "node/696",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "TET/DSC | 372": {
+              "link": {
+                "mlid": "372",
+                "plid": "368",
+                "title": "TET/DSC",
+                "description": "",
+                "path": "node/697",
+                "path_alias": "TET-DSC",
+                "href": "node/697",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Panchayat Secretary | 373": {
+              "link": {
+                "mlid": "373",
+                "plid": "368",
+                "title": "Panchayat Secretary",
+                "description": "",
+                "path": "node/698",
+                "path_alias": "panchayat-secretary",
+                "href": "node/698",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-45",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Forest Officers | 374": {
+              "link": {
+                "mlid": "374",
+                "plid": "368",
+                "title": "Forest Officers",
+                "description": "",
+                "path": "node/699",
+                "path_alias": "forest-officers",
+                "href": "node/699",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-44",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "VRO/VRA | 375": {
+              "link": {
+                "mlid": "375",
+                "plid": "368",
+                "title": "VRO/VRA",
+                "description": "",
+                "path": "node/700",
+                "path_alias": "VRO-VRA-Exams",
+                "href": "node/700",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-43",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "PREPARATION HUB | 869": {
+          "link": {
+            "mlid": "869",
+            "plid": "309",
+            "title": "PREPARATION HUB",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-47",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "Current Affairs | 381": {
+              "link": {
+                "mlid": "381",
+                "plid": "869",
+                "title": "Current Affairs",
+                "description": "",
+                "path": "node/4",
+                "path_alias": "current-affair",
+                "href": "node/4",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "GK | 868": {
+              "link": {
+                "mlid": "868",
+                "plid": "869",
+                "title": "GK",
+                "description": "",
+                "path": "node/1292",
+                "path_alias": "content/genreral-knowledge",
+                "href": "node/1292",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "General Essays | 2145": {
+              "link": {
+                "mlid": "2145",
+                "plid": "869",
+                "title": "General Essays",
+                "description": "",
+                "path": "node/1588",
+                "path_alias": "general-essays",
+                "href": "node/1588",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Previous Papers | 873": {
+              "link": {
+                "mlid": "873",
+                "plid": "869",
+                "title": "Previous Papers",
+                "description": "",
+                "path": "node/701",
+                "path_alias": "previous-papers",
+                "href": "node/701",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Material | 1404": {
+              "link": {
+                "mlid": "1404",
+                "plid": "869",
+                "title": "Material",
+                "description": "",
+                "path": "node/963",
+                "path_alias": "content/material",
+                "href": "node/963",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "Other Exams | 396": {
+          "link": {
+            "mlid": "396",
+            "plid": "309",
+            "title": "Other Exams",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "1",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-46",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "PREVIOUS PAPER | 1405": {
+          "link": {
+            "mlid": "1405",
+            "plid": "309",
+            "title": "PREVIOUS PAPER",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-46",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": {
+            "UPSC | 1406": {
+              "link": {
+                "mlid": "1406",
+                "plid": "1405",
+                "title": "UPSC",
+                "description": "",
+                "path": "node/701",
+                "path_alias": "previous-papers",
+                "href": "node/701",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "SSC | 1407": {
+              "link": {
+                "mlid": "1407",
+                "plid": "1405",
+                "title": "SSC",
+                "description": null,
+                "path": "http://sakshi.myofficestation.com/competitive-exam-section?sect=147&compt=688&lang=en",
+                "path_alias": false,
+                "href": "http://sakshi.myofficestation.com/competitive-exam-section?sect=147&compt=688&lang=en",
+                "hidden": "0",
+                "external": "1",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "APPSC | 1408": {
+              "link": {
+                "mlid": "1408",
+                "plid": "1405",
+                "title": "APPSC",
+                "description": null,
+                "path": "http://sakshi.myofficestation.com/competitive-exam-section?sect=147&compt=694&lang=en",
+                "path_alias": false,
+                "href": "http://sakshi.myofficestation.com/competitive-exam-section?sect=147&compt=694&lang=en",
+                "hidden": "0",
+                "external": "1",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Entrance Exams | 1409": {
+              "link": {
+                "mlid": "1409",
+                "plid": "1405",
+                "title": "Entrance Exams",
+                "description": "",
+                "path": "node/80",
+                "path_alias": "ENTRANCE-EXAMS",
+                "href": "node/80",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Banks | 1410": {
+              "link": {
+                "mlid": "1410",
+                "plid": "1405",
+                "title": "Banks",
+                "description": null,
+                "path": "http://192.168.1.17/sakshidrupal/competitive-exam-section?sect=147&compt=689",
+                "path_alias": false,
+                "href": "http://192.168.1.17/sakshidrupal/competitive-exam-section?sect=147&compt=689",
+                "hidden": "0",
+                "external": "1",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Eligibility Test | 1411": {
+              "link": {
+                "mlid": "1411",
+                "plid": "1405",
+                "title": "Eligibility Test",
+                "description": "",
+                "path": "node/966/",
+                "path_alias": false,
+                "href": "node/966/",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-45",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Solved Papers | 1412": {
+              "link": {
+                "mlid": "1412",
+                "plid": "1405",
+                "title": "Solved Papers",
+                "description": "",
+                "path": "node/965",
+                "path_alias": "content/solved-papers",
+                "href": "node/965",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-44",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "MISC | 1413": {
+              "link": {
+                "mlid": "1413",
+                "plid": "1405",
+                "title": "MISC",
+                "description": "",
+                "path": "node/964/",
+                "path_alias": false,
+                "href": "node/964/",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-43",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "కేంద్ర పరీక్షలు | 1850": {
+          "link": {
+            "mlid": "1850",
+            "plid": "309",
+            "title": "కేంద్ర పరీక్షలు",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "0",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "కేంద్ర పరీక్షలు | 1852": {
+          "link": {
+            "mlid": "1852",
+            "plid": "309",
+            "title": "కేంద్ర పరీక్షలు",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "0",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "తయారీ హబ్ | 1877": {
+          "link": {
+            "mlid": "1877",
+            "plid": "309",
+            "title": "తయారీ హబ్",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "0",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        }
+      }
+    },
+    "Estore | 310": {
+      "link": {
+        "mlid": "310",
+        "plid": "0",
+        "title": "Estore",
+        "description": "",
+        "path": "node/3",
+        "path_alias": "estore",
+        "href": "node/3",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "1",
+        "weight": "-47",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": {
+        "PDFs | 335": {
+          "link": {
+            "mlid": "335",
+            "plid": "310",
+            "title": "PDFs",
+            "description": "",
+            "path": "node/1624",
+            "path_alias": "content/pdfs",
+            "href": "node/1624",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "BOOKS | 336": {
+          "link": {
+            "mlid": "336",
+            "plid": "310",
+            "title": "BOOKS",
+            "description": "",
+            "path": "node/3",
+            "path_alias": "estore",
+            "href": "node/3",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "ONLINE TESTS | 337": {
+          "link": {
+            "mlid": "337",
+            "plid": "310",
+            "title": "ONLINE TESTS",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "1",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-48",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "HOW TO BUY | 338": {
+          "link": {
+            "mlid": "338",
+            "plid": "310",
+            "title": "HOW TO BUY",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-47",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": [
+
+          ]
+        }
+      }
+    },
+    "Jobs | 311": {
+      "link": {
+        "mlid": "311",
+        "plid": "0",
+        "title": "Jobs",
+        "description": "",
+        "path": "node/976",
+        "path_alias": "private-jobs",
+        "href": "node/976",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "1",
+        "weight": "-46",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": {
+        "Jobs | 865": {
+          "link": {
+            "mlid": "865",
+            "plid": "311",
+            "title": "Jobs",
+            "description": "",
+            "path": "node/684",
+            "path_alias": "jobs",
+            "href": "node/684",
+            "hidden": "1",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "Private Jobs | 341": {
+          "link": {
+            "mlid": "341",
+            "plid": "311",
+            "title": "Private Jobs",
+            "description": "",
+            "path": "node/976",
+            "path_alias": "private-jobs",
+            "href": "node/976",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": [
+
+              ],
+              "alter": true,
+              "node_type": "jobs_new"
+            },
+            "localized_options": {
+              "attributes": [
+
+              ],
+              "alter": true,
+              "node_type": "jobs_new"
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "Govt Jobs | 340": {
+          "link": {
+            "mlid": "340",
+            "plid": "311",
+            "title": "Govt Jobs",
+            "description": "",
+            "path": "node/975",
+            "path_alias": "govt-jobs",
+            "href": "node/975",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-48",
+            "depth": "2",
+            "options": {
+              "attributes": [
+
+              ],
+              "alter": true,
+              "node_type": "jobs_new"
+            },
+            "localized_options": {
+              "attributes": [
+
+              ],
+              "alter": true,
+              "node_type": "jobs_new"
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "Latest Jobs | 339": {
+          "link": {
+            "mlid": "339",
+            "plid": "311",
+            "title": "Latest Jobs",
+            "description": "",
+            "path": "node/974",
+            "path_alias": "latest-jobs",
+            "href": "node/974",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-47",
+            "depth": "2",
+            "options": {
+              "attributes": [
+
+              ],
+              "alter": true,
+              "node_type": "jobs_new"
+            },
+            "localized_options": {
+              "attributes": [
+
+              ],
+              "alter": true,
+              "node_type": "jobs_new"
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "JOB GUIDANCE | 395": {
+          "link": {
+            "mlid": "395",
+            "plid": "311",
+            "title": "JOB GUIDANCE",
+            "description": "",
+            "path": "node/685",
+            "path_alias": "job-guidance",
+            "href": "node/685",
+            "hidden": "1",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-46",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "తాజా జాబ్స్ | 1884": {
+          "link": {
+            "mlid": "1884",
+            "plid": "311",
+            "title": "తాజా జాబ్స్",
+            "description": "",
+            "path": "node/1083",
+            "path_alias": false,
+            "href": "node/1083",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "0",
+            "depth": "2",
+            "options": {
+              "node_type": "jobs_new",
+              "alter": true
+            },
+            "localized_options": {
+              "node_type": "jobs_new",
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "ప్రభుత్వ ఉద్యోగాలు | 1883": {
+          "link": {
+            "mlid": "1883",
+            "plid": "311",
+            "title": "ప్రభుత్వ ఉద్యోగాలు",
+            "description": "",
+            "path": "node/1081",
+            "path_alias": false,
+            "href": "node/1081",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "0",
+            "depth": "2",
+            "options": {
+              "node_type": "jobs_new",
+              "alter": true
+            },
+            "localized_options": {
+              "node_type": "jobs_new",
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "ప్రైవేట్ జాబ్స్ | 1885": {
+          "link": {
+            "mlid": "1885",
+            "plid": "311",
+            "title": "ప్రైవేట్ జాబ్స్",
+            "description": "",
+            "path": "node/1082",
+            "path_alias": false,
+            "href": "node/1082",
+            "hidden": true,
+            "external": "0",
+            "has_children": "0",
+            "weight": "0",
+            "depth": "2",
+            "options": {
+              "node_type": "jobs_new",
+              "alter": true
+            },
+            "localized_options": {
+              "node_type": "jobs_new",
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        }
+      }
+    },
+    "Online Tests | 312": {
+      "link": {
+        "mlid": "312",
+        "plid": "0",
+        "title": "Online Tests",
+        "description": "",
+        "path": "node/720",
+        "path_alias": "online-tests",
+        "href": "node/720",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "1",
+        "weight": "-45",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": {
+        "Latest Tests | 1853": {
+          "link": {
+            "mlid": "1853",
+            "plid": "312",
+            "title": "Latest Tests",
+            "description": "",
+            "path": "node/1048",
+            "path_alias": "content/latest-tests",
+            "href": "node/1048",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "Latest Tests | 342": {
+          "link": {
+            "mlid": "342",
+            "plid": "312",
+            "title": "Latest Tests",
+            "description": "",
+            "path": "node/1048",
+            "path_alias": "content/latest-tests",
+            "href": "node/1048",
+            "hidden": "1",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "BANKS | 343": {
+              "link": {
+                "mlid": "343",
+                "plid": "342",
+                "title": "BANKS",
+                "description": "",
+                "path": "node",
+                "path_alias": false,
+                "href": "node",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "CIVILS | 344": {
+              "link": {
+                "mlid": "344",
+                "plid": "342",
+                "title": "CIVILS",
+                "description": "",
+                "path": "node",
+                "path_alias": false,
+                "href": "node",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "STATE PSCs | 345": {
+          "link": {
+            "mlid": "345",
+            "plid": "312",
+            "title": "STATE PSCs",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "1",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "Trending Tests | 1854": {
+          "link": {
+            "mlid": "1854",
+            "plid": "312",
+            "title": "Trending Tests",
+            "description": "",
+            "path": "node/1049",
+            "path_alias": "trending-tests",
+            "href": "node/1049",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        },
+        "Most Popular Tests | 1855": {
+          "link": {
+            "mlid": "1855",
+            "plid": "312",
+            "title": "Most Popular Tests",
+            "description": "",
+            "path": "node/1050",
+            "path_alias": "most-popular-tests",
+            "href": "node/1050",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "0",
+            "weight": "-48",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": [
+
+          ]
+        }
+      }
+    },
+    "Updates | 313": {
+      "link": {
+        "mlid": "313",
+        "plid": "0",
+        "title": "Updates",
+        "description": "",
+        "path": "node/674",
+        "path_alias": "updates",
+        "href": "node/674",
+        "hidden": "0",
+        "external": "0",
+        "has_children": "1",
+        "weight": "-44",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": {
+        "ACADEMIC UPDATES | 348": {
+          "link": {
+            "mlid": "348",
+            "plid": "313",
+            "title": "ACADEMIC UPDATES",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-50",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": {
+            "Admissions | 349": {
+              "link": {
+                "mlid": "349",
+                "plid": "348",
+                "title": "Admissions",
+                "description": "",
+                "path": "node/1013",
+                "path_alias": "content/admissions",
+                "href": "node/1013",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Scholarships | 350": {
+              "link": {
+                "mlid": "350",
+                "plid": "348",
+                "title": "Scholarships",
+                "description": "",
+                "path": "node/1014",
+                "path_alias": "content/scholorships",
+                "href": "node/1014",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Internships | 351": {
+              "link": {
+                "mlid": "351",
+                "plid": "348",
+                "title": "Internships",
+                "description": "",
+                "path": "node/675",
+                "path_alias": "internship",
+                "href": "node/675",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Short Term Courses | 352": {
+              "link": {
+                "mlid": "352",
+                "plid": "348",
+                "title": "Short Term Courses",
+                "description": "",
+                "path": "node/676",
+                "path_alias": "short-term-courses",
+                "href": "node/676",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Online Courses | 353": {
+              "link": {
+                "mlid": "353",
+                "plid": "348",
+                "title": "Online Courses",
+                "description": "",
+                "path": "node/660",
+                "path_alias": "online-course",
+                "href": "node/660",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "University Updates | 866": {
+              "link": {
+                "mlid": "866",
+                "plid": "348",
+                "title": "University Updates",
+                "description": "",
+                "path": "node/645",
+                "path_alias": "university-update",
+                "href": "node/645",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-45",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Educations News | 355": {
+              "link": {
+                "mlid": "355",
+                "plid": "348",
+                "title": "Educations News",
+                "description": "",
+                "path": "node/677",
+                "path_alias": "educational-news",
+                "href": "node/677",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-44",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "COMPETITIVE EXAM UPDATES | 356": {
+          "link": {
+            "mlid": "356",
+            "plid": "313",
+            "title": "COMPETITIVE EXAM UPDATES",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-49",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              },
+              "alter": true
+            }
+          },
+          "children": {
+            "Hall Ticket | 358": {
+              "link": {
+                "mlid": "358",
+                "plid": "356",
+                "title": "Hall Ticket",
+                "description": "",
+                "path": "node/679",
+                "path_alias": "hall-tickets",
+                "href": "node/679",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Exam Reminder | 359": {
+              "link": {
+                "mlid": "359",
+                "plid": "356",
+                "title": "Exam Reminder",
+                "description": "",
+                "path": "node/680",
+                "path_alias": "exam-reminder",
+                "href": "node/680",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "JOB NOTIFICATIONS | 357": {
+              "link": {
+                "mlid": "357",
+                "plid": "356",
+                "title": "JOB NOTIFICATIONS",
+                "description": "",
+                "path": "node/678",
+                "path_alias": "job-notifications",
+                "href": "node/678",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Results | 867": {
+              "link": {
+                "mlid": "867",
+                "plid": "356",
+                "title": "Results",
+                "description": "",
+                "path": "node",
+                "path_alias": false,
+                "href": "node",
+                "hidden": "1",
+                "external": "0",
+                "has_children": "0",
+                "weight": "0",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  }
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        },
+        "RESULTS | 360": {
+          "link": {
+            "mlid": "360",
+            "plid": "313",
+            "title": "RESULTS",
+            "description": "",
+            "path": "node",
+            "path_alias": false,
+            "href": "node",
+            "hidden": "0",
+            "external": "0",
+            "has_children": "1",
+            "weight": "-48",
+            "depth": "2",
+            "options": {
+              "attributes": {
+                "title": ""
+              }
+            },
+            "localized_options": {
+              "attributes": {
+                "title": ""
+              }
+            }
+          },
+          "children": {
+            "Academic Results | 361": {
+              "link": {
+                "mlid": "361",
+                "plid": "360",
+                "title": "Academic Results",
+                "description": "",
+                "path": "node/681",
+                "path_alias": "academic-results",
+                "href": "node/681",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-50",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Entrance Results | 363": {
+              "link": {
+                "mlid": "363",
+                "plid": "360",
+                "title": "Entrance Results",
+                "description": "",
+                "path": "node/683",
+                "path_alias": "entrance-results",
+                "href": "node/683",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-49",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Recruitment Results | 1649": {
+              "link": {
+                "mlid": "1649",
+                "plid": "360",
+                "title": "Recruitment Results",
+                "description": "",
+                "path": "node/1029",
+                "path_alias": "recruitment-results",
+                "href": "node/1029",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-48",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Engineering Exams Results | 1637": {
+              "link": {
+                "mlid": "1637",
+                "plid": "360",
+                "title": "Engineering Exams Results",
+                "description": "",
+                "path": "node/1010",
+                "path_alias": "engineering-exams-results",
+                "href": "node/1010",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-47",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            },
+            "Other Exams Results | 1636": {
+              "link": {
+                "mlid": "1636",
+                "plid": "360",
+                "title": "Other Exams Results",
+                "description": "",
+                "path": "node/1011",
+                "path_alias": "others-exams-results",
+                "href": "node/1011",
+                "hidden": "0",
+                "external": "0",
+                "has_children": "0",
+                "weight": "-46",
+                "depth": "3",
+                "options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                },
+                "localized_options": {
+                  "attributes": {
+                    "title": ""
+                  },
+                  "alter": true
+                }
+              },
+              "children": [
+
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SSC | 346": {
+      "link": {
+        "mlid": "346",
+        "plid": "0",
+        "title": "SSC",
+        "description": "",
+        "path": "node",
+        "path_alias": false,
+        "href": "node",
+        "hidden": "1",
+        "external": "0",
+        "has_children": "0",
+        "weight": "-43",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          }
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          }
+        }
+      },
+      "children": [
+
+      ]
+    },
+    "REGISTER FOR THE TEST | 347": {
+      "link": {
+        "mlid": "347",
+        "plid": "0",
+        "title": "REGISTER FOR THE TEST",
+        "description": "",
+        "path": "node",
+        "path_alias": false,
+        "href": "node",
+        "hidden": "1",
+        "external": "0",
+        "has_children": "0",
+        "weight": "-42",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          }
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          }
+        }
+      },
+      "children": [
+
+      ]
+    },
+    " పౌర | 1849": {
+      "link": {
+        "mlid": "1849",
+        "plid": "0",
+        "title": " పౌర",
+        "description": "",
+        "path": "node/686",
+        "path_alias": "civil-services",
+        "href": "node/686",
+        "hidden": true,
+        "external": "0",
+        "has_children": "0",
+        "weight": "-41",
+        "depth": "1",
+        "options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        },
+        "localized_options": {
+          "attributes": {
+            "title": ""
+          },
+          "alter": true
+        }
+      },
+      "children": [
+
+      ]
+    },
+    "testing panel | 1359": {
+      "link": {
+        "mlid": "1359",
+        "plid": "0",
+        "title": "testing panel",
+        "description": "",
+        "path": "testing panel",
+        "path_alias": false,
+        "href": "testing panel",
+        "hidden": "1",
+        "external": "0",
+        "has_children": "0",
+        "weight": "-40",
+        "depth": "1",
+        "options": {
+          "alter": true
+        },
+        "localized_options": {
+          "alter": true
+        }
+      },
+      "children": [
+
+      ]
+    }
+  }
+}
