@@ -105,7 +105,7 @@ export default class CurrentAffairs extends Component {
   render() {
 
     return (
-      <ScrollView>
+      <ScrollView style={{backgroundColor: '#E8F3F7'}}>
         { this.renderCurrentAffairsList() }
       </ScrollView>
     )
