@@ -55,6 +55,8 @@ export default class ViewAllTrendingExams extends Component {
                   {exam.desc}
                   </Text>
                   <View style={styles.new}>
+                  { showText ?
+                    <Text style={{color: 'red'}}>new</Text> : <Text></Text> }
                   </View>
                 </View>
               <Text style={styles.description}>{exam.shortdesc}</Text>
