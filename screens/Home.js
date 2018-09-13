@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, StyleSheet, View, YellowBox } from 'react-native';
 import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
 import Competitive from './Compititive';
-import AcademicStudies from './AcademicStudies';
+import AcademicStudies from './AcademicStudies'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Second from "./../components/second";
@@ -13,6 +13,35 @@ import { Text, ScrollView } from 'react-native';
 import HomePage from './HomePage';
 import FacebookTabBar from './FacebookTabBar';
 import ScrollableTabView, { ScrollableTabBar } from 'react-native-scrollable-tab-view';
+import { createDrawerNavigator, createStackNavigator, DrawerActions } from 'react-navigation';
+import BillingScreen from '../components/Billing';
+import CheckoutScreen from '../components/Checkout';
+import ExamDetailsScreen from '../components/examDetails';
+import InfoTabScreen from '../components/InfoTab';
+import MyTestsScreen from '../components/MyTests';
+import NewCheckoutScreen from '../components/NewCheckout';
+import OnlineSubscribeScreen from '../components/OnlineSubscribe';
+import OnlineTestsScreen from '../components/OnlineTests';
+import PauseTestScreen from '../components/PauseTest';
+import StudyMaterialContentScreen from '../components/StudyMaterialContent';
+import SubscriptionScreen from '../components/Subscription';
+import TakeTestScreen from '../components/TakeTest';
+import TestScreen from '../components/Test';
+import TestReportScreen from '../components/TestReport';
+import TrendingExamScreen from '../components/ViewAllTrendingExams';
+import AcademicStudiesScreen from '../screens/AcademicStudies';
+import Compititive from '../screens/Compititive';
+import CurrentAffairsScreen from '../screens/CurrentAffairs';
+import CurrentAffairScreen from '../screens/CurrentAffair';
+import DrawerScreen from '../screens/Drawer';
+import EstoreScreen from '../screens/Estore';
+import ExamScreen from '../screens/Exam';
+import FeedbackScreen from '../screens/Feedback';
+import LoginScreen from '../screens/Login';
+import PaymentScreen from '../screens/Payment';
+import RegisterScreen from '../screens/Register';
+import TransactionInvoiceScreen from '../components/TransactionInvoice';
+
 
 
 YellowBox.ignoreWarnings([
@@ -23,87 +52,128 @@ YellowBox.ignoreWarnings([
   ]);
   console.disableYellowBox = true;
 
+
+  const Stack = createStackNavigator(
+
+    {
+       Base:  {
+         screen : BaseScreen
+       },
+       Exam: {
+         screen: ExamScreen,
+       },
+       Compititive: {
+         screen: Compititive,
+       },
+       Estore : {
+         screen : EstoreScreen
+       },
+       OnlineTests : {
+         screen : OnlineTestsScreen
+       },
+       Subscription : {
+         screen : SubscriptionScreen
+       },
+       OnlineSubscribe : {
+         screen : OnlineSubscribeScreen
+       },
+       Checkout : {
+         screen : CheckoutScreen
+       },
+       NewCheckout : {
+         screen : NewCheckoutScreen
+       },
+       Billing : {
+         screen : BillingScreen
+       },
+       ViewAllTrendingExams : {
+         screen : TrendingExamScreen
+       },
+       Payment : {
+         screen : PaymentScreen
+       },
+       AcademicStudies : {
+         screen : AcademicStudiesScreen
+       },
+       ExamDetails : {
+         screen : ExamDetailsScreen
+       },
+       CurrentAffairs: {
+         screen : CurrentAffairsScreen
+       },
+       CurrentAffair : {
+         screen : CurrentAffairScreen
+       },
+       TakeTest: {
+         screen : TakeTestScreen
+       },
+       Test: {
+         screen : TestScreen
+       },
+       Feedback: {
+         screen: FeedbackScreen
+       },
+       PauseTest: {
+         screen : PauseTestScreen
+       },
+       MyTests: {
+         screen : MyTestsScreen
+       },
+       TestReport: {
+         screen : TestReportScreen
+       },
+       InfoTab: {
+         screen : InfoTabScreen
+       },
+       StudyMaterialContent: {
+         screen : StudyMaterialContentScreen
+       },
+       TransactionInvoice: {
+         screen : TransactionInvoiceScreen
+       }
+    },
+
+    {
+      initialRouteName: 'Base',
+
+     navigationOptions : ({navigation, screenProps, navigationOptions}) => (
+    {
+      title: `Sakshi Education`,
+      headerTintColor: '#ffffff',
+      headerStyle: {
+        backgroundColor: '#364C8B',
+        borderBottomColor: '#ffffff'
+      },
+      headerTitleStyle: {
+        fontSize: 18,
+      },
+      headerRight : <View style={{display:'flex', flexDirection:'row'}}>
+      <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
+      <Icon style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
+      <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
+      </View> ,
+      headerLeft : <View>
+      <Ionicon onPress={() => {screenProps.rootNavigation.toggleDrawer()}} style={{marginLeft : 12, marginRight : 8}} name="md-menu" size={36} color="#fff"/>
+      </View>
+    }
+  )
+
+  });
 export default class Home extends React.Component {
-
-
-
   state = {
     index: 0
   };
 
 
   render() {
-      console.log('NAV=', JSON.stringify(this.props.navigation, null, 2));
-      let nav = this.props.navigation;
+    console.log('$$$$$$$',this.props.navigation);
     return (
-      <ScrollableTabView
-        style={{marginTop: 0}}
-          initialPage={0}
-          renderTabBar={() => <ScrollableTabBar underlineStyle={{backgroundColor:'#FFBC00'}}
-             activeTextColor='#FFFFFF' inactiveTextColor = '#98B9D6'
-             style ={{backgroundColor : '#364C8B',height:60}}/>}  >
-    <ScrollView tabLabel="Home" tabIcon="" style={styles.tabView}>
-      <View style={styles.card}>
-       <HomePage onNavigate={redirect.bind(this, nav)} />
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="Academic Studies" style={styles.tabView}>
-      <View style={styles.card}>
-        <AcademicStudies onNavigate={redirect.bind(this, nav)} />
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="Competitive Exams" style={styles.tabView}>
-      <View style={styles.card}>
-      <Competitive onNavigate={redirect.bind(this, nav)} />
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="eStore" style={styles.tabView}>
-      <View style={styles.card}>
-        <Estore onNavigate={redirect.bind(this, nav)}/>
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="Online Tests" style={styles.tabView}>
-      <View style={styles.card}>
-        <OnlineTests onNavigate={redirect.bind(this, nav)}/>
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="Current Affairs" style={styles.tabView}>
-      <View style={styles.card}>
-      <Text>Current Affairs</Text>
-      </View>
-    </ScrollView>
-    <ScrollView tabLabel="Jobs" style={styles.tabView}>
-      <View style={styles.card}>
-      <Text>Jobs</Text>
-      </View>
-    </ScrollView>
-  </ScrollableTabView>
+        <Stack screenProps={{
+	        rootNavigation: this.props.navigation
+	  }} />
     );
   }
 }
-
-const FirstRoute = (nav) => (
-  <HomePage onNavigate={redirect.bind(this, nav)}/>
-);
-
-const SecondRoute = () => (
-  <View style={[styles.container, { backgroundColor: '#673ab7' }]} />
-);
-
-const ThirdRoute = (nav) => (
-  <Competitive onNavigate={redirect.bind(this, nav)} />
-);
-
-
-
-
-const redirect = (nav, route, data) => {
-    console.log('NAVE=', JSON.stringify(nav, null,2 ) +
-    '\n ROUTE=', JSON.stringify(route, null,2 ) +
-    '\n DATA=', JSON.stringify(data, null,2 ));
-    nav.navigate(route, data);
-}
-
 
 const styles = StyleSheet.create({
   container: {

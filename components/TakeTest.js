@@ -4,6 +4,7 @@ import { Card } from 'native-base';
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
 import LikeIcon from 'react-native-vector-icons/EvilIcons';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -17,9 +18,11 @@ export default class TakeTest extends Component {
   static navigationOptions = ({navigation}) => (
   {
     title: 'Take Test',
+    headerRight : null,
+    headerLeft : <FontAwesomeIcon name={'arrow-left'} size={18} color="#fff" style={{marginLeft : 10}} onPress={ () => { navigation.goBack() } }  />,
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {

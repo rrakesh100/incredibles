@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, Image, Dimensions, StyleSheet, ScrollView } from 'react-native';
-import CartIcon from 'react-native-vector-icons/EvilIcons';
 import { Button, Icon } from 'react-native-elements';
 import { Card } from 'native-base';
-import CloseIcon from 'react-native-vector-icons/EvilIcons';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import { AsyncStorage } from "react-native";
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -23,10 +22,12 @@ export default class  NewCheckout extends Component {
 
   static navigationOptions = ({navigation}) => (
   {
-    title: 'My Cart',
+    title: 'Checkout',
+    headerRight : null,
+    headerLeft : <FontAwesomeIcon name={'arrow-left'} size={18} color="#fff" style={{marginLeft : 10}} onPress={ () => { navigation.goBack() } }  />,
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {
@@ -34,6 +35,7 @@ export default class  NewCheckout extends Component {
     }
   }
   );
+
 
   componentDidMount(){
     const { items } = this.state;
