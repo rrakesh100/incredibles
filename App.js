@@ -42,101 +42,12 @@ YellowBox.ignoreWarnings([
   console.disableYellowBox = true;
 
 
-  const InnerStackNavigator =  createStackNavigator(
-    {
-      Home: {
-        screen: HomeScreen,
-      },
-      Login: {
-        screen: LoginScreen,
-      },
-      Register: {
-        screen: RegisterScreen,
-      },
-      Exam: {
-        screen: ExamScreen,
-      },
-      Compititive: {
-        screen: Compititive,
-      },
-      Estore : {
-        screen : EstoreScreen
-      },
-      OnlineTests : {
-        screen : OnlineTestsScreen
-      },
-      Subscription : {
-        screen : SubscriptionScreen
-      },
-      OnlineSubscribe : {
-        screen : OnlineSubscribeScreen
-      },
-      Checkout : {
-        screen : CheckoutScreen
-      },
-      NewCheckout : {
-        screen : NewCheckoutScreen
-      },
-      Billing : {
-        screen : BillingScreen
-      },
-      ViewAllTrendingExams : {
-        screen : TrendingExamScreen
-      },
-      Payment : {
-        screen : PaymentScreen
-      },
-      AcademicStudies : {
-        screen : AcademicStudiesScreen
-      },
-      ExamDetails : {
-        screen : ExamDetailsScreen
-      },
-      CurrentAffairs: {
-        screen : CurrentAffairsScreen
-      },
-      CurrentAffair : {
-        screen : CurrentAffairScreen
-      },
-      TakeTest: {
-        screen : TakeTestScreen
-      },
-      Test: {
-        screen : TestScreen
-      },
-      Feedback: {
-        screen: FeedbackScreen
-      },
-      PauseTest: {
-        screen : PauseTestScreen
-      },
-      MyTests: {
-        screen : MyTestsScreen
-      },
-      TestReport: {
-        screen : TestReportScreen
-      },
-      InfoTab: {
-        screen : InfoTabScreen
-      },
-      StudyMaterialContent: {
-        screen : StudyMaterialContentScreen
-      },
-      TransactionInvoice: {
-        screen : TransactionInvoiceScreen
-      }
-    },
-    {
-      initialRouteName: 'Home',
-      headerMode: 'none',
-    }
-  );
 
 // Navigator
 const DrawerNavigator = createDrawerNavigator(
 	{
 	  Home: {
-	    screen: InnerStackNavigator,
+	    screen: HomeScreen,
     },
     Login: {
       screen: LoginScreen,
@@ -224,43 +135,10 @@ const DrawerNavigator = createDrawerNavigator(
 	}
 );
 
-const Stack = createStackNavigator({
-
-    //important: key and screen name (i.e. DrawerNavigator) should be same while using the drawer navigator inside stack navigator.
-
-    DrawerNavigator:{
-        screen: DrawerNavigator
-    }
-},{
-   navigationOptions : ({navigation}) => (
-  {
-    title: `Sakshi Education`,
-    headerTintColor: '#ffffff',
-    headerStyle: {
-      backgroundColor: '#364C8B',
-      borderBottomColor: '#ffffff'
-    },
-    headerTitleStyle: {
-      fontSize: 18,
-    },
-    headerRight : <View style={{display:'flex', flexDirection:'row'}}>
-    <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
-    <Icon style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
-    <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
-    </View> ,
-    headerLeft : <View>
-    <Ionicon onPress={() => {navigation.dispatch(DrawerActions.toggleDrawer())} } style={{marginLeft : 12, marginRight : 8}} name="md-menu" size={36} color="#fff"/>
-    </View>
-  }
-)
-
-});
-
-
 export default class App extends React.Component {
   render() {
     return (
-			<Stack />
+			<DrawerNavigator />
     );
   }
 }

@@ -7,13 +7,33 @@ import NewIcon from 'react-native-vector-icons/Feather';
 import IncorrectIcon from 'react-native-vector-icons/EvilIcons';
 import CloseIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { testQuestions } from '../api/onlineTests';
-
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import Ionicon from 'react-native-vector-icons/Ionicons';
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 
 
 export default class TestReport extends Component {
+
+
+    static navigationOptions = ({navigation}) => (
+    {
+      title: 'Test Report',
+      headerRight : null,
+      headerLeft : <Ionicon  onPress={ () => { navigation.navigate('Base') } }   style={{marginLeft : 12, marginRight : 8}}
+      name="md-menu" size={36} color="#fff"/>,
+      headerTintColor: '#ffffff',
+      headerStyle: {
+        backgroundColor: '#364C8B',
+        borderBottomColor: '#ffffff',
+      },
+      headerTitleStyle: {
+        fontSize: 18,
+      }
+    }
+    );
+
   constructor(props) {
     super(props);
 
@@ -86,19 +106,6 @@ export default class TestReport extends Component {
     }
   }
 
-  static navigationOptions = ({navigation}) => (
-  {
-    title: 'Test Report',
-    headerTintColor: '#ffffff',
-    headerStyle: {
-      backgroundColor: '#00539d',
-      borderBottomColor: '#ffffff',
-    },
-    headerTitleStyle: {
-      fontSize: 18,
-    }
-  }
-  );
 
   updateIndex = (index) => {
     this.setState({index})

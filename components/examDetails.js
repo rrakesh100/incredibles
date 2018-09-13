@@ -32,6 +32,8 @@ export default class ExamDetails extends React.Component {
   static navigationOptions = ({navigation}) => (
   {
     title: `${navigation.state.params ? navigation.state.params.data.examName : 'Exam Detail'}`,
+    headerRight : null,
+    headerLeft : <Icon name={'arrow-left'} size={18} color="#fff" style={{marginLeft : 10}} onPress={ () => { navigation.goBack() } }  />,
     headerTintColor: '#ffffff',
     headerStyle: {
       backgroundColor: '#364C8B',

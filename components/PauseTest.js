@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Octicons';
 import { Button, Badge } from 'react-native-elements';
 import ArrowIcon from 'react-native-vector-icons/Ionicons';
 import NewIcon from 'react-native-vector-icons/Feather';
-
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 
@@ -14,12 +14,15 @@ export default class PauseTest extends Component {
     super(props);
   }
 
+
   static navigationOptions = ({navigation}) => (
   {
     title: 'Pause/End Test',
+    headerRight : null,
+    headerLeft : <FontAwesomeIcon name={'arrow-left'} size={18} color="#fff" style={{marginLeft : 10}} onPress={ () => { navigation.goBack() } }  />,
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {

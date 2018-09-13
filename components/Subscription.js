@@ -4,12 +4,14 @@ import CartIcon from 'react-native-vector-icons/EvilIcons';
 import Icon from 'react-native-vector-icons/Entypo';
 import { Button, Card } from 'react-native-elements';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 
 
 export default class  Subscription extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -17,24 +19,22 @@ export default class  Subscription extends Component {
       quantity : 1
     }
   }
-
-
   static navigationOptions = ({navigation}) => (
   {
-    title: 'eStore-Online Tests',
+    title: `${navigation.state.params ? navigation.state.params.data.title : 'eStore-Study Material & Tests'}`,
+    headerRight : null,
+    headerLeft : <FontAwesomeIcon name={'arrow-left'} size={18} color="#fff" style={{marginLeft : 10}} onPress={ () => { navigation.goBack() } }  />,
     headerTintColor: '#ffffff',
     headerStyle: {
-      backgroundColor: '#00539d',
+      backgroundColor: '#364C8B',
       borderBottomColor: '#ffffff',
     },
     headerTitleStyle: {
       fontSize: 18,
-    },
-    headerRight: <View>
-        <CartIcon name="cart" style={{}} size={24} color="white" />
-        </View>
+    }
   }
   );
+
 
   componentDidMount() {
     console.log(this.props);
