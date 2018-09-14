@@ -156,7 +156,7 @@ YellowBox.ignoreWarnings([
       },
       headerRight : <View style={{display:'flex', flexDirection:'row'}}>
       <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
-      <Icon style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
+      <Icon onPress={() => {navigation.navigate('NewCheckout')} } style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
       <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
       </View> ,
       headerLeft : <View>

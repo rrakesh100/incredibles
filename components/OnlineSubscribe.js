@@ -4,7 +4,7 @@ import { Button, Card } from 'react-native-elements';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
 import Icon from 'react-native-vector-icons/Entypo';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-
+import { AsyncStorage } from "react-native";
 import { Col, Row, Grid } from "react-native-easy-grid";
 
 const sliderWidth = Dimensions.get('window').width;
@@ -37,9 +37,6 @@ export default class OnlineSubscribe extends Component {
   }
   );
 
-  componentDidMount() {
-    console.log(this.props)
-  }
 
   onQuantityChanged(action) {
     if(this.state.quantity === 1 && action === 'remove'){
@@ -57,8 +54,36 @@ export default class OnlineSubscribe extends Component {
     }
   }
 
+  addToCart = (data, qty) => {
+    let checkoutObj = {};
+    checkoutObj['data'] = data;
+    checkoutObj['quantity'] = qty;
+    this.storeData('subscriptions', checkoutObj);
+  }
+
+  storeData = async (key, value) => {
+    console.log('entered to store data');
+    try {
+      const storageValue = await AsyncStorage.getItem(key);
+      console.log('storagevalue =====================================', storageValue);
+      if(storageValue) {
+        existingValue = JSON.parse(storageValue);
+        existingValue.push(value);
+        await AsyncStorage.setItem(key, JSON.stringify(existingValue));
+      }else {
+        let existingValue = [];
+        existingValue.push(value)
+        await AsyncStorage.setItem(key, JSON.stringify(existingValue));
+      }
+
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
   render() {
-    console.log('@@@@@@@@',this.props.navigation);
     const { subscribed, quantity } = this.state;
     const { navigation } = this.props;
     const data = navigation.state.params.data;
@@ -116,9 +141,12 @@ export default class OnlineSubscribe extends Component {
             </Text>
             { subscribed ?
               <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
-            <Button title='PROCEED' buttonStyle={styles.bStyle}
-               onPress={() => this.props.navigation.navigate('NewCheckout', {data: data, Qty: quantity})}
-             textStyle={{color: '#F8C548', fontSize : 12}}  />
+              <Button title='PROCEED' buttonStyle={styles.bStyle}
+                 onPress={() => this.props.navigation.navigate('NewCheckout', {data: data, Qty: quantity})}
+               textStyle={{color: '#F8C548', fontSize : 12}}  />
+              <Button title='ADD TO CART' buttonStyle={styles.bStyle}
+                 onPress={ this.addToCart.bind(this, data, quantity) }
+               textStyle={{color: '#F8C548', fontSize : 12}}  />
              </View> : null }
             <View style={styles.flex}>
             <View>
