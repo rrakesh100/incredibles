@@ -20,6 +20,10 @@ export default class  NewCheckout extends Component {
     }
   }
 
+  componentDidMount(){
+    this._retrieveData();
+  }
+
   static navigationOptions = ({navigation}) => (
   {
     title: 'Checkout',
@@ -35,12 +39,6 @@ export default class  NewCheckout extends Component {
     }
   }
   );
-
-
-  componentDidMount(){
-    const { items } = this.state;
-
-  }
 
   onQuantityChanged(action) {
     if(this.state.quantity === 1 && action === 'remove'){
@@ -58,54 +56,66 @@ export default class  NewCheckout extends Component {
     }
   }
 
-  _storeData = async () => {
-    const { navigation } = this.props;
-
-    const data = navigation.state.params.data;
-      try {
-        let value =  this._retrieveData().then(value => {
-          console.log('LOLOLO', value);
-          let v = [];
-          v.push(data);
-          console.log('EEEEEEE', JSON.parse(value));
-          if(value) {
-           v = v.concat(JSON.parse(value));
-            console.log('VVVVVVVVVV', v);
-            console.log('WWWWWWWWWW', JSON.stringify(v));
-
-
-          }
-          console.log('HAHAHAHA', v);
-          AsyncStorage.setItem('items', JSON.stringify(v));
-          this.setState({
-            items : v
-          })
-          })
-      } catch (error) {
-        console.log(error) ;
-      }
+  storeData = async () => {
+    try {
+      await AsyncStorage.setItem('TASKS', 'I like to save it.');
+    } catch (error) {
+      // Error saving data
+    }
   }
 
   _retrieveData = async () => {
+
   try {
-    return AsyncStorage.getItem('items')
+      const subscriptions = await AsyncStorage.getItem('subscriptions') || 'none';
+      if (subscriptions !== null) {
+        let subscriptionsArray = JSON.parse(subscriptions);
+        this.setState({
+          'subscriptions' : subscriptionsArray
+        })
+
+
+      const onlineTests = {};
+
+      let itemsArray = []; let totalOriginalPrice = 0; let totalDiscount = 0;
+      let totalPrice = 0; let totalQuantity = 0; let allItemsObj = {};
+
+      subscriptionsArray.map((subscription , i)=> {
+        let subscripData = subscription['data'];
+        let item = {};
+        item.title = subscripData.title;
+        item.desc = subscripData.shortDesc;
+        item.originalPrice = subscripData.originalPrice;
+        item.price = subscripData.price;
+        itemsArray.push(item);
+        totalQuantity = totalQuantity + 1;
+        totalOriginalPrice += Number(subscripData.originalPrice);
+        totalDiscount += Number(subscripData.discountedPrice)
+        totalPrice += Number(subscripData.price)
+      })
+
+      allItemsObj['subscriptions'] = itemsArray;
+      allItemsObj['totalPrice'] = totalPrice;
+      allItemsObj['totalDiscount'] = totalDiscount;
+      allItemsObj['totalOriginalPrice'] = totalOriginalPrice;
+      this.setState({
+        allItemsObj
+      });
+    }
    } catch (error) {
-     // Error retrieving data
+       console.log('&&&&&&&&&&&&& ===== ', error);
    }
   }
 
-
   renderCartItems() {
-    const { navigation } = this.props;
-    const { items } =  this.state ;
 
-    console.log('$$$$$$$$$$$$$', items);
-
-    if(!items)
+    const { allItemsObj } = this.state;
+    if(!allItemsObj)
       return;
 
+    let subscriptionsArr = allItemsObj['subscriptions'];
     return (
-      items.map((item, index) => {
+      subscriptionsArr.map((item, index) => {
         return (
 
           <View key={index}>
@@ -124,7 +134,7 @@ export default class  NewCheckout extends Component {
                      <Text style={styles.textCardStyle}>Description</Text>
                   </Col>
                   <Col>
-                     <Text style={styles.textCardValueStyle}>{item.shortDesc}</Text>
+                     <Text style={styles.textCardValueStyle}>{item.desc}</Text>
                   </Col>
               </Row>
               <Row style={{marginTop: 10, marginLeft: 10}}>
@@ -154,44 +164,49 @@ export default class  NewCheckout extends Component {
 
   }
 
+
+  renderSummary() {
+    const  { allItemsObj } = this.state;
+    if(!allItemsObj)
+      return;
+    return (
+    <View style={{marginTop : 20}}>
+          <Grid>
+          <Row style={{marginTop : 20}}>
+            <Col><Text style={styles.textStyle}>Total # of items</Text></Col>
+            <Col><Text style={styles.textValueStyle}>{allItemsObj['totalQuantity']}</Text></Col>
+          </Row>
+          <Row style={{marginTop : 20}}>
+            <Col><Text style={styles.textStyle}>Total Price</Text></Col>
+            <Col><Text style={styles.textValueStyle}>Rs.{parseInt(allItemsObj['totalOriginalPrice'])}</Text></Col>
+          </Row>
+          <Row style={{marginTop : 20}}>
+            <Col><Text style={styles.textStyle}>Discount on MRP</Text></Col>
+            <Col><Text style={styles.textValueStyle}>Rs.{parseInt(allItemsObj['totalDiscount'])}</Text></Col>
+          </Row>
+          <Row style={{marginTop : 20}}>
+            <Col><Text style={styles.textStyle}>Amount Payable</Text></Col>
+            <Col><Text style={styles.textValueStyle}>Rs.{parseInt(allItemsObj['totalPrice'])}</Text></Col>
+          </Row>
+          </Grid>
+
+      <View style={{marginTop: 120, marginLeft: 120}}>
+        <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
+        onPress={() => this.props.navigation.navigate('Billing', {data: {amountPayable: amountPayable}})}
+         textStyle={{color: '#F8C548', fontSize : 14}} />
+      </View>
+      </View>
+
+    );
+  }
+
   render(){
-    const { items } = this.state;
-    const { navigation } = this.props;
-    const data = navigation.state.params.data;
-    let amountPayable =  data.price;
+
     return (
         <ScrollView style={{backgroundColor : '#E8F3F7', marginLeft : 10, marginRight:10}}>
           <Text style={{marginTop : 20, fontSize : 20}}>Order Summary</Text>
           { this.renderCartItems() }
-        <View style={{marginTop : 20}}>
-            <Grid>
-            <Row style={{marginTop : 20}}>
-              <Col><Text style={styles.textStyle}>Total # of items</Text></Col>
-              <Col><Text style={styles.textValueStyle}>2</Text></Col>
-            </Row>
-            <Row style={{marginTop : 20}}>
-              <Col><Text style={styles.textStyle}>Total Price</Text></Col>
-              <Col><Text style={styles.textValueStyle}>Rs.{parseInt(data.price)*2}</Text></Col>
-            </Row>
-            <Row style={{marginTop : 20}}>
-              <Col><Text style={styles.textStyle}>Discount on MRP</Text></Col>
-              <Col><Text style={styles.textValueStyle}>Rs.{parseInt(data.discountedPrice)*2}</Text></Col>
-            </Row>
-            <Row style={{marginTop : 20}}>
-              <Col><Text style={styles.textStyle}>Amount Payable</Text></Col>
-              <Col><Text style={styles.textValueStyle}>Rs.{parseInt(data.price)*2}</Text></Col>
-            </Row>
-            </Grid>
-        </View>
-
-        <View style={{marginTop: 120, marginLeft: 120}}>
-          <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
-          onPress={() => this.props.navigation.navigate('Billing', {data: {amountPayable: amountPayable}})}
-           textStyle={{color: '#F8C548', fontSize : 14}} />
-         <Button title='ADD' buttonStyle={styles.checkoutButton}
-         onPress={() => this._storeData()}
-          textStyle={{color: '#F8C548', fontSize : 14}} />
-        </View>
+          { this.renderSummary() }
 
         </ScrollView>
       )
