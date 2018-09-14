@@ -1,5 +1,29 @@
 export const academicStudies = [
   {
+    examName : '10th CLASS',
+    subjects : ['ENGLISH', 'SCIENCE', 'MATHS', 'SOCIAL'],
+    description : 'The National Eligibility cum Entrance Test or NEET-UG is an entrance examination in India, for students who wish to study graduate medical course and dental course in government or private medical colleges and dental colleges respectively in India'
+
+  },
+  {
+    examName : 'INTER',
+    subjects : ['PHYSICS', 'BOTANY', 'CHEMISTRY', 'ZOOLOGY'],
+    description : 'The National Eligibility cum Entrance Test or NEET-UG is an entrance examination in India, for students who wish to study graduate medical course and dental course in government or private medical colleges and dental colleges respectively in India'
+
+  },
+  {
+    examName : 'ENGINEERING',
+    subjects : ['ECE', 'CSE/IT', 'EEE', 'CIVIL'],
+    description : 'The National Eligibility cum Entrance Test or NEET-UG is an entrance examination in India, for students who wish to study graduate medical course and dental course in government or private medical colleges and dental colleges respectively in India'
+
+  },
+  {
+    examName : 'EAMCET',
+    subjects : ['PHYSICS', 'MATHS', 'CHEMISTRY', 'ZOOLOGY'],
+    description : 'The National Eligibility cum Entrance Test or NEET-UG is an entrance examination in India, for students who wish to study graduate medical course and dental course in government or private medical colleges and dental colleges respectively in India'
+
+  },
+  {
     examName : 'NEET',
     subjects : ['PHYSICS', 'BOTANY', 'CHEMISTRY', 'ZOOLOGY'],
     description : 'The National Eligibility cum Entrance Test or NEET-UG is an entrance examination in India, for students who wish to study graduate medical course and dental course in government or private medical colleges and dental colleges respectively in India'

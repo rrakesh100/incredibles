@@ -346,7 +346,7 @@ export default class HomePage extends Component {
               <View style={{marginBottom:100}}>
               <Text style={{marginTop: 6, fontSize: 16}} >{item.desc}</Text>
               <Text style={{marginTop: 6}}>
-              <Text style={{fontSize: 14, color: 'green', marginRight:10}}>Posted Dt :  {item.postedDate}</Text>
+              <Text style={{fontSize: 14, color: 'green', marginRight:10}}>Posted Date :  {item.postedDate}</Text>
               <Text style={{marginLeft : 10, fontSize: 14, color: 'red'}}>Last Date :  {item.lastDate}</Text>
               </Text>
               </View>
@@ -360,7 +360,7 @@ export default class HomePage extends Component {
           <View>
               <Card containerStyle={{width:0.9*sliderWidth, height: 300, backgroundColor: '#DCF0F7'}}
                image={item.image}
-               imageStyle={{width:0.8*sliderWidth, height: 100, marginTop: 8, marginLeft : 20}}>
+               imageStyle={{width:0.8*sliderWidth, height: 100, marginTop: 8, marginLeft : 'auto',marginRight: 'auto'}}>
                  <View style={{marginBottom:50}}>
                   <Grid>
                     <Row>
@@ -393,286 +393,282 @@ export default class HomePage extends Component {
         )
       }
 
-
-
-
-
-  render() {
-      return (
-        <ScrollView style={{backgroundColor : '#E8F3F7'}}>
-        <View>
-          <Carousel
-            ref={(c) => { this._carousel = c; }}
-            data={this.state.entries}
-            renderItem={this._renderItem}
-            sliderWidth={sliderWidth}
-            sliderHeight={sliderHeight}
-            itemWidth={sliderWidth}
-            autoplay={true}
-            loop={true}
-            onSnapToItem={(index) => this.setState({ activeSlide: index }) }
-          />
-          <View style={{height : 80}}>
-          { this.pagination() }
-          </View>
-        </View>
-        <View style={styles.imgText}>
-          <Text style={styles.txtS}>Recent <Text style={{fontWeight: 'bold'}}>Updates</Text></Text>
-            <View style={styles.container}>
-              <ButtonGroup
-                selectedButtonStyle={styles.selectedButtonStyle}
-                onPress={this.updateIndex}
-                selectedIndex={this.state.index}
-                textStyle={styles.textStyle}
-                buttonStyle={styles.buttonStyle}
-                selectedTextStyle={styles.selectedTextStyle}
-                buttons={['Academics', 'Exams', 'Results', 'Jobs']}
-                containerStyle={{height: 54}} />
-            </View>
-        </View>
-            {this.renderRecentHomeUpdates()}
-        <View style={styles.adStyle}>
-        <Text style={styles.adText}>Advertisement/Announcements</Text>
-        <Image resizeMode="contain" style={styles.shrink} source={require('../Adimg.jpg')} />
-        </View>
-        <View style={styles.adStyle}>
-        <Text style={styles.trend}>Trending <Text style={{fontWeight: 'bold'}}>Exams</Text></Text>
-
-          <Carousel
-            ref={(c) => { this._carousel = c; }}
-            data={trendingData}
-            renderItem={this.renderTrendingCards}
-            sliderWidth={sliderWidth}
-            itemWidth={sliderWidth}
-            autoplay={true}
-            loop={true} />
-            <View style={{alignItems: 'flex-end'}}>
-            <Button title='View All' buttonStyle={styles.viewAll}
-            onPress={() =>  this.props.onNavigate('ViewAllTrendingExams', {data: 'Girish'})}
-            textStyle={{color: '#F8C548'}} />
-            </View>
-        </View>
-
-        <TouchableHighlight underlayColor='#E8F3F7'
-            onPress={ () => console.log('eStore Ad')}>
-        <View style={{marginTop: 20, height: 70, flexDirection: 'row'}}>
-          <View style={{width: '70%', backgroundColor: '#364682'}}>
-              <Text style={{color: '#ffffff', fontSize: 26, marginLeft: 10, marginTop:4}}>At Our <Text style={{color: '#5DE38A', fontSize: 26, marginLeft: 10, marginTop:10}}>eStore</Text></Text>
-              <Text style={{color: '#ffffff', marginLeft: 10, fontSize:12}}>Buy our test module online</Text>
-              <Text style={{color: '#ffffff', marginLeft: 10, fontSize:12}}>We have wide range of collections of test papers</Text>
-          </View>
-          <View style={{width: '30%'}}>
-            <View style={{height: 40, backgroundColor: '#FF8017'}}>
-              <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>REPUBLIC</Text>
-              <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>DAY SALE</Text>
-            </View>
-            <View style={{height: 30, backgroundColor: '#128C00'}}>
-              <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>FREEDOM OFFER</Text>
-            </View>
-          </View>
-        </View>
-        </TouchableHighlight>
-
-        <View style={styles.trendStyle}>
-        <Text style={styles.trend}>Online Test and <Text style={{fontWeight: 'bold'}}>Test Series</Text></Text>
-
+    render() {
+        return (
+          <ScrollView style={{backgroundColor : '#E8F3F7'}}>
+          <View>
             <Carousel
               ref={(c) => { this._carousel = c; }}
-              data={onlineTestData}
-              renderItem={this.renderOnlineTestCards}
+              data={this.state.entries}
+              renderItem={this._renderItem}
               sliderWidth={sliderWidth}
+              sliderHeight={sliderHeight}
               itemWidth={sliderWidth}
               autoplay={true}
               loop={true}
+              onSnapToItem={(index) => this.setState({ activeSlide: index }) }
             />
-            <View style={{alignItems: 'flex-end'}}>
-            <Button title='View All' buttonStyle={styles.viewAll}
-            textStyle={{color: '#F8C548'}}  onPress={() =>  this.props.onNavigate('OnlineTests', {data: 'Girish'})} />
+            <View style={{height : 80}}>
+            { this.pagination() }
             </View>
-        </View>
-
-        <View style={styles.trendStyle}>
-        <Text style={styles.trend}>Current Affairs and <Text style={{fontWeight: 'bold'}}>Other Exams</Text></Text>
+          </View>
+          <View style={styles.imgText}>
+            <Text style={styles.txtS}>Recent <Text style={{fontWeight: 'bold'}}>Updates</Text></Text>
+              <View style={styles.container}>
+                <ButtonGroup
+                  selectedButtonStyle={styles.selectedButtonStyle}
+                  onPress={this.updateIndex}
+                  selectedIndex={this.state.index}
+                  textStyle={styles.textStyle}
+                  buttonStyle={styles.buttonStyle}
+                  selectedTextStyle={styles.selectedTextStyle}
+                  buttons={['Academics', 'Exams', 'Results', 'Jobs']}
+                  containerStyle={{height: 54}} />
+              </View>
+          </View>
+              {this.renderRecentHomeUpdates()}
+          <View style={styles.adStyle}>
+          <Text style={styles.adText}>Advertisement/Announcements</Text>
+          <Image resizeMode="contain" style={styles.shrink} source={require('../Adimg.jpg')} />
+          </View>
+          <View style={styles.adStyle}>
+          <Text style={styles.trend}>Trending <Text style={{fontWeight: 'bold'}}>Exams</Text></Text>
 
             <Carousel
               ref={(c) => { this._carousel = c; }}
-              data={currentAffairsData}
-              renderItem={this.renderCurrentAffairsCards}
+              data={trendingData}
+              renderItem={this.renderTrendingCards}
               sliderWidth={sliderWidth}
               itemWidth={sliderWidth}
               autoplay={true}
-              loop={true}
-            />
-            <View style={{alignItems: 'flex-end'}}>
-            <Button title='View All' onPress={() => this.props.onNavigate('CurrentAffair', {data: 'Girish'})}
-            buttonStyle={styles.viewAll}
-            textStyle={{color: '#F8C548'}} />
+              loop={true} />
+              <View style={{alignItems: 'flex-end'}}>
+              <Button title='View All' buttonStyle={styles.viewAll}
+              onPress={() =>  this.props.onNavigate('ViewAllTrendingExams', {data: 'Girish'})}
+              textStyle={{color: '#F8C548'}} />
+              </View>
+          </View>
+
+          <TouchableHighlight underlayColor='#E8F3F7'
+              onPress={ () => this.props.onNavigate('Estore', {data:''})}>
+          <View style={{marginTop: 20, height: 70, flexDirection: 'row'}}>
+            <View style={{width: '70%', backgroundColor: '#364682'}}>
+                <Text style={{color: '#ffffff', fontSize: 26, marginLeft: 10, marginTop:4}}>At Our <Text style={{color: '#5DE38A', fontSize: 26, marginLeft: 10, marginTop:10}}>eStore</Text></Text>
+                <Text style={{color: '#ffffff', marginLeft: 10, fontSize:12}}>Buy our test module online</Text>
+                <Text style={{color: '#ffffff', marginLeft: 10, fontSize:12}}>We have wide range of collections of test papers</Text>
             </View>
-        </View>
-        <View style={styles.ad}>
-        <Image resizeMode="contain" style={styles.shrink} source={require('../ad.jpg')} />
-        </View>
-        <View style={styles.cStyle}>
-        <Text style={styles.trend}>Current <Text style={{fontWeight: 'bold'}}>Affairs</Text></Text>
-        </View>
-        { this.renderCurrentAffairsList() }
-        </ScrollView>
-      )
+            <View style={{width: '30%'}}>
+              <View style={{height: 40, backgroundColor: '#FF8017'}}>
+                <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>REPUBLIC</Text>
+                <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>DAY SALE</Text>
+              </View>
+              <View style={{height: 30, backgroundColor: '#128C00'}}>
+                <Text style={{color: '#ffffff', fontWeight: 'bold', marginTop: 'auto', marginBottom: 'auto', marginLeft:'auto', marginRight: 'auto'}}>FREEDOM OFFER</Text>
+              </View>
+            </View>
+          </View>
+          </TouchableHighlight>
+
+          <View style={styles.trendStyle}>
+          <Text style={styles.trend}>Online Test and <Text style={{fontWeight: 'bold'}}>Test Series</Text></Text>
+
+              <Carousel
+                ref={(c) => { this._carousel = c; }}
+                data={onlineTestData}
+                renderItem={this.renderOnlineTestCards}
+                sliderWidth={sliderWidth}
+                itemWidth={sliderWidth}
+                autoplay={true}
+                loop={true}
+              />
+              <View style={{alignItems: 'flex-end'}}>
+              <Button title='View All' buttonStyle={styles.viewAll}
+              textStyle={{color: '#F8C548'}}  onPress={() =>  this.props.onNavigate('OnlineTests', {data: 'Girish'})} />
+              </View>
+          </View>
+
+          <View style={styles.trendStyle}>
+          <Text style={styles.trend}>Current Affairs and <Text style={{fontWeight: 'bold'}}>Other Exams</Text></Text>
+
+              <Carousel
+                ref={(c) => { this._carousel = c; }}
+                data={currentAffairsData}
+                renderItem={this.renderCurrentAffairsCards}
+                sliderWidth={sliderWidth}
+                itemWidth={sliderWidth}
+                autoplay={true}
+                loop={true}
+              />
+              <View style={{alignItems: 'flex-end'}}>
+              <Button title='View All' onPress={() => this.props.onNavigate('CurrentAffair', {data: 'Girish'})}
+              buttonStyle={styles.viewAll}
+              textStyle={{color: '#F8C548'}} />
+              </View>
+          </View>
+          <View style={styles.ad}>
+          <Image resizeMode="contain" style={styles.shrink} source={require('../ad.jpg')} />
+          </View>
+          <View style={styles.cStyle}>
+          <Text style={styles.trend}>Current <Text style={{fontWeight: 'bold'}}>Affairs</Text></Text>
+          </View>
+          { this.renderCurrentAffairsList() }
+          </ScrollView>
+        )
+      }
     }
-  }
 
-  const styles = StyleSheet.create({
-    title : {
-      color: '#47C8DB',
-      fontSize: 20,
-      margin: 8,
-      marginTop : 16,
-      fontWeight: 'bold'
-    },
-    imgS : {
-      height: 200,
-      borderRadius: 10,
-      width: 0.98*sliderWidth
-    },
-    txtS : {
-      color: '#47C8DB',
-      fontSize: 20,
-      marginLeft: 8,
+    const styles = StyleSheet.create({
+      title : {
+        color: '#47C8DB',
+        fontSize: 20,
+        margin: 8,
+        marginTop : 16,
+        fontWeight: 'bold'
+      },
+      imgS : {
+        height: 200,
+        borderRadius: 10,
+        width: 0.98*sliderWidth
+      },
+      txtS : {
+        color: '#47C8DB',
+        fontSize: 20,
+        marginLeft: 8,
+        marginTop : 12,
+        fontWeight: 'bold'
+      },
+      imgText: {
+        marginLeft:2,
+        backgroundColor: 'white'
+      },
+      homeS : {
+        backgroundColor: '#ecf0f1',
+      },
+      fText : {
+        fontSize: 20,
+        margin: 7
+      },
+      container : {
+      alignItems: 'center',
+      justifyContent: 'center',
       marginTop : 12,
-      fontWeight: 'bold'
-    },
-    imgText: {
-      marginLeft:2,
-      backgroundColor: 'white'
-    },
-    homeS : {
-      backgroundColor: '#ecf0f1',
-    },
-    fText : {
-      fontSize: 20,
-      margin: 7
-    },
-    container : {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop : 12,
-    marginLeft : -8,
-    marginRight : -8
+      marginLeft : -8,
+      marginRight : -8
 
-    },
-    separator : {
-      backgroundColor: '#ecf0f1',
-      height: 2
-    },
-    card: {
-      paddingVertical: 8,
-      backgroundColor: 'white',
-      paddingHorizontal: 6,
-      marginVertical: 4,
-    },
-    cardStyle: {
-      paddingVertical: 8,
-      backgroundColor: 'white',
-      paddingHorizontal: 6,
-      flexDirection: 'row'
-    },
-    listStyle : {
-      flexDirection: 'row',
-      alignItems: 'center'
-    },
-    date: {
-        color: 'orange',
-        marginHorizontal: 8
-    },
-    btnStyle: {
-      width: 140,
-      height: 25,
-      borderRadius: 16,
-      borderColor: '#50E347',
-      backgroundColor: '#DDFEE7',
-      borderWidth: 1
-    },
-    badge: {
-      backgroundColor: 'white',
-      width: 120,
-      alignSelf: 'flex-end',
-      height: 40,
-      marginTop: 5
-    },
-    textStyle : {
-      color: '#fff',
-      fontSize : 15,
-      fontWeight : 'bold',
-      marginLeft : 10
-    },
-    cardContent: {
-        flex: 1
-    },
-    contentDesc : {
-      fontSize : 8
-    },
-    ad: {
-      backgroundColor: '#ecf0f1',
-      height: 200
-    },
-    adStyle : {
-      marginTop: 10,
-      backgroundColor: '#ecf0f1',
-      height: 260
-    },
-    trendStyle : {
-      marginTop: 10,
-      backgroundColor: '#ecf0f1',
-      height: 270
-    },
-    adText : {
-      color: '#16A085',
-      fontSize: 20,
-      marginVertical: 20,
-      marginHorizontal: 10
-    },
-    shrink : {
-      flex:1,
-      height: undefined,
-      width: undefined,
-      marginVertical: 5
-    },
-    trend : {
-      color: '#47C8DB',
-      fontSize: 20,
-      marginVertical: 10,
-      marginHorizontal: 10
-    },
-    selectedTextStyle: {
-       color: '#fff',
-       fontSize : 12,
-       fontWeight : 'bold'
-   },
-   buttonStyle: {
-     backgroundColor: '#89AFCC'
-   },
-   viewAll: {
-     width: 100,
-     height: 34,
-     borderRadius: 20,
-     borderColor: '#F8C548',
-     borderWidth:1,
-     backgroundColor: 'white',
-     marginTop : 10
-   },
-   selectedButtonStyle: {
-        backgroundColor: '#FFBC00'
-   },
-   smallTab: {
-        color: '#555', fontSize: 12
-   },
-   cStyle: {
-     height: 40,
-     backgroundColor: 'white'
-   },
-   caStyle : {
-     backgroundColor: '#ecf0f1',
-     height: 400
-   },
+      },
+      separator : {
+        backgroundColor: '#ecf0f1',
+        height: 2
+      },
+      card: {
+        paddingVertical: 8,
+        backgroundColor: 'white',
+        paddingHorizontal: 6,
+        marginVertical: 4,
+      },
+      cardStyle: {
+        paddingVertical: 8,
+        backgroundColor: 'white',
+        paddingHorizontal: 6,
+        flexDirection: 'row'
+      },
+      listStyle : {
+        flexDirection: 'row',
+        alignItems: 'center'
+      },
+      date: {
+          color: 'orange',
+          marginHorizontal: 8
+      },
+      btnStyle: {
+        width: 140,
+        height: 25,
+        borderRadius: 16,
+        borderColor: '#50E347',
+        backgroundColor: '#DDFEE7',
+        borderWidth: 1
+      },
+      badge: {
+        backgroundColor: 'white',
+        width: 120,
+        alignSelf: 'flex-end',
+        height: 40,
+        marginTop: 5
+      },
+      textStyle : {
+        color: '#fff',
+        fontSize : 15,
+        fontWeight : 'bold',
+        marginLeft : 10
+      },
+      cardContent: {
+          flex: 1
+      },
+      contentDesc : {
+        fontSize : 8
+      },
+      ad: {
+        backgroundColor: '#ecf0f1',
+        height: 200
+      },
+      adStyle : {
+        marginTop: 10,
+        backgroundColor: '#ecf0f1',
+        height: 260
+      },
+      trendStyle : {
+        marginTop: 10,
+        backgroundColor: '#ecf0f1',
+        height: 270
+      },
+      adText : {
+        color: '#16A085',
+        fontSize: 20,
+        marginVertical: 20,
+        marginHorizontal: 10
+      },
+      shrink : {
+        flex:1,
+        height: undefined,
+        width: undefined,
+        marginVertical: 5
+      },
+      trend : {
+        color: '#47C8DB',
+        fontSize: 20,
+        marginVertical: 10,
+        marginHorizontal: 10
+      },
+      selectedTextStyle: {
+         color: '#fff',
+         fontSize : 12,
+         fontWeight : 'bold'
+     },
+     buttonStyle: {
+       backgroundColor: '#89AFCC'
+     },
+     viewAll: {
+       width: 100,
+       height: 34,
+       borderRadius: 20,
+       borderColor: '#F8C548',
+       borderWidth:1,
+       backgroundColor: 'white',
+       marginTop : 10
+     },
+     selectedButtonStyle: {
+          backgroundColor: '#FFBC00'
+     },
+     smallTab: {
+          color: '#555', fontSize: 12
+     },
+     cStyle: {
+       height: 40,
+       backgroundColor: 'white'
+     },
+     caStyle : {
+       backgroundColor: '#ecf0f1',
+       height: 400
+     },
 
-  })
+    })
