@@ -9,6 +9,8 @@ import CloseIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { testQuestions } from '../api/onlineTests';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
+import ProgressCircle from 'react-native-progress-circle'
+import LinearGradient from 'react-native-linear-gradient';
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
@@ -591,12 +593,43 @@ export default class TestReport extends Component {
           </Col>
 
           <Col size={30}>
-          <View style={styles.percentage}>
-          <Text style={{color: '#9FB8CC', fontSize: 10}}>OVERALL</Text>
-          </View>
+            <ProgressCircle
+              percent={80}
+              radius={50}
+              borderWidth={8}
+              color="#3ACBD3"
+              shadowColor="#CDCECD"
+              bgColor="#E8F3F7">
+              <Text style={{ fontSize: 18, color: '#3ACBD3', fontWeight:'bold' }}>{'80%'}</Text>
+              <Text style={{color: '#6C7A89'}}>OVERALL</Text>
+            </ProgressCircle>
           </Col>
 
         </Grid>
+
+        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 20}}>
+          <View>
+              <Text style={{fontWeight: 'bold', color: '#6C7A89', marginLeft: 'auto', marginRight: 'auto'}}>TIME</Text>
+              <View style={{height:10, width:100, borderRadius:6, borderColor: '#6C7A89', borderWidth:0.5, marginTop:10}}>
+                <View style={{height: 10, width: 90, backgroundColor: '#3ACBD3', borderRadius:6}}>
+                </View>
+              </View>
+          </View>
+          <View>
+              <Text style={{fontWeight: 'bold', color: '#6C7A89', marginLeft: 'auto', marginRight: 'auto'}}>ACCURACY</Text>
+              <View style={{height:10, width:100, borderRadius:6, borderColor: '#6C7A89', borderWidth:0.5, marginTop:10}}>
+              <View style={{height: 10, width: 75, backgroundColor: '#3ACBD3', borderRadius:6}}>
+              </View>
+              </View>
+          </View>
+          <View>
+              <Text style={{fontWeight: 'bold', color: '#6C7A89', marginLeft: 'auto', marginRight: 'auto'}}>ATTEMPT RATE</Text>
+              <View style={{height:10, width:100, borderRadius:6, borderColor: '#6C7A89', borderWidth:0.5, marginTop:10}}>
+              <View style={{height: 10, width: 60, backgroundColor: '#3ACBD3', borderRadius:6}}>
+              </View>
+              </View>
+          </View>
+        </View>
 
         <View style={[styles.flex, {justifyContent: 'space-around'}]}>
           <View style={[styles.flex, {margin: 6}]}>

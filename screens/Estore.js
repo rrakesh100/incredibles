@@ -62,19 +62,19 @@ export default class Estore extends Component {
     return (
       <View>
         {
-        studyMaterial.map(entry => {
+        studyMaterial.map((entry, index) => {
           let items = entry['items'];
           let slicedItems = viewAllClicked[entry.categoryName] ? items : items.slice(0,3);
         return (
-              <View>
+              <View key={index}>
                  <View style={styles.gap}>
                     <Text style={styles.cTxt}>{entry.categoryName}</Text>
                  </View>
                  <View>
                     {
-                      slicedItems.map(item => {
+                      slicedItems.map((item, index) => {
                         return (
-                          <Card>
+                          <Card key={index}>
                            <Grid>
                               <Col size={2.2}>
                                 <View style={styles.gap}>
