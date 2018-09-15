@@ -42,6 +42,7 @@ export const onlineTests = [
     image : require('../ot1.jpg'),
     description : '10 Tests with solutions and explanations',
     originalPrice : '150',
+    discountPercentage : 30,
     price : '100',
     validity : 'valid for 1 year',
     insideDescription : {
@@ -56,7 +57,8 @@ export const onlineTests = [
     image : require('../ot1.jpg'),
     description : '4 Tests with solutions and explanations',
     discountApplicable : 'yes',
-    discountPercentage : 40,
+    discountPercentage : 50,
+    originalPrice : '200',
     price : '100',
     validity : 'valid for 2 years',
     insideDescription : {
@@ -70,7 +72,8 @@ export const onlineTests = [
     title : 'SSC CGL 2016 Grand Tests (Set -II)',
     image : require('../ot1.jpg'),
     description : '4 Tests with solutions and explanations',
-    price : '100',
+    originalPrice : '400',
+    price : '300',
     validity : 'valid for 2 years',
     insideDescription : {
       first: 'Facility to take tests at your convenient time.',
@@ -83,8 +86,8 @@ export const onlineTests = [
     title : 'SBI PO Preliminary Exam 2016',
     image : require('../sbi.jpg'),
     description : '4 Tests with solutions and explanations',
-    price : '200',
-    price : '100',
+    originalPrice : '100',
+    price : '50',
     validity : 'valid for 2 years',
     insideDescription : {
       first: 'Facility to take tests at your convenient time.',
@@ -97,7 +100,8 @@ export const onlineTests = [
     title : 'Civil Services Prelims',
     image : require('../ias.jpg'),
     description : 'Full test series',
-    price : '300',
+    originalPrice : '120',
+    price : '100',
     validity : 'valid for 1 year',
     insideDescription : {
       first: 'Facility to take tests at your convenient time.',
@@ -150,6 +154,7 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         description : 'Indian Economy',
         discountApplicable : false,
+        originalPrice : '150',
         price : '150'
       },
       {
@@ -189,6 +194,7 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         description : 'Indian Economy',
         discountApplicable : false,
+        originalPrice : '150',
         price : '150'
       }
     ]
@@ -233,6 +239,7 @@ export const studyMaterial = [
         insideDesc: ' It contains 2017 Previous Papers Prepared by eminent faculty and experts.Solutions and explanations for all questions.',
         description : 'Sachin Tendulkar',
         discountApplicable : false,
+        originalPrice : '150',
         price : '150'
       },
       {
@@ -261,6 +268,7 @@ export const studyMaterial = [
         discountPercentage : 20,
         discountedPrice : 50,
         originalPrice : '250',
+        originalPrice : '200',
         price : '200'
       },
       {

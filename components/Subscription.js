@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import { Button, Card } from 'react-native-elements';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import { AsyncStorage } from "react-native";
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
@@ -39,6 +40,35 @@ export default class  Subscription extends Component {
   componentDidMount() {
     console.log(this.props);
   }
+
+
+    addToCart = (data, qty) => {
+      let checkoutObj = {};
+      checkoutObj['data'] = data;
+      checkoutObj['quantity'] = qty;
+      this.storeData('onlineTests', checkoutObj);
+    }
+
+    storeData = async (key, value) => {
+      try {
+        const storageValue = await AsyncStorage.getItem(key);
+        console.log('storageValue = = = ', storageValue);
+        if(storageValue) {
+          existingValue = JSON.parse(storageValue);
+          existingValue.push(value);
+          await AsyncStorage.setItem(key, JSON.stringify(existingValue));
+        }else {
+          let existingValue = [];
+          existingValue.push(value)
+          await AsyncStorage.setItem(key, JSON.stringify(existingValue));
+        }
+
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
 
   onQuantityChanged(action) {
     if(this.state.quantity === 1 && action === 'remove'){
@@ -124,8 +154,11 @@ export default class  Subscription extends Component {
         </View>
         <View style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 20}}>
             <Button title='PROCEED' buttonStyle={styles.proceedButton}
-               onPress={() => this.props.navigation.navigate('Checkout', {data: data})}
+               onPress={() => this.props.navigation.navigate('NewCheckout', {data: data})}
              textStyle={{color: '#F8C548', fontSize : 12}}  />
+             <Button title='ADD TO CART' buttonStyle={styles.bStyle}
+                onPress={ this.addToCart.bind(this, data, this.state.quantity) }
+              textStyle={{color: '#F8C548', fontSize : 12}}  />
         </View>
         <View style={styles.flex}>
         <View>

@@ -66,102 +66,155 @@ export default class  NewCheckout extends Component {
 
   _retrieveData = async () => {
 
-  try {
-      const subscriptions = await AsyncStorage.getItem('subscriptions') || 'none';
+    let allItemsObj = {}; let totalOriginalPrice = 0; let totalDiscount = 0;
+    let totalPrice = 0; let totalQuantity = 0;
+
+    try {
+      const subscriptions = await AsyncStorage.getItem('subscriptions') ;
+      const onlineTests = await AsyncStorage.getItem('onlineTests');
+
       if (subscriptions !== null) {
         let subscriptionsArray = JSON.parse(subscriptions);
         this.setState({
           'subscriptions' : subscriptionsArray
         })
 
+        let itemsArray = [];
+        console.log('subscriptions = = = = ', subscriptionsArray);
 
-      const onlineTests = {};
+        subscriptionsArray.map((subscription , i)=> {
+          let subscripData = subscription['data'];
+          let item = {};
+          item.title = subscripData.title;
+          item.desc = subscripData.description;
+          item.originalPrice = subscripData.originalPrice || subscripData.price;
+          item.price = subscripData.price;
+          itemsArray.push(item);
+          totalQuantity = totalQuantity + 1;
+          totalOriginalPrice += Number(item.originalPrice ? item.originalPrice : 0);
+          totalDiscount += Number(item.originalPrice - item.price);
+          totalPrice += Number(item.price ? item.price : 0);
+        })
 
-      let itemsArray = []; let totalOriginalPrice = 0; let totalDiscount = 0;
-      let totalPrice = 0; let totalQuantity = 0; let allItemsObj = {};
+        allItemsObj['subscriptions'] = itemsArray;
+        console.log('total price = = ' , totalPrice);
+        allItemsObj['totalPrice'] = totalPrice;
+        allItemsObj['totalDiscount'] = totalDiscount;
+        allItemsObj['totalOriginalPrice'] = totalOriginalPrice;
+        this.setState({
+          allItemsObj
+        });
+      }
 
-      subscriptionsArray.map((subscription , i)=> {
-        let subscripData = subscription['data'];
-        let item = {};
-        item.title = subscripData.title;
-        item.desc = subscripData.shortDesc;
-        item.originalPrice = subscripData.originalPrice;
-        item.price = subscripData.price;
-        itemsArray.push(item);
-        totalQuantity = totalQuantity + 1;
-        totalOriginalPrice += Number(subscripData.originalPrice);
-        totalDiscount += Number(subscripData.discountedPrice)
-        totalPrice += Number(subscripData.price)
-      })
+      if (onlineTests !== null) {
+          let onlineTestsArray = JSON.parse(onlineTests);
+          this.setState({
+            'onlineTests' : onlineTestsArray
+          })
 
-      allItemsObj['subscriptions'] = itemsArray;
-      allItemsObj['totalPrice'] = totalPrice;
-      allItemsObj['totalDiscount'] = totalDiscount;
-      allItemsObj['totalOriginalPrice'] = totalOriginalPrice;
-      this.setState({
-        allItemsObj
-      });
-    }
+          let itemsArray = [];
+
+          console.log('onlineTestsArray = = = = ', onlineTestsArray);
+
+
+          onlineTestsArray.map((onlineTest , i)=> {
+            let onlineTestData = onlineTest['data'];
+            let item = {};
+            item.title = onlineTestData.title;
+            item.desc = onlineTestData.description;
+            item.originalPrice = onlineTestData.originalPrice || onlineTestData.price;
+            item.price = onlineTestData.price;
+            itemsArray.push(item);
+            totalQuantity = totalQuantity + 1;
+            totalOriginalPrice += Number(item.originalPrice ? item.originalPrice : 0);
+            totalDiscount += Number(item.originalPrice - item.price)
+            totalPrice += Number(item.price ? item.price : 0)
+        })
+
+        allItemsObj['onlineTests'] = itemsArray;
+        console.log('total price = = ' , totalPrice);
+        allItemsObj['totalPrice'] = totalPrice;
+        allItemsObj['totalDiscount'] = totalDiscount;
+        allItemsObj['totalOriginalPrice'] = totalOriginalPrice;
+        allItemsObj['totalQuantity'] = totalQuantity ;
+
+        this.setState({
+          allItemsObj
+        });
+      }
    } catch (error) {
        console.log('&&&&&&&&&&&&& ===== ', error);
    }
   }
 
   renderCartItems() {
-
-    const { allItemsObj } = this.state;
+    const { allItemsObj } = this.state; let cards = [];
     if(!allItemsObj)
       return;
 
     let subscriptionsArr = allItemsObj['subscriptions'];
-    return (
-      subscriptionsArr.map((item, index) => {
-        return (
+    let onlineTestsArr = allItemsObj['onlineTests'];
 
-          <View key={index}>
-            <Card style={{height: 120}}>
-            <Grid>
-              <Row style={{marginTop: 10, marginLeft: 10}}>
-                  <Col>
-                     <Text style={styles.textCardStyle}>Title</Text>
-                  </Col>
-                  <Col>
-                     <Text style={styles.textCardValueStyle}>{item.title}</Text>
-                  </Col>
-              </Row>
-              <Row style={{marginTop: 10, marginLeft: 10}}>
-                  <Col>
-                     <Text style={styles.textCardStyle}>Description</Text>
-                  </Col>
-                  <Col>
-                     <Text style={styles.textCardValueStyle}>{item.desc}</Text>
-                  </Col>
-              </Row>
-              <Row style={{marginTop: 10, marginLeft: 10}}>
-                  <Col>
-                     <Text style={styles.textCardStyle}>Price</Text>
-                  </Col>
-                  <Col>
-                     <Text style={styles.textCardValueStyle}>{item.originalPrice}</Text>
-                  </Col>
-              </Row>
-              <Row style={{marginTop: 10, marginLeft: 10}}>
-                  <Col>
-                     <Text style={styles.textCardStyle}>Discounted Price</Text>
-                  </Col>
-                  <Col>
-                     <Text style={styles.textCardValueStyle}>{item.price}</Text>
-                  </Col>
-              </Row>
-            </Grid>
-            </Card>
-          </View>
-        )
+      if(subscriptionsArr) {
+        cards.push(<Text>Study Materials</Text>)
+        subscriptionsArr.map((item, index) => {
+          cards.push(
+            this.renderOneItem(item, index)
+           )
+        })
+      }
 
-      })
-    )
+      if(onlineTestsArr) {
+        cards.push(<Text>Online Tests</Text>)
+        onlineTestsArr.map((item, index) => {
+          cards.push(
+            this.renderOneItem(item,index)
+           )
+        })
+      }
 
+    return cards;
+  }
 
+  renderOneItem(item,index) {
+    return(  <View key={index}>
+        <Card style={{height: 120}}>
+        <Grid>
+          <Row style={{marginTop: 10, marginLeft: 10}}>
+              <Col size={3}>
+                 <Text style={styles.textCardStyle}>Title</Text>
+              </Col>
+              <Col size={7}>
+                 <Text style={styles.textCardValueStyle}>{item.title}</Text>
+              </Col>
+          </Row>
+          <Row style={{marginTop: 10, marginLeft: 10}}>
+              <Col size={3}>
+                 <Text style={styles.textCardStyle}>Description</Text>
+              </Col>
+              <Col size={7}>
+                 <Text style={styles.textCardValueStyle}>{item.desc}</Text>
+              </Col>
+          </Row>
+          <Row style={{marginTop: 10, marginLeft: 10}}>
+              <Col size={3}>
+                 <Text style={styles.textCardStyle}>Price</Text>
+              </Col>
+              <Col size={7}>
+                 <Text style={styles.textCardValueStyle}>{item.originalPrice}</Text>
+              </Col>
+          </Row>
+          <Row style={{marginTop: 10, marginLeft: 10}}>
+              <Col size={3}>
+                 <Text style={styles.textCardStyle}>Price after Discount Price</Text>
+              </Col>
+              <Col size={7}>
+                 <Text style={styles.textCardValueStyle}>{item.price}</Text>
+              </Col>
+          </Row>
+        </Grid>
+        </Card>
+      </View>)
   }
 
 
@@ -192,7 +245,7 @@ export default class  NewCheckout extends Component {
 
       <View style={{marginTop: 120, marginLeft: 120}}>
         <Button title='CHECKOUT' buttonStyle={styles.checkoutButton}
-        onPress={() => this.props.navigation.navigate('Billing', {data: {amountPayable: amountPayable}})}
+        onPress={() => this.props.navigation.navigate('Billing', {data: {amountPayable: allItemsObj['totalPrice']}})}
          textStyle={{color: '#F8C548', fontSize : 14}} />
       </View>
       </View>
