@@ -4530,9 +4530,27 @@ react-native-keyboard-aware-scroll-view@0.5.0:
     prop-types "^15.6.0"
     react-native-iphone-x-helper "^1.0.1"
 
+<<<<<<< HEAD
+=======
+react-native-linear-gradient@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.4.2.tgz#9d3acd0a198b9d4566e8f6253ef1f60fef0ff2be"
+
+react-native-maps@0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.21.0.tgz#005f58e93d7623ad59667e8002101970ddf235c2"
+  dependencies:
+    babel-plugin-module-resolver "^2.3.0"
+    babel-preset-react-native "1.9.0"
+
+>>>>>>> 975dbb6... charts in test reort
 react-native-payumoney@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/react-native-payumoney/-/react-native-payumoney-0.0.3.tgz#570e0dfb8384e55ca80027e6c424b0ba2d88e801"
+
+react-native-progress-circle@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-progress-circle/-/react-native-progress-circle-2.0.0.tgz#26c883cda380690a50baa446ee39a48d31cfabce"
 
 react-native-safe-area-view@^0.7.0:
   version "0.7.0"
