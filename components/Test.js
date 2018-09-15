@@ -55,8 +55,11 @@ export default class Test extends Component {
             allowFontScaling={true}
             style={styles.timerStyle} />
             </View>,
-    headerLeft: <View style={{width: 50, height: 60, backgroundColor: '#364E87'}}>
-                  <Text style={{color: 'white'}}>1</Text>
+
+    headerLeft: <View>
+                <View style={{width: 50, height: 60, backgroundColor: '#364E87'}}>
+                  <Text style={{fontSize: 20, color: 'white', marginTop: 'auto', marginBottom:'auto', marginLeft: 'auto', marginRight: 'auto'}}>1</Text>
+                </View>
                 </View>
   }
   );
