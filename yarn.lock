@@ -4531,7 +4531,10 @@ react-native-keyboard-aware-scroll-view@0.5.0:
     react-native-iphone-x-helper "^1.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 975dbb6... charts in test reort
 react-native-linear-gradient@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.4.2.tgz#9d3acd0a198b9d4566e8f6253ef1f60fef0ff2be"
