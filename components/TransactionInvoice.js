@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Table, Row, Rows } from 'react-native-table-component';
+import { AsyncStorage } from "react-native";
 
 
 const sliderWidth = Dimensions.get('window').width;

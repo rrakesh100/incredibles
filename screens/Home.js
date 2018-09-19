@@ -41,7 +41,6 @@ import LoginScreen from '../screens/Login';
 import PaymentScreen from '../screens/Payment';
 import RegisterScreen from '../screens/Register';
 import TransactionInvoiceScreen from '../components/TransactionInvoice';
-import BaseScreen from './Base.js';
 
 
 
