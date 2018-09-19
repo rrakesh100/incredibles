@@ -59,7 +59,7 @@ class Drawer extends Component {
                     type='ionicon'
                     color='orange'
                     />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('TransactionInvoice')}>
               My Transactions
               </Text>
             </View>
