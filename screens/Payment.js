@@ -41,49 +41,27 @@ export default class Payment extends Component<Props> {
         );
     }
 
-    // _makePay() {
-    //       let options = {
-    //           amount: 10.0,
-    //           txid: "123123123",
-    //           productId: "test",
-    //           name: "Name",
-    //           email: "test@gmail.com",
-    //           phone: "8826343434",
-    //           id: "393463",
-    //           key: "LLKwG0",
-    //           surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
-    //           furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
-    //           sandbox: true, //false in production
-    //           hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
-    //       };
-    //       PayuMoney.pay(options).then((d) => {
-    //           console.log(d);
-    //       }).catch(e => {
-    //           console.log(e);
-    //       });
-    //   }
-
     _makePay() {
-    //  let amount = parseFloat(this.props.navigation.state.params.data.amountPayable);
+      let amt = Number(this.props.navigation.state.params.data.amountPayable);
       let options = {
-          txid: "123456123",
-          key: "rjQUPktU",
-          amount: 10.23,
-          productId: "MobileApp",
-          name: "test",
-          email: "test@gmail.com",
-          phone: "9901250919",
-          id:"6371743",
-          surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
-          furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
-          sandbox: true, //false in production
-          hash: "351f1d33928a41f52fbe8d1e1b2ac232a0731bdb8bad33654a39b53b3c37d336a856f4063633f98a8c6419e77c36e63e04212ea26f418f8f43ab9c0f81ffb5a3"
-      };
-      PayuMoney.pay(options).then((d) => {
-          console.log(d);
-      }).catch(e => {
-          console.log(e);
-      });
+              amount: 10.0,
+              txid: "123123123",
+              productId: "test",
+              name: "Name",
+              email: "test@gmail.com",
+              phone: "8826343434",
+              id: "393463",
+              key: "LLKwG0",
+              surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
+              furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
+              sandbox: true, //false in production
+              hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
+          };
+          PayuMoney.pay(options).then((d) => {
+              this.props.navigation.navigate('TransactionInvoice')
+          }).catch(e => {
+            this.props.navigation.navigate('TransactionInvoice')
+          });
   }
 
     // Below is the test card details for doing a test transaction:
