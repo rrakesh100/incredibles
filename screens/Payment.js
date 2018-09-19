@@ -42,30 +42,27 @@ export default class Payment extends Component<Props> {
     }
 
     _makePay() {
-      //merchantId = 6371743
-    //merchantkey = ikWUZXlM
-    //merchantSalt = emwQSa7mLh
-      let amount = parseFloat(this.props.navigation.state.params.data.amountPayable);
-        let options = {
-            amount: amount,
-            txid: new Date().getTime()+"",
-            productId: "Sakshi",
-            name: "coders",
-            email: "codersmagic@gmail.com",
-            phone: "9901250919",
-            id: "6371743",
-            key: "ikWUZXlM",
-            surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
-            furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
-            sandbox: true, //false in production
-            hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
-        };
-        PayuMoney.pay(options).then((d) => {
-            console.log(d);
-        }).catch(e => {
-            console.log(e);
-        });
-    }
+      let amt = Number(this.props.navigation.state.params.data.amountPayable);
+      let options = {
+              amount: 10.0,
+              txid: "123123123",
+              productId: "test",
+              name: "Name",
+              email: "test@gmail.com",
+              phone: "8826343434",
+              id: "393463",
+              key: "LLKwG0",
+              surl: "https://www.payumoney.com/mobileapp/payumoney/success.php",
+              furl: "https://www.payumoney.com/mobileapp/payumoney/failure.php",
+              sandbox: true, //false in production
+              hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
+          };
+          PayuMoney.pay(options).then((d) => {
+              this.props.navigation.navigate('TransactionInvoice')
+          }).catch(e => {
+            this.props.navigation.navigate('TransactionInvoice')
+          });
+  }
 
     // Below is the test card details for doing a test transaction:
     // Card No - 5123456789012346

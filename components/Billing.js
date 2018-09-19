@@ -160,8 +160,8 @@ export default class  Billing extends Component {
           onPress={() => this.props.navigation.navigate('Payment', {data: {amountPayable: this.props.navigation.state.params.data.amountPayable}})}
            textStyle={{color: '#F8C548', fontSize : 14}} />
            </View>
-           <View style={{marginTop: 40, marginLeft: sliderWidth*0.35}}>
-           <Button title='TRANSACTION' buttonStyle={styles.buyButton}
+           <View style={{marginTop: 100, marginLeft: sliderWidth*0.35}}>
+           <Button title='INVOICE' buttonStyle={styles.buyButton}
            onPress={() => this.props.navigation.navigate('TransactionInvoice')}
             textStyle={{color: '#F8C548', fontSize : 14}} />
             </View>
