@@ -12,7 +12,7 @@ import { Button } from 'react-native-elements';
 import InfoTab from "./InfoTab";
 import InfoAccordion from './InfoAccordion';
 import { studyMaterialData } from '../api/academicStudies';
-
+import { CareerGuidance } from './CareerGuidance';
 
 const examInfo = [
     {
@@ -47,7 +47,11 @@ export default class ExamDetails extends React.Component {
     state = {
         index: 0,
         searchText : "",
-        tabType : "recentUpdates"
+        tabType : "recentUpdates",
+        studyMaterial: false,
+        onlineTest: false,
+        cGuidance: false,
+        comments: false
     }
 
     updateIndex = (index) => {
@@ -55,6 +59,8 @@ export default class ExamDetails extends React.Component {
     }
 
     render() {
+      console.log(this.props);
+      const { cGuidance } = this.state;
         return (
             <ScrollView style={{
                 backgroundColor:'#E8F3F7'
@@ -71,9 +77,7 @@ export default class ExamDetails extends React.Component {
                 }}>
                     <ImageCarousel images={images}/>
                 </View>
-                  <InfoTab />
-                <View >
-                  </View>
+
                 <View style={styles.space}>
                     <Text style={{color: '#47C8DB',
                     fontSize: 18,
@@ -94,7 +98,7 @@ export default class ExamDetails extends React.Component {
                 </View>
 
                 <View style={styles.hBar}>
-                <TouchableHighlight onPress={ () => console.log('study material')}>
+                <TouchableHighlight onPress={ () => this.setState({ studyMaterial: true}) }>
                   <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
                     <Icon name='file-text-o' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto'}} />
                     <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>STUDY</Text>
@@ -103,7 +107,7 @@ export default class ExamDetails extends React.Component {
                 </TouchableHighlight>
 
                 <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}/>
-                <TouchableHighlight onPress={ () => console.log('online test')}>
+                <TouchableHighlight onPress={ () => this.setState({ onlineTest: true}) }>
                   <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
                     <NewIcon name='computer' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto'}}/>
                     <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>ONLINE</Text>
@@ -113,7 +117,7 @@ export default class ExamDetails extends React.Component {
 
                 <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}/>
 
-                <TouchableHighlight onPress={ () => console.log('career guidance')}>
+                <TouchableHighlight onPress={ () => this.props.navigation.navigate('CareerGuidance') }>
                   <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
                     <GuidanceIcon name='directions' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}/>
                     <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto'}}>CAREER</Text>
@@ -123,7 +127,7 @@ export default class ExamDetails extends React.Component {
 
                 <View style={{width: 2, height: 70, backgroundColor: '#ffffff'}}/>
 
-                <TouchableHighlight onPress={ () => console.log('comments')}>
+                <TouchableHighlight onPress={ () => this.setState({ comments: true}) }>
                 <View style={{width: 90, height: 70, backgroundColor: '#E8F3F7'}}>
                   <CommentIcon name='comment-discussion' size={26} color='#B1B5B8' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}/>
                   <Text style={{fontSize:14, color: '#B1B5B8', marginLeft: 'auto', marginRight: 'auto', marginTop: 4}}>COMMENTS</Text>
@@ -134,6 +138,7 @@ export default class ExamDetails extends React.Component {
               <View>
                 <InfoAccordion data={studyMaterialData} />
               </View>
+
           </ScrollView>
         );
     }

@@ -4,7 +4,7 @@ import { Button } from 'react-native-elements';
 import { Form } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GoogleIcon from 'react-native-vector-icons/Zocial';
-
+import { registerUser } from '../api/register';
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -38,7 +38,33 @@ export default class Login extends Component {
     Linking.openURL(url)
   }
 
+  onRegisterClick() {
+    const { name, email, mobile, password } = this.state;
+
+    const data = {
+      name : name,
+      mail : email,
+      pass : { pass1 : password, pass2 : password },
+      address : {
+        	first_name : "abc",
+        	last_name : "123",
+          street1 : "xab",
+        	city : "xyz",
+        	zone : "east",
+        	postal_code : "123456"
+        }
+    }
+
+    const jsonData = JSON.stringify(data);
+
+    registerUser(data).then((response) => {
+      console.log(response);
+    })
+    .catch((err) => console.log(err))
+  }
+
   render() {
+    console.log(this.state);
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
         <Text style={styles.loginText}>REGISTER</Text>
@@ -61,26 +87,30 @@ export default class Login extends Component {
 
           <View style={styles.inputStyle}>
           <TextInput placeholder='Name'
+          onChangeText={(name) => this.setState({name})}
           style={styles.textInput}/>
           </View>
 
           <View style={styles.inputStyle}>
           <TextInput placeholder='Email Id'
+          onChangeText={(email) => this.setState({email})}
           style={styles.textInput}/>
           </View>
 
           <View style={styles.inputStyle}>
           <TextInput placeholder='Mobile No'
+          onChangeText={(mobile) => this.setState({mobile})}
           style={styles.textInput}/>
           </View>
 
           <View style={styles.inputStyle}>
           <TextInput placeholder='Password'
+          onChangeText={(password) => this.setState({password})}
           style={styles.textInput}/>
           </View>
 
           <TouchableHighlight underlayColor='#ffffff'
-            onPress={ () => console.log('register page')} >
+            onPress={ this.onRegisterClick.bind(this) } >
             <View style={styles.btnView}>
               <Text style={styles.btnText}>REGISTER HERE</Text>
             </View>
