@@ -27,12 +27,12 @@ export default class Comments extends Component {
   render() {
     return (
       <View>
-          <Text>Nithya Menon</Text>
+          <Text>Comments</Text>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  
+
 })
