@@ -31,6 +31,10 @@ import LoginScreen from './screens/Login';
 import PaymentScreen from './screens/Payment';
 import RegisterScreen from './screens/Register';
 import TransactionInvoiceScreen from './components/TransactionInvoice';
+import CareerGuidanceScreen from './components/CareerGuidance';
+import CareerGuidanceDetailScreen from './components/CareerGuidanceDetail';
+import CommentsScreen from './components/Comments';
+
 
 
 YellowBox.ignoreWarnings([
@@ -126,46 +130,24 @@ const DrawerNavigator = createDrawerNavigator(
     },
     TransactionInvoice: {
       screen : TransactionInvoiceScreen
+    },
+    CareerGuidance: {
+      screen : CareerGuidanceScreen
+    },
+    CareerGuidanceDetail: {
+      screen : CareerGuidanceDetailScreen
+    },
+    Comments : {
+      screen : CommentsScreen
     }
 	},
 	{
-    initialRouteName: 'Home',
+    initialRouteName: 'Comments',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
 );
 
-const Stack = createStackNavigator({
-
-    //important: key and screen name (i.e. DrawerNavigator) should be same while using the drawer navigator inside stack navigator.
-
-    DrawerNavigator:{
-        screen: DrawerNavigator
-    }
-},{
-   navigationOptions : ({navigation}) => (
-  {
-    title: `Sakshi Education`,
-    headerTintColor: '#ffffff',
-    headerStyle: {
-      backgroundColor: '#364C8B',
-      borderBottomColor: '#ffffff'
-    },
-    headerTitleStyle: {
-      fontSize: 18,
-    },
-    headerRight : <View style={{display:'flex', flexDirection:'row'}}>
-    <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
-    <Icon style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff" onPress={() => navigation.navigate('NewCheckout', {data: {}})}/>
-    <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
-    </View> ,
-    headerLeft : <View>
-    <Ionicon onPress={() => {navigation.dispatch(DrawerActions.toggleDrawer())} } style={{marginLeft : 12, marginRight : 8}} name="md-menu" size={36} color="#fff"/>
-    </View>
-  }
-)
-
-});
 
 
 export default class App extends React.Component {

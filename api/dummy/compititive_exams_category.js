@@ -1,4 +1,5 @@
-{
+export const cData = [
+  {
   "self": "http://sakshi.myofficestation.com/English/node?type=competitive_exams_category",
   "first": "http://sakshi.myofficestation.com/English/node?type=competitive_exams_category&page=0",
   "last": "http://sakshi.myofficestation.com/English/node?type=competitive_exams_category&page=0",
@@ -2019,3 +2020,4 @@
     }
   ]
 }
+]

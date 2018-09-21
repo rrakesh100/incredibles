@@ -1,18 +1,20 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { compititiveData } from '../api/competitive';
+import { compititiveData, cData } from '../api/competitive';
 
 
 
 export default class Compititive extends React.Component {
 
     render() {
+      let cObj = cData[0];
+      let iList = cObj.list;
         return (
             <View s={s.container}>
                 <FlatList
-                    data={compititiveData}
-                    renderItem={this.renderItem.bind(this)}
+                    data={iList}
+                    renderItem={this.renderCompetitiveItem.bind(this)}
                     ItemSeparatorComponent={this.renderItemSeperator.bind(this)}
                 />
             </View>
@@ -23,6 +25,23 @@ export default class Compititive extends React.Component {
         return (
             <View style={s.separator}></View>
         )
+    }
+
+    renderCompetitiveItem({item}) {
+      return (
+        <TouchableHighlight
+            onPress={() => this.props.onNavigate('Exam', {data:item})}
+            underlayColor='#ffffff'>
+        <View style={s.card}>
+            <View style={s.cardContent}>
+                <Text style={s.title}>{item.title}</Text>
+            </View>
+            <View style={s.arrow}>
+                <Icon name="ios-arrow-forward" color="#4F8EF7"   size={32} />
+            </View>
+        </View>
+        </TouchableHighlight>
+      )
     }
 
     renderItem({item}) {
@@ -52,6 +71,9 @@ const s = StyleSheet.create({
       backgroundColor: 'white',
       paddingHorizontal: 6,
       flexDirection: 'row'
+    },
+    container: {
+      backgroundColor:'#E8F3F7'
     },
     cardContent: {
         flex: 1
