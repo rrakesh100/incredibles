@@ -30,10 +30,12 @@ import HomeScreen from './screens/Home';
 import LoginScreen from './screens/Login';
 import PaymentScreen from './screens/Payment';
 import RegisterScreen from './screens/Register';
+import RegisterVerificationScreen from './screens/RegisterVerification';
 import TransactionInvoiceScreen from './components/TransactionInvoice';
 import CareerGuidanceScreen from './components/CareerGuidance';
 import CareerGuidanceDetailScreen from './components/CareerGuidanceDetail';
 import CommentsScreen from './components/Comments';
+import AllCommentsScreen from './components/AllComments';
 
 
 
@@ -139,10 +141,16 @@ const DrawerNavigator = createDrawerNavigator(
     },
     Comments : {
       screen : CommentsScreen
+    },
+    AllComments : {
+      screen : AllCommentsScreen
+    },
+    RegisterVerification : {
+      screen : RegisterVerificationScreen
     }
 	},
 	{
-    initialRouteName: 'Comments',
+    initialRouteName: 'Home',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}

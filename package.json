@@ -19,7 +19,11 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    "moment": "^2.20.1",
+>>>>>>> b500e97... register verification page and comments page
     "jquery": "^3.2.1",
     "axios": "^0.18.0",
     "expo": "^27.0.1",
