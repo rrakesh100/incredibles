@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View, Picker, Dimensions, TouchableHighlight } from 'react-native';
 import { Button, Header, Text } from 'react-native-elements';
+
+const sliderWidth = Dimensions.get('window').width;
+
+
 export default class Feedback extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
     static navigationOptions = ({navigation}) => (
 	{
         title: 'Feedback',
@@ -21,25 +30,32 @@ export default class Feedback extends Component {
                 <View style={s.binder}>
 
                     <Text style={s.title}>Please fill the details</Text>
-                    <TextInput
-                        placeholder='Select Reason'
-                        style={[s.inputContainer, s.inputStyle]}
-                    />
+                    <View style={{backgroundColor: 'white'}}>
+                        <Picker
+                          onValueChange={(itemValue, itemIndex) => this.setState({reason: itemValue})}
+                          selectedValue={this.state.reason}
+                          style={{ height: 40 }}>
+                          <Picker.Item label="Reason1" value="reason1" />
+                          <Picker.Item label="Reason2" value="reason2" />
+                          <Picker.Item label="Reason3" value="reason3" />
+                          <Picker.Item label="Reason4" value="reason4" />
+                        </Picker>
+                    </View>
                     <TextInput
                         multiline={true}
                         numberOfLines={4}
+                        underlineColorAndroid = "transparent"
                         placeholder='Comments if any..'
                         shake={true}
                        style={[s.inputContainer, s.inputStyle, {height: 120}]}
                     />
-                    <View style={s.buttonContainer}>
-                        <Button
-                            title='Submit'
-                            color='white'
-                            containerStyle={{marginTop: 20}}
-                        />
-                    </View>
 
+                    <TouchableHighlight underlayColor='#E8F3F7'
+                        onPress={() => console.log('send')} >
+                      <View style={s.buttonContainer}>
+                        <Text style={s.send}>SEND</Text>
+                      </View>
+                    </TouchableHighlight>
                 </View>
 
             </View>
@@ -69,11 +85,27 @@ const s = StyleSheet.create({
         fontSize: 22,
         paddingTop: 10,
         paddingBottom: 10,
-        marginTop: 4,
+        marginTop: 10,
         marginBottom: 4,
         marginLeft: 4,
     },
     buttonContainer: {
-        marginTop: 40
+        marginTop: 40,
+        backgroundColor: '#ffffff',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        height: 40,
+        width: 140,
+        borderRadius: 30,
+        borderColor: '#FFBC01',
+        borderWidth:1,
+    },
+    send: {
+      color: '#FFBC01',
+      fontSize: 24,
+      marginTop: 'auto',
+      marginBottom: 'auto',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     }
 })

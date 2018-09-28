@@ -19,13 +19,14 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "moment": "^2.20.1",
-    "jquery": "^3.2.1",
     "axios": "^0.18.0",
     "expo": "^27.0.1",
+    "jquery": "^3.2.1",
+    "moment": "^2.20.1",
     "native-base": "^2.7.2",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-native-camera-roll-picker": "^1.2.3",
     "react-native-easy-grid": "^0.2.0",
     "react-native-elements": "^0.19.1",
     "react-native-linear-gradient": "^2.4.2",
