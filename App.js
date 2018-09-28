@@ -36,7 +36,8 @@ import CareerGuidanceScreen from './components/CareerGuidance';
 import CareerGuidanceDetailScreen from './components/CareerGuidanceDetail';
 import CommentsScreen from './components/Comments';
 import AllCommentsScreen from './components/AllComments';
-
+import ProfileModifyScreen from './screens/ProfileModify';
+import ApplicationSettingsScreen from './screens/ApplicationSettings';
 
 
 YellowBox.ignoreWarnings([
@@ -147,6 +148,12 @@ const DrawerNavigator = createDrawerNavigator(
     },
     RegisterVerification : {
       screen : RegisterVerificationScreen
+    },
+    ProfileModify : {
+      screen : ProfileModifyScreen
+    },
+    ApplicationSettings : {
+      screen : ApplicationSettingsScreen
     }
 	},
 	{
