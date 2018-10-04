@@ -2,20 +2,51 @@ import React, {Component} from 'react';
 import { View, Text, StyleSheet, FlatList, Dimensions, ScrollView, TextInput, Linking, TouchableHighlight, Image, Picker } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import CameraRollPicker from 'react-native-camera-roll-picker';
+import ImagePicker from 'react-native-image-picker';
 
+
+const options = {
+  title : 'my pic',
+  takePhotoButtonTitle: 'Take Photo using your Camera',
+  chooseFromLibraryButtonTitle: 'Choose Photo from Library'
+}
 
 export default class ProfileModify extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      avatarSource: null
+    };
   }
+
+  onIconClick = () => {
+    console.log('Clicked');
+    ImagePicker.showImagePicker(options, (response) => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled image picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else {
+        let source = { uri: response.uri };
+
+        this.setState({
+          avatarSource: source
+        });
+      }
+    })
+  }
+
 
   render() {
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
         <View style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 50}}>
           <Image source={require('../universe.jpg')}  style={{width:100, height: 100, borderRadius: 50}}/>
-          <Icon name='edit' color='#FFBC01' size={30}/>
+          <Icon name='edit' color='#FFBC01' size={30} onPress={ this.onIconClick }/>
         </View>
         <View>
           <Text style={styles.name}>Swapan Kumar GV</Text>
@@ -31,6 +62,7 @@ export default class ProfileModify extends Component {
         <View style={styles.modify}>
             <Text style={styles.mTxt}>MODIFY</Text>
         </View>
+
       </ScrollView>
     )
   }

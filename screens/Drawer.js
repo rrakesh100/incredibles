@@ -123,7 +123,7 @@ class Drawer extends Component {
                     type='ionicon'
                     color='orange'
                     />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('AboutSakshi')}>
               About Sakshi
               </Text>
             </View>

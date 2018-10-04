@@ -38,7 +38,9 @@ import CommentsScreen from './components/Comments';
 import AllCommentsScreen from './components/AllComments';
 import ProfileModifyScreen from './screens/ProfileModify';
 import ApplicationSettingsScreen from './screens/ApplicationSettings';
-
+import AboutSakshiScreen from './screens/AboutSakshi';
+import NotFoundScreen from './screens/NotFound';
+import NoInternetAlertScreen from './screens/NoInternetAlert';
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -154,14 +156,24 @@ const DrawerNavigator = createDrawerNavigator(
     },
     ApplicationSettings : {
       screen : ApplicationSettingsScreen
+    },
+    AboutSakshi : {
+      screen : AboutSakshiScreen
+    },
+    NotFound : {
+      screen : NotFoundScreen
+    },
+    NoInternetAlert : {
+      screen : NoInternetAlertScreen
     }
 	},
 	{
-    initialRouteName: 'Home',
+    initialRouteName: 'NoInternetAlert',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
 );
+
 
 
 
