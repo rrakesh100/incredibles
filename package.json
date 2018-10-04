@@ -41,6 +41,7 @@
     "react-native-camera-roll-picker": "^1.2.3",
     "react-native-easy-grid": "^0.2.0",
     "react-native-elements": "^0.19.1",
+    "react-native-image-picker": "^0.26.10",
     "react-native-linear-gradient": "^2.4.2",
     "react-native-payumoney": "^0.0.3",
     "react-native-progress-circle": "^2.0.0",
