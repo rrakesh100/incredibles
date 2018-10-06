@@ -27,7 +27,7 @@ class Drawer extends Component {
                 type='ionicon'
                 color='orange'
                 />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Home')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('ExploreSakshi')}>
                 Explore Sakshi Eduction
               </Text>
             </View>

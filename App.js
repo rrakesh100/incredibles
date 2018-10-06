@@ -41,6 +41,7 @@ import ApplicationSettingsScreen from './screens/ApplicationSettings';
 import AboutSakshiScreen from './screens/AboutSakshi';
 import NotFoundScreen from './screens/NotFound';
 import NoInternetAlertScreen from './screens/NoInternetAlert';
+import ExploreSakshiScreen from './screens/ExploreSakshi';
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -165,10 +166,13 @@ const DrawerNavigator = createDrawerNavigator(
     },
     NoInternetAlert : {
       screen : NoInternetAlertScreen
+    },
+    ExploreSakshi : {
+      screen : ExploreSakshiScreen
     }
 	},
 	{
-    initialRouteName: 'NoInternetAlert',
+    initialRouteName: 'ExploreSakshi',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
