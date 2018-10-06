@@ -172,7 +172,7 @@ const DrawerNavigator = createDrawerNavigator(
     }
 	},
 	{
-    initialRouteName: 'ExploreSakshi',
+    initialRouteName: 'Home',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
