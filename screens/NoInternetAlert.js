@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, Text, NetInfo, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, NetInfo, StyleSheet, Dimensions, TouchableOpacity, WebView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
@@ -31,16 +31,23 @@ export default class NoInternetAlert extends Component {
   render() {
     if(!this.state.isConnected) {
     return (
-        <View style={{height: 100, backgroundColor: '#DC4443'}}>
-            <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 'auto', marginBottom: 'auto'}}>
-              <Icon name='warning' size={26} color='#ffffff'/>
-              <Text style={{color: '#ffffff'}}>Please Check Your Internet Connection!!</Text>
-              <TouchableOpacity onPress={ () => console.log('retried') }>
-              <View style={styles.retry}>
-                <Text style={styles.bName}>Retry</Text>
+        <View style={{flex:1}}>
+          <View style={{width: 40,height: 40,position: 'relative'}}>
+              <View style={{width: '100%',height: '100%',position: 'absolute',left: 0,top: 0}}>
               </View>
-              </TouchableOpacity>
-            </View>
+
+          </View>
+          <View style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 100, backgroundColor: '#DC4443'}}>
+              <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 'auto', marginBottom: 'auto'}}>
+                <Icon name='warning' size={26} color='#ffffff'/>
+                <Text style={{color: '#ffffff'}}>Please Check Your Internet Connection!!</Text>
+                <TouchableOpacity onPress={ () => console.log('retried') }>
+                <View style={styles.retry}>
+                  <Text style={styles.bName}>Retry</Text>
+                </View>
+                </TouchableOpacity>
+              </View>
+          </View>
         </View>
     );
   }

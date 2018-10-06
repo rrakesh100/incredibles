@@ -49,6 +49,7 @@ import PaymentScreen from '../screens/Payment';
 import RegisterScreen from '../screens/Register';
 import TransactionInvoiceScreen from '../components/TransactionInvoice';
 import NoInternetAlertScreen from '../screens/NoInternetAlert';
+import ExploreSakshiScreen from '../screens/ExploreSakshi';
 
 
 
@@ -141,6 +142,9 @@ YellowBox.ignoreWarnings([
        },
        NoInternetAlert : {
          screen : NoInternetAlertScreen
+       },
+       ExploreSakshi : {
+         screen : ExploreSakshiScreen
        }
     },
 
@@ -172,8 +176,17 @@ YellowBox.ignoreWarnings([
   });
 export default class Home extends React.Component {
   state = {
-    index: 0
+    index: 0,
+    errorFound: false
   };
+
+  componentDidCatch(error, info) {
+  this.setState({
+   errorFound: true
+  });
+  console.log('error: ', error);
+  console.log('info: ', info);
+ }
 
 
   render() {
