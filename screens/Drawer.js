@@ -93,7 +93,7 @@ class Drawer extends Component {
                     type='ionicon'
                     color='orange'
                     />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('Notifications')}>
               Notifications
               </Text>
             </View>
@@ -103,7 +103,7 @@ class Drawer extends Component {
                     type='ionicon'
                     color='orange'
                     />
-              <Text style={s.itemText} onPress={this.navigateToScreen('Contact')}>
+              <Text style={s.itemText} onPress={this.navigateToScreen('Updates')}>
               Updates
               </Text>
             </View>
@@ -195,7 +195,7 @@ class Drawer extends Component {
             <Avatar
                 size="xlarge"
                 source={{uri: "http://theroyalmorecambe.co.uk/wp-content/uploads/2017/05/anonymous.gif"}}
-                onPress={() => console.log("Works!")}
+                onPress={this.navigateToScreen('ProfileModify')}
                 activeOpacity={0.7}
                 rounded
                 style={s.avatar}
