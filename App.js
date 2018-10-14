@@ -42,6 +42,10 @@ import AboutSakshiScreen from './screens/AboutSakshi';
 import NotFoundScreen from './screens/NotFound';
 import NoInternetAlertScreen from './screens/NoInternetAlert';
 import ExploreSakshiScreen from './screens/ExploreSakshi';
+import UpdatesScreen from './screens/Updates';
+import NotificationsScreen from './screens/Notifications';
+import ViewNotificationScreen from './screens/ViewNotification';
+
 
 YellowBox.ignoreWarnings([
   'Encountered an error loading page', // WebView uri: result.url and url failing to load - "bloomberg suneq" https://github.com/facebook/react-native/issues/7839#issuecomment-224111608
@@ -169,10 +173,19 @@ const DrawerNavigator = createDrawerNavigator(
     },
     ExploreSakshi : {
       screen : ExploreSakshiScreen
+    },
+    Updates : {
+      screen : UpdatesScreen
+    },
+    Notifications : {
+      screen : NotificationsScreen
+    },
+    ViewNotification : {
+      screen : ViewNotificationScreen
     }
 	},
 	{
-    initialRouteName: 'Home',
+    initialRouteName: 'Notifications',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
