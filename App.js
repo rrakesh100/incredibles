@@ -36,6 +36,8 @@ import CareerGuidanceScreen from './components/CareerGuidance';
 import CareerGuidanceDetailScreen from './components/CareerGuidanceDetail';
 import CommentsScreen from './components/Comments';
 import AllCommentsScreen from './components/AllComments';
+import SwitchCategoryScreen from './components/SwitchCategory';
+import KnowledgeCenterScreen from './components/KnowledgeCenter';
 import ProfileModifyScreen from './screens/ProfileModify';
 import ApplicationSettingsScreen from './screens/ApplicationSettings';
 import AboutSakshiScreen from './screens/AboutSakshi';
@@ -182,10 +184,16 @@ const DrawerNavigator = createDrawerNavigator(
     },
     ViewNotification : {
       screen : ViewNotificationScreen
+    },
+    SwitchCategory : {
+      screen : SwitchCategoryScreen
+    },
+    KnowledgeCenter : {
+      screen : KnowledgeCenterScreen
     }
 	},
 	{
-    initialRouteName: 'Home',
+    initialRouteName: 'KnowledgeCenter',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
