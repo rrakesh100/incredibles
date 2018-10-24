@@ -29,7 +29,6 @@ export default class ExploreSakshi extends Component {
   );
 
   render() {
-    console.log(this.props);
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
           <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 'auto', marginRight: 'auto', marginTop:10}}>
