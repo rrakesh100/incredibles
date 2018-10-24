@@ -43,12 +43,12 @@ export default class CareerGuidance extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView style={{backgroundColor:'#E8F3F7'}}>
       <FlatList
           data={careerGuidanceData}
           renderItem={this.renderCareerItem.bind(this)}
       />
-      </View>
+      </ScrollView>
     )
   }
 }

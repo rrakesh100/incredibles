@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions, ScrollView, TextInput, Linking, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, ScrollView, TextInput, Linking, TouchableHighlight, TouchableOpacity } from 'react-native';
 import { Button } from 'native-base';
 import { Badge } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GoogleIcon from 'react-native-vector-icons/Zocial';
+import { loginUser } from '../api/register';
 
 
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
+const fetchUrl = require("fetch").fetchUrl;
 
 
 export default class Login extends Component {
@@ -16,8 +18,6 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
   }
-
-
 
   componentDidMount() {
     console.log(this.props);
@@ -27,12 +27,33 @@ export default class Login extends Component {
     Linking.openURL(url)
   }
 
+  onLoginBtnClick() {
+    const { email, password } = this.state;
+
+  }
+
+  onLoginClick() {
+    const { email, password } = this.state;
+
+    const data = {
+      "username" : email,
+      "password" : password
+    }
+    let a = loginUser();
+    a.then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   render() {
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
         <Text style={styles.loginText}>LOGIN</Text>
         <Text style={styles.text}>Login Through Social Accounts</Text>
-          <View style={[styles.flex, {marginTop: 20}]}>
+          <View style={[styles.flex, {marginTop: 20, marginLeft: 'auto', marginRight: 'auto'}]}>
             <TouchableHighlight underlayColor='#ffffff'
               onPress={ this.onButtonPress.bind(this, 'https://www.facebook.com/') }>
               <View>
@@ -71,20 +92,22 @@ export default class Login extends Component {
 
           <View style={styles.email}>
           <TextInput placeholder='Mobile No/Email Id'
+          onChangeText={(email) => this.setState({email})}
           style={styles.textInput}/>
           </View>
 
           <View style={styles.password}>
           <TextInput placeholder='Password'
+          onChangeText={(password) => this.setState({password})}
           style={styles.textInput}/>
           </View>
 
-          <TouchableHighlight underlayColor='#ffffff'
-            onPress={ () => console.log('login')} >
+          <TouchableOpacity underlayColor='#ffffff'
+            onPress={ this.onLoginBtnClick.bind(this) } >
             <View style={styles.btnView}>
               <Text style={styles.btnText}>LOGIN</Text>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
           <View>
             <Text style={styles.forgot} onPress={ () => console.log('forgot password') }>Forgot Password?</Text>
           </View>
@@ -93,12 +116,12 @@ export default class Login extends Component {
             <Text style={[styles.text, {fontSize: 16}]}>Not A Registered User?</Text>
           </View>
 
-          <TouchableHighlight underlayColor='#ffffff'
+          <TouchableOpacity underlayColor='#ffffff'
             onPress={ () => this.props.navigation.navigate('Register') } >
             <View style={styles.btnView}>
               <Text style={styles.btnText}>REGISTER</Text>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
 
       </ScrollView>
     )
@@ -175,9 +198,9 @@ const styles = StyleSheet.create({
     marginBottom:'auto'
   },
   badge: {
-    height: 40,
-    width: 40,
-    borderRadius: 22,
+    height: 50,
+    width: 50,
+    borderRadius: 25,
     borderWidth: 1,
     marginLeft: 'auto',
     marginRight: 'auto',

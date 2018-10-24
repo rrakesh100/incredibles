@@ -5,7 +5,7 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 import { createDrawerNavigator, createStackNavigator, DrawerActions } from 'react-navigation';
 import BillingScreen from './components/Billing';
 import CheckoutScreen from './components/Checkout';
-import ExamDetailsScreen from './components/examDetails';
+import ExamDetailsScreen from './components/ExamDetails';
 import InfoTabScreen from './components/InfoTab';
 import MyTestsScreen from './components/MyTests';
 import NewCheckoutScreen from './components/NewCheckout';
@@ -185,7 +185,7 @@ const DrawerNavigator = createDrawerNavigator(
     }
 	},
 	{
-    initialRouteName: 'Notifications',
+    initialRouteName: 'Home',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}

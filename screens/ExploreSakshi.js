@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import CartIcon from 'react-native-vector-icons/EvilIcons';
 import NewIcon from 'react-native-vector-icons/MaterialIcons';
 import BulbIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 
 export default class ExploreSakshi extends Component {
@@ -200,17 +201,60 @@ export default class ExploreSakshi extends Component {
             <Text style={{color: '#7d98a0',fontSize:16, marginLeft:10}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
             </View>
           </View>
+          </TouchableOpacity>
+
           <View style={{height:6}}/>
-          <View style={{width: '96%', height: 150, backgroundColor: '#ffffff', marginLeft: 'auto', marginRight: 'auto'}}>
+          <View style={{width: '96%', height: 80, backgroundColor: '#ffffff', marginLeft: 'auto', marginRight: 'auto'}}>
             <View style={{flexDirection: 'row', alignItems:'center'}}>
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>JEE</Text>
+              </View>
+              <View style={{width: '1%',height:80, backgroundColor: '#E8F3F7'}} />
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>EAMCET</Text>
+              </View>
+              <View style={{width: '1%',height:80, backgroundColor: '#E8F3F7'}} />
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>NEET</Text>
+              </View>
+              <View style={{width: '1%',height:80, backgroundColor: '#E8F3F7'}} />
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>GATE</Text>
+              </View>
             </View>
           </View>
-          </TouchableOpacity>
+          <View style={{height:4}}/>
+          <View style={{width: '96%', height: 80, backgroundColor: '#ffffff', marginLeft: 'auto', marginRight: 'auto'}}>
+            <View style={{flexDirection: 'row', alignItems:'center'}}>
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>SSC</Text>
+              </View>
+              <View style={{width: '1%',height:80, backgroundColor: '#E8F3F7'}} />
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>RRB</Text>
+              </View>
+              <View style={{width: '1%',height:80, backgroundColor: '#E8F3F7'}} />
+              <View style={{width: '23.25%'}}>
+                <Text style={[styles.bottomText, {textAlign: 'center'}]}>POLICE CONSTABLE</Text>
+              </View>
+              <View style={{width: '1%',height:80, backgroundColor: '#E8F3F7'}} />
+              <View style={{width: '23.25%'}}>
+                <Text style={styles.bottomText}>CIVILS</Text>
+              </View>
+            </View>
+          </View>
       </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
-
+  bottomText: {
+    fontSize: 14,
+    color: '#F1B323',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 'auto',
+    marginBottom: 'auto'
+  }
 });
