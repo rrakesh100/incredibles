@@ -16,7 +16,7 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
         <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/incredibles-react-native-vector-icons-unspecified_2dd7d16eda60e09ff90c4b173265704f52899b2a.jar" />
     </item>
     <item
@@ -192,6 +192,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/rrampall/.m2/repository/com/squareup/okhttp3/okhttp/3.6.0/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_1d9b514b9d92c2bd1dd905cced761787661cfba9.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
@@ -288,15 +297,6 @@
         revision="23.0.1"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
         <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_cd56423e692e5af6a7672974d425163ed7239971.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/rrampall/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/rrampall/work/lab/sakshi/incredibles/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_65324109318e14828e4b479f933a837d422e0865.jar" />
     </item>
     <item
         is-multidex="false"

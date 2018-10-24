@@ -18,29 +18,17 @@
     "preset": "react-native"
   },
   "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    "moment": "^2.20.1",
->>>>>>> b500e97... register verification page and comments page
-    "jquery": "^3.2.1",
-    "axios": "^0.18.0",
-    "expo": "^27.0.1",
->>>>>>> 317d79f... career guidance
-=======
     "axios": "^0.18.0",
     "expo": "^27.0.1",
     "jquery": "^3.2.1",
     "moment": "^2.20.1",
->>>>>>> ca283dd... application settings and profile modify pages
     "native-base": "^2.7.2",
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-camera-roll-picker": "^1.2.3",
     "react-native-easy-grid": "^0.2.0",
     "react-native-elements": "^0.19.1",
+    "react-native-git-upgrade": "^0.2.7",
     "react-native-image-picker": "^0.26.10",
     "react-native-linear-gradient": "^2.4.2",
     "react-native-payumoney": "^0.0.3",
