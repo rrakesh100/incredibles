@@ -2,13 +2,32 @@ import axios from 'axios';
 import $ from 'jquery';
 
 
+export function loginUser() {
+
+    let headers = {
+              'Content-Type': 'application/json'
+          };
+
+    let data = {
+        "username":"admin",
+        "password":"viperv"
+        }
+
+    return  axios.post('http://sakshi.myofficestation.com/user_login/user/login', data, {headers: headers})
+
+}
+
 export function registerUser(userObj) {
   console.log(userObj);
+  let headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'JWT fefege...'
+        };
   return axios.post(
     'http://sakshi.myofficestation.com/user_register/user/register',
     {
       name: "gnm123",
-      mail: "gnm@gmail.com",
+      mail: "gnm123@gmail.com",
       pass: {
         pass1: "123456",
         pass2: "123456"
@@ -21,8 +40,10 @@ export function registerUser(userObj) {
         zone: "east",
         postal_code: "123456"
       }
-    }
+    },
+    {headers: headers}
   );
+}
 
 //   var settings = {
 //   "async": true,
@@ -40,4 +61,3 @@ export function registerUser(userObj) {
 // $.ajax(settings).done(function (response) {
 //   console.log(response);
 // });
-}

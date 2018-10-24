@@ -31,21 +31,23 @@ export default class CareerGuidanceDetail extends Component {
   render() {
     const data = this.props.navigation.state.params.data;
     return (
-      <View>
+      <ScrollView>
+        <View style={{width: '95%', marginLeft: 'auto', marginRight: 'auto'}}>
           <Text style={{fontSize:20, fontWeight: 'bold', color: '#3D4648'}}>Online-Counselling Process of JEE (Main) 2016, JEE (Advanced) 2016</Text>
           <Text style={{marginTop: 10, fontSize: 16, color: '#838685'}}>Be very clear about the problem name. This will help everyone locate the problem in their respective sheets and there is a higher chance that you will get answered by others.</Text>
           <Image source={data.image} style={styles.resize} />
           <Text style={{fontSize: 16, color: '#838685'}}>{data.detailedDescription}</Text>
-      </View>
+        </View>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
   resize : {
-    width: sliderWidth,
+    width: sliderWidth*0.95,
     height: sliderHeight*0.30,
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
   },
 })
