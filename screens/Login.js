@@ -5,6 +5,8 @@ import { Badge } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GoogleIcon from 'react-native-vector-icons/Zocial';
 import { loginUser } from '../api/register';
+import axios from 'axios';
+import CookieManager from 'react-native-cookies';
 
 
 
@@ -21,6 +23,10 @@ export default class Login extends Component {
 
   componentDidMount() {
     console.log(this.props);
+    CookieManager.get('http://sakshi.myofficestation.com')
+  .then((res) => {
+    console.log('CookieManager.get =>', res); // => 'user_session=abcdefg; path=/;'
+  });
   }
 
   onButtonPress(url) {
@@ -28,8 +34,53 @@ export default class Login extends Component {
   }
 
   onLoginBtnClick() {
-    const { email, password } = this.state;
+  //  const { email, password } = this.state;
+    console.log('Firing API call to the server');
+    let headers = {
+              'Content-Type': 'application/json',
+              'X-CSRFToken' : '',
+              'XSRF-TOKEN' : '',
+              'X-XSRF-TOKEN' : '',
+              'xsrfCookieName' : '',
+              'xsrfHeaderName' : ''
+    };
+    let a = axios.post(
+      'http://sakshi.myofficestation.com/user_register/user/register',
+      {
+        name: "pm123",
+        mail: "pm123@gmail.com",
+        pass: {
+          pass1: "123456",
+          pass2: "123456"
+        },
+        address: {
+          first_name: "holy",
+          last_name: "shit",
+          city: "delhi",
+          street1: "abc",
+          zone: "east",
+          postal_code: "123456"
+        }
+      },
+      {headers: headers}
+    );
+    console.log(a);
+    a.then((successResponse)=>{
+      console.log(successResponse)
+    }).catch((e,r,t) => {console.log(e,r,t)});
 
+
+    let login = axios.post(
+      'http://sakshi.myofficestation.com/user_login/user/login',
+      {
+        username : "rk123",
+        password : "123456"
+      },
+      {headers: headers});
+    console.log('login= ', login);
+    login.then((successResponse)=>{
+      console.log(successResponse)
+    }).catch((e,r,t) => {console.log(e,r,t)});
   }
 
   onLoginClick() {
