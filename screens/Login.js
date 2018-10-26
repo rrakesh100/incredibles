@@ -27,6 +27,10 @@ export default class Login extends Component {
   .then((res) => {
     console.log('CookieManager.get =>', res); // => 'user_session=abcdefg; path=/;'
   });
+  CookieManager.clearAll()
+  .then((res) => {
+    console.log('CookieManager.clearAll =>', res);
+  });
   }
 
   onButtonPress(url) {
@@ -47,8 +51,8 @@ export default class Login extends Component {
     let a = axios.post(
       'http://sakshi.myofficestation.com/user_register/user/register',
       {
-        name: "pm123",
-        mail: "pm123@gmail.com",
+        name: "pm1234",
+        mail: "pm1234@gmail.com",
         pass: {
           pass1: "123456",
           pass2: "123456"

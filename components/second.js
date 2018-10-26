@@ -1,7 +1,7 @@
 import React from "react";
 import AcademicStudies from "./academicStudies";
 import {View, Alert} from "react-native";
-import ExamDetails from "./examDetails";
+import ExamDetails from "./ExamDetails";
 import Exam from "../screens/Exam";
 import AllSubject from "./allSubjects";
 

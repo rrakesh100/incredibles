@@ -26,11 +26,7 @@ export function registerUser(userObj) {
     'http://sakshi.myofficestation.com/user_register/user/register',
     {
       name: "nm123",
-<<<<<<< HEAD
-      mail: "nm123@gmail.com",
-=======
       mail: " nm123@gmail.com",
->>>>>>> 7f0a622... axios testing
       pass: {
         pass1: "123456",
         pass2: "123456"
