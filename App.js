@@ -193,7 +193,7 @@ const DrawerNavigator = createDrawerNavigator(
     }
 	},
 	{
-    initialRouteName: 'KnowledgeCenter',
+    initialRouteName: 'Home',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}

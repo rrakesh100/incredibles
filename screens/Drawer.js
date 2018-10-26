@@ -137,6 +137,54 @@ class Drawer extends Component {
               Settings
               </Text>
             </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('CareerGuidance')}>
+              Career Guidance
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('KnowledgeCenter')}>
+              Knowledge Center
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('Comments')}>
+              Comments
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('AllComments')}>
+              All Comments
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('NotFound')}>
+              Not Found
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('ProfileModify')}>
+              Profile Modify
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('Notifications')}>
+              Notifications
+              </Text>
+            </View>
+            <View style={s.item}>
+
+              <Text style={s.itemText} onPress={this.navigateToScreen('NoInternetAlert')}>
+              No Internet Alert
+              </Text>
+            </View>
             <View style={s.bottomInfo}>
                 { this.renderNeedHelp() }
                 { this.renderBanner() }
