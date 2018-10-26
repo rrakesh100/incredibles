@@ -6,8 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import GoogleIcon from 'react-native-vector-icons/Zocial';
 import { loginUser } from '../api/register';
 import axios from 'axios';
-import CookieManager from 'react-native-cookies';
-
+import RCTNetworking from 'RCTNetworking';
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -23,10 +22,8 @@ export default class Login extends Component {
 
   componentDidMount() {
     console.log(this.props);
-    CookieManager.get('http://sakshi.myofficestation.com')
-  .then((res) => {
-    console.log('CookieManager.get =>', res); // => 'user_session=abcdefg; path=/;'
-  });
+    //Uncomment the below line to clear the cookies
+     //console.log('RCTNetworking:', RCTNetworking.clearCookies());
   }
 
   onButtonPress(url) {
