@@ -7,7 +7,7 @@ import { estoreData , onlineTests, studyMaterial } from '../api/estore';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import OnlineTests from '../components/OnlineTests';
 import { Col, Row, Grid } from "react-native-easy-grid";
-import  PayuMoney from 'react-native-payumoney';
+// import  PayuMoney from 'react-native-payumoney';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 import uuidv4 from 'uuid/v4';
@@ -156,12 +156,12 @@ export default class Estore extends Component {
      };
 
       // options.hash = hash;
-        console.log(options);
-        PayuMoney.pay(options).then((d) => {
-            alert(d); // WIll get a Success response with verification hash
-        }).catch(e => {
-            alert(e); //In case of failture
-        });
+        // console.log(options);
+        // PayuMoney.pay(options).then((d) => {
+        //     alert(d); // WIll get a Success response with verification hash
+        // }).catch(e => {
+        //     alert(e); //In case of failture
+        // });
 
   }
 

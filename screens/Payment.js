@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
-import PayuMoney from 'react-native-payumoney';
+//import PayuMoney from 'react-native-payumoney';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
@@ -57,11 +57,11 @@ export default class Payment extends Component<Props> {
               sandbox: true, //false in production
               hash: "d829abecdaf9f2835787b3f56d1c7565721ca2501e6414438e61948dab435f102fc93213008cdfa3474691cadcc2dabdde64cd58c128dd2afcf3b389d617919c"
           };
-          PayuMoney.pay(options).then((d) => {
-              this.props.navigation.navigate('TransactionInvoice')
-          }).catch(e => {
-            this.props.navigation.navigate('TransactionInvoice')
-          });
+          // PayuMoney.pay(options).then((d) => {
+          //     this.props.navigation.navigate('TransactionInvoice')
+          // }).catch(e => {
+          //   this.props.navigation.navigate('TransactionInvoice')
+          // });
   }
 
     // Below is the test card details for doing a test transaction:
