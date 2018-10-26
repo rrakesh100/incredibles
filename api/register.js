@@ -20,21 +20,20 @@ export function loginUser() {
 export function registerUser(userObj) {
   console.log(userObj);
   let headers = {
-            'Content-Type': 'application/json',
-            'Authorization': 'JWT fefege...'
-        };
+            'Content-Type': 'application/json'
+  };
   return axios.post(
     'http://sakshi.myofficestation.com/user_register/user/register',
     {
-      name: "gnm123",
-      mail: "gnm123@gmail.com",
+      name: "nm123",
+      mail: "nm123@gmail.com",
       pass: {
         pass1: "123456",
         pass2: "123456"
       },
       address: {
-        first_name: "test",
-        last_name: "123",
+        first_name: "holy",
+        last_name: "shit",
         city: "delhi",
         street1: "abc",
         zone: "east",
