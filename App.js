@@ -193,7 +193,7 @@ const DrawerNavigator = createDrawerNavigator(
     }
 	},
 	{
-    initialRouteName: 'Login',
+    initialRouteName: 'RegisterVerification',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}
