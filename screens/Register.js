@@ -39,7 +39,7 @@ export default class Login extends Component {
   componentDidMount() {
     // console.log(this.props);
     //  console.log('RCTNetworking:', RCTNetworking.clearCookies());
-    
+
   }
 
   onButtonPress(url) {
@@ -85,7 +85,14 @@ export default class Login extends Component {
 
   render() {
     return (
-      <ScrollView style={{backgroundColor: '#E8F3F7'}}>
+      <ScrollView style={{backgroundColor: '#E8F3F7', flex:1}}>
+        <View style={{height: 200, backgroundColor: '#3E5FAC'}}>
+          <View style={{marginTop:'auto', marginBottom: 'auto'}}>
+            <Text style={{textAlign: 'center', color: '#ffffff', fontSize: 30, fontWeight: 'bold'}}>SAKSHI EDUCATION</Text>
+            <View style={{borderBottomColor: '#ffffff', borderBottomWidth: 1}} />
+            <Text style={{textAlign: 'center', color: '#ffffff'}}>Educating, Enlightening and Ennobling</Text>
+          </View>
+        </View>
         <Text style={styles.loginText}>REGISTER</Text>
         <Text style={styles.text}>Please Fill The Details To Register With Us</Text>
         <Text style={styles.select}>Select Language</Text>
@@ -134,7 +141,7 @@ export default class Login extends Component {
               <Text style={styles.btnText}>REGISTER HERE</Text>
             </View>
           </TouchableOpacity>
-
+          <View style={{height:50}} />
       </ScrollView>
     )
   }
