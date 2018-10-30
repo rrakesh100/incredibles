@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, AsyncStorage } from 'react-native';
 import { Avatar, Button, Icon, Text as RNEText } from 'react-native-elements';
-import { AsyncStorage } from "react-native";
+import axios from 'axios';
 
 
 class Drawer extends Component {
@@ -14,20 +14,37 @@ class Drawer extends Component {
   constructor() {
     super();
     this.state= {
-      email : ''
+      email : '',
+      loggedIn : false
     }
   }
 
-  componentDidMount() {
-    this._retrieveLoginData
-  }
+
 
     _retrieveLoginData = async () => {
   try {
     const value = await AsyncStorage.getItem('loginData');
-    console.log(value);
+
     if (value !== null) {
       console.log(value);
+      let retrievedValue = JSON.parse(value);
+      console.log('retrievedValue == ', retrievedValue);
+      let sessionId = retrievedValue.sessionId;
+      let token = retrievedValue.token;
+
+      let headers = {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token' : token,
+                'Cookie' : sessionId
+      };
+
+      let logout = axios.post(
+        'http://sakshi.myofficestation.com/user_login/user/logout',
+        {headers: headers});
+
+      logout.then((successResponse)=>{
+        console.log(successResponse);
+      }).catch((err) => {console.log(err)});
     }
    } catch (error) {
      console.log(error);
@@ -252,6 +269,11 @@ class Drawer extends Component {
       )
   }
 
+
+  onLogoutPress() {
+    this._retrieveLoginData();
+  }
+
   onSuccessLogin() {
     this.setState({
       loggedIn: true
@@ -264,13 +286,32 @@ class Drawer extends Component {
     })
   }
 
-  onLogoutPress() {
-    this._retrieveLoginData();
+  renderLoginButton() {
+    return (
+      <Button
+          title="Login"
+          buttonStyle={s.btnStyle}
+          textStyle={{color: '#FEC336'}}
+          onPress={() => this.props.navigation.navigate('Login', {
+            onSuccessLogin: this.onSuccessLogin.bind(this),
+            onLoginFail: this.onLoginFail.bind(this)
+          } )} />
+    )
+  }
+
+  renderLogoutButton() {
+    return (
+      <Button
+            title="Logout"
+            buttonStyle={s.btnStyle}
+            textStyle={{color: '#FEC336'}}
+            onPress={this.onLogoutPress.bind(this)} />
+    )
   }
 
   renderTitle() {
 
-    const { email } = this.state;
+    const { email, loggedIn } = this.state;
     if(!email) {
       return (
         <View style={s.title}>
@@ -283,16 +324,7 @@ class Drawer extends Component {
                 style={s.avatar}
             />
             <View style={s.info}>
-                <Button
-                    title="Login"
-                    buttonStyle={s.btnStyle}
-                    textStyle={{color: '#FEC336'}}
-                    onPress={this.navigateToScreen('Login')} />
-                  <Button
-                        title="Logout"
-                        buttonStyle={s.btnStyle}
-                        textStyle={{color: '#FEC336'}}
-                        onPress={this.onLogoutPress.bind(this)} />
+                { !loggedIn ? this.renderLoginButton() : this.renderLogoutButton() }
             </View>
         </View>
       );
