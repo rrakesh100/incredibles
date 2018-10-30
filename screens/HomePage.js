@@ -102,7 +102,7 @@ export default class HomePage extends Component {
 
       for(let i=0; i<maxNum; i++) {
         updatesArr.push(
-          <View>
+          <View key={'currentAffair' + Math.random()}>
           <TouchableHighlight onPress={() => this.props.onNavigate('CurrentAffair', {data: curAffData[i]})}
             underlayColor='#ffffff' style={{marginTop : 10, marginBottom : 10}}>
           <View>
@@ -122,7 +122,7 @@ export default class HomePage extends Component {
       }
       updatesArr.push(
         !currentAffairsViewAllClicked ?
-        <View style={{alignItems: 'flex-end'}}>
+        <View style={{alignItems: 'flex-end'}} key={'ca' + Math.random()}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={() => this.props.onNavigate('CurrentAffairs', {data:{name:'Girish'}})}
           textStyle={{color: '#F8C548'}} />
@@ -173,12 +173,12 @@ export default class HomePage extends Component {
 
         updatesArr.push(
             !viewAllClicked ?
-            <View style={{alignItems: 'flex-end'}}>
+            <View style={{alignItems: 'flex-end'}} key={Math.random()}>
           <Button title='View All' buttonStyle={styles.viewAll}
           onPress={this.onViewAllButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
           </View> :
-          <View style={{alignItems: 'flex-end'}}>
+          <View style={{alignItems: 'flex-end'}} key={Math.random()}>
           <Button title='Hide' buttonStyle={styles.viewAll}
           onPress={this.onHideButton.bind(this)}
           textStyle={{color: '#F8C548'}} />
