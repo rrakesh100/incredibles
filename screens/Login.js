@@ -21,17 +21,18 @@ export default class Login extends Component {
   }
 
   componentDidMount() {
-    // console.log(this.props);
-    //  console.log('RCTNetworking:', RCTNetworking.clearCookies());
     console.log(this.props);
+     // console.log('RCTNetworking:', RCTNetworking.clearCookies());
   }
 
   onButtonPress(url) {
     Linking.openURL(url)
   }
 
+
   onLoginBtnClick() {
    const { email, password } = this.state;
+   const { params } = this.props.navigation.state;
     console.log('Firing API call to the server');
     let headers = {
               'Content-Type': 'application/json',
@@ -52,6 +53,8 @@ export default class Login extends Component {
 
     login.then((successResponse)=>{
       console.log(successResponse);
+      params.onSuccessLogin();
+
       let sessionId = successResponse['data'].sessid;
       let token = successResponse['data'].token;
       let value = { sessionId, token };
