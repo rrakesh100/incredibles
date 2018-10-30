@@ -7,11 +7,11 @@ import GoogleIcon from 'react-native-vector-icons/Zocial';
 import { loginUser } from '../api/register';
 import axios from 'axios';
 import RCTNetworking from 'RCTNetworking';
+import { AsyncStorage } from "react-native";
 
 
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
-const fetchUrl = require("fetch").fetchUrl;
 
 
 export default class Login extends Component {
@@ -21,9 +21,9 @@ export default class Login extends Component {
   }
 
   componentDidMount() {
+    // console.log(this.props);
+    //  console.log('RCTNetworking:', RCTNetworking.clearCookies());
     console.log(this.props);
-    //Uncomment the below line to clear the cookies
-     //console.log('RCTNetworking:', RCTNetworking.clearCookies());
   }
 
   onButtonPress(url) {
@@ -31,7 +31,7 @@ export default class Login extends Component {
   }
 
   onLoginBtnClick() {
-  //  const { email, password } = this.state;
+   const { email, password } = this.state;
     console.log('Firing API call to the server');
     let headers = {
               'Content-Type': 'application/json',
@@ -41,60 +41,37 @@ export default class Login extends Component {
               'xsrfCookieName' : '',
               'xsrfHeaderName' : ''
     };
-    let a = axios.post(
-      'http://sakshi.myofficestation.com/user_register/user/register',
-      {
-        name: "pm123",
-        mail: "pm123@gmail.com",
-        pass: {
-          pass1: "123456",
-          pass2: "123456"
-        },
-        address: {
-          first_name: "holy",
-          last_name: "shit",
-          city: "delhi",
-          street1: "abc",
-          zone: "east",
-          postal_code: "123456"
-        }
-      },
-      {headers: headers}
-    );
-    console.log(a);
-    a.then((successResponse)=>{
-      console.log(successResponse)
-    }).catch((e,r,t) => {console.log(e,r,t)});
-
 
     let login = axios.post(
       'http://sakshi.myofficestation.com/user_login/user/login',
       {
-        username : "rk123",
-        password : "123456"
+        username : email,
+        password : password
       },
       {headers: headers});
-    console.log('login= ', login);
+
     login.then((successResponse)=>{
-      console.log(successResponse)
+      console.log(successResponse);
+      let sessionId = successResponse['data'].sessid;
+      let token = successResponse['data'].token;
+      let value = { sessionId, token };
+
+      this.onLoginSuccess('loginData', value)
     }).catch((e,r,t) => {console.log(e,r,t)});
   }
 
-  onLoginClick() {
-    const { email, password } = this.state;
+    onLoginSuccess = async (key, value) => {
 
-    const data = {
-      "username" : email,
-      "password" : password
+      const storageValue = JSON.stringify(value);
+      console.log(storageValue);
+      try {
+        await AsyncStorage.setItem(key, storageValue);
+        this.props.navigation.navigate('Home')
+      } catch (error) {
+        console.log(error);
+      }
     }
-    let a = loginUser();
-    a.then((response) => {
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
+
 
   render() {
     return (

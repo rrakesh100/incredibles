@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Avatar, Button, Icon, Text as RNEText } from 'react-native-elements';
+import { AsyncStorage } from "react-native";
+
 
 class Drawer extends Component {
   navigateToScreen = (route) => () => {
@@ -15,6 +17,22 @@ class Drawer extends Component {
       email : ''
     }
   }
+
+  componentDidMount() {
+    this._retrieveLoginData
+  }
+
+    _retrieveLoginData = async () => {
+  try {
+    const value = await AsyncStorage.getItem('loginData');
+    console.log(value);
+    if (value !== null) {
+      console.log(value);
+    }
+   } catch (error) {
+     console.log(error);
+   }
+}
 
   render () {
     return (
@@ -234,6 +252,22 @@ class Drawer extends Component {
       )
   }
 
+  onSuccessLogin() {
+    this.setState({
+      loggedIn: true
+    })
+  }
+
+  onLoginFail() {
+    this.setState({
+      loggedIn: false
+    })
+  }
+
+  onLogoutPress() {
+    this._retrieveLoginData();
+  }
+
   renderTitle() {
 
     const { email } = this.state;
@@ -254,6 +288,11 @@ class Drawer extends Component {
                     buttonStyle={s.btnStyle}
                     textStyle={{color: '#FEC336'}}
                     onPress={this.navigateToScreen('Login')} />
+                  <Button
+                        title="Logout"
+                        buttonStyle={s.btnStyle}
+                        textStyle={{color: '#FEC336'}}
+                        onPress={this.onLogoutPress.bind(this)} />
             </View>
         </View>
       );
