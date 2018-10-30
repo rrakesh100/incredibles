@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions, ScrollView, TextInput, Linking, TouchableHighlight, Picker } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, ScrollView, TextInput, Linking, TouchableOpacity, Picker } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Form } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import GoogleIcon from 'react-native-vector-icons/Zocial';
 import { registerUser } from '../api/register';
+import axios from 'axios';
+import RCTNetworking from 'RCTNetworking';
 
 
 const sliderWidth = Dimensions.get('window').width;
@@ -34,6 +36,12 @@ export default class Login extends Component {
   }
   );
 
+  componentDidMount() {
+    // console.log(this.props);
+    //  console.log('RCTNetworking:', RCTNetworking.clearCookies());
+    
+  }
+
   onButtonPress(url) {
     Linking.openURL(url)
   }
@@ -41,30 +49,41 @@ export default class Login extends Component {
   onRegisterClick() {
     const { name, email, mobile, password } = this.state;
 
-    const data = {
-      name : name,
-      mail : email,
-      pass : { pass1 : password, pass2 : password },
-      address : {
-        	first_name : "abc",
-        	last_name : "123",
-          street1 : "xab",
-        	city : "xyz",
-        	zone : "east",
-        	postal_code : "123456"
+    let headers = {
+              'Content-Type': 'application/json',
+              'X-CSRFToken' : '',
+              'XSRF-TOKEN' : '',
+              'X-XSRF-TOKEN' : '',
+              'xsrfCookieName' : '',
+              'xsrfHeaderName' : ''
+    };
+    let a = axios.post(
+      'http://sakshi.myofficestation.com/user_register/user/register',
+      {
+        name: name,
+        mail: email,
+        pass: {
+          pass1: password,
+          pass2: password
+        },
+        address: {
+          first_name: "holy",
+          last_name: "shit",
+          city: "delhi",
+          street1: "abc",
+          zone: "east",
+          postal_code: "123456"
         }
-    }
-
-    const jsonData = JSON.stringify(data);
-
-    registerUser(data).then((response) => {
-      console.log(response);
-    })
-    .catch((err) => console.log(err))
+      },
+      {headers: headers}
+    );
+    console.log(a);
+    a.then((successResponse)=>{
+      console.log(successResponse)
+    }).catch((e,r,t) => {console.log(e,r,t)});
   }
 
   render() {
-    console.log(this.state);
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
         <Text style={styles.loginText}>REGISTER</Text>
@@ -109,12 +128,12 @@ export default class Login extends Component {
           style={styles.textInput}/>
           </View>
 
-          <TouchableHighlight underlayColor='#ffffff'
+          <TouchableOpacity underlayColor='#ffffff'
             onPress={ this.onRegisterClick.bind(this) } >
             <View style={styles.btnView}>
               <Text style={styles.btnText}>REGISTER HERE</Text>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
 
       </ScrollView>
     )

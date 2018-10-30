@@ -1,24 +1,53 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableHighlight, View, AsyncStorage } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { compititiveData, cData } from '../api/competitive';
+import axios from 'axios';
 
 
 
 export default class Compititive extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      competitiveDataObj: null,
+    }
+  }
+
+
+  componentDidMount() {
+
+    const competitiveData = axios.get('http://sakshi.myofficestation.com/node.json?type=competitive_exams_category', {withCredentials: true});
+
+    competitiveData.then((res) => {
+      console.log(res);
+      this.setState({
+        competitiveDataObj: res
+      })
+    }
+    ).catch((e) => console.log(e))
+
+  }
+
     render() {
-      let cObj = cData[0];
-      let iList = cObj.list;
+      const { competitiveDataObj } = this.state;
+
+      if(competitiveDataObj) {
+      let cData = competitiveDataObj['data'];
+      let dList = cData.list;
+
         return (
             <View s={s.container}>
                 <FlatList
-                    data={iList}
+                    data={dList}
                     renderItem={this.renderCompetitiveItem.bind(this)}
                     ItemSeparatorComponent={this.renderItemSeperator.bind(this)}
                 />
             </View>
         )
+      } else {
+        return null;
+      }
     }
 
     renderItemSeperator() {
@@ -30,7 +59,7 @@ export default class Compititive extends React.Component {
     renderCompetitiveItem({item}) {
       return (
         <TouchableHighlight
-            onPress={() => this.props.onNavigate('Exam', {data:item})}
+            onPress={() => this.props.onNavigate('Exam', {data:item.title})}
             underlayColor='#ffffff'>
         <View style={s.card}>
             <View style={s.cardContent}>
