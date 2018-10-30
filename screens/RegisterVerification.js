@@ -47,7 +47,16 @@ export default class Login extends Component {
 
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
-        <Text style={styles.loginText}>VERIFY YOUR MOBILE NUMBER</Text>
+      <View style={{marginTop:50}}>
+          <View>
+              <Text style={{textAlign: 'center', color: '#38507F', fontSize: 30, fontWeight: 'bold'}}>SAKSHI EDUCATION</Text>
+          </View>
+          <View style={{borderBottomColor: '#9FB8CC', borderBottomWidth: 1}} />
+          <View>
+              <Text style={{textAlign: 'center', color: '#FFBC01'}}>Educating, Enlightening and Ennobling</Text>
+          </View>
+      </View>
+        <Text style={styles.loginText}>VERIFY YOUR MOBILE NO</Text>
         <Text style={styles.select}>Language</Text>
 
         <View style={{marginLeft: 'auto', marginRight:'auto', marginTop:20, height: 50, width: 140, backgroundColor: '#ffffff', borderColor: '#FFBC01', borderWidth:1, borderRadius:25}}>
