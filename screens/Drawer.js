@@ -34,14 +34,15 @@ class Drawer extends Component {
 
       let headers = {
                 'Content-Type': 'application/json',
-                'X-CSRF-Token' : token,
-                'Cookie' : sessionId
+                'Cookie' : sessionId,
+                'X-CSRF-Token' : token
       };
 
       let logout = axios.post(
         'http://sakshi.myofficestation.com/user_login/user/logout',
+        {},
         {headers: headers});
-
+        console.log(logout);
       logout.then((successResponse)=>{
         console.log(successResponse);
       }).catch((err) => {console.log(err)});
