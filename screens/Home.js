@@ -144,26 +144,26 @@ YellowBox.ignoreWarnings([
       initialRouteName: 'Base',
 
      navigationOptions : ({navigation, screenProps, navigationOptions}) => (
-    {
-      title: `Sakshi Education`,
-      headerTintColor: '#ffffff',
-      headerStyle: {
-        backgroundColor: '#364C8B',
-        borderBottomColor: '#ffffff'
-      },
-      headerTitleStyle: {
-        fontSize: 18,
-      },
-      headerRight : <View style={{display:'flex', flexDirection:'row'}}>
-      <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
-      <Icon onPress={() => {navigation.navigate('NewCheckout')} } style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
-      <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
-      </View> ,
-      headerLeft : <View>
-      <Ionicon onPress={() => {screenProps.rootNavigation.toggleDrawer()}} style={{marginLeft : 12, marginRight : 8}} name="md-menu" size={36} color="#fff"/>
-      </View>
-    }
-  )
+          {
+            title: `Sakshi Education`,
+            headerTintColor: '#ffffff',
+            headerStyle: {
+              backgroundColor: '#364C8B',
+              borderBottomColor: '#ffffff'
+            },
+            headerTitleStyle: {
+              fontSize: 18,
+            },
+            headerRight : <View style={{display:'flex', flexDirection:'row'}}>
+            <View style={{marginLeft : 12, marginRight : 8}}><Icon name="user-circle-o" size={24} color="#fff" /></View>
+            <Icon onPress={() => {navigation.navigate('NewCheckout')} } style={{marginLeft : 12, marginRight : 8}} name="shopping-cart" size={24} color="#fff"/>
+            <Icon style={{marginLeft : 12, marginRight : 8}} name="bell" size={24} color="#fff"/>
+            </View> ,
+            headerLeft : <View>
+            <Ionicon onPress={() => {screenProps.rootNavigation.toggleDrawer()}} style={{marginLeft : 12, marginRight : 8}} name="md-menu" size={36} color="#fff"/>
+            </View>
+          }
+      )
 
   });
 export default class Home extends React.Component {

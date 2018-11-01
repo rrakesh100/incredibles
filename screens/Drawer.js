@@ -7,6 +7,8 @@ import axios from 'axios';
 
 class Drawer extends Component {
   navigateToScreen = (route) => () => {
+    console.log('props=', this.props);
+    console.log('navigation=',this.props.navigation);
     this.props.navigation.navigate(route);
     this.props.navigation.closeDrawer();
   }

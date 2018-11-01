@@ -43,12 +43,7 @@ export default class Login extends Component {
    const { params } = this.props.navigation.state;
     console.log('Firing API call to the server');
     let headers = {
-              'Content-Type': 'application/json',
-              'X-CSRFToken' : '',
-              'XSRF-TOKEN' : '',
-              'X-XSRF-TOKEN' : '',
-              'xsrfCookieName' : '',
-              'xsrfHeaderName' : ''
+              'Content-Type': 'application/json'
     };
 
 
