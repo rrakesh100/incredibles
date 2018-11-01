@@ -45,6 +45,11 @@ class Drawer extends Component {
         console.log(logout);
       logout.then((successResponse)=>{
         console.log(successResponse);
+        console.log(successResponse['data']);
+        if(successResponse['status'] == 200) {
+          console.log('loggedout successfully');
+        }
+        this.onLogoutSuccess();
       }).catch((err) => {console.log(err)});
     }
    } catch (error) {
@@ -279,6 +284,17 @@ class Drawer extends Component {
     this.setState({
       loggedIn: true
     })
+  }
+
+  closeDrawer() {
+    this.props.navigation.closeDrawer();
+    this.props.navigation.navigate('Login');
+  }
+
+  onLogoutSuccess() {
+    this.setState({
+      loggedIn: false
+    }, this.closeDrawer())
   }
 
   onLoginFail() {
