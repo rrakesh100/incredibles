@@ -193,7 +193,7 @@ const DrawerNavigator = createDrawerNavigator(
     }
 	},
 	{
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
     contentComponent: DrawerScreen,
     drawerWidth: 300
 	}

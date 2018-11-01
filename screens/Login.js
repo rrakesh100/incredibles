@@ -139,7 +139,7 @@ export default class Login extends Component {
           </View>
 
           <View style={styles.password}>
-          <TextInput placeholder='Password'
+          <TextInput placeholder='Password' secureTextEntry={true}
           onChangeText={(password) => this.setState({password})}
           style={styles.textInput}/>
           </View>
