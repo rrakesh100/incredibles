@@ -34,13 +34,17 @@ export default class AcademicStudies extends React.Component {
         });
     }
 
-    render(){
+    render() {
+      console.log(this.props.onNavigate);
         return (
           <ScrollView style={{backgroundColor : '#E8F3F7'}}>
             {
               academicStudies.map((item, index) => {
                 return (  <TouchableOpacity key={index}
-                  onPress={() => this.props.onNavigate('ExamDetails', {data: item})}
+                  onPress={() => {
+                    this.props.onNavigate ? this.props.onNavigate('ExamDetails', {data: item}) :
+                    this.props.navigation.navigate('ExamDetails', {data: item})
+                  }}
                       >
                       <View  key= {index} style={{
                           backgroundColor : "white",
