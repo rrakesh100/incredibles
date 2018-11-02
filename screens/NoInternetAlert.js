@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { View, Text, NetInfo, StyleSheet, Dimensions, TouchableOpacity, WebView } from 'react-native';
+import { View, Text, NetInfo, StyleSheet, Dimensions, TouchableOpacity, WebView, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 
 
@@ -8,15 +9,25 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default class NoInternetAlert extends Component {
 
   state = {
-    isConnected : true
+    isConnected : true,
+    spinner : false
   }
 
   componentDidMount() {
     NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectivityChange);
+    this.spinnerTime()
   }
 
   componentWillUnmount() {
     NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectivityChange);
+  }
+
+  spinnerTime() {
+    setInterval(() => {
+      this.setState({
+        spinner: !this.state.spinner
+      });
+    }, 1000);
   }
 
   handleConnectivityChange = isConnected => {
@@ -32,11 +43,10 @@ export default class NoInternetAlert extends Component {
     if(!this.state.isConnected) {
     return (
         <View style={{flex:1}}>
-          <View style={{width: 40,height: 40,position: 'relative'}}>
-              <View style={{width: '100%',height: '100%',position: 'absolute',left: 0,top: 0}}>
-              </View>
+            <View style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 'auto', marginBottom: 'auto'}}>
+              <ActivityIndicator size="large" color="#FFBC01" />
+            </View>
 
-          </View>
           <View style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 100, backgroundColor: '#DC4443'}}>
               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 'auto', marginBottom: 'auto'}}>
                 <Icon name='warning' size={26} color='#ffffff'/>
@@ -70,5 +80,8 @@ const styles = StyleSheet.create({
     marginBottom: 'auto',
     marginLeft: 'auto',
     marginRight: 'auto',
+  },
+  spinnerTextStyle: {
+    color: '#FFBC01'
   }
 })
