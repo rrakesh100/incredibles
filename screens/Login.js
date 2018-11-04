@@ -32,7 +32,10 @@ export default class Login extends Component {
 
   onLoginBtnClick() {
    const { email, password } = this.state;
+   console.log(email);
+   console.log(password);
    const { params } = this.props.navigation.state;
+   console.log(params);
     console.log('Firing API call to the server');
     let headers = {
               'Content-Type': 'application/json',
@@ -53,6 +56,10 @@ export default class Login extends Component {
 
     login.then((successResponse)=>{
       console.log(successResponse);
+      let emailId = successResponse['data']['user']['mail'];
+      let userName = successResponse['data']['user']['name'];
+      console.log(emailId);
+      console.log(userName);
       params.onSuccessLogin();
 
       let sessionId = successResponse['data'].sessid;

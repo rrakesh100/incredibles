@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Text, View, AsyncStorage } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, AsyncStorage, TouchableOpacity } from 'react-native';
 import { Avatar, Button, Icon, Text as RNEText } from 'react-native-elements';
 import axios from 'axios';
+import ShareIcon from 'react-native-vector-icons/FontAwesome';
 
 
 class Drawer extends Component {
@@ -255,22 +256,17 @@ class Drawer extends Component {
             />
 
             <RNEText h5 style={s.centeredWhiteText}>Educating, Enlightening and Ennobling</RNEText>
-            <Button
-                title="Share App"
-                loading
-                loadingProps={{ size: "large", color: "rgba(111, 202, 186, 1)" }}
-                titleStyle={{ fontWeight: "700" }}
-                buttonStyle={{
-                    backgroundColor: "rgba(92, 99,216, 1)",
-                    width: 300,
-                    height: 45,
-                    borderColor: "transparent",
-                    borderWidth: 0,
-                    borderRadius: 5
-                }}
-                containerStyle={{ marginTop: 20, marginBottom: 40 }}
-            />
+            <TouchableOpacity onPress={() => console.log('share the app')}>
+              <View style={s.gth}>
+                  <ShareIcon name='share-square-o' size={24} color='#ffffff' style={{marginLeft: 30}} />
+                  <Text style={s.gthT}>Share App</Text>
+              </View>
+            </TouchableOpacity>
 
+            <View style={s.fText}>
+                <Text style={s.privacy} onPress={ () => console.log('terms of use') }>Terms of use</Text>
+                <Text style={s.privacy} onPress={ () => console.log('privacy policy') }>Privacy Policy</Text>
+            </View>
           </View>
       )
   }
@@ -379,7 +375,7 @@ export default Drawer;
 
 const s = StyleSheet.create({
     title: {
-        backgroundColor: '#364C8B',
+        backgroundColor: '#0FB9E1',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -430,5 +426,37 @@ const s = StyleSheet.create({
     item: {
         flexDirection: 'row',
         marginLeft: 8
+    },
+    gth: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#3D59A2',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginTop:80,
+      height: 40,
+      width: 200,
+      borderRadius: 30,
+      borderColor: '#FFBC01',
+      borderWidth:2,
+    },
+    gthT: {
+      color: '#FFBC01',
+      fontSize: 24,
+      marginTop: 'auto',
+      marginBottom:'auto',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    },
+    fText: {
+      flexDirection: 'row',
+      marginTop: 30,
+      marginBottom: 30
+    },
+    privacy: {
+      marginLeft: 10,
+      color: '#ffffff',
+      textDecorationLine: 'underline',
+
     }
 });
