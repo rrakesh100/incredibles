@@ -140,13 +140,17 @@ export default class OnlineSubscribe extends Component {
             *PDFs will be emailed only to the subscribed
             </Text>
             { subscribed ?
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
               <Button title='PROCEED' buttonStyle={styles.bStyle}
                  onPress={() => this.props.navigation.navigate('NewCheckout', {data: data, Qty: quantity})}
                textStyle={{color: '#F8C548', fontSize : 12}}  />
+               </View>
+               <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
               <Button title='ADD TO CART' buttonStyle={styles.bStyle}
                  onPress={ this.addToCart.bind(this, data, quantity) }
                textStyle={{color: '#F8C548', fontSize : 12}}  />
+               </View>
              </View> : null }
             <View style={styles.flex}>
             <View>

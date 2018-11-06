@@ -117,7 +117,7 @@ export default class OnlineTests extends  Component {
         <View style={styles.seperator}>
         <View><Text>We have more than 1000 tests with 50 different category exams</Text></View>
         <View style={styles.flex}>
-          <View style={{marginTop: 20, marginLeft:10, backgroundColor: 'white', width: sliderWidth*0.5}}>
+          <View style={{marginTop:20, marginLeft:'auto', marginRight: 'auto', backgroundColor: 'white', width: '50%'}}>
               <Picker
                 onValueChange={(itemValue, itemIndex) => this.setState({exam: itemValue})}
                 selectedValue={this.state.exam}
@@ -136,7 +136,7 @@ export default class OnlineTests extends  Component {
                   <Picker.Item label="TRT Exam" value="trt" />
               </Picker>
           </View>
-          <View style={{marginTop: 20, marginLeft:10, backgroundColor: 'white', width: sliderWidth*0.4}}>
+          <View style={{marginTop:20, marginLeft:'auto', marginRight: 'auto', backgroundColor: 'white', width: '40%'}}>
               <Picker
                 onValueChange={(itemValue, itemIndex) => this.setState({test: itemValue})}
                 selectedValue={this.state.test}
@@ -157,12 +157,12 @@ export default class OnlineTests extends  Component {
           </View>
           </View>
 
-          <View style={{marginTop: 40, marginLeft: sliderWidth*0.35}}>
+          <View style={{marginTop: 40, marginLeft: 'auto', marginRight: 'auto'}}>
           <Button title='FIND' buttonStyle={styles.btnS}
            textStyle={{color: '#F8C548', fontSize : 14}} />
           </View>
 
-          <View>
+          <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
           <Badge textStyle={{color: 'white', fontSize: 8}}
           containerStyle={styles.badge} value='OR' />
           </View>
@@ -175,7 +175,7 @@ export default class OnlineTests extends  Component {
             inputStyle={{backgroundColor: 'white'}}
             placeholder='Which test are you looking for ?' />
 
-          <View style={{marginTop: 30, marginLeft: sliderWidth*0.35}}>
+          <View style={{marginTop: 30, marginLeft: 'auto', marginRight: 'auto'}}>
           <Button title='SEARCH' buttonStyle={styles.btnS}
            textStyle={{color: '#F8C548', fontSize : 14}} />
           </View>
@@ -219,7 +219,6 @@ const styles = StyleSheet.create({
     width: 36,
     borderRadius: 16,
     borderWidth: 1,
-    marginLeft: sliderWidth/2,
     backgroundColor: '#688183',
     borderColor: '#688183'
   },

@@ -115,50 +115,45 @@ export default class  Subscription extends Component {
 
         </View>
         <View style={styles.seperator}>
-        <View style={{marginLeft: 20}} >
-        <Grid style={{marginTop: 10}}>
-         <Row>
-           <Col size={3}>
-           <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>{data.price}</Text></Text>
-           </Col>
-           <Col size={3}>
-           <Text style={{color: '#C3CFCF'}}>{data.validity}</Text>
-           </Col>
-           <Col size={4}>
-           {
-             subscribed ? (
-               <Row>
-                <Col>
-                <Icon name='circle-with-minus' size={26} color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'remove')} />
-                </Col>
-                <Col>
-                  <Text>{this.state.quantity}</Text>
-                </Col>
-                <Col >
-                <Icon name='circle-with-plus' size={26} color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'add')} />
-                </Col>
-
-               </Row>
-              ) :
-             ( <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
-                 onPress={() => {
-                   this.setState({subscribed : true});
-                 }}
-               textStyle={{color: '#F8C548', fontSize : 10}}  />)
-           }
-
-           </Col>
-           </Row>
-         </Grid>
+          <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 'auto', marginBottom: 'auto'}}>
+            <View style={{marginLeft: 20}}>
+              <Text style={{fontSize: 20}}>Rs.<Text style={{fontSize: 20, color: '#47C8DB'}}>{data.price}</Text></Text>
+            </View>
+            <View style={{marginLeft: 20}}>
+              <Text style={{color: '#C3CFCF'}}>{data.validity}</Text>
+            </View>
+            <View style={{position: 'absolute', right: 30}}>
+              {
+                subscribed ?
+                  <View style={[styles.flex]}>
+                  <Icon name='circle-with-minus'
+                  size={24} style={{marginRight:10}}
+                  color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'remove')} />
+                  <Text style={{fontSize: 20}}>{this.state.quantity}</Text>
+                  <Icon name='circle-with-plus'
+                  size={24} style={{marginLeft:10}}
+                  color='#FFBC00'  onPress={this.onQuantityChanged.bind(this, 'add')} />
+                  </View> :
+                  <Button title='SUBSCRIBE' buttonStyle={styles.subscribeButton}
+                     onPress={() => {
+                       this.setState({subscribed : true});
+                     }}
+                   textStyle={{color: '#F8C548', fontSize : 10}}  />
+             }
+            </View>
+            </View>
         </View>
-        </View>
-        <View style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 20}}>
-            <Button title='PROCEED' buttonStyle={styles.proceedButton}
-               onPress={() => this.props.navigation.navigate('NewCheckout', {data: data})}
-             textStyle={{color: '#F8C548', fontSize : 12}}  />
-             <Button title='ADD TO CART' buttonStyle={styles.bStyle}
-                onPress={ this.addToCart.bind(this, data, this.state.quantity) }
-              textStyle={{color: '#F8C548', fontSize : 12}}  />
+        <View style={[styles.flex, {marginTop: 20}]}>
+            <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
+              <Button title='PROCEED' buttonStyle={styles.proceedButton}
+                 onPress={() => this.props.navigation.navigate('NewCheckout', {data: data})}
+               textStyle={{color: '#F8C548', fontSize : 12}}  />
+             </View>
+             <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
+               <Button title='ADD TO CART' buttonStyle={styles.bStyle}
+                  onPress={ this.addToCart.bind(this, data, this.state.quantity) }
+                textStyle={{color: '#F8C548', fontSize : 12}}  />
+            </View>
         </View>
         <View style={styles.flex}>
         <View>
@@ -217,6 +212,7 @@ const styles = StyleSheet.create({
   flex: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-around'
   },
   btnStyle: {
     width: 74,

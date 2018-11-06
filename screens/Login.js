@@ -54,6 +54,8 @@ export default class Login extends Component {
       },
       {headers: headers});
 
+    console.log(login);
+    
     login.then((successResponse)=>{
       console.log(successResponse);
       let emailId = successResponse['data']['user']['mail'];

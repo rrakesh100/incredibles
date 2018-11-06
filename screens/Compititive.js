@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, TouchableHighlight, View, AsyncStorage } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableHighlight, View, AsyncStorage, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 
@@ -46,7 +46,13 @@ export default class Compititive extends React.Component {
             </View>
         )
       } else {
-        return null;
+        return (
+          <View style={s.cardContent}>
+            <View style={s.indicator}>
+              <ActivityIndicator size="large" color="#FFBC01" />
+            </View>
+          </View>
+        )
       }
     }
 
@@ -128,5 +134,11 @@ const s = StyleSheet.create({
     separator: {
         backgroundColor: '#ecf0f1',
         height: 8
+    },
+    indicator: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginTop: 'auto',
+      marginBottom: 'auto'
     }
   });
