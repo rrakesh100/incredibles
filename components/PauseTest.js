@@ -38,35 +38,38 @@ export default class PauseTest extends Component {
   render() {
     return (
       <ScrollView style={{backgroundColor: '#E8F3F7'}}>
-        <View style={{marginTop: 40, marginLeft: sliderWidth/2 }}>
+        <View style={{marginTop: 40, marginLeft: 'auto', marginRight: 'auto' }}>
           <Icon name='stop' color='' size={30}/>
         </View>
         <View style={styles.heading}>
           <Text style={styles.tS}>Test Summary</Text>
         </View>
 
-        <View style={[styles.txtView1, styles.flex]}>
-          <View style={{marginLeft: sliderWidth*0.32}}>
-          <NewIcon name='arrow-right' color='#47C8DB' size={20}/>
+        <View style={[styles.txtView1]}>
+          <View style={[styles.flex, styles.margin]}>
+            <View>
+            <NewIcon name='arrow-right' color='#47C8DB' size={20}/>
+            </View>
+            <View>
+            <ArrowIcon name='ios-arrow-forward' color='#47C8DB' size={20}/>
+            </View>
+            <View style={{marginLeft:4}}>
+            <Text style={styles.skip}>Skipped: <Text style={{color: '#47C8DB'}}>0</Text></Text>
+            </View>
           </View>
+        </View>
+
+        <View style={{height: 2, backgroundColor: '#E8F3F7'}} />
+
+        <View style={[styles.txtView2]}>
+        <View style={[styles.margin, styles.flex]}>
           <View>
-          <ArrowIcon name='ios-arrow-forward' color='#47C8DB' size={20}/>
-          </View>
-          <View style={{marginLeft:4}}>
-          <Text style={styles.skip}>Skipped: <Text style={{color: '#47C8DB'}}>0</Text></Text>
-          </View>
-        </View>
-
-        <View style={{height: 2, backgroundColor: '#E8F3F7'}}>
-        </View>
-
-        <View style={[styles.txtView2, styles.flex]}>
-          <View style={{marginLeft: sliderWidth*0.32}}>
             <NewIcon name='check' color='#59B503' size={20}/>
           </View>
           <View style={{marginLeft: 4}}>
             <Text style={styles.ans}>Answered: <Text style={{color: '#59B503'}}>0</Text></Text>
           </View>
+        </View>
         </View>
 
         <View style={{marginTop: 30}}>
@@ -75,7 +78,7 @@ export default class PauseTest extends Component {
           </Text>
         </View>
 
-        <View style={{marginTop: 40, marginLeft: sliderWidth*0.32}}>
+        <View style={{marginTop: 40, marginLeft: 'auto', marginRight: 'auto'}}>
         <Button title='END TEST' buttonStyle={styles.btnS}
          onPress={() => this.props.navigation.navigate('TestReport')}
          textStyle={{color: '#F8C548', fontSize : 14}} />
@@ -86,7 +89,7 @@ export default class PauseTest extends Component {
         containerStyle={styles.badge} value='OR' />
         </View>
 
-        <View style={{marginTop: 40, marginLeft: sliderWidth*0.32}}>
+        <View style={{marginTop: 40, marginLeft: 'auto', marginRight: 'auto'}}>
         <Button title='RESUME TEST' buttonStyle={styles.btnS}
          onPress={() => this.props.navigation.navigate('Test')}
          textStyle={{color: '#F8C548', fontSize : 14}} />
@@ -98,7 +101,8 @@ export default class PauseTest extends Component {
 
 const styles = StyleSheet.create({
   heading: {
-    marginLeft: sliderWidth*0.35
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   tS: {
     color: '#FEC336',
@@ -113,7 +117,8 @@ const styles = StyleSheet.create({
     width: 36,
     borderRadius: 16,
     borderWidth: 1,
-    marginLeft: sliderWidth*0.47,
+    marginLeft: 'auto',
+    marginRight: 'auto',
     backgroundColor: '#688183',
     borderColor: '#688183'
   },
@@ -140,5 +145,9 @@ const styles = StyleSheet.create({
   },
   ans: {
     fontSize: 24
+  },
+  margin: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 })

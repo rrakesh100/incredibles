@@ -77,7 +77,8 @@ export default class TakeTest extends Component {
         <Text style={styles.tS}>Good Luck</Text>
         </View>
         <View style={styles.takeTest}>
-        <Button title='TAKE TEST' onPress={() => this.props.navigation.navigate('Test', {data: {time: navigation.state.params.data.time}})}
+        <Button title='TAKE TEST' onPress={() => this.props.navigation.navigate('Test', {data: {time: navigation.state.params.data.time,
+        questions: navigation.state.params.data.questions}})}
           buttonStyle={styles.btnS}
          textStyle={{color: '#F8C548', fontSize : 14}} />
         </View>
@@ -131,8 +132,9 @@ export default class TakeTest extends Component {
       flexDirection: 'column'
     },
     icon: {
-      marginLeft: sliderWidth*0.45,
-      marginTop: 60
+      marginTop: 60,
+      marginLeft: 'auto',
+      marginRight: 'auto'
     },
     inst : {
       margin: sliderWidth*0.02,
@@ -154,10 +156,12 @@ export default class TakeTest extends Component {
       bottom:20
     },
     wish: {
-      marginLeft: sliderWidth*0.40
+      marginLeft: 'auto',
+      marginRight: 'auto'
     },
     takeTest: {
       marginTop: 50,
-      marginLeft: sliderWidth*0.32
+      marginLeft: 'auto',
+      marginRight: 'auto'
     }
   })

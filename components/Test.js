@@ -14,6 +14,38 @@ import SadIcon from 'react-native-vector-icons/Entypo';
 const sliderWidth = Dimensions.get('window').width;
 const sliderHeight = Dimensions.get('window').height;
 
+const Iterate = (numOfQuestions) => {
+  let numOfQstns = numOfQuestions.numOfQuestions;
+  let circleArr = [];
+  return (
+    <ScrollView horizontal={true} contentContainerStyle={{flexDirection: 'row', alignItems: 'center'}}>
+      { (() => {
+        for(let i=0; i<numOfQstns; i++) {
+          circleArr.push(<View key={'numOfCirlcles' + Math.random()} style={{marginLeft:2,width:8, height:8, borderRadius: 4, borderColor: '#9FB8CC', borderWidth:0.5 }} />)
+        }
+        return circleArr;
+    })() }
+    </ScrollView>
+  )
+}
+
+const HeaderTitle = (headerProps) => {
+
+  return (
+    <View>
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <Icon name='ios-arrow-back' color='#9FB8CC' size={24}/>
+        <Iterate numOfQuestions={headerProps.headerProps.state.params.data.questions}/>
+        <Icon name='ios-arrow-forward' color='#9FB8CC' size={24}/>
+      </View>
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <Text>{headerProps.headerProps.state.params.data.questions} Questions</Text>
+        <Text style={{marginLeft:10}}>{headerProps.headerProps.state.params.data.time} Mins</Text>
+      </View>
+    </View>
+  )
+}
+
 export default class Test extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +53,8 @@ export default class Test extends Component {
       index: 0,
       btnIndex: 0,
       answers: {},
-      revisitTest: false
+      revisitTest: false,
+      time:0
     };
   }
 
@@ -29,6 +62,7 @@ export default class Test extends Component {
 
   static navigationOptions = ({navigation}) => (
   {
+    headerTitle: <HeaderTitle headerProps={navigation}/>,
     headerStyle: {
       backgroundColor: 'white',
       borderBottomColor: '#ffffff',
@@ -65,11 +99,19 @@ export default class Test extends Component {
   );
 
   componentDidMount() {
-    console.log(this.props.navigation.state.params.data.time);
+    console.log(this.props);
   }
+
+  newFunc() {
+    return (
+      <View><Text>Girish</Text></View>
+    )
+  }
+
 
   updateIndex = (index) => {
 
+    const { navigation } = this.props;
     const { btnIndex } = this.state;
     if(index == 0 && btnIndex != 0) {
       this.setState({ btnIndex: this.state.btnIndex-1 })
@@ -135,7 +177,8 @@ export default class Test extends Component {
   }
 
   render() {
-    const { index, btnIndex, answers } = this.state;
+    const { index, btnIndex, answers, time } = this.state;
+    console.log(time);
     return (
       <View style={styles.flexView}>
           <View style={[styles.flex, {flex:5}]}>
@@ -187,7 +230,7 @@ export default class Test extends Component {
 
   const styles = StyleSheet.create({
     headerView: {
-      marginRight: sliderWidth*0.05
+      marginRight: 10
     },
     timerStyle: {
       fontSize: 16,
